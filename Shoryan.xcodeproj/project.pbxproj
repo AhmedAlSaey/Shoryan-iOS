@@ -7,23 +7,55 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B1428C8D2598564600A75D9C /* ThemeConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1428C8C2598564600A75D9C /* ThemeConstants.swift */; };
+		B1428C9125985AB300A75D9C /* AuthorizationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1428C8F25985AB300A75D9C /* AuthorizationViewController.swift */; };
+		B1428C9225985AB300A75D9C /* AuthorizationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B1428C9025985AB300A75D9C /* AuthorizationViewController.xib */; };
+		B1428C9525985ACB00A75D9C /* AuthorizationPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1428C9425985ACB00A75D9C /* AuthorizationPresenter.swift */; };
 		B166B0D9259826B800AD6FD6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B166B0D8259826B800AD6FD6 /* AppDelegate.swift */; };
 		B166B0DB259826B800AD6FD6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B166B0DA259826B800AD6FD6 /* SceneDelegate.swift */; };
-		B166B0DD259826B800AD6FD6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B166B0DC259826B800AD6FD6 /* ViewController.swift */; };
-		B166B0E0259826B800AD6FD6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B166B0DE259826B800AD6FD6 /* Main.storyboard */; };
 		B166B0E2259826BA00AD6FD6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B166B0E1259826BA00AD6FD6 /* Assets.xcassets */; };
 		B166B0E5259826BA00AD6FD6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B166B0E3259826BA00AD6FD6 /* LaunchScreen.storyboard */; };
+		B166B0FD259828D500AD6FD6 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B166B0FC259828D500AD6FD6 /* BaseViewController.swift */; };
+		B166B10025982AB600AD6FD6 /* BasePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B166B0FF25982AB600AD6FD6 /* BasePresenter.swift */; };
+		B166B10325982AC300AD6FD6 /* BaseRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B166B10225982AC300AD6FD6 /* BaseRouter.swift */; };
+		B166B10625982ACD00AD6FD6 /* BaseInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B166B10525982ACD00AD6FD6 /* BaseInteractor.swift */; };
+		B166B10925982AD800AD6FD6 /* BaseEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = B166B10825982AD800AD6FD6 /* BaseEntity.swift */; };
+		B166B10C25982BD700AD6FD6 /* BaseError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B166B10B25982BD700AD6FD6 /* BaseError.swift */; };
+		B166B11F25982CB500AD6FD6 /* LaunchScreenPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B166B11A25982CB500AD6FD6 /* LaunchScreenPresenter.swift */; };
+		B166B12025982CB500AD6FD6 /* LaunchRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B166B11B25982CB500AD6FD6 /* LaunchRouter.swift */; };
+		B166B12225982CB500AD6FD6 /* LaunchInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B166B11D25982CB500AD6FD6 /* LaunchInteractor.swift */; };
+		B166B12725982CD600AD6FD6 /* LaunchScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B166B12525982CD600AD6FD6 /* LaunchScreenViewController.swift */; };
+		B166B12825982CD600AD6FD6 /* LaunchScreenViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B166B12625982CD600AD6FD6 /* LaunchScreenViewController.xib */; };
+		B166B1382598386900AD6FD6 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B166B1362598386900AD6FD6 /* LogInViewController.swift */; };
+		B166B1392598386900AD6FD6 /* LogInViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B166B1372598386900AD6FD6 /* LogInViewController.xib */; };
+		B166B13E2598415200AD6FD6 /* LogInPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B166B13D2598415200AD6FD6 /* LogInPresenter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B1428C8C2598564600A75D9C /* ThemeConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeConstants.swift; sourceTree = "<group>"; };
+		B1428C8F25985AB300A75D9C /* AuthorizationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationViewController.swift; sourceTree = "<group>"; };
+		B1428C9025985AB300A75D9C /* AuthorizationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AuthorizationViewController.xib; sourceTree = "<group>"; };
+		B1428C9425985ACB00A75D9C /* AuthorizationPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationPresenter.swift; sourceTree = "<group>"; };
 		B166B0D5259826B800AD6FD6 /* Shoryan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Shoryan.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B166B0D8259826B800AD6FD6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B166B0DA259826B800AD6FD6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		B166B0DC259826B800AD6FD6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		B166B0DF259826B800AD6FD6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B166B0E1259826BA00AD6FD6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B166B0E4259826BA00AD6FD6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B166B0E6259826BA00AD6FD6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B166B0FC259828D500AD6FD6 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		B166B0FF25982AB600AD6FD6 /* BasePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasePresenter.swift; sourceTree = "<group>"; };
+		B166B10225982AC300AD6FD6 /* BaseRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseRouter.swift; sourceTree = "<group>"; };
+		B166B10525982ACD00AD6FD6 /* BaseInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseInteractor.swift; sourceTree = "<group>"; };
+		B166B10825982AD800AD6FD6 /* BaseEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseEntity.swift; sourceTree = "<group>"; };
+		B166B10B25982BD700AD6FD6 /* BaseError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseError.swift; sourceTree = "<group>"; };
+		B166B11A25982CB500AD6FD6 /* LaunchScreenPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreenPresenter.swift; sourceTree = "<group>"; };
+		B166B11B25982CB500AD6FD6 /* LaunchRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchRouter.swift; sourceTree = "<group>"; };
+		B166B11D25982CB500AD6FD6 /* LaunchInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchInteractor.swift; sourceTree = "<group>"; };
+		B166B12525982CD600AD6FD6 /* LaunchScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreenViewController.swift; sourceTree = "<group>"; };
+		B166B12625982CD600AD6FD6 /* LaunchScreenViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LaunchScreenViewController.xib; sourceTree = "<group>"; };
+		B166B1362598386900AD6FD6 /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
+		B166B1372598386900AD6FD6 /* LogInViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LogInViewController.xib; sourceTree = "<group>"; };
+		B166B13D2598415200AD6FD6 /* LogInPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInPresenter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,6 +69,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B1428C89259855E400A75D9C /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				B166B11B25982CB500AD6FD6 /* LaunchRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		B1428C8A259855F300A75D9C /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				B166B11D25982CB500AD6FD6 /* LaunchInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		B1428C8B2598560F00A75D9C /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				B1428C8C2598564600A75D9C /* ThemeConstants.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
 		B166B0CC259826B800AD6FD6 = {
 			isa = PBXGroup;
 			children = (
@@ -56,15 +112,135 @@
 		B166B0D7259826B800AD6FD6 /* Shoryan */ = {
 			isa = PBXGroup;
 			children = (
-				B166B0D8259826B800AD6FD6 /* AppDelegate.swift */,
-				B166B0DA259826B800AD6FD6 /* SceneDelegate.swift */,
-				B166B0DC259826B800AD6FD6 /* ViewController.swift */,
-				B166B0DE259826B800AD6FD6 /* Main.storyboard */,
-				B166B0E1259826BA00AD6FD6 /* Assets.xcassets */,
-				B166B0E3259826BA00AD6FD6 /* LaunchScreen.storyboard */,
-				B166B0E6259826BA00AD6FD6 /* Info.plist */,
+				B166B0F22598276C00AD6FD6 /* App */,
+				B166B0ED259826C800AD6FD6 /* Modules */,
+				B166B0EE259826F700AD6FD6 /* Resouces */,
+				B166B0EF2598272800AD6FD6 /* Supporting Files */,
 			);
 			path = Shoryan;
+			sourceTree = "<group>";
+		};
+		B166B0ED259826C800AD6FD6 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				B166B0F62598284000AD6FD6 /* BaseModule */,
+				B166B10E25982C4500AD6FD6 /* LaunchModule */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		B166B0EE259826F700AD6FD6 /* Resouces */ = {
+			isa = PBXGroup;
+			children = (
+				B166B0E1259826BA00AD6FD6 /* Assets.xcassets */,
+			);
+			path = Resouces;
+			sourceTree = "<group>";
+		};
+		B166B0EF2598272800AD6FD6 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B166B0E6259826BA00AD6FD6 /* Info.plist */,
+				B166B0E3259826BA00AD6FD6 /* LaunchScreen.storyboard */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B166B0F22598276C00AD6FD6 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				B166B0D8259826B800AD6FD6 /* AppDelegate.swift */,
+				B166B0DA259826B800AD6FD6 /* SceneDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		B166B0F62598284000AD6FD6 /* BaseModule */ = {
+			isa = PBXGroup;
+			children = (
+				B166B0FA2598287F00AD6FD6 /* View */,
+				B166B0F92598287A00AD6FD6 /* Presenter */,
+				B166B0FB2598288600AD6FD6 /* Router */,
+				B166B0F82598287200AD6FD6 /* Interactor */,
+				B166B0F72598285600AD6FD6 /* Entity */,
+			);
+			path = BaseModule;
+			sourceTree = "<group>";
+		};
+		B166B0F72598285600AD6FD6 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				B166B10825982AD800AD6FD6 /* BaseEntity.swift */,
+				B166B10B25982BD700AD6FD6 /* BaseError.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		B166B0F82598287200AD6FD6 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				B166B10525982ACD00AD6FD6 /* BaseInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		B166B0F92598287A00AD6FD6 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				B166B0FF25982AB600AD6FD6 /* BasePresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		B166B0FA2598287F00AD6FD6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B166B0FC259828D500AD6FD6 /* BaseViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B166B0FB2598288600AD6FD6 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				B166B10225982AC300AD6FD6 /* BaseRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		B166B10E25982C4500AD6FD6 /* LaunchModule */ = {
+			isa = PBXGroup;
+			children = (
+				B166B12425982CC200AD6FD6 /* View */,
+				B166B13C2598413900AD6FD6 /* Presenter */,
+				B1428C89259855E400A75D9C /* Router */,
+				B1428C8A259855F300A75D9C /* Interactor */,
+				B1428C8B2598560F00A75D9C /* Entity */,
+			);
+			path = LaunchModule;
+			sourceTree = "<group>";
+		};
+		B166B12425982CC200AD6FD6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B166B12525982CD600AD6FD6 /* LaunchScreenViewController.swift */,
+				B166B12625982CD600AD6FD6 /* LaunchScreenViewController.xib */,
+				B166B1362598386900AD6FD6 /* LogInViewController.swift */,
+				B166B1372598386900AD6FD6 /* LogInViewController.xib */,
+				B1428C8F25985AB300A75D9C /* AuthorizationViewController.swift */,
+				B1428C9025985AB300A75D9C /* AuthorizationViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B166B13C2598413900AD6FD6 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				B166B11A25982CB500AD6FD6 /* LaunchScreenPresenter.swift */,
+				B166B13D2598415200AD6FD6 /* LogInPresenter.swift */,
+				B1428C9425985ACB00A75D9C /* AuthorizationPresenter.swift */,
+			);
+			path = Presenter;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -103,9 +279,10 @@
 			};
 			buildConfigurationList = B166B0D0259826B800AD6FD6 /* Build configuration list for PBXProject "Shoryan" */;
 			compatibilityVersion = "Xcode 9.3";
-			developmentRegion = en;
+			developmentRegion = ar;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+                ar,
 				en,
 				Base,
 			);
@@ -124,9 +301,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B166B1392598386900AD6FD6 /* LogInViewController.xib in Resources */,
+				B1428C9225985AB300A75D9C /* AuthorizationViewController.xib in Resources */,
 				B166B0E5259826BA00AD6FD6 /* LaunchScreen.storyboard in Resources */,
 				B166B0E2259826BA00AD6FD6 /* Assets.xcassets in Resources */,
-				B166B0E0259826B800AD6FD6 /* Main.storyboard in Resources */,
+				B166B12825982CD600AD6FD6 /* LaunchScreenViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,23 +316,29 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B166B0DD259826B800AD6FD6 /* ViewController.swift in Sources */,
 				B166B0D9259826B800AD6FD6 /* AppDelegate.swift in Sources */,
+				B166B10025982AB600AD6FD6 /* BasePresenter.swift in Sources */,
+				B166B13E2598415200AD6FD6 /* LogInPresenter.swift in Sources */,
+				B1428C9525985ACB00A75D9C /* AuthorizationPresenter.swift in Sources */,
+				B166B12225982CB500AD6FD6 /* LaunchInteractor.swift in Sources */,
+				B1428C9125985AB300A75D9C /* AuthorizationViewController.swift in Sources */,
+				B166B10925982AD800AD6FD6 /* BaseEntity.swift in Sources */,
+				B166B11F25982CB500AD6FD6 /* LaunchScreenPresenter.swift in Sources */,
+				B166B10325982AC300AD6FD6 /* BaseRouter.swift in Sources */,
+				B166B12725982CD600AD6FD6 /* LaunchScreenViewController.swift in Sources */,
+				B166B12025982CB500AD6FD6 /* LaunchRouter.swift in Sources */,
 				B166B0DB259826B800AD6FD6 /* SceneDelegate.swift in Sources */,
+				B166B1382598386900AD6FD6 /* LogInViewController.swift in Sources */,
+				B1428C8D2598564600A75D9C /* ThemeConstants.swift in Sources */,
+				B166B0FD259828D500AD6FD6 /* BaseViewController.swift in Sources */,
+				B166B10625982ACD00AD6FD6 /* BaseInteractor.swift in Sources */,
+				B166B10C25982BD700AD6FD6 /* BaseError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		B166B0DE259826B800AD6FD6 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				B166B0DF259826B800AD6FD6 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		B166B0E3259826BA00AD6FD6 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -216,7 +401,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -271,7 +456,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -287,7 +472,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = Shoryan/Info.plist;
+				DEVELOPMENT_TEAM = 5R6B5V8RQU;
+				INFOPLIST_FILE = "Shoryan/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -295,7 +481,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.ahmedalsai.Shoryan;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -305,7 +491,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = Shoryan/Info.plist;
+				DEVELOPMENT_TEAM = 5R6B5V8RQU;
+				INFOPLIST_FILE = "Shoryan/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -313,7 +500,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.ahmedalsai.Shoryan;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
