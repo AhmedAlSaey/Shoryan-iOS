@@ -50,6 +50,19 @@
 		B1A471A7259D95E4006152C1 /* RequestBasicTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B1A471A5259D95E4006152C1 /* RequestBasicTableViewCell.xib */; };
 		B1A471AB259D9F38006152C1 /* SimpleRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A471AA259D9F38006152C1 /* SimpleRequest.swift */; };
 		B1A471AE259DA02D006152C1 /* RequestFilters.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A471AD259DA02D006152C1 /* RequestFilters.swift */; };
+		B1A471B8259DAC17006152C1 /* NewRequestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A471B6259DAC17006152C1 /* NewRequestViewController.swift */; };
+		B1A471B9259DAC17006152C1 /* NewRequestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B1A471B7259DAC17006152C1 /* NewRequestViewController.xib */; };
+		B1A471BD259DAC25006152C1 /* NewRequestInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A471BC259DAC25006152C1 /* NewRequestInteractor.swift */; };
+		B1A471C0259DAC38006152C1 /* NewRequestPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A471BF259DAC38006152C1 /* NewRequestPresenter.swift */; };
+		B1A471C3259DAC44006152C1 /* NewRequestRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A471C2259DAC44006152C1 /* NewRequestRouter.swift */; };
+		B1A471C7259DB00B006152C1 /* BloodTypeSelectionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A471C6259DB00B006152C1 /* BloodTypeSelectionButton.swift */; };
+		B1A471D4259DBE92006152C1 /* NotificationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A471D2259DBE92006152C1 /* NotificationsViewController.swift */; };
+		B1A471D5259DBE92006152C1 /* NotificationsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B1A471D3259DBE92006152C1 /* NotificationsViewController.xib */; };
+		B1A471D8259DBE9C006152C1 /* NotificationsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A471D7259DBE9C006152C1 /* NotificationsInteractor.swift */; };
+		B1A471DB259DBEC2006152C1 /* NotificationsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A471DA259DBEC2006152C1 /* NotificationsPresenter.swift */; };
+		B1A471DE259DBECC006152C1 /* NotificationsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A471DD259DBECC006152C1 /* NotificationsRouter.swift */; };
+		B1A471E4259DC03A006152C1 /* NotificationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A471E2259DC03A006152C1 /* NotificationTableViewCell.swift */; };
+		B1A471E5259DC03A006152C1 /* NotificationTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B1A471E3259DC03A006152C1 /* NotificationTableViewCell.xib */; };
 		B1B3A1E9259D88EE0089E41D /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B3A1E8259D88EE0089E41D /* UIImage.swift */; };
 /* End PBXBuildFile section */
 
@@ -99,6 +112,19 @@
 		B1A471A5259D95E4006152C1 /* RequestBasicTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RequestBasicTableViewCell.xib; sourceTree = "<group>"; };
 		B1A471AA259D9F38006152C1 /* SimpleRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleRequest.swift; sourceTree = "<group>"; };
 		B1A471AD259DA02D006152C1 /* RequestFilters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestFilters.swift; sourceTree = "<group>"; };
+		B1A471B6259DAC17006152C1 /* NewRequestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewRequestViewController.swift; sourceTree = "<group>"; };
+		B1A471B7259DAC17006152C1 /* NewRequestViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewRequestViewController.xib; sourceTree = "<group>"; };
+		B1A471BC259DAC25006152C1 /* NewRequestInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewRequestInteractor.swift; sourceTree = "<group>"; };
+		B1A471BF259DAC38006152C1 /* NewRequestPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewRequestPresenter.swift; sourceTree = "<group>"; };
+		B1A471C2259DAC44006152C1 /* NewRequestRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewRequestRouter.swift; sourceTree = "<group>"; };
+		B1A471C6259DB00B006152C1 /* BloodTypeSelectionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BloodTypeSelectionButton.swift; sourceTree = "<group>"; };
+		B1A471D2259DBE92006152C1 /* NotificationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsViewController.swift; sourceTree = "<group>"; };
+		B1A471D3259DBE92006152C1 /* NotificationsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NotificationsViewController.xib; sourceTree = "<group>"; };
+		B1A471D7259DBE9C006152C1 /* NotificationsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsInteractor.swift; sourceTree = "<group>"; };
+		B1A471DA259DBEC2006152C1 /* NotificationsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsPresenter.swift; sourceTree = "<group>"; };
+		B1A471DD259DBECC006152C1 /* NotificationsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsRouter.swift; sourceTree = "<group>"; };
+		B1A471E2259DC03A006152C1 /* NotificationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationTableViewCell.swift; sourceTree = "<group>"; };
+		B1A471E3259DC03A006152C1 /* NotificationTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NotificationTableViewCell.xib; sourceTree = "<group>"; };
 		B1B3A1E8259D88EE0089E41D /* UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -256,6 +282,9 @@
 		B166B0ED259826C800AD6FD6 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				B1A471CC259DBE55006152C1 /* NotificationModule */,
+				B1A471CA259DBD0C006152C1 /* NotificationsModule */,
+				B1A471B0259DABD6006152C1 /* NewRequestModule */,
 				B114ADCD259AF0380052C89D /* SharedModule */,
 				B149ED6A259C49BB003C7C46 /* HomeModule */,
 				B166B0F62598284000AD6FD6 /* BaseModule */,
@@ -397,6 +426,136 @@
 			path = Cells;
 			sourceTree = "<group>";
 		};
+		B1A471B0259DABD6006152C1 /* NewRequestModule */ = {
+			isa = PBXGroup;
+			children = (
+				B1A471B5259DABF9006152C1 /* Router */,
+				B1A471B4259DABF3006152C1 /* Entity */,
+				B1A471B3259DABEF006152C1 /* Presenter */,
+				B1A471B2259DABEA006152C1 /* Interactor */,
+				B1A471B1259DABE7006152C1 /* View */,
+			);
+			path = NewRequestModule;
+			sourceTree = "<group>";
+		};
+		B1A471B1259DABE7006152C1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B1A471C5259DAFEE006152C1 /* Helper */,
+				B1A471B6259DAC17006152C1 /* NewRequestViewController.swift */,
+				B1A471B7259DAC17006152C1 /* NewRequestViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B1A471B2259DABEA006152C1 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				B1A471BC259DAC25006152C1 /* NewRequestInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		B1A471B3259DABEF006152C1 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				B1A471BF259DAC38006152C1 /* NewRequestPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		B1A471B4259DABF3006152C1 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		B1A471B5259DABF9006152C1 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				B1A471C2259DAC44006152C1 /* NewRequestRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		B1A471C5259DAFEE006152C1 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				B1A471C6259DB00B006152C1 /* BloodTypeSelectionButton.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		B1A471CA259DBD0C006152C1 /* NotificationsModule */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = NotificationsModule;
+			sourceTree = "<group>";
+		};
+		B1A471CC259DBE55006152C1 /* NotificationModule */ = {
+			isa = PBXGroup;
+			children = (
+				B1A471D1259DBE74006152C1 /* Entity */,
+				B1A471D0259DBE71006152C1 /* Router */,
+				B1A471CF259DBE67006152C1 /* Presenter */,
+				B1A471CE259DBE63006152C1 /* Interactor */,
+				B1A471CD259DBE5F006152C1 /* View */,
+			);
+			path = NotificationModule;
+			sourceTree = "<group>";
+		};
+		B1A471CD259DBE5F006152C1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B1A471E0259DC020006152C1 /* Cells */,
+				B1A471D2259DBE92006152C1 /* NotificationsViewController.swift */,
+				B1A471D3259DBE92006152C1 /* NotificationsViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B1A471CE259DBE63006152C1 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				B1A471D7259DBE9C006152C1 /* NotificationsInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		B1A471CF259DBE67006152C1 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				B1A471DA259DBEC2006152C1 /* NotificationsPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		B1A471D0259DBE71006152C1 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				B1A471DD259DBECC006152C1 /* NotificationsRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		B1A471D1259DBE74006152C1 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		B1A471E0259DC020006152C1 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				B1A471E2259DC03A006152C1 /* NotificationTableViewCell.swift */,
+				B1A471E3259DC03A006152C1 /* NotificationTableViewCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -460,9 +619,12 @@
 				B1428C9225985AB300A75D9C /* AuthorizationViewController.xib in Resources */,
 				B166B0E5259826BA00AD6FD6 /* LaunchScreen.storyboard in Resources */,
 				B1428C9B259AE29500A75D9C /* LogInPasswordViewController.xib in Resources */,
+				B1A471B9259DAC17006152C1 /* NewRequestViewController.xib in Resources */,
 				B166B0E2259826BA00AD6FD6 /* Assets.xcassets in Resources */,
+				B1A471E5259DC03A006152C1 /* NotificationTableViewCell.xib in Resources */,
 				B114ADE1259C20880052C89D /* SignUpViewController.xib in Resources */,
 				B166B12825982CD600AD6FD6 /* LaunchScreenViewController.xib in Resources */,
+				B1A471D5259DBE92006152C1 /* NotificationsViewController.xib in Resources */,
 				B1A471A7259D95E4006152C1 /* RequestBasicTableViewCell.xib in Resources */,
 				B163D1CF259D73160005C731 /* HomeViewController.xib in Resources */,
 			);
@@ -479,15 +641,21 @@
 				B166B10025982AB600AD6FD6 /* BasePresenter.swift in Sources */,
 				B166B13E2598415200AD6FD6 /* LogInPresenter.swift in Sources */,
 				B163D1D9259D73360005C731 /* HomeInteractor.swift in Sources */,
+				B1A471C0259DAC38006152C1 /* NewRequestPresenter.swift in Sources */,
 				B1428C9525985ACB00A75D9C /* AuthorizationPresenter.swift in Sources */,
+				B1A471DE259DBECC006152C1 /* NotificationsRouter.swift in Sources */,
 				B163D1D6259D732D0005C731 /* HomeRouter.swift in Sources */,
 				B166B12225982CB500AD6FD6 /* LaunchInteractor.swift in Sources */,
 				B1428C9125985AB300A75D9C /* AuthorizationViewController.swift in Sources */,
+				B1A471C3259DAC44006152C1 /* NewRequestRouter.swift in Sources */,
+				B1A471D8259DBE9C006152C1 /* NotificationsInteractor.swift in Sources */,
+				B1A471DB259DBEC2006152C1 /* NotificationsPresenter.swift in Sources */,
 				B1A471A6259D95E4006152C1 /* RequestBasicTableViewCell.swift in Sources */,
 				B149ED68259C4191003C7C46 /* Views.swift in Sources */,
 				B163D1D3259D73240005C731 /* HomePresenter.swift in Sources */,
 				B166B10925982AD800AD6FD6 /* BaseEntity.swift in Sources */,
 				B1428C9A259AE29500A75D9C /* LogInPasswordViewController.swift in Sources */,
+				B1A471D4259DBE92006152C1 /* NotificationsViewController.swift in Sources */,
 				B114ADE4259C38F80052C89D /* SignUpPresenter.swift in Sources */,
 				B1B3A1E9259D88EE0089E41D /* UIImage.swift in Sources */,
 				B1428C9F259AE4C700A75D9C /* LogInSMSViewController.swift in Sources */,
@@ -495,12 +663,16 @@
 				B166B11F25982CB500AD6FD6 /* LaunchScreenPresenter.swift in Sources */,
 				B166B10325982AC300AD6FD6 /* BaseRouter.swift in Sources */,
 				B166B12725982CD600AD6FD6 /* LaunchScreenViewController.swift in Sources */,
+				B1A471B8259DAC17006152C1 /* NewRequestViewController.swift in Sources */,
 				B163D1CE259D73160005C731 /* HomeViewController.swift in Sources */,
 				B114ADD0259AF0890052C89D /* String.swift in Sources */,
 				B1428CA6259AE68A00A75D9C /* LogInSMSPresenter.swift in Sources */,
 				B1A471AE259DA02D006152C1 /* RequestFilters.swift in Sources */,
 				B166B12025982CB500AD6FD6 /* LaunchRouter.swift in Sources */,
+				B1A471E4259DC03A006152C1 /* NotificationTableViewCell.swift in Sources */,
 				B166B0DB259826B800AD6FD6 /* SceneDelegate.swift in Sources */,
+				B1A471BD259DAC25006152C1 /* NewRequestInteractor.swift in Sources */,
+				B1A471C7259DB00B006152C1 /* BloodTypeSelectionButton.swift in Sources */,
 				B166B1382598386900AD6FD6 /* LogInViewController.swift in Sources */,
 				B1428CA3259AE65400A75D9C /* LogInPasswordPresenter.swift in Sources */,
 				B114ADE0259C20880052C89D /* SignUpViewController.swift in Sources */,

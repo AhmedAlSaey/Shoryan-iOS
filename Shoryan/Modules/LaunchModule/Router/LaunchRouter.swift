@@ -115,7 +115,9 @@ class LaunchRouter: BaseRouter {
     }
     
     func launchStartSscreen() {
-        HomeRouter.shared.launchHomePage()
+//        HomeRouter.shared.launchHomePage()
+//        NewRequestRouter.shared.launchNewRequestPage()
+        NotificationsRouter.shared.launchNotifications()
     }
     
     

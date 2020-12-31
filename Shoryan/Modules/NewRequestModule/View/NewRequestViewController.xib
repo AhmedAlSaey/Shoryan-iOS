@@ -1,0 +1,364 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="NewRequestViewController" customModule="Shoryan" customModuleProvider="target">
+            <connections>
+                <outlet property="bloodBankDropdownImage" destination="CNP-cA-JmB" id="eM8-3A-1Dn"/>
+                <outlet property="bloodBankTextField" destination="w7i-kj-4dl" id="xQ0-Mr-Hfe"/>
+                <outlet property="bloodBankView" destination="2U9-yv-mcp" id="joo-ag-8RV"/>
+                <outlet property="minusButton" destination="AgT-Zg-RiR" id="w9G-az-Chy"/>
+                <outlet property="navBarTopConstraint" destination="1S4-mh-qvy" id="G7v-y6-o46"/>
+                <outlet property="navigationBarView" destination="WCS-nN-HoA" id="nnl-Kj-T4w"/>
+                <outlet property="plusButton" destination="7yu-0q-ZN7" id="yiG-Jp-C0I"/>
+                <outlet property="regionDropdownImage" destination="0c5-gm-8JN" id="g7i-bZ-P2x"/>
+                <outlet property="regionTextField" destination="StV-J9-gAV" id="nh5-xg-3Ri"/>
+                <outlet property="regionView" destination="4EM-2b-emG" id="UUo-Ua-ZIw"/>
+                <outlet property="requestButton" destination="FJf-k6-vGp" id="1ww-Z3-q1f"/>
+                <outlet property="stateDropdownImage" destination="lNi-cj-eAr" id="1vr-39-Ci2"/>
+                <outlet property="stateTextField" destination="Msg-Pg-Bfx" id="hye-KR-d6q"/>
+                <outlet property="stateView" destination="rVD-Io-AXX" id="6W9-3Y-p15"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WCS-nN-HoA">
+                    <rect key="frame" x="0.0" y="44" width="414" height="83"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="طلب جديد" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wUY-ql-iMl">
+                            <rect key="frame" x="167.5" y="27.5" width="79.5" height="28"/>
+                            <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="25"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" name="MainRed"/>
+                    <constraints>
+                        <constraint firstItem="wUY-ql-iMl" firstAttribute="centerX" secondItem="WCS-nN-HoA" secondAttribute="centerX" id="MhS-gH-juM"/>
+                        <constraint firstItem="wUY-ql-iMl" firstAttribute="centerY" secondItem="WCS-nN-HoA" secondAttribute="centerY" id="Ozw-od-4KS"/>
+                        <constraint firstAttribute="height" constant="83" id="bDR-rK-Fbv"/>
+                    </constraints>
+                </view>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" contentInsetAdjustmentBehavior="never" translatesAutoresizingMaskIntoConstraints="NO" id="Jhv-eE-H1A">
+                    <rect key="frame" x="0.0" y="127" width="414" height="769"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gGF-kz-9OH">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="868.5"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="يمكنك طلب دم ۳ مرات فقط خلال اليوم " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Evs-30-UeK">
+                                    <rect key="frame" x="90" y="27" width="234" height="56"/>
+                                    <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="25"/>
+                                    <color key="textColor" name="MainRed"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="فصيلة الدم" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vWW-5X-ivD">
+                                    <rect key="frame" x="313.5" y="121" width="75.5" height="25"/>
+                                    <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="22"/>
+                                    <color key="textColor" name="MainRed"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="فصيلة الدم" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nT5-Ql-O8a">
+                                    <rect key="frame" x="313.5" y="324" width="75.5" height="25"/>
+                                    <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="22"/>
+                                    <color key="textColor" name="MainRed"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="فصيلة الدم" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ggn-YC-f4t">
+                                    <rect key="frame" x="313.5" y="482" width="75.5" height="25"/>
+                                    <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="22"/>
+                                    <color key="textColor" name="MainRed"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="zRI-ZA-etf">
+                                    <rect key="frame" x="63" y="166" width="288" height="116"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="0bj-yI-zdm">
+                                            <rect key="frame" x="0.0" y="0.0" width="288" height="43"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1WV-VA-kda" customClass="BloodTypeSelectionButton" customModule="Shoryan" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="0.0" width="57" height="43"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="57" id="dUw-cz-83h"/>
+                                                        <constraint firstAttribute="height" constant="43" id="iFe-BJ-1yK"/>
+                                                    </constraints>
+                                                    <state key="normal" title="A+"/>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UPx-1H-puL" customClass="BloodTypeSelectionButton" customModule="Shoryan" customModuleProvider="target">
+                                                    <rect key="frame" x="77" y="0.0" width="57" height="43"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="57" id="a6S-7P-BZQ"/>
+                                                        <constraint firstAttribute="height" constant="43" id="m4B-Gf-Mhg"/>
+                                                    </constraints>
+                                                    <state key="normal" title="B+"/>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jbe-AF-Bjq" customClass="BloodTypeSelectionButton" customModule="Shoryan" customModuleProvider="target">
+                                                    <rect key="frame" x="154" y="0.0" width="57" height="43"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="57" id="Gsz-33-4CW"/>
+                                                        <constraint firstAttribute="height" constant="43" id="gm1-cM-AhX"/>
+                                                    </constraints>
+                                                    <state key="normal" title="AB+"/>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c9s-2x-jgS" customClass="BloodTypeSelectionButton" customModule="Shoryan" customModuleProvider="target">
+                                                    <rect key="frame" x="231" y="0.0" width="57" height="43"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="57" id="0ub-u7-xmp"/>
+                                                        <constraint firstAttribute="height" constant="43" id="xhe-bF-uPD"/>
+                                                    </constraints>
+                                                    <state key="normal" title="O+"/>
+                                                </button>
+                                            </subviews>
+                                        </stackView>
+                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="Hol-5n-ND3">
+                                            <rect key="frame" x="0.0" y="73" width="288" height="43"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F2j-vK-QMm" customClass="BloodTypeSelectionButton" customModule="Shoryan" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="0.0" width="57" height="43"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="43" id="L59-9J-LZu"/>
+                                                        <constraint firstAttribute="width" constant="57" id="MpF-Z7-lNz"/>
+                                                    </constraints>
+                                                    <state key="normal" title="A-"/>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zTc-eE-FwO" customClass="BloodTypeSelectionButton" customModule="Shoryan" customModuleProvider="target">
+                                                    <rect key="frame" x="77" y="0.0" width="57" height="43"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="43" id="8qz-Ik-U1d"/>
+                                                        <constraint firstAttribute="width" constant="57" id="eRP-wl-F9f"/>
+                                                    </constraints>
+                                                    <state key="normal" title="B-"/>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ziQ-w2-CQw" customClass="BloodTypeSelectionButton" customModule="Shoryan" customModuleProvider="target">
+                                                    <rect key="frame" x="154" y="0.0" width="57" height="43"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="57" id="RtG-c8-7gy"/>
+                                                        <constraint firstAttribute="height" constant="43" id="YVl-ev-9cc"/>
+                                                    </constraints>
+                                                    <state key="normal" title="AB-"/>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BtC-3n-khb" customClass="BloodTypeSelectionButton" customModule="Shoryan" customModuleProvider="target">
+                                                    <rect key="frame" x="231" y="0.0" width="57" height="43"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="57" id="8qR-cz-I4T"/>
+                                                        <constraint firstAttribute="height" constant="43" id="CvL-UO-g29"/>
+                                                    </constraints>
+                                                    <state key="normal" title="O-"/>
+                                                </button>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                </stackView>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XeO-tL-MCA">
+                                    <rect key="frame" x="63" y="382" width="288" height="43"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AgT-Zg-RiR">
+                                            <rect key="frame" x="0.0" y="0.0" width="57" height="43"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="57" id="eL2-CZ-24G"/>
+                                                <constraint firstAttribute="height" constant="43" id="ukc-K8-ODs"/>
+                                            </constraints>
+                                            <state key="normal" title="-">
+                                                <color key="titleColor" name="MainRed"/>
+                                            </state>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7yu-0q-ZN7">
+                                            <rect key="frame" x="231" y="0.0" width="57" height="43"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="43" id="MaE-SR-LJN"/>
+                                                <constraint firstAttribute="width" constant="57" id="r7j-Rg-RZ7"/>
+                                            </constraints>
+                                            <state key="normal" title="+">
+                                                <color key="titleColor" name="MainRed"/>
+                                            </state>
+                                        </button>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FTx-ci-zhv">
+                                            <rect key="frame" x="139" y="11.5" width="10.5" height="20.5"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nmK-be-ZjF">
+                                            <rect key="frame" x="92" y="32" width="104" height="1"/>
+                                            <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="104" id="FE7-4N-6r1"/>
+                                                <constraint firstAttribute="height" constant="1" id="iGS-kZ-Ddx"/>
+                                            </constraints>
+                                        </view>
+                                    </subviews>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="7yu-0q-ZN7" secondAttribute="trailing" id="AXt-CG-Eyf"/>
+                                        <constraint firstItem="AgT-Zg-RiR" firstAttribute="leading" secondItem="XeO-tL-MCA" secondAttribute="leading" id="JZX-yg-sGH"/>
+                                        <constraint firstItem="nmK-be-ZjF" firstAttribute="top" secondItem="FTx-ci-zhv" secondAttribute="bottom" id="OsZ-7k-2ca"/>
+                                        <constraint firstItem="FTx-ci-zhv" firstAttribute="centerX" secondItem="XeO-tL-MCA" secondAttribute="centerX" id="P5z-dg-dAI"/>
+                                        <constraint firstAttribute="bottom" secondItem="AgT-Zg-RiR" secondAttribute="bottom" id="Ydr-76-hUi"/>
+                                        <constraint firstItem="FTx-ci-zhv" firstAttribute="centerY" secondItem="XeO-tL-MCA" secondAttribute="centerY" id="aV0-0q-gxc"/>
+                                        <constraint firstItem="7yu-0q-ZN7" firstAttribute="top" secondItem="XeO-tL-MCA" secondAttribute="top" id="eOd-Nh-CAS"/>
+                                        <constraint firstItem="AgT-Zg-RiR" firstAttribute="top" secondItem="XeO-tL-MCA" secondAttribute="top" id="jcD-d2-KK5"/>
+                                        <constraint firstItem="nmK-be-ZjF" firstAttribute="centerX" secondItem="FTx-ci-zhv" secondAttribute="centerX" id="wfy-uY-jGn"/>
+                                        <constraint firstAttribute="bottom" secondItem="7yu-0q-ZN7" secondAttribute="bottom" id="zhe-xa-6rJ"/>
+                                    </constraints>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rVD-Io-AXX">
+                                    <rect key="frame" x="50" y="542" width="314" height="35.5"/>
+                                    <subviews>
+                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="اختر المحافظة..." textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Msg-Pg-Bfx">
+                                            <rect key="frame" x="44" y="8" width="247" height="19.5"/>
+                                            <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="16"/>
+                                            <textInputTraits key="textInputTraits"/>
+                                        </textField>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iconfinder_nav-arrow-right_-15" translatesAutoresizingMaskIntoConstraints="NO" id="lNi-cj-eAr">
+                                            <rect key="frame" x="16" y="14" width="13" height="7.5"/>
+                                        </imageView>
+                                    </subviews>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="Msg-Pg-Bfx" secondAttribute="trailing" constant="23" id="LIX-3Z-NSH"/>
+                                        <constraint firstItem="lNi-cj-eAr" firstAttribute="leading" secondItem="rVD-Io-AXX" secondAttribute="leading" constant="16" id="QPK-FU-p4d"/>
+                                        <constraint firstItem="lNi-cj-eAr" firstAttribute="centerY" secondItem="rVD-Io-AXX" secondAttribute="centerY" id="S3w-PV-Vfo"/>
+                                        <constraint firstItem="Msg-Pg-Bfx" firstAttribute="top" secondItem="rVD-Io-AXX" secondAttribute="top" constant="8" id="Uc6-iS-jQi"/>
+                                        <constraint firstAttribute="bottom" secondItem="Msg-Pg-Bfx" secondAttribute="bottom" constant="8" id="WbB-j9-kZn"/>
+                                        <constraint firstItem="Msg-Pg-Bfx" firstAttribute="leading" secondItem="lNi-cj-eAr" secondAttribute="trailing" constant="15" id="puW-rn-QTe"/>
+                                    </constraints>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4EM-2b-emG">
+                                    <rect key="frame" x="50" y="605.5" width="314" height="35.5"/>
+                                    <subviews>
+                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="اختر المنطقة..." textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="StV-J9-gAV">
+                                            <rect key="frame" x="44" y="8" width="247" height="19.5"/>
+                                            <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="16"/>
+                                            <textInputTraits key="textInputTraits"/>
+                                        </textField>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iconfinder_nav-arrow-right_-16" translatesAutoresizingMaskIntoConstraints="NO" id="0c5-gm-8JN">
+                                            <rect key="frame" x="16" y="14" width="13" height="7.5"/>
+                                        </imageView>
+                                    </subviews>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="StV-J9-gAV" secondAttribute="trailing" constant="23" id="0We-jA-7Qd"/>
+                                        <constraint firstItem="0c5-gm-8JN" firstAttribute="leading" secondItem="4EM-2b-emG" secondAttribute="leading" constant="16" id="6kd-Pr-eYJ"/>
+                                        <constraint firstItem="StV-J9-gAV" firstAttribute="leading" secondItem="0c5-gm-8JN" secondAttribute="trailing" constant="15" id="Uxf-ec-CSe"/>
+                                        <constraint firstItem="0c5-gm-8JN" firstAttribute="centerY" secondItem="4EM-2b-emG" secondAttribute="centerY" id="VYS-B1-PTC"/>
+                                        <constraint firstItem="StV-J9-gAV" firstAttribute="top" secondItem="4EM-2b-emG" secondAttribute="top" constant="8" id="bTw-mZ-7Vc"/>
+                                        <constraint firstAttribute="bottom" secondItem="StV-J9-gAV" secondAttribute="bottom" constant="8" id="ySj-Hn-xbG"/>
+                                    </constraints>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2U9-yv-mcp">
+                                    <rect key="frame" x="50" y="669" width="314" height="35.5"/>
+                                    <subviews>
+                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="اختر بنك الدم..." textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="w7i-kj-4dl">
+                                            <rect key="frame" x="44" y="8" width="247" height="19.5"/>
+                                            <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="16"/>
+                                            <textInputTraits key="textInputTraits"/>
+                                        </textField>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iconfinder_nav-arrow-right_-16" translatesAutoresizingMaskIntoConstraints="NO" id="CNP-cA-JmB">
+                                            <rect key="frame" x="16" y="14" width="13" height="7.5"/>
+                                        </imageView>
+                                    </subviews>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="w7i-kj-4dl" secondAttribute="bottom" constant="8" id="2na-wJ-25V"/>
+                                        <constraint firstAttribute="trailing" secondItem="w7i-kj-4dl" secondAttribute="trailing" constant="23" id="7Fl-m8-Vh9"/>
+                                        <constraint firstItem="w7i-kj-4dl" firstAttribute="top" secondItem="2U9-yv-mcp" secondAttribute="top" constant="8" id="d32-hk-hln"/>
+                                        <constraint firstItem="w7i-kj-4dl" firstAttribute="leading" secondItem="CNP-cA-JmB" secondAttribute="trailing" constant="15" id="kRw-8o-9xJ"/>
+                                        <constraint firstItem="CNP-cA-JmB" firstAttribute="centerY" secondItem="2U9-yv-mcp" secondAttribute="centerY" id="oO0-aC-MLc"/>
+                                        <constraint firstItem="CNP-cA-JmB" firstAttribute="leading" secondItem="2U9-yv-mcp" secondAttribute="leading" constant="16" id="xBu-By-Lwc"/>
+                                    </constraints>
+                                </view>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FJf-k6-vGp">
+                                    <rect key="frame" x="93.5" y="759.5" width="227" height="54"/>
+                                    <color key="backgroundColor" name="MainRed"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="227" id="Ct2-dx-W2S"/>
+                                        <constraint firstAttribute="height" constant="54" id="Ha8-A2-7wJ"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="17"/>
+                                    <state key="normal" title="طلب دم">
+                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </state>
+                                </button>
+                            </subviews>
+                            <constraints>
+                                <constraint firstItem="zRI-ZA-etf" firstAttribute="leading" secondItem="gGF-kz-9OH" secondAttribute="leading" constant="63" id="19F-Eb-s5F"/>
+                                <constraint firstAttribute="trailing" secondItem="vWW-5X-ivD" secondAttribute="trailing" constant="25" id="336-bE-VSA"/>
+                                <constraint firstItem="rVD-Io-AXX" firstAttribute="top" secondItem="ggn-YC-f4t" secondAttribute="bottom" constant="35" id="3vO-5y-9T3"/>
+                                <constraint firstAttribute="bottom" secondItem="FJf-k6-vGp" secondAttribute="bottom" constant="55" id="9Kh-YB-9Vh"/>
+                                <constraint firstItem="zRI-ZA-etf" firstAttribute="top" secondItem="vWW-5X-ivD" secondAttribute="bottom" constant="20" id="9T6-Ef-f4D"/>
+                                <constraint firstItem="rVD-Io-AXX" firstAttribute="leading" secondItem="gGF-kz-9OH" secondAttribute="leading" constant="50" id="Ada-0O-aoe"/>
+                                <constraint firstItem="XeO-tL-MCA" firstAttribute="leading" secondItem="gGF-kz-9OH" secondAttribute="leading" constant="63" id="CXW-OQ-sHc"/>
+                                <constraint firstAttribute="trailing" secondItem="Evs-30-UeK" secondAttribute="trailing" constant="90" id="D6M-ox-GSH"/>
+                                <constraint firstAttribute="trailing" secondItem="XeO-tL-MCA" secondAttribute="trailing" constant="63" id="Gth-5o-FAI"/>
+                                <constraint firstAttribute="trailing" secondItem="zRI-ZA-etf" secondAttribute="trailing" constant="63" id="KNQ-ai-lRb"/>
+                                <constraint firstItem="vWW-5X-ivD" firstAttribute="top" secondItem="Evs-30-UeK" secondAttribute="bottom" constant="38" id="NNt-5a-Z8a"/>
+                                <constraint firstItem="XeO-tL-MCA" firstAttribute="top" secondItem="nT5-Ql-O8a" secondAttribute="bottom" constant="33" id="NTk-jE-BYA"/>
+                                <constraint firstItem="ggn-YC-f4t" firstAttribute="top" secondItem="XeO-tL-MCA" secondAttribute="bottom" constant="57" id="PgP-9X-3Wu"/>
+                                <constraint firstItem="FJf-k6-vGp" firstAttribute="centerX" secondItem="gGF-kz-9OH" secondAttribute="centerX" id="R0N-O3-jC1"/>
+                                <constraint firstItem="FJf-k6-vGp" firstAttribute="top" secondItem="2U9-yv-mcp" secondAttribute="bottom" constant="55" id="TFI-f5-Smg"/>
+                                <constraint firstItem="2U9-yv-mcp" firstAttribute="leading" secondItem="4EM-2b-emG" secondAttribute="leading" id="WgA-0M-SJY"/>
+                                <constraint firstItem="Evs-30-UeK" firstAttribute="top" secondItem="gGF-kz-9OH" secondAttribute="top" constant="27" id="d3n-WK-rbg"/>
+                                <constraint firstItem="4EM-2b-emG" firstAttribute="top" secondItem="rVD-Io-AXX" secondAttribute="bottom" constant="28" id="e4C-AN-MAR"/>
+                                <constraint firstItem="nT5-Ql-O8a" firstAttribute="trailing" secondItem="vWW-5X-ivD" secondAttribute="trailing" id="fHw-eh-3E3"/>
+                                <constraint firstItem="2U9-yv-mcp" firstAttribute="top" secondItem="4EM-2b-emG" secondAttribute="bottom" constant="28" id="kbN-HD-5Pr"/>
+                                <constraint firstItem="2U9-yv-mcp" firstAttribute="trailing" secondItem="4EM-2b-emG" secondAttribute="trailing" id="qhQ-rU-Hse"/>
+                                <constraint firstItem="4EM-2b-emG" firstAttribute="trailing" secondItem="rVD-Io-AXX" secondAttribute="trailing" id="rgG-zT-XQm"/>
+                                <constraint firstItem="ggn-YC-f4t" firstAttribute="trailing" secondItem="nT5-Ql-O8a" secondAttribute="trailing" id="sjW-Xl-dHw"/>
+                                <constraint firstAttribute="trailing" secondItem="rVD-Io-AXX" secondAttribute="trailing" constant="50" id="uYJ-qV-Fkq"/>
+                                <constraint firstItem="4EM-2b-emG" firstAttribute="leading" secondItem="rVD-Io-AXX" secondAttribute="leading" id="x7a-Ka-6lg"/>
+                                <constraint firstItem="nT5-Ql-O8a" firstAttribute="top" secondItem="zRI-ZA-etf" secondAttribute="bottom" constant="42" id="zMJ-Td-jlo"/>
+                                <constraint firstItem="Evs-30-UeK" firstAttribute="leading" secondItem="gGF-kz-9OH" secondAttribute="leading" constant="90" id="zmk-AI-2LG"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="2hh-q4-9om" firstAttribute="trailing" secondItem="gGF-kz-9OH" secondAttribute="trailing" id="22h-nM-rc3"/>
+                        <constraint firstItem="gGF-kz-9OH" firstAttribute="top" secondItem="2hh-q4-9om" secondAttribute="top" id="BkN-ox-VOM"/>
+                        <constraint firstItem="gGF-kz-9OH" firstAttribute="leading" secondItem="2hh-q4-9om" secondAttribute="leading" id="ZND-4T-skl"/>
+                        <constraint firstItem="gGF-kz-9OH" firstAttribute="width" secondItem="zbT-LJ-yr2" secondAttribute="width" id="vNP-eQ-b8J"/>
+                        <constraint firstItem="2hh-q4-9om" firstAttribute="bottom" secondItem="gGF-kz-9OH" secondAttribute="bottom" id="zjG-0g-q2T"/>
+                    </constraints>
+                    <viewLayoutGuide key="contentLayoutGuide" id="2hh-q4-9om"/>
+                    <viewLayoutGuide key="frameLayoutGuide" id="zbT-LJ-yr2"/>
+                </scrollView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="WCS-nN-HoA" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="1S4-mh-qvy"/>
+                <constraint firstItem="Jhv-eE-H1A" firstAttribute="top" secondItem="WCS-nN-HoA" secondAttribute="bottom" id="5ky-kG-N8x"/>
+                <constraint firstAttribute="bottom" secondItem="Jhv-eE-H1A" secondAttribute="bottom" id="Ehm-SA-gSs"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="WCS-nN-HoA" secondAttribute="trailing" id="KQo-Y6-GRE"/>
+                <constraint firstItem="WCS-nN-HoA" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Nab-05-IYs"/>
+                <constraint firstAttribute="trailing" secondItem="Jhv-eE-H1A" secondAttribute="trailing" id="iqr-Vq-ith"/>
+                <constraint firstItem="Jhv-eE-H1A" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="uJp-f7-FZ3"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="137.68115942028987" y="79.6875"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="iconfinder_nav-arrow-right_-15" width="13" height="7.5"/>
+        <image name="iconfinder_nav-arrow-right_-16" width="13" height="7.5"/>
+        <namedColor name="MainRed">
+            <color red="0.6119999885559082" green="0.067000001668930054" blue="0.067000001668930054" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="opaqueSeparatorColor">
+            <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
