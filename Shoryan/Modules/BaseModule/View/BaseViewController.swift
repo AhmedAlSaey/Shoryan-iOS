@@ -16,6 +16,11 @@ class BaseViewController: UIViewController, UIGestureRecognizerDelegate {
         super.viewDidLoad()
         presenter?.viewDidLoad()
         localizeStrings()
+        
+        let backButton = UIBarButtonItem()
+         backButton.title = "رجوع"
+         self.navigationController?.navigationBar.topItem?.backBarButtonItem = backButton
+        makeNavigationBarTransparent()
     }
     
     func localizeStrings() {

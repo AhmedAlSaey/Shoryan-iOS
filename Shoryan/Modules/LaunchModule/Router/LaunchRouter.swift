@@ -40,6 +40,30 @@ class LaunchRouter: BaseRouter {
         return viewController
     }
     
+    func createLogInWithPassword(phoneNumber: String) -> UIViewController {
+        
+        let viewController = LogInPasswordViewController()
+        
+        let presenter = LogInPasswordPresenter()
+        presenter.phoneNumber = phoneNumber
+        viewController.presenter = presenter
+        viewController.presenter?.view = viewController
+        
+        return viewController
+    }
+    
+    func createLogInWithSMS(phoneNumber: String) -> UIViewController {
+        
+        let viewController = LogInSMSViewController()
+        
+        let presenter = LogInSMSPresenter()
+        presenter.phoneNumber = phoneNumber
+        viewController.presenter = presenter
+        viewController.presenter?.view = viewController
+        
+        return viewController
+    }
+    
     func createAuthorization() -> UIViewController {
         
         let viewController = AuthorizationViewController()
@@ -52,9 +76,17 @@ class LaunchRouter: BaseRouter {
         return viewController
     }
     
-    func launchHomePage() {
+    func createSignUp() -> UIViewController{
+        let viewController = SignUpViewController()
         
+        let presenter = SignUpPresenter()
+        
+        viewController.presenter = presenter
+        viewController.presenter?.view = viewController
+        
+        return viewController
     }
+    
     
     func launchAuthorizationPage() {
         let nc = embedInNavigationController(viewController: createAuthorization())
@@ -65,6 +97,25 @@ class LaunchRouter: BaseRouter {
     func pushLogInPage() {
         let vc = createLogIn()
         navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    func pushLogInWithPasswordPage(phoneNumber: String) {
+        let vc = createLogInWithPassword(phoneNumber: phoneNumber)
+        navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    func pushLogInWithSMSPage(phoneNumber: String) {
+        let vc = createLogInWithSMS(phoneNumber: phoneNumber)
+        navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    func pushSignUp() {
+        let vc = createSignUp()
+        navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    func launchStartSscreen() {
+        HomeRouter.shared.launchHomePage()
     }
     
     

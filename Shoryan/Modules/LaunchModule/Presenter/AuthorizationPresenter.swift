@@ -16,6 +16,6 @@ class AuthorizationPresenter: BasePresenter {
         LaunchRouter.shared.pushLogInPage()
     }
     func signUpButtonClicked(){
-        
+        LaunchRouter.shared.pushSignUp()
     }
 }

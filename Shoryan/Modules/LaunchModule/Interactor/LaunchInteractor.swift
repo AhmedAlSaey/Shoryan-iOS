@@ -21,4 +21,17 @@ class LaunchInteractor {
     func initializeApp() {
         ThemeConstants.globalApplicationTheming()
     }
+    
+    func logInWithPassword(phoneNumber: String, password: String, successHandler: () -> (), failHandler: () -> ()){
+        successHandler()
+    }
+    
+    func logInWithCode(phoneNumber: String, code: String, successHandler: () -> (), failHandler: () -> ()){
+        successHandler()
+    }
+    
+    func signUp(successHandler: () -> (), failHandler: () -> ()){
+        successHandler()
+    }
+
 }

@@ -12,7 +12,7 @@ struct ThemeConstants {
     // MARK: - Colors
     
     // Main
-    static let colorShoryanMain               = UIColor(red:156, green:17, blue:17, alpha:1)
+    static let colorShoryanMain               = UIColor(red:0.61, green:0.06, blue:0.06, alpha:1)
     
     // Grey
     // Grays
@@ -58,11 +58,11 @@ struct ThemeConstants {
 //
 //        // Bars
         UIBarButtonItem.appearance().tintColor = .white
-//
+        
 //        // Tab Bar
 //        UITabBar.appearance().isTranslucent = false
 //        UITabBar.appearance().tintColor = ThemeConstants.colorHidsiMain
-//        UITabBar.appearance().barTintColor = .white
+//        µUITabBar.appearance().barTintColor = .white
 //        if #available(iOS 10.0, *) {
 //            UITabBar.appearance().unselectedItemTintColor = ThemeConstants.colorMediumGray
 //        }

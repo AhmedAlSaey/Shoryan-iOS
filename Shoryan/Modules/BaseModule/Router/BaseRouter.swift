@@ -42,7 +42,7 @@ class BaseRouter: NSObject {
         transition.duration = 0.5
         transition.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeInEaseOut)
         transition.type = .push
-        transition.subtype = .fromLeft
+        transition.subtype = .fromRight
         window?.rootViewController?.view.layer.add(transition, forKey: "transition")
         rootViewController.view.layer.add(transition, forKey: "transition")
         window?.rootViewController?.view.isHidden = true

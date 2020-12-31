@@ -12,6 +12,12 @@ class LogInPresenter: BasePresenter {
     override func viewDidLoad() {
         
     }
+    func logInWithSMSClicked(phoneNumber: String){
+        LaunchRouter.shared.pushLogInWithSMSPage(phoneNumber: phoneNumber)
+    }
+    func logInWithPasswordClicked(phoneNumber: String){
+        LaunchRouter.shared.pushLogInWithPasswordPage(phoneNumber: phoneNumber)
+    }
     
 }
 
