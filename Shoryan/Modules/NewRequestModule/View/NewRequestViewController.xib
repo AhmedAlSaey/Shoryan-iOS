@@ -12,6 +12,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="NewRequestViewController" customModule="Shoryan" customModuleProvider="target">
             <connections>
+                <outlet property="aPositiveButton" destination="1WV-VA-kda" id="Lxq-tM-gTt"/>
                 <outlet property="bloodBankDropdownImage" destination="CNP-cA-JmB" id="eM8-3A-1Dn"/>
                 <outlet property="bloodBankTextField" destination="w7i-kj-4dl" id="xQ0-Mr-Hfe"/>
                 <outlet property="bloodBankView" destination="2U9-yv-mcp" id="joo-ag-8RV"/>
@@ -69,14 +70,14 @@
                                     <color key="textColor" name="MainRed"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="فصيلة الدم" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nT5-Ql-O8a">
-                                    <rect key="frame" x="313.5" y="324" width="75.5" height="25"/>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="عدد الوحدات" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nT5-Ql-O8a">
+                                    <rect key="frame" x="297.5" y="324" width="91.5" height="25"/>
                                     <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="22"/>
                                     <color key="textColor" name="MainRed"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="فصيلة الدم" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ggn-YC-f4t">
-                                    <rect key="frame" x="313.5" y="482" width="75.5" height="25"/>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="اختر المكان" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ggn-YC-f4t">
+                                    <rect key="frame" x="307" y="482" width="82" height="25"/>
                                     <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="22"/>
                                     <color key="textColor" name="MainRed"/>
                                     <nil key="highlightedColor"/>
@@ -94,6 +95,9 @@
                                                         <constraint firstAttribute="height" constant="43" id="iFe-BJ-1yK"/>
                                                     </constraints>
                                                     <state key="normal" title="A+"/>
+                                                    <connections>
+                                                        <action selector="bloodSelectionButtonPressed:" destination="-1" eventType="touchUpInside" id="clz-QS-eG8"/>
+                                                    </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UPx-1H-puL" customClass="BloodTypeSelectionButton" customModule="Shoryan" customModuleProvider="target">
                                                     <rect key="frame" x="77" y="0.0" width="57" height="43"/>

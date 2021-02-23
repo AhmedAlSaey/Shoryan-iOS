@@ -25,11 +25,12 @@ class NewRequestRouter: BaseRouter {
         return viewController
     }
     
-    func launchNewRequestPage() {
+    func createNewRequestEmbeddedInViewController() -> UIViewController {
         let nc = embedInNavigationController(viewController: createNewRequest())
         navigationController = nc
-        
-        self.initializeWindowWithNavigationControllerAnimation(rootViewController: nc)
+        return nc
     }
+    
+    
     
 }

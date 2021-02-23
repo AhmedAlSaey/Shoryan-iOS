@@ -21,6 +21,7 @@ class BaseViewController: UIViewController, UIGestureRecognizerDelegate {
          backButton.title = "رجوع"
          self.navigationController?.navigationBar.topItem?.backBarButtonItem = backButton
         makeNavigationBarTransparent()
+        hideKeyboardWhenTappedAround()
     }
     
     func localizeStrings() {

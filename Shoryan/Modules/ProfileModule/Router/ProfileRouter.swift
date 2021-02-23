@@ -1,25 +1,24 @@
 //
-//  HomeRouter.swift
+//  ProfileRouter.swift
 //  Shoryan
 //
 //  Created by Ahmed AlSai on 31/12/2020.
 //
 
-
 import UIKit
 
-class HomeRouter: BaseRouter {
+class ProfileRouter: BaseRouter {
     
     
     var navigationController: UINavigationController?
     
-    static let shared = HomeRouter()
+    static let shared = ProfileRouter()
     
     
-    func createHomePage() -> UIViewController {
-        let viewController = HomeViewController()
+    func createProfile() -> UIViewController {
+        let viewController = ProfileViewController()
         
-        let presenter = HomePresenter()
+        let presenter = ProfilePresenter()
         
         viewController.presenter = presenter
         viewController.presenter?.view = viewController
@@ -27,12 +26,10 @@ class HomeRouter: BaseRouter {
         return viewController
     }
     
-    func createHomePageEmbeddedInViewController() -> UIViewController {
-        let nc = embedInNavigationController(viewController: createHomePage())
+    func createProfileEmbeddedInViewController() -> UIViewController {
+        let nc = embedInNavigationController(viewController: createProfile())
         navigationController = nc
         return nc
     }
-    
-    
     
 }

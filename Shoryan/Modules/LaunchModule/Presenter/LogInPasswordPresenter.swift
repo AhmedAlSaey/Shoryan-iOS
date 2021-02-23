@@ -16,7 +16,7 @@ class LogInPasswordPresenter: BasePresenter {
     func didClickContinueFromPasswordLogIn(withPassword password: String){
         guard let phoneNumber = phoneNumber else {fatalError()}
         LaunchInteractor.shared.logInWithPassword(phoneNumber: phoneNumber, password: password, successHandler: {
-            LaunchRouter.shared.launchStartSscreen()
+            LaunchRouter.shared.launchStartScreen()
         }, failHandler: {
             
         })

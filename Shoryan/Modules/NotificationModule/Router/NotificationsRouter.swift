@@ -26,11 +26,10 @@ class NotificationsRouter: BaseRouter {
         return viewController
     }
     
-    func launchNotifications() {
-        let nc = embedInNavigationController(viewController: NotificationsViewController())
+    func createNotificationsEmbeddedInViewController() -> UIViewController {
+        let nc = embedInNavigationController(viewController: createNotifications())
         navigationController = nc
-        
-        self.initializeWindowWithNavigationControllerAnimation(rootViewController: nc)
+        return nc
     }
     
 }

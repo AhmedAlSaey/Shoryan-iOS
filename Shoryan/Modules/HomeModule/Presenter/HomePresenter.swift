@@ -10,9 +10,11 @@ import Foundation
 class HomePresenter: BasePresenter {
 
     override func viewDidLoad() {
-        let requests = HomeInteractor.shared.getRequestList()
+        
+        let ongoingRequests = HomeInteractor.shared.getOngoingRequestsList()
         if let view = view as? HomeViewController {
-            view.requests = requests
+            view.requests = ongoingRequests
         }
     }
 }
+

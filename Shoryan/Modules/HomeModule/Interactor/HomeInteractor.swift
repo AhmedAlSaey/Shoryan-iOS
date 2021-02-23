@@ -8,11 +8,15 @@
 
 import Foundation
 
-class HomeInteractor {
+class HomeInteractor: BaseInteractor{
     
     static let shared = HomeInteractor()
     
-    func getRequestList() -> [SimpleRequest]{
+    func loadHomeData(){
+        
+    }
+    
+    func getOngoingRequestsList() -> [SimpleRequest]{
         var requests = [SimpleRequest]()
         
         for _ in 1...5 {
@@ -22,6 +26,12 @@ class HomeInteractor {
         
         return requests
     }
+    
+    func getPendingRequest() {
+        
+    }
+    
+    
     
 
 }

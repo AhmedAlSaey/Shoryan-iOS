@@ -24,8 +24,6 @@ class LogInViewController: BaseViewController {
         continuePasswordButton.layer.cornerRadius = continuePasswordButton.frame.size.height / 2
         continueSMSButton.layer.cornerRadius = continueSMSButton.frame.size.height / 2
         
-        hideKeyboardWhenTappedAround()
-        
     }
 
 

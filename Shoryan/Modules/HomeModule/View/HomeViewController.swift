@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SnapKit
 
 class HomeViewController: BaseViewController {
     
@@ -48,11 +49,11 @@ class HomeViewController: BaseViewController {
     
     func configureCards() {
         
-        configureCard(target: leftImageView, targetContainer: leftImageViewContainer, topImageTitle: "Rectangle 1446", bottomImageTitle: "label-hands-inscription-follow-instructions-3.png") {
+        configureCard(target: leftImageView, targetContainer: leftImageViewContainer, topImageTitle: "Rectangle 1446", bottomImageTitle: "label-hands-inscription-follow-instructions-3.png", cardText: "طلباتى") {
             // TODO: - Talabaty click action
         }
         
-        configureCard(target: rightImageView, targetContainer: rightImageViewContainer, topImageTitle: "Rectangle 1446", bottomImageTitle: "label-hands-inscription-follow-instructions-3.png") {
+        configureCard(target: rightImageView, targetContainer: rightImageViewContainer, topImageTitle: "Rectangle 1446", bottomImageTitle: "label-hands-inscription-follow-instructions-1", cardText: "في انتظارك") {
             // TODO: - Fe entzarek click action
         }
     }
@@ -66,9 +67,11 @@ class HomeViewController: BaseViewController {
     func configureTableView(){
         requestsTableView.delegate = self
         requestsTableView.dataSource = self
+        
+        requestsTableView.register(UINib(nibName: "RequestBasicTableViewCell", bundle: nil), forCellReuseIdentifier: "RequestCell")
     }
     
-    func configureCard(target: UIImageView, targetContainer: UIView, topImageTitle: String, bottomImageTitle: String, clickAction: () -> ()) {
+    func configureCard(target: UIImageView, targetContainer: UIView, topImageTitle: String, bottomImageTitle: String, cardText: String, clickAction: () -> ()) {
         let topImage = UIImage(named: topImageTitle)
         let bottomImage = UIImage(named: bottomImageTitle)
 
@@ -86,7 +89,18 @@ class HomeViewController: BaseViewController {
         target.image = newImage
         target.applyshadowWithCorner(containerView: targetContainer, cornerRadius: 24)
         
-        requestsTableView.register(UINib(nibName: "RequestBasicTableViewCell", bundle: nil), forCellReuseIdentifier: "RequestCell")
+        let textLabel = UILabel()
+        textLabel.text = cardText
+        textLabel.textAlignment = .center
+        textLabel.font = UIFont(name:"Arial",size:18)
+        textLabel.textColor = .white
+        targetContainer.addSubview(textLabel)
+        textLabel.snp.makeConstraints { (make) -> Void in
+            make.bottom.equalToSuperview().offset(-7)
+            make.left.equalToSuperview().offset(10)
+            make.right.equalToSuperview().offset(-10)
+        }
+        
         
     }
     

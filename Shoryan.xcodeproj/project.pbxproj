@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		116B702154CEEC8BA4DC3E8A /* Pods_Shoryan.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEF183AFF4350C40B2B48A37 /* Pods_Shoryan.framework */; };
 		B114ADD0259AF0890052C89D /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = B114ADCF259AF0890052C89D /* String.swift */; };
 		B114ADDB259AFF4E0052C89D /* UnderlinedUITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = B114ADDA259AFF4E0052C89D /* UnderlinedUITextField.swift */; };
 		B114ADE0259C20880052C89D /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B114ADDE259C20880052C89D /* SignUpViewController.swift */; };
@@ -63,10 +64,19 @@
 		B1A471DE259DBECC006152C1 /* NotificationsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A471DD259DBECC006152C1 /* NotificationsRouter.swift */; };
 		B1A471E4259DC03A006152C1 /* NotificationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A471E2259DC03A006152C1 /* NotificationTableViewCell.swift */; };
 		B1A471E5259DC03A006152C1 /* NotificationTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B1A471E3259DC03A006152C1 /* NotificationTableViewCell.xib */; };
+		B1A471F1259DC764006152C1 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A471EF259DC764006152C1 /* ProfileViewController.swift */; };
+		B1A471F2259DC764006152C1 /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B1A471F0259DC764006152C1 /* ProfileViewController.xib */; };
+		B1A471F5259DC78A006152C1 /* ProfileInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A471F4259DC78A006152C1 /* ProfileInteractor.swift */; };
+		B1A471F8259DC792006152C1 /* ProfileRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A471F7259DC792006152C1 /* ProfileRouter.swift */; };
+		B1A471FB259DC79B006152C1 /* ProfilePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A471FA259DC79B006152C1 /* ProfilePresenter.swift */; };
+		B1A471FF259DDCF6006152C1 /* MainTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A471FE259DDCF6006152C1 /* MainTabBarViewController.swift */; };
+		B1A47203259DF5FD006152C1 /* LaunchModuleAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A47202259DF5FD006152C1 /* LaunchModuleAPIManager.swift */; };
 		B1B3A1E9259D88EE0089E41D /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B3A1E8259D88EE0089E41D /* UIImage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		38B1791A66AF9DEBE0F616E8 /* Pods-Shoryan.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Shoryan.debug.xcconfig"; path = "Target Support Files/Pods-Shoryan/Pods-Shoryan.debug.xcconfig"; sourceTree = "<group>"; };
+		8B6D1215174CF978C1FB5C42 /* Pods-Shoryan.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Shoryan.release.xcconfig"; path = "Target Support Files/Pods-Shoryan/Pods-Shoryan.release.xcconfig"; sourceTree = "<group>"; };
 		B114ADCF259AF0890052C89D /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		B114ADDA259AFF4E0052C89D /* UnderlinedUITextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnderlinedUITextField.swift; sourceTree = "<group>"; };
 		B114ADDE259C20880052C89D /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
@@ -125,7 +135,16 @@
 		B1A471DD259DBECC006152C1 /* NotificationsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsRouter.swift; sourceTree = "<group>"; };
 		B1A471E2259DC03A006152C1 /* NotificationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationTableViewCell.swift; sourceTree = "<group>"; };
 		B1A471E3259DC03A006152C1 /* NotificationTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NotificationTableViewCell.xib; sourceTree = "<group>"; };
+		B1A471EF259DC764006152C1 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		B1A471F0259DC764006152C1 /* ProfileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileViewController.xib; sourceTree = "<group>"; };
+		B1A471F4259DC78A006152C1 /* ProfileInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileInteractor.swift; sourceTree = "<group>"; };
+		B1A471F7259DC792006152C1 /* ProfileRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileRouter.swift; sourceTree = "<group>"; };
+		B1A471FA259DC79B006152C1 /* ProfilePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePresenter.swift; sourceTree = "<group>"; };
+		B1A471FE259DDCF6006152C1 /* MainTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarViewController.swift; sourceTree = "<group>"; };
+		B1A47202259DF5FD006152C1 /* LaunchModuleAPIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchModuleAPIManager.swift; sourceTree = "<group>"; };
 		B1B3A1E8259D88EE0089E41D /* UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
+		B1B5051125DDF9CC0040786A /* Shoryan.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Shoryan.entitlements; sourceTree = "<group>"; };
+		CEF183AFF4350C40B2B48A37 /* Pods_Shoryan.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Shoryan.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,12 +152,31 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				116B702154CEEC8BA4DC3E8A /* Pods_Shoryan.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1BCB84193A40CED0CFCCD74B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				38B1791A66AF9DEBE0F616E8 /* Pods-Shoryan.debug.xcconfig */,
+				8B6D1215174CF978C1FB5C42 /* Pods-Shoryan.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		5FDB45DD35D0CDB742476FC8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CEF183AFF4350C40B2B48A37 /* Pods_Shoryan.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		B114ADCD259AF0380052C89D /* SharedModule */ = {
 			isa = PBXGroup;
 			children = (
@@ -257,6 +295,8 @@
 			children = (
 				B166B0D7259826B800AD6FD6 /* Shoryan */,
 				B166B0D6259826B800AD6FD6 /* Products */,
+				1BCB84193A40CED0CFCCD74B /* Pods */,
+				5FDB45DD35D0CDB742476FC8 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -271,6 +311,7 @@
 		B166B0D7259826B800AD6FD6 /* Shoryan */ = {
 			isa = PBXGroup;
 			children = (
+				B1B5051125DDF9CC0040786A /* Shoryan.entitlements */,
 				B166B0F22598276C00AD6FD6 /* App */,
 				B166B0ED259826C800AD6FD6 /* Modules */,
 				B166B0EE259826F700AD6FD6 /* Resouces */,
@@ -282,8 +323,8 @@
 		B166B0ED259826C800AD6FD6 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				B1A471E7259DC6FD006152C1 /* ProfileModule */,
 				B1A471CC259DBE55006152C1 /* NotificationModule */,
-				B1A471CA259DBD0C006152C1 /* NotificationsModule */,
 				B1A471B0259DABD6006152C1 /* NewRequestModule */,
 				B114ADCD259AF0380052C89D /* SharedModule */,
 				B149ED6A259C49BB003C7C46 /* HomeModule */,
@@ -387,6 +428,7 @@
 		B166B12425982CC200AD6FD6 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				B1A47201259DF5DF006152C1 /* Managers */,
 				B114ADD8259AFF1E0052C89D /* Helper */,
 				B166B12525982CD600AD6FD6 /* LaunchScreenViewController.swift */,
 				B166B12625982CD600AD6FD6 /* LaunchScreenViewController.xib */,
@@ -400,6 +442,7 @@
 				B1428C9E259AE4C700A75D9C /* LogInSMSViewController.xib */,
 				B114ADDE259C20880052C89D /* SignUpViewController.swift */,
 				B114ADDF259C20880052C89D /* SignUpViewController.xib */,
+				B1A471FE259DDCF6006152C1 /* MainTabBarViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -487,13 +530,6 @@
 			path = Helper;
 			sourceTree = "<group>";
 		};
-		B1A471CA259DBD0C006152C1 /* NotificationsModule */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = NotificationsModule;
-			sourceTree = "<group>";
-		};
 		B1A471CC259DBE55006152C1 /* NotificationModule */ = {
 			isa = PBXGroup;
 			children = (
@@ -556,6 +592,66 @@
 			path = Cells;
 			sourceTree = "<group>";
 		};
+		B1A471E7259DC6FD006152C1 /* ProfileModule */ = {
+			isa = PBXGroup;
+			children = (
+				B1A471ED259DC736006152C1 /* Entity */,
+				B1A471EB259DC721006152C1 /* Presenter */,
+				B1A471EA259DC711006152C1 /* Router */,
+				B1A471E9259DC70D006152C1 /* Interactor */,
+				B1A471E8259DC708006152C1 /* View */,
+			);
+			path = ProfileModule;
+			sourceTree = "<group>";
+		};
+		B1A471E8259DC708006152C1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B1A471EF259DC764006152C1 /* ProfileViewController.swift */,
+				B1A471F0259DC764006152C1 /* ProfileViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B1A471E9259DC70D006152C1 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				B1A471F4259DC78A006152C1 /* ProfileInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		B1A471EA259DC711006152C1 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				B1A471F7259DC792006152C1 /* ProfileRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		B1A471EB259DC721006152C1 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				B1A471FA259DC79B006152C1 /* ProfilePresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		B1A471ED259DC736006152C1 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		B1A47201259DF5DF006152C1 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				B1A47202259DF5FD006152C1 /* LaunchModuleAPIManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -563,9 +659,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B166B0E9259826BA00AD6FD6 /* Build configuration list for PBXNativeTarget "Shoryan" */;
 			buildPhases = (
+				432DA193A5597448D2BDB84E /* [CP] Check Pods Manifest.lock */,
 				B166B0D1259826B800AD6FD6 /* Sources */,
 				B166B0D2259826B800AD6FD6 /* Frameworks */,
 				B166B0D3259826B800AD6FD6 /* Resources */,
+				B06876EE0F3C3D28DDC67D57 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -614,6 +712,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B1A471F2259DC764006152C1 /* ProfileViewController.xib in Resources */,
 				B166B1392598386900AD6FD6 /* LogInViewController.xib in Resources */,
 				B1428CA0259AE4C700A75D9C /* LogInSMSViewController.xib in Resources */,
 				B1428C9225985AB300A75D9C /* AuthorizationViewController.xib in Resources */,
@@ -632,6 +731,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		432DA193A5597448D2BDB84E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Shoryan-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B06876EE0F3C3D28DDC67D57 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Shoryan/Pods-Shoryan-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Shoryan/Pods-Shoryan-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Shoryan/Pods-Shoryan-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		B166B0D1259826B800AD6FD6 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -647,6 +788,8 @@
 				B163D1D6259D732D0005C731 /* HomeRouter.swift in Sources */,
 				B166B12225982CB500AD6FD6 /* LaunchInteractor.swift in Sources */,
 				B1428C9125985AB300A75D9C /* AuthorizationViewController.swift in Sources */,
+				B1A471F5259DC78A006152C1 /* ProfileInteractor.swift in Sources */,
+				B1A47203259DF5FD006152C1 /* LaunchModuleAPIManager.swift in Sources */,
 				B1A471C3259DAC44006152C1 /* NewRequestRouter.swift in Sources */,
 				B1A471D8259DBE9C006152C1 /* NotificationsInteractor.swift in Sources */,
 				B1A471DB259DBEC2006152C1 /* NotificationsPresenter.swift in Sources */,
@@ -662,6 +805,7 @@
 				B1A471AB259D9F38006152C1 /* SimpleRequest.swift in Sources */,
 				B166B11F25982CB500AD6FD6 /* LaunchScreenPresenter.swift in Sources */,
 				B166B10325982AC300AD6FD6 /* BaseRouter.swift in Sources */,
+				B1A471FB259DC79B006152C1 /* ProfilePresenter.swift in Sources */,
 				B166B12725982CD600AD6FD6 /* LaunchScreenViewController.swift in Sources */,
 				B1A471B8259DAC17006152C1 /* NewRequestViewController.swift in Sources */,
 				B163D1CE259D73160005C731 /* HomeViewController.swift in Sources */,
@@ -673,14 +817,17 @@
 				B166B0DB259826B800AD6FD6 /* SceneDelegate.swift in Sources */,
 				B1A471BD259DAC25006152C1 /* NewRequestInteractor.swift in Sources */,
 				B1A471C7259DB00B006152C1 /* BloodTypeSelectionButton.swift in Sources */,
+				B1A471FF259DDCF6006152C1 /* MainTabBarViewController.swift in Sources */,
 				B166B1382598386900AD6FD6 /* LogInViewController.swift in Sources */,
 				B1428CA3259AE65400A75D9C /* LogInPasswordPresenter.swift in Sources */,
 				B114ADE0259C20880052C89D /* SignUpViewController.swift in Sources */,
 				B1428C8D2598564600A75D9C /* ThemeConstants.swift in Sources */,
 				B114ADDB259AFF4E0052C89D /* UnderlinedUITextField.swift in Sources */,
 				B166B0FD259828D500AD6FD6 /* BaseViewController.swift in Sources */,
+				B1A471F1259DC764006152C1 /* ProfileViewController.swift in Sources */,
 				B166B10625982ACD00AD6FD6 /* BaseInteractor.swift in Sources */,
 				B166B10C25982BD700AD6FD6 /* BaseError.swift in Sources */,
+				B1A471F8259DC792006152C1 /* ProfileRouter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -816,9 +963,12 @@
 		};
 		B166B0EA259826BA00AD6FD6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 38B1791A66AF9DEBE0F616E8 /* Pods-Shoryan.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Shoryan/Shoryan.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5R6B5V8RQU;
 				INFOPLIST_FILE = "Shoryan/Supporting Files/Info.plist";
@@ -828,6 +978,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.ahmedalsai.Shoryan;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -835,9 +986,12 @@
 		};
 		B166B0EB259826BA00AD6FD6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8B6D1215174CF978C1FB5C42 /* Pods-Shoryan.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Shoryan/Shoryan.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5R6B5V8RQU;
 				INFOPLIST_FILE = "Shoryan/Supporting Files/Info.plist";
@@ -847,6 +1001,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.ahmedalsai.Shoryan;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};

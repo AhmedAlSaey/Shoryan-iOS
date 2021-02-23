@@ -30,8 +30,12 @@ class LaunchInteractor {
         successHandler()
     }
     
-    func signUp(successHandler: () -> (), failHandler: () -> ()){
+    func signUp(fullName: String, phoneNumber: String, birthDate: String, bloodType: String, address: String, password: String, passwordConfirmation: String, successHandler: () -> (), failHandler: () -> ()){
         successHandler()
+    }
+    
+    func getBloodTypes() -> [String] {
+        return ["A+", "A-", "B+", "B-", "AB+", "AB-", "O+", "O-"]
     }
 
 }

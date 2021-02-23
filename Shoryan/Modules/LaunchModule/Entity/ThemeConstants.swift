@@ -60,19 +60,19 @@ struct ThemeConstants {
         UIBarButtonItem.appearance().tintColor = .white
         
 //        // Tab Bar
-//        UITabBar.appearance().isTranslucent = false
-//        UITabBar.appearance().tintColor = ThemeConstants.colorHidsiMain
-//        µUITabBar.appearance().barTintColor = .white
-//        if #available(iOS 10.0, *) {
-//            UITabBar.appearance().unselectedItemTintColor = ThemeConstants.colorMediumGray
-//        }
-//        UITabBarItem.appearance().setTitleTextAttributes(ThemeConstants.attributes(
-//            font:ThemeConstants.fontBold(size: 9),
-//            color: ThemeConstants.colorMediumGray), for: .normal)
-//        UITabBarItem.appearance().setTitleTextAttributes(ThemeConstants.attributes(
-//            font:ThemeConstants.fontBold(size: 9),
-//            color: ThemeConstants.colorHidsiMain), for: .selected)
-//        UITabBarItem.appearance().titlePositionAdjustment = UIOffset(horizontal: 0, vertical: -9.0)
+        UITabBar.appearance().isTranslucent = false
+        UITabBar.appearance().tintColor = ThemeConstants.colorShoryanMain
+        UITabBar.appearance().barTintColor = .white
+        if #available(iOS 10.0, *) {
+            UITabBar.appearance().unselectedItemTintColor = ThemeConstants.colorMediumGray
+        }
+        UITabBarItem.appearance().setTitleTextAttributes(ThemeConstants.attributes(
+            font:ThemeConstants.fontRegular(size: 10),
+            color: ThemeConstants.colorMediumGray), for: .normal)
+        UITabBarItem.appearance().setTitleTextAttributes(ThemeConstants.attributes(
+            font:ThemeConstants.fontRegular(size: 10),
+            color: ThemeConstants.colorMediumGray), for: .selected)
+        UITabBarItem.appearance().titlePositionAdjustment = UIOffset(horizontal: 0, vertical: -9.0)
         
         
 ////        UITabBarItem.appearance().imageInsets = UIEdgeInsets(top: 0, left: 0, bottom: 2, right: 0)    // this line causes a known crash in UIKit

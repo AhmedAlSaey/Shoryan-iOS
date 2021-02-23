@@ -29,6 +29,8 @@ class NewRequestViewController: BaseViewController {
     
     @IBOutlet weak var requestButton: UIButton!
     
+    @IBOutlet weak var aPositiveButton: BloodTypeSelectionButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         styleNavigationBar()
@@ -52,6 +54,7 @@ class NewRequestViewController: BaseViewController {
         plusButton.layer.borderColor = ThemeConstants.colorShoryanMain.cgColor
         
         requestButton.layer.cornerRadius = requestButton.layer.frame.height / 2
+        
     }
     
     func styleLocationInputViews() {
@@ -73,6 +76,9 @@ class NewRequestViewController: BaseViewController {
         bloodBankTextField.isUserInteractionEnabled = false
     }
 
-   
+    @IBAction func bloodSelectionButtonPressed(_ sender: BloodTypeSelectionButton) {
+        aPositiveButton.setSelected()
+    }
+    
 
 }

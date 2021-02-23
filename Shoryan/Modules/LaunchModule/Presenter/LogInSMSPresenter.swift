@@ -17,7 +17,7 @@ class LogInSMSPresenter: BasePresenter {
     func didClickContinueFromSMSLogIn(withCode code: String){
         guard let phoneNumber = phoneNumber else {fatalError()}
         LaunchInteractor.shared.logInWithCode(phoneNumber: phoneNumber, code: code, successHandler: {
-            LaunchRouter.shared.launchStartSscreen()
+            LaunchRouter.shared.launchStartScreen()
         }, failHandler: {
             
         })

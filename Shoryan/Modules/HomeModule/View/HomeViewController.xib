@@ -14,13 +14,13 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeViewController" customModule="Shoryan" customModuleProvider="target">
             <connections>
                 <outlet property="filterView" destination="8C2-S3-DM9" id="C4h-JE-Omf"/>
-                <outlet property="leftImageView" destination="wgg-q7-C9u" id="bM5-Ch-hBg"/>
-                <outlet property="leftImageViewContainer" destination="XG5-dV-4NY" id="itp-44-CCW"/>
+                <outlet property="leftImageView" destination="fRp-Qh-1yf" id="iyI-26-hnz"/>
+                <outlet property="leftImageViewContainer" destination="6T7-IQ-8zE" id="lpQ-9h-OIC"/>
                 <outlet property="navBarTopConstraint" destination="CZi-OY-yBE" id="bpv-8d-vYO"/>
                 <outlet property="navigationBarView" destination="kH3-29-kXP" id="p0e-gN-Jki"/>
                 <outlet property="requestsTableView" destination="7UO-ZM-bb3" id="b0F-Kh-1Ej"/>
-                <outlet property="rightImageView" destination="fRp-Qh-1yf" id="KkA-ss-4fe"/>
-                <outlet property="rightImageViewContainer" destination="6T7-IQ-8zE" id="48N-KK-dqu"/>
+                <outlet property="rightImageView" destination="wgg-q7-C9u" id="meB-I5-zcd"/>
+                <outlet property="rightImageViewContainer" destination="XG5-dV-4NY" id="Dct-tv-RvX"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
