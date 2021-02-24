@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -72,6 +72,19 @@
 		B1A471FF259DDCF6006152C1 /* MainTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A471FE259DDCF6006152C1 /* MainTabBarViewController.swift */; };
 		B1A47203259DF5FD006152C1 /* LaunchModuleAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A47202259DF5FD006152C1 /* LaunchModuleAPIManager.swift */; };
 		B1B3A1E9259D88EE0089E41D /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B3A1E8259D88EE0089E41D /* UIImage.swift */; };
+		B1C22F3525E4BA28002EECD9 /* RegExHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C22F3425E4BA28002EECD9 /* RegExHandler.swift */; };
+		B1C22F4D25E4D891002EECD9 /* CustomFloatingPlaceholderTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C22F4C25E4D891002EECD9 /* CustomFloatingPlaceholderTextField.swift */; };
+		B1C22F5125E6F0B3002EECD9 /* FirstNameTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C22F5025E6F0B3002EECD9 /* FirstNameTextField.swift */; };
+		B1C22F5925E6F27D002EECD9 /* LastNameTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C22F5825E6F27D002EECD9 /* LastNameTextField.swift */; };
+		B1C22F5C25E6F2AB002EECD9 /* PhoneNumberTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C22F5B25E6F2AB002EECD9 /* PhoneNumberTextField.swift */; };
+		B1C22F5F25E6F4B6002EECD9 /* BirthDateTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C22F5E25E6F4B6002EECD9 /* BirthDateTextField.swift */; };
+		B1C22F6225E6F507002EECD9 /* BloodTypeTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C22F6125E6F507002EECD9 /* BloodTypeTextField.swift */; };
+		B1C22F6525E6F515002EECD9 /* GenderTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C22F6425E6F515002EECD9 /* GenderTextField.swift */; };
+		B1C22F6825E6F52A002EECD9 /* LocationTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C22F6725E6F52A002EECD9 /* LocationTextField.swift */; };
+		B1C22F6B25E6F53E002EECD9 /* PasswordTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C22F6A25E6F53E002EECD9 /* PasswordTextField.swift */; };
+		B1C22F6E25E6F552002EECD9 /* PasswordConfirmationTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C22F6D25E6F552002EECD9 /* PasswordConfirmationTextField.swift */; };
+		B1C22F7A25E70C4A002EECD9 /* MapSelectorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C22F7825E70C4A002EECD9 /* MapSelectorViewController.swift */; };
+		B1C22F7B25E70C4A002EECD9 /* MapSelectorViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B1C22F7925E70C4A002EECD9 /* MapSelectorViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -144,6 +157,19 @@
 		B1A47202259DF5FD006152C1 /* LaunchModuleAPIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchModuleAPIManager.swift; sourceTree = "<group>"; };
 		B1B3A1E8259D88EE0089E41D /* UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
 		B1B5051125DDF9CC0040786A /* Shoryan.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Shoryan.entitlements; sourceTree = "<group>"; };
+		B1C22F3425E4BA28002EECD9 /* RegExHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegExHandler.swift; sourceTree = "<group>"; };
+		B1C22F4C25E4D891002EECD9 /* CustomFloatingPlaceholderTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomFloatingPlaceholderTextField.swift; sourceTree = "<group>"; };
+		B1C22F5025E6F0B3002EECD9 /* FirstNameTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstNameTextField.swift; sourceTree = "<group>"; };
+		B1C22F5825E6F27D002EECD9 /* LastNameTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastNameTextField.swift; sourceTree = "<group>"; };
+		B1C22F5B25E6F2AB002EECD9 /* PhoneNumberTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneNumberTextField.swift; sourceTree = "<group>"; };
+		B1C22F5E25E6F4B6002EECD9 /* BirthDateTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirthDateTextField.swift; sourceTree = "<group>"; };
+		B1C22F6125E6F507002EECD9 /* BloodTypeTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BloodTypeTextField.swift; sourceTree = "<group>"; };
+		B1C22F6425E6F515002EECD9 /* GenderTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenderTextField.swift; sourceTree = "<group>"; };
+		B1C22F6725E6F52A002EECD9 /* LocationTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationTextField.swift; sourceTree = "<group>"; };
+		B1C22F6A25E6F53E002EECD9 /* PasswordTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordTextField.swift; sourceTree = "<group>"; };
+		B1C22F6D25E6F552002EECD9 /* PasswordConfirmationTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordConfirmationTextField.swift; sourceTree = "<group>"; };
+		B1C22F7825E70C4A002EECD9 /* MapSelectorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapSelectorViewController.swift; sourceTree = "<group>"; };
+		B1C22F7925E70C4A002EECD9 /* MapSelectorViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MapSelectorViewController.xib; sourceTree = "<group>"; };
 		CEF183AFF4350C40B2B48A37 /* Pods_Shoryan.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Shoryan.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -165,7 +191,6 @@
 				38B1791A66AF9DEBE0F616E8 /* Pods-Shoryan.debug.xcconfig */,
 				8B6D1215174CF978C1FB5C42 /* Pods-Shoryan.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -180,6 +205,7 @@
 		B114ADCD259AF0380052C89D /* SharedModule */ = {
 			isa = PBXGroup;
 			children = (
+				B1C22F7725E70383002EECD9 /* View */,
 				B114ADD3259AF9E10052C89D /* Styling */,
 				B114ADCE259AF0770052C89D /* Extensions */,
 			);
@@ -206,6 +232,7 @@
 		B114ADD8259AFF1E0052C89D /* Helper */ = {
 			isa = PBXGroup;
 			children = (
+				B1C22F4C25E4D891002EECD9 /* CustomFloatingPlaceholderTextField.swift */,
 				B114ADDA259AFF4E0052C89D /* UnderlinedUITextField.swift */,
 			);
 			path = Helper;
@@ -231,6 +258,7 @@
 			isa = PBXGroup;
 			children = (
 				B1428C8C2598564600A75D9C /* ThemeConstants.swift */,
+				B1C22F3425E4BA28002EECD9 /* RegExHandler.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -428,6 +456,7 @@
 		B166B12425982CC200AD6FD6 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				B1C22F4F25E6F048002EECD9 /* Signup Input Fields */,
 				B1A47201259DF5DF006152C1 /* Managers */,
 				B114ADD8259AFF1E0052C89D /* Helper */,
 				B166B12525982CD600AD6FD6 /* LaunchScreenViewController.swift */,
@@ -652,6 +681,31 @@
 			path = Managers;
 			sourceTree = "<group>";
 		};
+		B1C22F4F25E6F048002EECD9 /* Signup Input Fields */ = {
+			isa = PBXGroup;
+			children = (
+				B1C22F5025E6F0B3002EECD9 /* FirstNameTextField.swift */,
+				B1C22F5825E6F27D002EECD9 /* LastNameTextField.swift */,
+				B1C22F5B25E6F2AB002EECD9 /* PhoneNumberTextField.swift */,
+				B1C22F5E25E6F4B6002EECD9 /* BirthDateTextField.swift */,
+				B1C22F6125E6F507002EECD9 /* BloodTypeTextField.swift */,
+				B1C22F6425E6F515002EECD9 /* GenderTextField.swift */,
+				B1C22F6725E6F52A002EECD9 /* LocationTextField.swift */,
+				B1C22F6A25E6F53E002EECD9 /* PasswordTextField.swift */,
+				B1C22F6D25E6F552002EECD9 /* PasswordConfirmationTextField.swift */,
+			);
+			path = "Signup Input Fields";
+			sourceTree = "<group>";
+		};
+		B1C22F7725E70383002EECD9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B1C22F7825E70C4A002EECD9 /* MapSelectorViewController.swift */,
+				B1C22F7925E70C4A002EECD9 /* MapSelectorViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -720,6 +774,7 @@
 				B1428C9B259AE29500A75D9C /* LogInPasswordViewController.xib in Resources */,
 				B1A471B9259DAC17006152C1 /* NewRequestViewController.xib in Resources */,
 				B166B0E2259826BA00AD6FD6 /* Assets.xcassets in Resources */,
+				B1C22F7B25E70C4A002EECD9 /* MapSelectorViewController.xib in Resources */,
 				B1A471E5259DC03A006152C1 /* NotificationTableViewCell.xib in Resources */,
 				B114ADE1259C20880052C89D /* SignUpViewController.xib in Resources */,
 				B166B12825982CD600AD6FD6 /* LaunchScreenViewController.xib in Resources */,
@@ -779,6 +834,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				B166B0D9259826B800AD6FD6 /* AppDelegate.swift in Sources */,
+				B1C22F6825E6F52A002EECD9 /* LocationTextField.swift in Sources */,
+				B1C22F6225E6F507002EECD9 /* BloodTypeTextField.swift in Sources */,
+				B1C22F6525E6F515002EECD9 /* GenderTextField.swift in Sources */,
 				B166B10025982AB600AD6FD6 /* BasePresenter.swift in Sources */,
 				B166B13E2598415200AD6FD6 /* LogInPresenter.swift in Sources */,
 				B163D1D9259D73360005C731 /* HomeInteractor.swift in Sources */,
@@ -797,6 +855,7 @@
 				B149ED68259C4191003C7C46 /* Views.swift in Sources */,
 				B163D1D3259D73240005C731 /* HomePresenter.swift in Sources */,
 				B166B10925982AD800AD6FD6 /* BaseEntity.swift in Sources */,
+				B1C22F5F25E6F4B6002EECD9 /* BirthDateTextField.swift in Sources */,
 				B1428C9A259AE29500A75D9C /* LogInPasswordViewController.swift in Sources */,
 				B1A471D4259DBE92006152C1 /* NotificationsViewController.swift in Sources */,
 				B114ADE4259C38F80052C89D /* SignUpPresenter.swift in Sources */,
@@ -808,6 +867,7 @@
 				B1A471FB259DC79B006152C1 /* ProfilePresenter.swift in Sources */,
 				B166B12725982CD600AD6FD6 /* LaunchScreenViewController.swift in Sources */,
 				B1A471B8259DAC17006152C1 /* NewRequestViewController.swift in Sources */,
+				B1C22F5925E6F27D002EECD9 /* LastNameTextField.swift in Sources */,
 				B163D1CE259D73160005C731 /* HomeViewController.swift in Sources */,
 				B114ADD0259AF0890052C89D /* String.swift in Sources */,
 				B1428CA6259AE68A00A75D9C /* LogInSMSPresenter.swift in Sources */,
@@ -815,18 +875,25 @@
 				B166B12025982CB500AD6FD6 /* LaunchRouter.swift in Sources */,
 				B1A471E4259DC03A006152C1 /* NotificationTableViewCell.swift in Sources */,
 				B166B0DB259826B800AD6FD6 /* SceneDelegate.swift in Sources */,
+				B1C22F7A25E70C4A002EECD9 /* MapSelectorViewController.swift in Sources */,
 				B1A471BD259DAC25006152C1 /* NewRequestInteractor.swift in Sources */,
 				B1A471C7259DB00B006152C1 /* BloodTypeSelectionButton.swift in Sources */,
 				B1A471FF259DDCF6006152C1 /* MainTabBarViewController.swift in Sources */,
 				B166B1382598386900AD6FD6 /* LogInViewController.swift in Sources */,
 				B1428CA3259AE65400A75D9C /* LogInPasswordPresenter.swift in Sources */,
+				B1C22F4D25E4D891002EECD9 /* CustomFloatingPlaceholderTextField.swift in Sources */,
+				B1C22F3525E4BA28002EECD9 /* RegExHandler.swift in Sources */,
 				B114ADE0259C20880052C89D /* SignUpViewController.swift in Sources */,
+				B1C22F6B25E6F53E002EECD9 /* PasswordTextField.swift in Sources */,
 				B1428C8D2598564600A75D9C /* ThemeConstants.swift in Sources */,
 				B114ADDB259AFF4E0052C89D /* UnderlinedUITextField.swift in Sources */,
+				B1C22F5125E6F0B3002EECD9 /* FirstNameTextField.swift in Sources */,
+				B1C22F6E25E6F552002EECD9 /* PasswordConfirmationTextField.swift in Sources */,
 				B166B0FD259828D500AD6FD6 /* BaseViewController.swift in Sources */,
 				B1A471F1259DC764006152C1 /* ProfileViewController.swift in Sources */,
 				B166B10625982ACD00AD6FD6 /* BaseInteractor.swift in Sources */,
 				B166B10C25982BD700AD6FD6 /* BaseError.swift in Sources */,
+				B1C22F5C25E6F2AB002EECD9 /* PhoneNumberTextField.swift in Sources */,
 				B1A471F8259DC792006152C1 /* ProfileRouter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

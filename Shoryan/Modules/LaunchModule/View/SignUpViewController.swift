@@ -6,39 +6,39 @@
 //
 
 import UIKit
+import JVFloatLabeledTextField
 
 class SignUpViewController: BaseViewController {
     
-    @IBOutlet weak var fullNameTextField: UITextField!
-    @IBOutlet weak var phoneNumberTextField: UITextField!
-    
+    @IBOutlet weak var firstNameTextField: FirstNameTextField!
+    @IBOutlet weak var secondNameTextField: LastNameTextField!
+    @IBOutlet weak var phoneNumberTextField: PhoneNumberTextField!
     @IBOutlet weak var dateView: UIView!
-    @IBOutlet weak var dateTextField: UITextField!
-    var birthDatePickView: UIDatePicker = UIDatePicker()
-    
-    
-    @IBOutlet weak var bloodTypeTextField: UITextField!
-    var bloodTypePickerView: UIPickerView = UIPickerView()
-    var bloodTypes: [String]? {
-        didSet {
-            bloodTypePickerView.reloadAllComponents()
-        }
-    }
-    
-    
-    @IBOutlet weak var maleRadiobutton: UIButton!
-    @IBOutlet weak var femaleRadioButton: UIButton!
-    var selectedGender: String?
-    
-    @IBOutlet weak var addressTextField: UITextField!
-    @IBOutlet weak var passwordTextField: UITextField!
-    @IBOutlet weak var passwordConfirmationTextField: UITextField!
+    @IBOutlet weak var dateTextField: BirthDateTextField!
+    @IBOutlet weak var bloodTypeTextField: BloodTypeTextField!
+    @IBOutlet weak var genderTextField: GenderTextField!
+    @IBOutlet weak var addressTextField: LocationTextField!
+    @IBOutlet weak var passwordTextField: PasswordTextField!
+    @IBOutlet weak var passwordConfirmationTextField: PasswordConfirmationTextField!
     
     
     @IBOutlet weak var continueButton: UIButton!
     @IBOutlet weak var locationButton: UIButton!
     @IBOutlet weak var cardView: UIView!
     
+    var birthDatePickView: UIDatePicker = UIDatePicker()
+    var bloodTypePickerView: UIPickerView = UIPickerView()
+    var bloodTypes: [String]? {
+        didSet {
+            bloodTypePickerView.reloadAllComponents()
+        }
+    }
+    var genderPickerView: UIPickerView = UIPickerView()
+    var genders: [String]? {
+        didSet {
+            genderPickerView.reloadAllComponents()
+        }
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         style()
@@ -54,10 +54,16 @@ class SignUpViewController: BaseViewController {
             // Fallback on earlier versions
         }
         birthDatePickView.addTarget(self, action: #selector(handleDatePicker), for: .valueChanged)
-        
         bloodTypePickerView.delegate = self
         bloodTypePickerView.dataSource = self
+        bloodTypePickerView.tag = 1
         bloodTypeTextField.inputView = bloodTypePickerView
+        
+        genderPickerView.delegate = self
+        genderPickerView.dataSource = self
+        genderPickerView.tag = 2
+        genderTextField.inputView = genderPickerView
+        
         
         
     }
@@ -82,23 +88,22 @@ class SignUpViewController: BaseViewController {
     @objc func handleDatePicker() {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "dd-MM-yyyy"
-
         let dateString = dateFormatter.string(from: birthDatePickView.date)
         dateTextField.text = dateString
     }
     
-    @objc func handleBloodTypePicker() {
-        
+    func isAllInputValid() -> Bool {
+        return firstNameTextField.isValidEntry && secondNameTextField.isValidEntry && phoneNumberTextField.isValidEntry && dateTextField.isValidEntry && bloodTypeTextField.isValidEntry && genderTextField.isValidEntry && addressTextField.isValidEntry && passwordTextField.isValidEntry && passwordConfirmationTextField.isValidEntry && (passwordTextField.text == passwordConfirmationTextField.text)
     }
     
     @IBAction func continueButtonPressed(_ sender: Any) {
         if let presenter = presenter as? SignUpPresenter {
             presenter.continueClicked(
-                fullName: fullNameTextField.text.nonNullString,
+                firstName: firstNameTextField.text.nonNullString,
+                lastName: secondNameTextField.text.nonNullString,
                 phoneNumber: phoneNumberTextField.text.nonNullString,
                 birthDate: dateTextField.text.nonNullString,
                 bloodType: bloodTypeTextField.text.nonNullString,
-                address: addressTextField.text.nonNullString,
                 password: passwordTextField.text.nonNullString,
                 passwordConfirmation: passwordConfirmationTextField.text.nonNullString
             )
@@ -106,18 +111,7 @@ class SignUpViewController: BaseViewController {
     }
     
     
-    @IBAction func genderRadioClicked(_ sender: UIButton) {
-        if sender.tag == 0 {
-            maleRadiobutton.setImage(UIImage(named: "Radio button - Selected"), for: .normal)
-            femaleRadioButton.setImage(UIImage(named: "Radio button - Empty"), for: .normal)
-            selectedGender = "Male"
-        }
-        else{
-            femaleRadioButton.setImage(UIImage(named: "Radio button - Selected"), for: .normal)
-            maleRadiobutton.setImage(UIImage(named: "Radio button - Empty"), for: .normal)
-            selectedGender = "Female"
-        }
-    }
+
     
 
     
@@ -130,14 +124,41 @@ extension SignUpViewController: UIPickerViewDataSource, UIPickerViewDelegate {
     }
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        bloodTypes?.count ?? 0
+        if pickerView.tag == 1 {
+            return bloodTypes?.count ?? 0
+        }
+        else if pickerView.tag == 2 {
+            return genders?.count ?? 0
+        }
+        else {
+            fatalError("Unexpected sender")
+        }
+        
+        
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        bloodTypeTextField.text = bloodTypes![row]
+        if pickerView.tag == 1 {
+            bloodTypeTextField.text = bloodTypes![row]
+        }
+        else if pickerView.tag == 2 {
+            genderTextField.text = genders![row]
+        }
+        else {
+            fatalError("Unexpected sender")
+        }
     }
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        bloodTypes![row]
+        if pickerView.tag == 1 {
+            return bloodTypes![row]
+        }
+        else if pickerView.tag == 2 {
+            return genders![row]
+        }
+        else {
+            fatalError("Unexpected sender")
+        }
     }
+    
     
 }
