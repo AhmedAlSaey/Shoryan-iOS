@@ -28,6 +28,7 @@ class NewRequestRouter: BaseRouter {
     func createNewRequestEmbeddedInViewController() -> UIViewController {
         let nc = embedInNavigationController(viewController: createNewRequest())
         navigationController = nc
+        nc.isNavigationBarHidden = true
         return nc
     }
     

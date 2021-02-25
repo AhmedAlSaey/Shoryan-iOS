@@ -1,22 +1,111 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13142" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12042"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MapSelectorViewController" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MapSelectorViewController" customModule="Shoryan" customModuleProvider="target">
             <connections>
+                <outlet property="backButton" destination="3wi-5L-ASc" id="WIW-Uo-47X"/>
+                <outlet property="locationSelectedButton" destination="BCt-iZ-alc" id="5iC-Vo-ZBc"/>
+                <outlet property="myLocationButton" destination="AQa-B1-7tb" id="G31-3O-DJQ"/>
+                <outlet property="searchButton" destination="d02-hx-CLE" id="mdt-hk-qE8"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
-            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AQa-B1-7tb">
+                    <rect key="frame" x="325" y="674" width="74" height="74"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="74" id="TKi-mc-A9y"/>
+                        <constraint firstAttribute="height" constant="74" id="qTk-lE-btL"/>
+                    </constraints>
+                    <state key="normal" image="target"/>
+                    <connections>
+                        <action selector="myLocationButtonSelected:" destination="-1" eventType="touchUpInside" id="VMS-1E-9Ci"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d02-hx-CLE">
+                    <rect key="frame" x="325" y="64" width="74" height="74"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="74" id="M6b-Hp-PbQ"/>
+                        <constraint firstAttribute="height" constant="74" id="U7A-WL-0X6"/>
+                    </constraints>
+                    <state key="normal" image="magnifying_glass"/>
+                    <connections>
+                        <action selector="myLocationButtonSelected:" destination="-1" eventType="touchUpInside" id="BWM-ZV-hwx"/>
+                        <action selector="searchButtonClicked:" destination="-1" eventType="touchUpInside" id="Djo-Mt-s5J"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3wi-5L-ASc">
+                    <rect key="frame" x="15" y="64" width="74" height="74"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="74" id="R0Z-je-pJn"/>
+                        <constraint firstAttribute="height" constant="74" id="Thf-nI-Pt2"/>
+                    </constraints>
+                    <state key="normal" image="Backward arrow maps"/>
+                    <connections>
+                        <action selector="backButtonClicked:" destination="-1" eventType="touchUpInside" id="hKV-4O-EIe"/>
+                        <action selector="myLocationButtonSelected:" destination="-1" eventType="touchUpInside" id="Hvo-hJ-kDH"/>
+                    </connections>
+                </button>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="maps_location_pin" translatesAutoresizingMaskIntoConstraints="NO" id="q72-QA-clw">
+                    <rect key="frame" x="193.5" y="417.5" width="27" height="39"/>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BCt-iZ-alc">
+                    <rect key="frame" x="325" y="768" width="74" height="74"/>
+                    <color key="backgroundColor" name="MainRed"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="74" id="8Tp-0A-Kjf"/>
+                        <constraint firstAttribute="height" constant="74" id="ipD-JP-FjC"/>
+                    </constraints>
+                    <state key="normal" image="check"/>
+                    <connections>
+                        <action selector="locationSelectedButtonClicked:" destination="-1" eventType="touchUpInside" id="Wb5-cm-Qhk"/>
+                    </connections>
+                </button>
+            </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="d02-hx-CLE" secondAttribute="trailing" constant="15" id="5ae-Od-uMf"/>
+                <constraint firstItem="BCt-iZ-alc" firstAttribute="top" secondItem="AQa-B1-7tb" secondAttribute="bottom" constant="20" id="Bp0-LQ-Okf"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="BCt-iZ-alc" secondAttribute="bottom" constant="20" id="H5C-5q-ufz"/>
+                <constraint firstItem="3wi-5L-ASc" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="15" id="K7y-1F-2yg"/>
+                <constraint firstItem="q72-QA-clw" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="KOO-Ua-FlW"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="BCt-iZ-alc" secondAttribute="trailing" constant="15" id="R7O-0n-qRo"/>
+                <constraint firstItem="3wi-5L-ASc" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="20" id="Uqr-Pk-iaQ"/>
+                <constraint firstItem="d02-hx-CLE" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="20" id="ah5-sI-HEe"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="AQa-B1-7tb" secondAttribute="trailing" constant="15" id="oYI-ep-tuh"/>
+                <constraint firstItem="q72-QA-clw" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" constant="-11" id="zWC-uQ-ZeO"/>
+            </constraints>
+            <point key="canvasLocation" x="-42" y="80"/>
         </view>
     </objects>
+    <resources>
+        <image name="Backward arrow maps" width="36.5" height="36.5"/>
+        <image name="check" width="47.5" height="34.5"/>
+        <image name="magnifying_glass" width="35" height="36"/>
+        <image name="maps_location_pin" width="27" height="39"/>
+        <image name="target" width="56.5" height="56.5"/>
+        <namedColor name="MainRed">
+            <color red="0.6119999885559082" green="0.067000001668930054" blue="0.067000001668930054" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>

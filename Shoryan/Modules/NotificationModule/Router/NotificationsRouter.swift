@@ -29,6 +29,7 @@ class NotificationsRouter: BaseRouter {
     func createNotificationsEmbeddedInViewController() -> UIViewController {
         let nc = embedInNavigationController(viewController: createNotifications())
         navigationController = nc
+        nc.isNavigationBarHidden = true
         return nc
     }
     

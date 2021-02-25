@@ -110,6 +110,18 @@ class SignUpViewController: BaseViewController {
         }
     }
     
+    @IBAction func locationButtonPressed(_ sender: Any) {
+        if let presenter = presenter as? SignUpPresenter {
+            presenter.locationButtonPressed()
+        }
+    }
+    
+    
+    @IBAction func backButtonPressed(_ sender: Any) {
+        if let presenter = presenter as? SignUpPresenter {
+            presenter.backButtonPressed()
+        }
+    }
     
 
     

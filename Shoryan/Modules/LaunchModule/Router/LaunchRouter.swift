@@ -87,9 +87,18 @@ class LaunchRouter: BaseRouter, UITabBarControllerDelegate {
         return viewController
     }
     
+    func createMapSelectionSignup() -> UIViewController{
+        let viewController = MapSelectorViewController()
+        
+        let presenter = MapSelectorPresenter()
+        
+        return viewController
+    }
+    
     
     func launchAuthorizationPage() {
         let nc = embedInNavigationController(viewController: createAuthorization())
+        nc.isNavigationBarHidden = true
         navigationController = nc
         self.initializeWindowWithNavigationControllerAnimation(rootViewController: nc)
     }
@@ -113,6 +122,15 @@ class LaunchRouter: BaseRouter, UITabBarControllerDelegate {
         let vc = createSignUp()
         navigationController?.pushViewController(vc, animated: true)
     }
+    func dissmissSignup(){
+        guard let _ = navigationController?.viewControllers.last as? SignUpViewController else {fatalError()}
+        navigationController?.popViewController(animated: true)
+    }
+    
+    func dissmissMapSelector() {
+        guard let _ = navigationController?.viewControllers.last as? MapSelectorViewController else {fatalError()}
+        navigationController?.popViewController(animated: true)
+    }
     
     func launchStartScreen() {
         
@@ -134,6 +152,7 @@ class LaunchRouter: BaseRouter, UITabBarControllerDelegate {
             newRequestTabVC,
             homeTabVC,
         ]
+        tabBarController?.tabBar.selectedItem = tabBarController?.tabBar.items?.last
         
         
         
@@ -141,6 +160,14 @@ class LaunchRouter: BaseRouter, UITabBarControllerDelegate {
         
         
     }
+    
+    func launchMapSelectorSignup(delegate: MapSelectorDelegate){
+        if let vc = createMapSelectionSignup() as? MapSelectorViewController {
+            vc.delegate = delegate
+            navigationController?.pushViewController(vc, animated: true)
+        }
+    }
+    
     
     func createViewControllerTab(viewController: UIViewController, title: String, image: String, selectedImage: String) -> UIViewController {
         

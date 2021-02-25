@@ -8,6 +8,11 @@
 import UIKit
 
 class SignUpPresenter: BasePresenter {
+    var selectedLocationLng: Double?
+    var selectedLocationLat: Double?
+    var selectedLocationCity: String?
+    var selectedLocationGovernorate: String?
+    
     
     override func viewDidLoad() {
         guard let view = view as? SignUpViewController else {fatalError()}
@@ -32,13 +37,17 @@ class SignUpPresenter: BasePresenter {
     func continueClicked(firstName: String, lastName: String, phoneNumber: String, birthDate: String, bloodType: String, password: String, passwordConfirmation: String){
         
         if let view = view as? SignUpViewController {
-            if view.isAllInputValid() {
+            if view.isAllInputValid(), let lat = selectedLocationLat, let lng = selectedLocationLng {
                 LaunchInteractor.shared.signUp(
                     firstName: firstName,
                     lastName: lastName,
                     phoneNumber: phoneNumber,
                     birthDate: birthDate,
                     bloodType: bloodType,
+                    lng: lng,
+                    lat: lat,
+                    city: selectedLocationCity,
+                    governorate: selectedLocationGovernorate,
                     password: password,
                     passwordConfirmation: passwordConfirmation,
                     successHandler: {
@@ -56,5 +65,37 @@ class SignUpPresenter: BasePresenter {
         
         
     }
+    
+    func backButtonPressed() {
+        LaunchRouter.shared.dissmissSignup()
+    }
+    
+    func locationButtonPressed() {
+        LaunchRouter.shared.launchMapSelectorSignup(delegate: self)
+    }
+    
+    
+    
+    
+    
+}
+
+extension SignUpPresenter: MapSelectorDelegate{
+    func didSelectLocation(lng: Double, lat: Double, city: String?, governorate: String?, formattedAddress: String?) {
+        selectedLocationLng = lng
+        selectedLocationLat = lat
+        selectedLocationCity = city
+        selectedLocationGovernorate = governorate
+        
+        if let view = view as? SignUpViewController {
+            view.addressTextField.text = formattedAddress
+        }
+        LaunchRouter.shared.dissmissMapSelector()
+    }
+    
+    func didPressBackButton() {
+        LaunchRouter.shared.dissmissMapSelector()
+    }
+    
     
 }

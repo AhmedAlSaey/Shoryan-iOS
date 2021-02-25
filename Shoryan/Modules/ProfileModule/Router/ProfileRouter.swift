@@ -29,6 +29,7 @@ class ProfileRouter: BaseRouter {
     func createProfileEmbeddedInViewController() -> UIViewController {
         let nc = embedInNavigationController(viewController: createProfile())
         navigationController = nc
+        nc.isNavigationBarHidden = true
         return nc
     }
     

@@ -85,6 +85,7 @@
 		B1C22F6E25E6F552002EECD9 /* PasswordConfirmationTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C22F6D25E6F552002EECD9 /* PasswordConfirmationTextField.swift */; };
 		B1C22F7A25E70C4A002EECD9 /* MapSelectorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C22F7825E70C4A002EECD9 /* MapSelectorViewController.swift */; };
 		B1C22F7B25E70C4A002EECD9 /* MapSelectorViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B1C22F7925E70C4A002EECD9 /* MapSelectorViewController.xib */; };
+		B1C22F8B25E71081002EECD9 /* MapSelectorPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C22F8A25E71081002EECD9 /* MapSelectorPresenter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -170,6 +171,7 @@
 		B1C22F6D25E6F552002EECD9 /* PasswordConfirmationTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordConfirmationTextField.swift; sourceTree = "<group>"; };
 		B1C22F7825E70C4A002EECD9 /* MapSelectorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapSelectorViewController.swift; sourceTree = "<group>"; };
 		B1C22F7925E70C4A002EECD9 /* MapSelectorViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MapSelectorViewController.xib; sourceTree = "<group>"; };
+		B1C22F8A25E71081002EECD9 /* MapSelectorPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapSelectorPresenter.swift; sourceTree = "<group>"; };
 		CEF183AFF4350C40B2B48A37 /* Pods_Shoryan.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Shoryan.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -205,21 +207,12 @@
 		B114ADCD259AF0380052C89D /* SharedModule */ = {
 			isa = PBXGroup;
 			children = (
+				B1C22F8725E7103A002EECD9 /* Entity */,
 				B1C22F7725E70383002EECD9 /* View */,
+				B1C22F8925E71063002EECD9 /* Presenter */,
 				B114ADD3259AF9E10052C89D /* Styling */,
-				B114ADCE259AF0770052C89D /* Extensions */,
 			);
 			path = SharedModule;
-			sourceTree = "<group>";
-		};
-		B114ADCE259AF0770052C89D /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				B114ADCF259AF0890052C89D /* String.swift */,
-				B149ED67259C4191003C7C46 /* Views.swift */,
-				B1B3A1E8259D88EE0089E41D /* UIImage.swift */,
-			);
-			path = Extensions;
 			sourceTree = "<group>";
 		};
 		B114ADD3259AF9E10052C89D /* Styling */ = {
@@ -700,10 +693,36 @@
 		B1C22F7725E70383002EECD9 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				B1C22F8825E7104B002EECD9 /* Extensions */,
 				B1C22F7825E70C4A002EECD9 /* MapSelectorViewController.swift */,
 				B1C22F7925E70C4A002EECD9 /* MapSelectorViewController.xib */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		B1C22F8725E7103A002EECD9 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				B114ADCF259AF0890052C89D /* String.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		B1C22F8825E7104B002EECD9 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				B149ED67259C4191003C7C46 /* Views.swift */,
+				B1B3A1E8259D88EE0089E41D /* UIImage.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		B1C22F8925E71063002EECD9 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				B1C22F8A25E71081002EECD9 /* MapSelectorPresenter.swift */,
+			);
+			path = Presenter;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -718,6 +737,7 @@
 				B166B0D2259826B800AD6FD6 /* Frameworks */,
 				B166B0D3259826B800AD6FD6 /* Resources */,
 				B06876EE0F3C3D28DDC67D57 /* [CP] Embed Pods Frameworks */,
+				24C5AC2B62759BEA161243CF /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -787,6 +807,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		24C5AC2B62759BEA161243CF /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Shoryan/Pods-Shoryan-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Shoryan/Pods-Shoryan-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Shoryan/Pods-Shoryan-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		432DA193A5597448D2BDB84E /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -876,6 +913,7 @@
 				B1A471E4259DC03A006152C1 /* NotificationTableViewCell.swift in Sources */,
 				B166B0DB259826B800AD6FD6 /* SceneDelegate.swift in Sources */,
 				B1C22F7A25E70C4A002EECD9 /* MapSelectorViewController.swift in Sources */,
+				B1C22F8B25E71081002EECD9 /* MapSelectorPresenter.swift in Sources */,
 				B1A471BD259DAC25006152C1 /* NewRequestInteractor.swift in Sources */,
 				B1A471C7259DB00B006152C1 /* BloodTypeSelectionButton.swift in Sources */,
 				B1A471FF259DDCF6006152C1 /* MainTabBarViewController.swift in Sources */,

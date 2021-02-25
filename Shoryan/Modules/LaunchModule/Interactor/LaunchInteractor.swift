@@ -58,7 +58,7 @@ class LaunchInteractor {
         successHandler()
     }
     
-    func signUp(firstName: String, lastName: String, phoneNumber: String, birthDate: String, bloodType: String, password: String, passwordConfirmation: String, successHandler: () -> (), failHandler: () -> ()){
+    func signUp(firstName: String, lastName: String, phoneNumber: String, birthDate: String, bloodType: String, lng: Double, lat: Double, city: String?, governorate: String?, password: String, passwordConfirmation: String, successHandler: () -> (), failHandler: () -> ()){
         
         //TODO: - Fix missing:
         /*

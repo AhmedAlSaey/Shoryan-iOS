@@ -30,6 +30,7 @@ class HomeRouter: BaseRouter {
     func createHomePageEmbeddedInViewController() -> UIViewController {
         let nc = embedInNavigationController(viewController: createHomePage())
         navigationController = nc
+        nc.isNavigationBarHidden = true
         return nc
     }
     
