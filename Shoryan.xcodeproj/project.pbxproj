@@ -132,6 +132,7 @@
 		B166B1362598386900AD6FD6 /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		B166B1372598386900AD6FD6 /* LogInViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LogInViewController.xib; sourceTree = "<group>"; };
 		B166B13D2598415200AD6FD6 /* LogInPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInPresenter.swift; sourceTree = "<group>"; };
+		B181453E25E8B15D009C6221 /* Shoryan.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Shoryan.entitlements; sourceTree = "<group>"; };
 		B1A471A4259D95E4006152C1 /* RequestBasicTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestBasicTableViewCell.swift; sourceTree = "<group>"; };
 		B1A471A5259D95E4006152C1 /* RequestBasicTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RequestBasicTableViewCell.xib; sourceTree = "<group>"; };
 		B1A471AA259D9F38006152C1 /* SimpleRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleRequest.swift; sourceTree = "<group>"; };
@@ -157,7 +158,6 @@
 		B1A471FE259DDCF6006152C1 /* MainTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarViewController.swift; sourceTree = "<group>"; };
 		B1A47202259DF5FD006152C1 /* LaunchModuleAPIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchModuleAPIManager.swift; sourceTree = "<group>"; };
 		B1B3A1E8259D88EE0089E41D /* UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
-		B1B5051125DDF9CC0040786A /* Shoryan.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Shoryan.entitlements; sourceTree = "<group>"; };
 		B1C22F3425E4BA28002EECD9 /* RegExHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegExHandler.swift; sourceTree = "<group>"; };
 		B1C22F4C25E4D891002EECD9 /* CustomFloatingPlaceholderTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomFloatingPlaceholderTextField.swift; sourceTree = "<group>"; };
 		B1C22F5025E6F0B3002EECD9 /* FirstNameTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstNameTextField.swift; sourceTree = "<group>"; };
@@ -332,7 +332,7 @@
 		B166B0D7259826B800AD6FD6 /* Shoryan */ = {
 			isa = PBXGroup;
 			children = (
-				B1B5051125DDF9CC0040786A /* Shoryan.entitlements */,
+				B181453E25E8B15D009C6221 /* Shoryan.entitlements */,
 				B166B0F22598276C00AD6FD6 /* App */,
 				B166B0ED259826C800AD6FD6 /* Modules */,
 				B166B0EE259826F700AD6FD6 /* Resouces */,

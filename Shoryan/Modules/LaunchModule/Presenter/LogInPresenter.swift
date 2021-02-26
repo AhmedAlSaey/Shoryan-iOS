@@ -10,13 +10,35 @@ import Foundation
 class LogInPresenter: BasePresenter {
     
     override func viewDidLoad() {
+        if let view = view as? LogInViewController {
+            view.phoneTextField.validate = LaunchInteractor.shared.getPhoneNumberValidationFunction()
+        }
         
     }
     func logInWithSMSClicked(phoneNumber: String){
-        LaunchRouter.shared.pushLogInWithSMSPage(phoneNumber: phoneNumber)
+        if validateEntries() {
+            LaunchRouter.shared.pushLogInWithSMSPage(phoneNumber: phoneNumber)
+        }
     }
     func logInWithPasswordClicked(phoneNumber: String){
-        LaunchRouter.shared.pushLogInWithPasswordPage(phoneNumber: phoneNumber)
+        if validateEntries() {
+            LaunchRouter.shared.pushLogInWithPasswordPage(phoneNumber: phoneNumber)
+        }
+    }
+    
+    func validateEntries() -> Bool {
+        if let view = view as? LogInViewController {
+            if view.areEntriesValid() {
+                return true
+            } else {
+                view.showAlert(title: "Error", message: "الرجاء التأكد من صحة رقم الهاتف")
+            }
+        }
+        return false
+    }
+    
+    func backButtonClicked() {
+        LaunchRouter.shared.dismissLogin()
     }
     
 }

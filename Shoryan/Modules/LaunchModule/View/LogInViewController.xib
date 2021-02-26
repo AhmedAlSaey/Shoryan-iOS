@@ -15,6 +15,7 @@
                 <outlet property="continuePasswordButton" destination="N4z-cJ-eyp" id="hSt-89-oJH"/>
                 <outlet property="continueSMSButton" destination="oCB-hs-FTK" id="ijT-jT-GkK"/>
                 <outlet property="numberTextField" destination="otz-8v-MbW" id="vaa-Ye-h3B"/>
+                <outlet property="phoneTextField" destination="otz-8v-MbW" id="cCq-gf-qaN"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -44,7 +45,7 @@
                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="username" translatesAutoresizingMaskIntoConstraints="NO" id="UUC-kP-0gz">
                             <rect key="frame" x="348" y="7" width="16" height="16"/>
                         </imageView>
-                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="012xxxxxxxx" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="otz-8v-MbW">
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="012xxxxxxxx" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="otz-8v-MbW" customClass="PhoneNumberTextField" customModule="Shoryan" customModuleProvider="target">
                             <rect key="frame" x="16" y="5" width="244" height="20.5"/>
                             <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="17"/>
                             <textInputTraits key="textInputTraits" keyboardType="phonePad" textContentType="tel"/>
@@ -76,6 +77,12 @@
                         <action selector="continueWithPasswordClicked:" destination="-1" eventType="touchUpInside" id="Ue7-ob-8nv"/>
                     </connections>
                 </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="رجوع" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xnh-aH-V2b">
+                    <rect key="frame" x="46" y="66" width="32" height="18"/>
+                    <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="16"/>
+                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oCB-hs-FTK">
                     <rect key="frame" x="25" y="532.5" width="364" height="58"/>
                     <color key="backgroundColor" name="MainRed"/>
@@ -90,6 +97,20 @@
                         <action selector="continueWithSMSClicked:" destination="-1" eventType="touchUpInside" id="QrA-4n-zyK"/>
                     </connections>
                 </button>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eup-XU-HsO">
+                    <rect key="frame" x="25" y="389.5" width="364" height="1"/>
+                    <color key="backgroundColor" name="MainRed"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="0vQ-7o-m2Q"/>
+                    </constraints>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fGB-ZE-ddW">
+                    <rect key="frame" x="15" y="64" width="16" height="22"/>
+                    <state key="normal" image="Backward arrow navbar"/>
+                    <connections>
+                        <action selector="backButtonClicked:" destination="-1" eventType="touchUpInside" id="tGv-Iy-1Lz"/>
+                    </connections>
+                </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -101,19 +122,32 @@
                 <constraint firstItem="N4z-cJ-eyp" firstAttribute="trailing" secondItem="kUo-yY-7xQ" secondAttribute="trailing" id="Fae-8S-BPn"/>
                 <constraint firstItem="oCB-hs-FTK" firstAttribute="leading" secondItem="N4z-cJ-eyp" secondAttribute="leading" id="FwO-mb-qUm"/>
                 <constraint firstItem="RpJ-Np-4nB" firstAttribute="top" secondItem="g16-Je-afK" secondAttribute="bottom" constant="70" id="G3T-v4-Ghk"/>
+                <constraint firstItem="eup-XU-HsO" firstAttribute="trailing" secondItem="kUo-yY-7xQ" secondAttribute="trailing" id="H8b-ay-nOb"/>
+                <constraint firstItem="fGB-ZE-ddW" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="20" id="HfG-8D-VeG"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="g16-Je-afK" secondAttribute="trailing" id="JGh-6p-WU4"/>
                 <constraint firstItem="RpJ-Np-4nB" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Rcm-CH-wXU"/>
+                <constraint firstItem="xnh-aH-V2b" firstAttribute="centerY" secondItem="fGB-ZE-ddW" secondAttribute="centerY" id="Ugk-UG-0sv"/>
+                <constraint firstItem="fGB-ZE-ddW" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="15" id="Wyw-WX-d0t"/>
+                <constraint firstItem="xnh-aH-V2b" firstAttribute="leading" secondItem="fGB-ZE-ddW" secondAttribute="trailing" constant="15" id="XTM-rq-9eE"/>
                 <constraint firstItem="N4z-cJ-eyp" firstAttribute="leading" secondItem="kUo-yY-7xQ" secondAttribute="leading" id="avU-KF-sSQ"/>
                 <constraint firstItem="oCB-hs-FTK" firstAttribute="top" secondItem="N4z-cJ-eyp" secondAttribute="bottom" constant="15" id="c4f-0B-Afv"/>
                 <constraint firstItem="kUo-yY-7xQ" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="25" id="lPp-70-z4V"/>
                 <constraint firstItem="kUo-yY-7xQ" firstAttribute="top" secondItem="RpJ-Np-4nB" secondAttribute="bottom" constant="110" id="oML-Wt-vEl"/>
+                <constraint firstItem="eup-XU-HsO" firstAttribute="top" secondItem="kUo-yY-7xQ" secondAttribute="bottom" constant="10" id="oNz-k7-AwY"/>
+                <constraint firstItem="eup-XU-HsO" firstAttribute="leading" secondItem="kUo-yY-7xQ" secondAttribute="leading" id="uzj-9V-p4O"/>
                 <constraint firstItem="oCB-hs-FTK" firstAttribute="trailing" secondItem="N4z-cJ-eyp" secondAttribute="trailing" id="yIY-f1-CBK"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <point key="canvasLocation" x="137.68115942028987" y="79.6875"/>
         </view>
     </objects>
+    <designables>
+        <designable name="otz-8v-MbW">
+            <size key="intrinsicContentSize" width="96.5" height="20.5"/>
+        </designable>
+    </designables>
     <resources>
+        <image name="Backward arrow navbar" width="16" height="16"/>
         <image name="Intersection 1" width="413" height="150.5"/>
         <image name="username" width="16" height="16"/>
         <namedColor name="MainRed">

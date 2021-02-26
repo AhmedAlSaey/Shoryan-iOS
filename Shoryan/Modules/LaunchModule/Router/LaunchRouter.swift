@@ -90,8 +90,6 @@ class LaunchRouter: BaseRouter, UITabBarControllerDelegate {
     func createMapSelectionSignup() -> UIViewController{
         let viewController = MapSelectorViewController()
         
-        let presenter = MapSelectorPresenter()
-        
         return viewController
     }
     
@@ -127,6 +125,21 @@ class LaunchRouter: BaseRouter, UITabBarControllerDelegate {
         navigationController?.popViewController(animated: true)
     }
     
+    func dismissLogin() {
+        guard let _ = navigationController?.viewControllers.last as? LogInViewController else {fatalError()}
+        navigationController?.popViewController(animated: true)
+    }
+    
+    func dismissLogInPassword() {
+        guard let _ = navigationController?.viewControllers.last as? LogInPasswordViewController else {fatalError()}
+        navigationController?.popViewController(animated: true)
+    }
+    
+    func dismissLogInSMS() {
+        guard let _ = navigationController?.viewControllers.last as? LogInSMSViewController else {fatalError()}
+        navigationController?.popViewController(animated: true)
+    }
+    
     func dissmissMapSelector() {
         guard let _ = navigationController?.viewControllers.last as? MapSelectorViewController else {fatalError()}
         navigationController?.popViewController(animated: true)
@@ -152,8 +165,7 @@ class LaunchRouter: BaseRouter, UITabBarControllerDelegate {
             newRequestTabVC,
             homeTabVC,
         ]
-        tabBarController?.tabBar.selectedItem = tabBarController?.tabBar.items?.last
-        
+        tabBarController?.selectedIndex = 3
         
         
         initializeWindowWithNavigationControllerAnimation(rootViewController: tabBarController!)

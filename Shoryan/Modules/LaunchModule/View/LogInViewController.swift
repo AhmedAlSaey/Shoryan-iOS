@@ -15,6 +15,7 @@ class LogInViewController: BaseViewController {
     
     @IBOutlet weak var continuePasswordButton: UIButton!
     @IBOutlet weak var continueSMSButton: UIButton!
+    @IBOutlet weak var phoneTextField: PhoneNumberTextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,6 +25,10 @@ class LogInViewController: BaseViewController {
         continuePasswordButton.layer.cornerRadius = continuePasswordButton.frame.size.height / 2
         continueSMSButton.layer.cornerRadius = continueSMSButton.frame.size.height / 2
         
+    }
+    
+    func areEntriesValid() -> Bool {
+        return phoneTextField.isValidEntry
     }
 
 
@@ -38,6 +43,11 @@ class LogInViewController: BaseViewController {
         }
     }
     
+    @IBAction func backButtonClicked(_ sender: Any) {
+        if let presenter = presenter as? LogInPresenter {
+            presenter.backButtonClicked()
+        }
+    }
     
    
 }

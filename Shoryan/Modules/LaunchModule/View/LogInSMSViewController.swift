@@ -13,6 +13,9 @@ class LogInSMSViewController: BaseViewController, UITextFieldDelegate {
     @IBOutlet weak var code2TF: UITextField!
     @IBOutlet weak var code3TF: UITextField!
     @IBOutlet weak var code4TF: UITextField!
+    
+    @IBOutlet weak var phoneTextField: UILabel!
+    
     @IBOutlet weak var continueButton: UIButton!
     
     var code: String {
@@ -34,7 +37,9 @@ class LogInSMSViewController: BaseViewController, UITextFieldDelegate {
     override func viewWillAppear(_ animated: Bool) {
     }
     
-    
+    func areEntriesValid() -> Bool {
+        return !code.isEmpty
+    }
     
     
     
@@ -84,6 +89,13 @@ class LogInSMSViewController: BaseViewController, UITextFieldDelegate {
             presenter.didClickContinueFromSMSLogIn(withCode: code)
         }
     }
+    
+    @IBAction func backButtonPressed(_ sender: Any) {
+        if let presenter = presenter as? LogInSMSPresenter {
+            presenter.backButtonPressed()
+        }
+    }
+    
     
 
 }

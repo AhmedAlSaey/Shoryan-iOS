@@ -9,7 +9,8 @@ import UIKit
 
 class LogInPasswordViewController: BaseViewController {
     
-    @IBOutlet weak var password: UITextField!
+    @IBOutlet weak var password: PasswordTextField!
+    @IBOutlet weak var phoneTextField: UILabel!
     @IBOutlet weak var continueButton: UIButton!
     
     override func viewDidLoad() {
@@ -21,6 +22,10 @@ class LogInPasswordViewController: BaseViewController {
         // Do any additional setup after loading the view.
     }
     
+    func areEntriesValid() -> Bool {
+        return password.isValidEntry
+    }
+    
 
     @IBAction func didClickContinue(_ sender: UIButton) {
         if let presenter = presenter as? LogInPasswordPresenter {
@@ -28,6 +33,11 @@ class LogInPasswordViewController: BaseViewController {
         }
     }
     
+    @IBAction func backButtonPressed(_ sender: Any) {
+        if let presenter = presenter as? LogInPasswordPresenter {
+            presenter.backButtonPressed()
+        }
+    }
     /*
     // MARK: - Navigation
 
