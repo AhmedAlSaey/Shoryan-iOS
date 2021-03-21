@@ -31,16 +31,4 @@ class BaseError : Error {
     
 }
 
-class UnknownError: BaseError {
-    override init() {
-        super.init()
-        message = "Unknown Error"
-    }
-}
 
-class NoInternetError : BaseError {
-    override init() {
-        super.init()
-        message = "No internet connection"
-    }
-}

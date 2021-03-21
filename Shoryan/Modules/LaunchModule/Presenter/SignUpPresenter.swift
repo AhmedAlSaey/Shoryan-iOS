@@ -34,27 +34,31 @@ class SignUpPresenter: BasePresenter {
         view.passwordConfirmationTextField.mainPasswordTextField = view.passwordTextField
         
     }
-    func continueClicked(firstName: String, lastName: String, phoneNumber: String, birthDate: String, bloodType: String, password: String, passwordConfirmation: String){
+    func continueClicked(firstName: String, lastName: String, phoneNumber: String, birthDate: Date, bloodType: String, gender: String, password: String){
         
         if let view = view as? SignUpViewController {
             if view.isAllInputValid(), let lat = selectedLocationLat, let lng = selectedLocationLng {
+                view.showLoading()
                 LaunchInteractor.shared.signUp(
                     firstName: firstName,
                     lastName: lastName,
                     phoneNumber: phoneNumber,
                     birthDate: birthDate,
                     bloodType: bloodType,
-                    lng: lng,
-                    lat: lat,
-                    city: selectedLocationCity,
-                    governorate: selectedLocationGovernorate,
-                    password: password,
-                    passwordConfirmation: passwordConfirmation,
-                    successHandler: {
-                    LaunchRouter.shared.launchStartScreen()
-                }, failHandler: {
-                    
-                })
+                    gender: gender,
+                    lng: lat,
+                    lat: lng,
+                    governorate: selectedLocationGovernorate!,
+                    region: selectedLocationCity!,
+                    password: password) { (result) in
+                    view.dismissLoading()
+                    switch result {
+                    case.success(_):
+                        LaunchRouter.shared.launchStartScreen()
+                    case.failure(let error):
+                        view.showAlert(error: error)
+                    }
+                }
             }
             else {
                 view.showAlert(message: "الرجاء التأكد من ادخال جميع المعلومات و التأكد من صحتها")

@@ -64,8 +64,6 @@ class SignUpViewController: BaseViewController {
         genderPickerView.tag = 2
         genderTextField.inputView = genderPickerView
         
-        
-        
     }
     
     
@@ -97,15 +95,15 @@ class SignUpViewController: BaseViewController {
     }
     
     @IBAction func continueButtonPressed(_ sender: Any) {
-        if let presenter = presenter as? SignUpPresenter {
+        if let presenter = presenter as? SignUpPresenter, isAllInputValid() {
             presenter.continueClicked(
                 firstName: firstNameTextField.text.nonNullString,
                 lastName: secondNameTextField.text.nonNullString,
                 phoneNumber: phoneNumberTextField.text.nonNullString,
-                birthDate: dateTextField.text.nonNullString,
+                birthDate: birthDatePickView.date,
                 bloodType: bloodTypeTextField.text.nonNullString,
-                password: passwordTextField.text.nonNullString,
-                passwordConfirmation: passwordConfirmationTextField.text.nonNullString
+                gender: genderTextField.text.nonNullString,
+                password: passwordTextField.text.nonNullString
             )
         }
     }

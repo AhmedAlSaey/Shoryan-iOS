@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import JGProgressHUD
 
 class BaseViewController: UIViewController, UIGestureRecognizerDelegate {
     
@@ -72,6 +73,40 @@ class BaseViewController: UIViewController, UIGestureRecognizerDelegate {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
         self.present(alert, animated: true, completion: nil)
+    }
+    
+    func showAlert(title: String, message: String, okAction: (() -> ())? = nil) {
+        
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { (action) in
+            okAction?()
+        }))
+        DispatchQueue.main.async {
+            self.present(alert, animated: true, completion: nil)
+        }
+        
+    }
+    
+    func showDislaimer(title: String, message: String, agreeAction: @escaping () -> (), agreeTitle: String = "Ok"){
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: agreeTitle, style: .default, handler: { (action) in
+            agreeAction()
+        }))
+        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+        self.present(alert, animated: true, completion: nil)
+    }
+    
+    var hud: JGProgressHUD?
+    func showLoading() {
+        DispatchQueue.main.async {
+            self.hud = JGProgressHUD()
+            self.hud?.textLabel.text = "Loading"
+            self.hud?.show(in: self.view)
+        }
+    }
+    
+    func dismissLoading() {
+        self.hud?.dismiss()
     }
     
     @objc @IBAction func backAction(_ sender: UIButton) {

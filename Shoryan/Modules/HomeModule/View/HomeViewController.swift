@@ -38,7 +38,7 @@ class HomeViewController: BaseViewController {
         configureCards()
         configureFilterView()
         configureTableView()
-        
+        presenter?.viewDidLoad()
     }
     
     func styleNavigationBar() {

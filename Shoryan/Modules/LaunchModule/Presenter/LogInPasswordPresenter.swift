@@ -18,20 +18,26 @@ class LogInPasswordPresenter: BasePresenter {
     }
     
     func didClickContinueFromPasswordLogIn(withPassword password: String){
-        guard let phoneNumber = phoneNumber else {fatalError()}
-        if areEntriedValid() {
-            LaunchInteractor.shared.logInWithPassword(phoneNumber: phoneNumber, password: password, successHandler: {
-                LaunchRouter.shared.launchStartScreen()
-            }, failHandler: {
-                view?.showAlert(title: "Error", message: "الرجاء التأكد من صحة كلمة كلمة المرور")
-            })
+        guard let phoneNumber = phoneNumber, let view = view as? LogInPasswordViewController else {fatalError()}
+        if areEntriesValid() {
+            view.showLoading()
+            LaunchInteractor.shared.logInWithPassword(phoneNumber: phoneNumber, password: password) { (result) in
+                self.view?.dismissLoading()
+                switch result {
+                case .success(_):
+                    LaunchRouter.shared.launchStartScreen()
+                case .failure(let error):
+                    view.showAlert(error: error)
+                }
+            }
+            
         } else {
-            view?.showAlert(title: "Error", message: "الرجاء التأكد من صحة كلمة كلمة المرور")
+            view.showAlert(title: "Error", message: "الرجاء التأكد من صحة كلمة كلمة المرور")
         }
         
     }
     
-    func areEntriedValid() -> Bool {
+    func areEntriesValid() -> Bool {
         guard let view = view as? LogInPasswordViewController else {fatalError()}
         return view.areEntriesValid()
     }

@@ -43,38 +43,58 @@ class LaunchInteractor {
 
     
     func isUserSignedIn() -> Bool {
-        return false
+        return AppUser.shared.isUserAuthenticated()
     }
     
     func initializeApp() {
         ThemeConstants.globalApplicationTheming()
     }
     
-    func logInWithPassword(phoneNumber: String, password: String, successHandler: () -> (), failHandler: () -> ()){
-        successHandler()
+    func logInWithPassword(phoneNumber: String, password: String, completionHandler: @escaping (Result<LoginPasswordResponse, NetworkError>) -> ()){
+        LaunchModuleAPIManager.authenticateUserPassword(phoneNumber: phoneNumber, password: password, simulatedDelay: 0.2) { (result) in
+            if case .success(let result) = result {
+                AppUser.shared.saveNewUserAcessTokens(userData: result)
+            }
+            completionHandler(result)
+        }
     }
     
     func logInWithCode(phoneNumber: String, code: String, successHandler: () -> (), failHandler: () -> ()){
         successHandler()
     }
     
-    func signUp(firstName: String, lastName: String, phoneNumber: String, birthDate: String, bloodType: String, lng: Double, lat: Double, city: String?, governorate: String?, password: String, passwordConfirmation: String, successHandler: () -> (), failHandler: () -> ()){
+    func signUp(firstName: String, lastName: String, phoneNumber: String, birthDate: Date, bloodType: String, gender: String, lng: Double, lat: Double, governorate: String, region: String, password: String, completionHandler: @escaping (Result<RegisterResponse, BaseError>) -> ()){
         
-        //TODO: - Fix missing:
-        /*
-         governorate: "Cairo",
-         region: "Nasr City,",
-         lat: 31.357096680117373,
-         lon: 30.0592406644431,
-         */
-        successHandler()
+        
+        LaunchModuleAPIManager.registerUser(firstName: firstName, lastName: lastName, phoneNumber: Int(phoneNumber)!, password: password, governorate: governorate, region: region, lat: lat, lng: lng, bloodType: bloodType, gender: translateGender(arabicGender: gender), birthYear: birthDate.get(.year), birthMonth: birthDate.get(.month), birthDay: birthDate.get(.day), simulatedDelay: 0.2) { (result) in
+            if case .success(let result) = result {
+                AppUser.shared.saveNewUserAcessTokens(userData: result)
+            }
+            completionHandler(result.mapError({ (error) -> BaseError in
+                return error as BaseError
+            }))
+            
+        }
     }
     
     func getBloodTypes() -> [String] {
         return ["A+", "A-", "B+", "B-", "AB+", "AB-", "O+", "O-"]
     }
     func getGenders() -> [String] {
-        return ["اُفضل عدم القول", "ذكر", "أنثى"]
+        return ["افضل عدم القول", "ذكر", "أنثى"]
+    }
+    
+    func translateGender(arabicGender: String) -> String {
+        switch arabicGender {
+        case "ذكر":
+            return "Male"
+        case "أنثى":
+            return "Female"
+        case "افضل عدم القول":
+            return "Prefer not to say"
+        default:
+            fatalError()
+        }
     }
 
 }
