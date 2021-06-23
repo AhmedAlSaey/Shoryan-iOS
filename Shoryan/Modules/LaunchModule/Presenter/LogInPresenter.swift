@@ -50,7 +50,7 @@ class LogInPresenter: BasePresenter, SMSAuthenticatorDelegate {
             if view.areEntriesValid() {
                 return true
             } else {
-                view.showAlert(title: "خطأ", message: "الرجاء التأكد من صحة رقم الهاتف")
+                view.showAlert(title: "Error".localized(), message: "incorrectphonenumber.alert".localized())
             }
         }
         return false

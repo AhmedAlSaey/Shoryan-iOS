@@ -39,7 +39,7 @@ class SMSAuthenticationPresenter: BasePresenter, SMSAuthenticationController {
 //                })
                 delegate?.didSelectValidCode(sender: self, code: code)
             } else {
-                view.showAlert(title: "خطأ", message: "الرجاء التأكد من ادخال رمز صحيح")
+                view.showAlert(title: "Error".localized(), message: "incorrectcode.alert".localized())
             }
             
         }
@@ -70,7 +70,7 @@ class SMSAuthenticationPresenter: BasePresenter, SMSAuthenticationController {
             self.dismissLoading()
             switch result {
             case .success(_):
-                view.showAlert(title: "Success", message: "Code resent successfully")
+                view.showAlert(title: "Success".localized(), message: "coderesent.alert".localized())
             case .failure(let error):
                 view.showAlert(error: error)
             }

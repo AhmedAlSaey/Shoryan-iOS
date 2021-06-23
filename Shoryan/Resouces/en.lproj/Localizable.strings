@@ -12,6 +12,14 @@
 
 //General
 "Continue" = "Continue";
+"Error" = "Error";
+"Success" = "Success";
+
+//Alerts/Error messages
+"incorrectphonenumber.alert" = "Please make sure you entered a correct phone number";
+"incorrectpassword.alert" = "Please make sure you entered a correct password";
+"incorrectcode.alert" = "Please make sure you entered a valid code";
+"coderesent.alert" = "Code resent successfully";
 
 //AuthorizationViewController
 "login.button" = "Login";
@@ -28,3 +36,8 @@
 "codeaurthenticationinstruction" = "Enter the verification code we sent to";
 "codesubmit.button" = "Submit";
 "resendcode.button" = "Resend Code";
+
+//Login
+"loginpasswordinstructions.label" = "Enter the password for mobile number";
+"password.label" = "Password";
+"password.placeholder" = "Password";

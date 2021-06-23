@@ -36,7 +36,7 @@ class LogInPasswordPresenter: BasePresenter {
             }
             
         } else {
-            view.showAlert(title: "خطأ", message: "الرجاء التأكد من صحة كلمة كلمة المرور")
+            view.showAlert(title: "Error".localized(), message: "incorrectpassword.alert".localized())
         }
         
     }

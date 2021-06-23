@@ -12,6 +12,14 @@
 
 //General
 "Continue" = "استمرار";
+"Error" = "خطأ";
+"Success" = "نجاح";
+
+//Alerts/Error messages
+"incorrectphonenumber.alert" = "الرجاء التأكد من صحة رقم الهاتف";
+"incorrectpassword.alert" = "الرجاء التأكد من صحة كلمة كلمة المرور";
+"incorrectcode.alert" = "الرجاء التأكد من ادخال رمز صحيح";
+"coderesent.alert" = "تم إعادة إرسال الرمز بنجاح";
 
 //AuthorizationViewController
 "login.button" = "تسجيل دخول";
@@ -28,4 +36,9 @@
 "codeaurthenticationinstruction" = "قم بإدخال رمز الدخول المرسل إلى";
 "codesubmit.button" = "تأكيد";
 "resendcode.button" = "إعادة إرسال الرمز";
+
+//Login
+"loginpasswordinstructions.label" = "قم بإدخال كلمة السر الخاصة برقم";
+"password.label" = "كلمة السر";
+"password.placeholder" = "كلمة السر";
 
