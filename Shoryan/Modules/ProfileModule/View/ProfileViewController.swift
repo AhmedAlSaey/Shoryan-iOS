@@ -12,6 +12,9 @@ class ProfileViewController: BaseViewController {
     @IBOutlet weak var navigationBarView: UIView!
     @IBOutlet weak var navBarTopConstraint: NSLayoutConstraint!
     @IBOutlet var statsView: UIView!
+    @IBOutlet weak var pointsLabel: UILabel!
+    @IBOutlet weak var donationsLabel: UILabel!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,9 +24,11 @@ class ProfileViewController: BaseViewController {
     }
 
     func styleNavigationBar() {
-        let barHeight = navigationController?.navigationBar.layer.frame.height ?? 0
-        navBarTopConstraint.constant -= barHeight
+//        let barHeight = navigationController?.navigationBar.layer.frame.height ?? 0
+//        navBarTopConstraint.constant -= barHeight
         navigationBarView.addSpecificCornerRadius(forCorners: .Bottom, radius: 20)
+        pointsLabel.text = pointsLabel.text?.enToArDigits
+        donationsLabel.text = donationsLabel.text?.enToArDigits
         
     }
     

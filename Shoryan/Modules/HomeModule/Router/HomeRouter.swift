@@ -34,6 +34,22 @@ class HomeRouter: BaseRouter {
         return nc
     }
     
+    func createDetailedRequestScreen() -> RequestViewController {
+        let vc = RequestViewController()
+        let presenter = RequestPresenter()
+        
+        vc.presenter = presenter
+        presenter.view = vc
+        
+        return vc
+    }
+    
+    func presentRequest(detailedRequest: DetailedRequest){
+        let vc = createDetailedRequestScreen()
+        vc.request = detailedRequest
+        navigationController?.present(vc, animated: true, completion: nil)
+    }
+    
     
     
 }

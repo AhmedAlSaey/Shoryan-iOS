@@ -8,18 +8,7 @@
 import Foundation
 
 class LoginPasswordResponse: Decodable {
-    let state: Bool
-    let user: LoginUser
+    let accessToken: String
+    let refreshToken: String
 }
 
-class LoginUser: Decodable {
-    let name: LoginUser
-    let points: Int
-    let _id: String
-    let bloodType: String
-}
-
-class LogInName: Decodable {
-    let firstName: String
-    let lastName: String
-}

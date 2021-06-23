@@ -8,6 +8,7 @@
 import UIKit
 import GooglePlaces
 import GoogleMaps
+import JGProgressHUD
 
 protocol MapSelectorDelegate {
     func didSelectLocation(lng: Double, lat: Double, city: String?, governorate: String?, formattedAddress: String?) -> Void
@@ -23,6 +24,7 @@ class MapSelectorViewController: UIViewController {
     var mapView: GMSMapView?
     var locationManager = CLLocationManager()
     var delegate: MapSelectorDelegate?
+    let hud = JGProgressHUD()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -65,6 +67,7 @@ class MapSelectorViewController: UIViewController {
     }
     
     func startLocationManager() {
+        hud.show(in: self.view)
         locationManager.requestWhenInUseAuthorization()
         locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
         locationManager.delegate = self
@@ -202,6 +205,7 @@ extension MapSelectorViewController: GMSAutocompleteViewControllerDelegate {
 
   func viewController(_ viewController: GMSAutocompleteViewController, didFailAutocompleteWithError error: Error) {
     //TODO: - handle the error.
+    hud.dismiss()
     showAlert(title: "Error", message: error.localizedDescription)
   }
 
@@ -226,6 +230,7 @@ extension MapSelectorViewController: GMSAutocompleteViewControllerDelegate {
 //MARK: - CLLocationManagerDelegate
 extension MapSelectorViewController: CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        hud.dismiss()
         if let location = locations.last {
             locationManager.stopUpdatingLocation()
             let lat = location.coordinate.latitude
@@ -236,6 +241,7 @@ extension MapSelectorViewController: CLLocationManagerDelegate {
     }
     
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
+        hud.dismiss()
         print(error)
     }
 }

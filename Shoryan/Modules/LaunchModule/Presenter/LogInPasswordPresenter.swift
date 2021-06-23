@@ -4,6 +4,7 @@
 //
 //  Created by Ahmed AlSai on 29/12/2020.
 //
+import Foundation
 
 class LogInPasswordPresenter: BasePresenter {
     
@@ -15,24 +16,27 @@ class LogInPasswordPresenter: BasePresenter {
             view.phoneTextField.text = phoneNumber
         }
         
+        
     }
     
     func didClickContinueFromPasswordLogIn(withPassword password: String){
         guard let phoneNumber = phoneNumber, let view = view as? LogInPasswordViewController else {fatalError()}
         if areEntriesValid() {
-            view.showLoading()
+            showLoading()
             LaunchInteractor.shared.logInWithPassword(phoneNumber: phoneNumber, password: password) { (result) in
-                self.view?.dismissLoading()
-                switch result {
-                case .success(_):
-                    LaunchRouter.shared.launchStartScreen()
-                case .failure(let error):
-                    view.showAlert(error: error)
+                DispatchQueue.main.async {
+                    self.dismissLoading()
+                    switch result {
+                    case .success(let responce):
+                        LaunchRouter.shared.launchStartScreen()
+                    case .failure(let error):
+                        view.showAlert(error: error)
+                    }
                 }
             }
             
         } else {
-            view.showAlert(title: "Error", message: "الرجاء التأكد من صحة كلمة كلمة المرور")
+            view.showAlert(title: "خطأ", message: "الرجاء التأكد من صحة كلمة كلمة المرور")
         }
         
     }

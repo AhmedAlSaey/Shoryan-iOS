@@ -52,14 +52,15 @@ class LaunchRouter: BaseRouter, UITabBarControllerDelegate {
         return viewController
     }
     
-    func createLogInWithSMS(phoneNumber: String) -> UIViewController {
+    func createAuthenticationWithSMS(phoneNumber: String, delegate: SMSAuthenticatorDelegate) -> UIViewController {
         
-        let viewController = LogInSMSViewController()
+        let viewController = SMSAuthenticationViewController()
         
-        let presenter = LogInSMSPresenter()
+        let presenter = SMSAuthenticationPresenter()
         presenter.phoneNumber = phoneNumber
         viewController.presenter = presenter
         viewController.presenter?.view = viewController
+        presenter.delegate = delegate
         
         return viewController
     }
@@ -111,8 +112,10 @@ class LaunchRouter: BaseRouter, UITabBarControllerDelegate {
         navigationController?.pushViewController(vc, animated: true)
     }
     
-    func pushLogInWithSMSPage(phoneNumber: String) {
-        let vc = createLogInWithSMS(phoneNumber: phoneNumber)
+    
+    
+    func pushSMSAuthenticationScreen(phoneNumber: String, delegate: SMSAuthenticatorDelegate) {
+        let vc = createAuthenticationWithSMS(phoneNumber: phoneNumber, delegate: delegate)
         navigationController?.pushViewController(vc, animated: true)
     }
     
@@ -135,8 +138,8 @@ class LaunchRouter: BaseRouter, UITabBarControllerDelegate {
         navigationController?.popViewController(animated: true)
     }
     
-    func dismissLogInSMS() {
-        guard let _ = navigationController?.viewControllers.last as? LogInSMSViewController else {fatalError()}
+    func dismissSMSAuthentication() {
+        guard let _ = navigationController?.viewControllers.last as? SMSAuthenticationViewController else {fatalError()}
         navigationController?.popViewController(animated: true)
     }
     

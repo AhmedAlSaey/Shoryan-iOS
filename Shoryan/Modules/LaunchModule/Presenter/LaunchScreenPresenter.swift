@@ -17,6 +17,7 @@ class LaunchScreenPresenter: BasePresenter {
         DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
             if LaunchInteractor.shared.isUserSignedIn() {
                 // Call router to launch home page
+                LaunchRouter.shared.launchStartScreen()
             } else {
                 // Call router to launch authorization page
                 LaunchRouter.shared.launchAuthorizationPage()

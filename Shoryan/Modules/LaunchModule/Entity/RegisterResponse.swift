@@ -8,11 +8,9 @@
 import Foundation
 
 class RegisterResponse: Decodable {
-    let name: RegisterName
-    let _id: String
+    let response: RegisterMessage
 }
 
-class RegisterName: Decodable {
-    let firstName: String
-    let lastName: String
+class RegisterMessage: Decodable {
+    let message: String
 }

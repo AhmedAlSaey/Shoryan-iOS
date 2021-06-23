@@ -29,6 +29,10 @@ class NetworkError : BaseError {
             return CodeExpiredError()
         case "JWT_EXPIRED":
             return JWTExpiredError()
+        case "PHONE_NUMBER_REQUIRED":
+            return PhoneNumberRequiredError()
+        case "ACCOUNT_NOT_VERIFIED":
+            return AccountNotVerifiedError()
         default:
             return UnknownNetworkError()
         }
@@ -42,6 +46,7 @@ class NetworkError : BaseError {
             return UnknownNetworkError()
         }
     }
+    
 }
 
 class EmptyError: BaseError {
@@ -125,6 +130,20 @@ class JWTExpiredError : NetworkError {
     }
 }
 
+class PhoneNumberRequiredError : NetworkError {
+    override init() {
+        super.init()
+        message = "Phone number is required before continuing"
+    }
+}
+
+class AccountNotVerifiedError : NetworkError {
+    override init() {
+        super.init()
+        message = "Your account was not verified after registration, please try registering again"
+    }
+}
+
 class InvalidPathError : NetworkError {
     override init() {
         super.init()
@@ -149,6 +168,6 @@ class ParseError : NetworkError {
 class NoInternetConnectionError : NetworkError {
     override init() {
         super.init()
-        message = "Your intenet connection is offline, please make sure you are connected to the internet"
+        message = "Your internet connection is offline, please make sure you are connected to the internet"
     }
 }

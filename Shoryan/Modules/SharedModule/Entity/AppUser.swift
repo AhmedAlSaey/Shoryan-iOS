@@ -18,20 +18,39 @@ class AppUser {
             KeyChain.shared[Constants.userIDKey] = newValue
         }
     }
+    var accessToken : String? {
+        get {
+            KeyChain.shared[Constants.accessTokenKey]
+        }
+    }
+    
+    var pendingRequestID: String? {
+        get {
+            return KeyChain.shared[Constants.pendingRequestIDKey]
+        }
+        set {
+            KeyChain.shared[Constants.pendingRequestIDKey] = newValue
+        }
+    }
 
     func isUserAuthenticated() -> Bool {
         return userID != nil
     }
     
     func saveNewUserAcessTokens(userData: LoginPasswordResponse) {
-        KeyChain.shared[Constants.userIDKey] = userData.user._id
+        KeyChain.shared[Constants.accessTokenKey] = userData.accessToken
     }
     
-    func saveNewUserAcessTokens(userData: RegisterResponse) {
-        KeyChain.shared[Constants.userIDKey] = userData._id
+    func saveNewUserAcessTokens(userData: LoginUsingCodeResponse) {
+        KeyChain.shared[Constants.accessTokenKey] = userData.accessToken
+    }
+    
+    func saveNewUserAcessTokens(userData: VerifyAccountResponse) {
+        KeyChain.shared[Constants.accessTokenKey] = userData.accessToken
     }
     
     func clearUserData() {
+        KeyChain.shared[Constants.accessTokenKey] = nil
         KeyChain.shared[Constants.userIDKey] = nil
     }
     

@@ -10,6 +10,7 @@ import Foundation
 enum URLRequestType {
     case POST
     case GET
+    case DEL
     
     var stringValue : String {
         switch self {
@@ -17,6 +18,8 @@ enum URLRequestType {
             return "POST"
         case .GET:
             return "GET"
+        case .DEL:
+            return "DELETE"
         }
     }
 }
@@ -96,31 +99,34 @@ class Network {
                     }
                     
                 }
-                catch DecodingError.dataCorrupted(let context) {
-                   print(context)
-               } catch DecodingError.keyNotFound(let key, let context) {
-                   print("Key '\(key)' not found:", context.debugDescription)
-                   print("codingPath:", context.codingPath)
-               } catch DecodingError.valueNotFound(let value, let context) {
-                   print("Value '\(value)' not found:", context.debugDescription)
-                   print("codingPath:", context.codingPath)
-               } catch DecodingError.typeMismatch(let type, let context)  {
-                   print("Type '\(type)' mismatch:", context.debugDescription)
-                   print("codingPath:", context.codingPath)
-               } catch {
-                   print("error: ", error)
-               }
-//                catch {
-//                    print(error)
-//                    do {
-//                        let errorObject: DecodableErrorResponse = try decoder.decode(DecodableErrorResponse.self, from: jsonData)
-//                        completionHandler(.failure(NetworkError.getNetwrokError(fromResponseError: errorObject)))
-//                    }
-//                    catch {
-//                        //TODO: - Fix this line to return appropriate error
-//                        completionHandler(.failure(ParseError()))
-//                    }
-//                }
+                catch {
+                    print(error)
+                    do {
+                        let errorObject: DecodableErrorResponse = try decoder.decode(DecodableErrorResponse.self, from: jsonData)
+                        let networkError = NetworkError.getNetwrokError(fromResponseError: errorObject)
+                        completionHandler(.failure(networkError))
+                    }
+                    catch {
+                        //TODO: - Fix this line to return appropriate error
+                        completionHandler(.failure(ParseError()))
+                    }
+                }
+                
+//                catch DecodingError.dataCorrupted(let context) {
+//                   print(context)
+//               } catch DecodingError.keyNotFound(let key, let context) {
+//                   print("Key '\(key)' not found:", context.debugDescription)
+//                   print("codingPath:", context.codingPath)
+//               } catch DecodingError.valueNotFound(let value, let context) {
+//                   print("Value '\(value)' not found:", context.debugDescription)
+//                   print("codingPath:", context.codingPath)
+//               } catch DecodingError.typeMismatch(let type, let context)  {
+//                   print("Type '\(type)' mismatch:", context.debugDescription)
+//                   print("codingPath:", context.codingPath)
+//               } catch {
+//                   print("error: ", error)
+//               }
+
             }
             else {
                 if let error = error {

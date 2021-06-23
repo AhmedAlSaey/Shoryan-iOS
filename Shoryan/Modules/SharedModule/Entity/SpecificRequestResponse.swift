@@ -16,6 +16,7 @@ class SpecificRequest: Decodable {
     let numberOfBagsFulfilled: Int
     let numberOfComingDonors: Int
     let isActive: Bool
+    let comingDonors: [String]
     let _id: String
     let bloodType: String
     let numberOfBagsRequired: Int
@@ -23,11 +24,8 @@ class SpecificRequest: Decodable {
     let requestBy: SpecificRequestRequester
     let donationLocation: SpecificRequestDonationLocation
     let date: String
-    let __v: String
-    
-    //TODO: - Implement this field
-//    let comingDonors:
-//    let donation
+    let donations: [SpecificRequestDonation]
+    let __v: Int
 }
 
 class SpecificRequestRequester: Decodable {
@@ -59,5 +57,21 @@ class SpecificRequestLocation: Decodable {
 
 class SpecificRequestUserCanDonate: Decodable {
     let state: Bool
-    let message: String
+    let message: String?
+}
+
+class SpecificRequestDonation: Decodable {
+    let _id: String
+    let user: SpecificRequestDonator
+    let donationTime: String
+}
+
+class SpecificRequestDonator: Decodable {
+    let name: SpecificRequestDonatorName
+    let _id: String
+}
+
+class SpecificRequestDonatorName: Decodable {
+    let firstName: String
+    let lastName: String
 }

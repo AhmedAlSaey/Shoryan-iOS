@@ -8,20 +8,23 @@
 import Foundation
 
 class AllRequestsResponse: Decodable {
+    let requests: [AllRequestsResponseRequest]
+    
+}
+
+class AllRequestsResponseRequest: Decodable {
     let _id: String
     let bloodType: String
     let requestBy: AllRequestsRequester?
     let donationLocation: AllRequestsDonationLocation
+    let urgent: Bool?
 }
 
 class AllRequestsRequester: Decodable {
-    let name: AllRequestsRequesterName
+    let name: String
     let _id: String
 }
 
-class AllRequestsRequesterName: Decodable {
-    let firstName: String
-}
 
 class AllRequestsDonationLocation: Decodable {
     let location: AllRequestsLocation

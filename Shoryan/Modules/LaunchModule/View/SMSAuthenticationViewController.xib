@@ -1,21 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LogInSMSViewController" customModule="Shoryan" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SMSAuthenticationViewController" customModule="Shoryan" customModuleProvider="target">
             <connections>
                 <outlet property="code1TF" destination="rTg-sW-7sd" id="KFh-5y-w6d"/>
                 <outlet property="code2TF" destination="lH0-pb-OcM" id="33H-AX-pie"/>
                 <outlet property="code3TF" destination="j4P-wy-jgX" id="KyI-iS-pyj"/>
                 <outlet property="code4TF" destination="9ZC-73-laj" id="xoQ-EW-5DK"/>
+                <outlet property="code5TF" destination="b1J-me-BMv" id="eE9-L2-JoD"/>
+                <outlet property="code6TF" destination="Hyf-Y5-v4X" id="g7c-Yl-6zo"/>
                 <outlet property="continueButton" destination="63R-d9-3cc" id="dEE-Ub-yF9"/>
                 <outlet property="phoneTextField" destination="bml-xl-psM" id="UKN-Tb-bMI"/>
                 <outlet property="view" destination="TCg-2B-uNg" id="QQl-1c-nQF"/>
@@ -59,22 +61,32 @@
                     <rect key="frame" x="40" y="376.5" width="334" height="18.5"/>
                     <subviews>
                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rTg-sW-7sd" customClass="UnderlinedUITextField" customModule="Shoryan" customModuleProvider="target">
-                            <rect key="frame" x="0.0" y="0.0" width="56" height="18.5"/>
+                            <rect key="frame" x="0.0" y="0.0" width="25" height="18.5"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <textInputTraits key="textInputTraits" keyboardType="numberPad" textContentType="one-time-code"/>
                         </textField>
                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lH0-pb-OcM" customClass="UnderlinedUITextField" customModule="Shoryan" customModuleProvider="target">
-                            <rect key="frame" x="93" y="0.0" width="55.5" height="18.5"/>
+                            <rect key="frame" x="62" y="0.0" width="24.5" height="18.5"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <textInputTraits key="textInputTraits" keyboardType="numberPad" textContentType="one-time-code"/>
                         </textField>
                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="j4P-wy-jgX" customClass="UnderlinedUITextField" customModule="Shoryan" customModuleProvider="target">
-                            <rect key="frame" x="185.5" y="0.0" width="56" height="18.5"/>
+                            <rect key="frame" x="123.5" y="0.0" width="25" height="18.5"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <textInputTraits key="textInputTraits" keyboardType="numberPad" textContentType="one-time-code"/>
                         </textField>
                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9ZC-73-laj" customClass="UnderlinedUITextField" customModule="Shoryan" customModuleProvider="target">
-                            <rect key="frame" x="278.5" y="0.0" width="55.5" height="18.5"/>
+                            <rect key="frame" x="185.5" y="0.0" width="25" height="18.5"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits" keyboardType="numberPad" textContentType="one-time-code"/>
+                        </textField>
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="b1J-me-BMv" customClass="UnderlinedUITextField" customModule="Shoryan" customModuleProvider="target">
+                            <rect key="frame" x="247.5" y="0.0" width="24.5" height="18.5"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits" keyboardType="numberPad" textContentType="one-time-code"/>
+                        </textField>
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Hyf-Y5-v4X" customClass="UnderlinedUITextField" customModule="Shoryan" customModuleProvider="target">
+                            <rect key="frame" x="309" y="0.0" width="25" height="18.5"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <textInputTraits key="textInputTraits" keyboardType="numberPad" textContentType="one-time-code"/>
                         </textField>
@@ -99,6 +111,16 @@
                         <action selector="backButtonPressed:" destination="-1" eventType="touchUpInside" id="WEZ-Q2-702"/>
                     </connections>
                 </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="35R-HC-0T0">
+                    <rect key="frame" x="156.5" y="555" width="101" height="31"/>
+                    <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="17"/>
+                    <state key="normal" title="إعادة إرسال الرمز">
+                        <color key="titleColor" systemColor="labelColor"/>
+                    </state>
+                    <connections>
+                        <action selector="resendButtonClicked:" destination="-1" eventType="touchUpInside" id="F6D-rc-UTe"/>
+                    </connections>
+                </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="qwx-Xw-xbT"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -106,6 +128,7 @@
                 <constraint firstItem="yIV-tT-5mf" firstAttribute="top" secondItem="bml-xl-psM" secondAttribute="bottom" constant="30" id="31Z-HT-B9F"/>
                 <constraint firstItem="bml-xl-psM" firstAttribute="top" secondItem="47r-ad-ZNi" secondAttribute="bottom" constant="10" id="36e-RP-d9g"/>
                 <constraint firstItem="qwx-Xw-xbT" firstAttribute="trailing" secondItem="63R-d9-3cc" secondAttribute="trailing" constant="25" id="3CG-ZC-AdO"/>
+                <constraint firstItem="35R-HC-0T0" firstAttribute="centerX" secondItem="TCg-2B-uNg" secondAttribute="centerX" id="3uo-cX-r63"/>
                 <constraint firstItem="qwx-Xw-xbT" firstAttribute="trailing" secondItem="Ccs-W6-bjf" secondAttribute="trailing" id="4pE-GK-Myd"/>
                 <constraint firstItem="47r-ad-ZNi" firstAttribute="leading" secondItem="qwx-Xw-xbT" secondAttribute="leading" constant="25" id="7X0-T9-Vmj"/>
                 <constraint firstItem="CXp-jI-Snq" firstAttribute="top" secondItem="Ccs-W6-bjf" secondAttribute="bottom" constant="70" id="Ai9-sR-PeZ"/>
@@ -114,6 +137,7 @@
                 <constraint firstItem="bml-xl-psM" firstAttribute="trailing" secondItem="47r-ad-ZNi" secondAttribute="trailing" id="Pnp-Ea-06j"/>
                 <constraint firstItem="jrY-8j-ojZ" firstAttribute="centerY" secondItem="o40-qF-cOM" secondAttribute="centerY" id="Smj-Cn-Kdq"/>
                 <constraint firstItem="63R-d9-3cc" firstAttribute="leading" secondItem="qwx-Xw-xbT" secondAttribute="leading" constant="25" id="b26-VW-P3f"/>
+                <constraint firstItem="35R-HC-0T0" firstAttribute="top" secondItem="63R-d9-3cc" secondAttribute="bottom" constant="27" id="b99-ml-Fnh"/>
                 <constraint firstItem="Ccs-W6-bjf" firstAttribute="top" secondItem="TCg-2B-uNg" secondAttribute="top" id="fMk-mX-4HT"/>
                 <constraint firstItem="Ccs-W6-bjf" firstAttribute="leading" secondItem="qwx-Xw-xbT" secondAttribute="leading" id="hA4-Hd-Lhp"/>
                 <constraint firstItem="o40-qF-cOM" firstAttribute="top" secondItem="qwx-Xw-xbT" secondAttribute="top" constant="20" id="kGS-MS-z7a"/>
@@ -134,6 +158,9 @@
         <namedColor name="MainRed">
             <color red="0.6119999885559082" green="0.067000001668930054" blue="0.067000001668930054" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

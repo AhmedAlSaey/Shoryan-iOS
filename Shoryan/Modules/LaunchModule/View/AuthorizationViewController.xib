@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -13,6 +13,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AuthorizationViewController" customModule="Shoryan" customModuleProvider="target">
             <connections>
                 <outlet property="logInButton" destination="lvI-eY-Ufj" id="ASB-64-jhP"/>
+                <outlet property="logoImage" destination="BtS-cF-dWU" id="F2E-Wv-h5D"/>
                 <outlet property="signUpButton" destination="9aW-BM-tMG" id="Bon-wX-L6C"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -22,38 +23,10 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lvI-eY-Ufj">
-                    <rect key="frame" x="25" y="681" width="364" height="58"/>
-                    <color key="backgroundColor" name="MainRed"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="58" id="R7u-Oj-ke1"/>
-                    </constraints>
-                    <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="17"/>
-                    <state key="normal" title="تسجيل دخول">
-                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    </state>
-                    <connections>
-                        <action selector="didClickLogInButton:" destination="-1" eventType="touchUpInside" id="FaB-Tg-rjQ"/>
-                    </connections>
-                </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9aW-BM-tMG">
-                    <rect key="frame" x="25" y="759" width="364" height="58"/>
-                    <color key="backgroundColor" name="MainRed"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="58" id="NyG-fb-x34"/>
-                    </constraints>
-                    <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="17"/>
-                    <state key="normal" title="إنشاء حساب جديد">
-                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    </state>
-                    <connections>
-                        <action selector="didClickSignUpButton:" destination="-1" eventType="touchUpInside" id="stR-Qr-awB"/>
-                    </connections>
-                </button>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hSs-tD-5Vq">
                     <rect key="frame" x="0.0" y="44" width="414" height="637"/>
                     <subviews>
-                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo picture" translatesAutoresizingMaskIntoConstraints="NO" id="BtS-cF-dWU">
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo-picture_en" translatesAutoresizingMaskIntoConstraints="NO" id="BtS-cF-dWU">
                             <rect key="frame" x="35" y="180.5" width="344" height="276"/>
                         </imageView>
                     </subviews>
@@ -65,27 +38,63 @@
                         <constraint firstItem="BtS-cF-dWU" firstAttribute="centerX" secondItem="hSs-tD-5Vq" secondAttribute="centerX" id="tLo-X2-iDQ"/>
                     </constraints>
                 </view>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="red-oval" translatesAutoresizingMaskIntoConstraints="NO" id="4yd-bb-lml">
+                    <rect key="frame" x="0.0" y="609" width="414" height="287"/>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lvI-eY-Ufj">
+                    <rect key="frame" x="25" y="681" width="364" height="58"/>
+                    <color key="backgroundColor" name="MainRed"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="58" id="R7u-Oj-ke1"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="17"/>
+                    <state key="normal" title="Login">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <connections>
+                        <action selector="didClickLogInButton:" destination="-1" eventType="touchUpInside" id="FaB-Tg-rjQ"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9aW-BM-tMG">
+                    <rect key="frame" x="25" y="759" width="364" height="58"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="58" id="NyG-fb-x34"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="17"/>
+                    <state key="normal" title="Register">
+                        <color key="titleColor" red="0.41960784313725491" green="0.37647058823529411" blue="0.37647058823529411" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="didClickSignUpButton:" destination="-1" eventType="touchUpInside" id="stR-Qr-awB"/>
+                    </connections>
+                </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
+                <constraint firstAttribute="trailing" secondItem="4yd-bb-lml" secondAttribute="trailing" id="52Q-iI-U7e"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="9aW-BM-tMG" secondAttribute="bottom" constant="45" id="8LX-Ei-SOm"/>
+                <constraint firstAttribute="bottom" secondItem="4yd-bb-lml" secondAttribute="bottom" id="Ekq-lw-eV7"/>
                 <constraint firstItem="lvI-eY-Ufj" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="25" id="HSh-a3-hww"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="9aW-BM-tMG" secondAttribute="trailing" constant="25" id="Onk-sF-tLa"/>
+                <constraint firstItem="4yd-bb-lml" firstAttribute="top" secondItem="lvI-eY-Ufj" secondAttribute="top" constant="-72" id="VVh-TI-h7g"/>
                 <constraint firstItem="9aW-BM-tMG" firstAttribute="top" secondItem="lvI-eY-Ufj" secondAttribute="bottom" constant="20" id="WfW-VE-BAZ"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="hSs-tD-5Vq" secondAttribute="trailing" id="n05-ki-x0o"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="lvI-eY-Ufj" secondAttribute="trailing" constant="25" id="pPd-zs-5gS"/>
                 <constraint firstItem="9aW-BM-tMG" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="25" id="pQS-N7-r81"/>
                 <constraint firstItem="hSs-tD-5Vq" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="pob-wq-0en"/>
+                <constraint firstItem="4yd-bb-lml" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="u0L-NX-Jwb"/>
                 <constraint firstItem="lvI-eY-Ufj" firstAttribute="top" secondItem="hSs-tD-5Vq" secondAttribute="bottom" id="u8J-vn-00U"/>
                 <constraint firstItem="hSs-tD-5Vq" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="uRG-lp-BcL"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="35" y="80"/>
+            <point key="canvasLocation" x="34.782608695652179" y="79.6875"/>
         </view>
     </objects>
     <resources>
-        <image name="logo picture" width="276" height="276"/>
+        <image name="logo-picture_en" width="276" height="276"/>
+        <image name="red-oval" width="414" height="252"/>
         <namedColor name="MainRed">
             <color red="0.6119999885559082" green="0.067000001668930054" blue="0.067000001668930054" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

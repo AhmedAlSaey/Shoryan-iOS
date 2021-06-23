@@ -8,10 +8,19 @@
 import UIKit
 
 class SignUpPresenter: BasePresenter {
+    
     var selectedLocationLng: Double?
     var selectedLocationLat: Double?
     var selectedLocationCity: String?
     var selectedLocationGovernorate: String?
+    
+    var firstName: String!
+    var lastName: String!
+    var phoneNumber: String!
+    var birthDate: Date!
+    var bloodType: String!
+    var gender: String!
+    var password: String!
     
     
     override func viewDidLoad() {
@@ -38,7 +47,16 @@ class SignUpPresenter: BasePresenter {
         
         if let view = view as? SignUpViewController {
             if view.isAllInputValid(), let lat = selectedLocationLat, let lng = selectedLocationLng {
-                view.showLoading()
+                
+                self.firstName = firstName
+                self.lastName = lastName
+                self.phoneNumber = phoneNumber
+                self.birthDate = birthDate
+                self.bloodType = bloodType
+                self.gender = gender
+                self.password = password
+                
+                showLoading()
                 LaunchInteractor.shared.signUp(
                     firstName: firstName,
                     lastName: lastName,
@@ -51,10 +69,10 @@ class SignUpPresenter: BasePresenter {
                     governorate: selectedLocationGovernorate!,
                     region: selectedLocationCity!,
                     password: password) { (result) in
-                    view.dismissLoading()
+                    self.dismissLoading()
                     switch result {
                     case.success(_):
-                        LaunchRouter.shared.launchStartScreen()
+                        LaunchRouter.shared.pushSMSAuthenticationScreen(phoneNumber: phoneNumber, delegate: self)
                     case.failure(let error):
                         view.showAlert(error: error)
                     }
@@ -102,4 +120,54 @@ extension SignUpPresenter: MapSelectorDelegate{
     }
     
     
+}
+
+extension SignUpPresenter: SMSAuthenticatorDelegate {
+
+    
+    func didPressResendButton(sender: SMSAuthenticationController, completionHandler: @escaping (Result<Bool, BaseError>) -> ()) {
+        guard let lat = selectedLocationLat, let lng = selectedLocationLng else {fatalError("The location should be selected at this stage")}
+        showLoading()
+        LaunchInteractor.shared.signUp(
+            firstName: firstName,
+            lastName: lastName,
+            phoneNumber: phoneNumber,
+            birthDate: birthDate,
+            bloodType: bloodType,
+            gender: gender,
+            lng: lat,
+            lat: lng,
+            governorate: selectedLocationGovernorate!,
+            region: selectedLocationCity!,
+            password: password) { (result) in
+            self.dismissLoading()
+            switch result {
+            case.success(_):
+                completionHandler(.success(true))
+            case.failure(let error):
+                completionHandler(.failure(error))
+            }
+        }
+            
+        
+    }
+    
+    
+    func didSelectValidCode(sender: SMSAuthenticationPresenter, code: String) {
+        if let phoneNumber = phoneNumber, let view = view as? SignUpViewController {
+            LaunchInteractor.shared.signUpVerifyCode(phoneNumber: phoneNumber, code: code) { result in
+                switch result{
+                case .success(_):
+                    LaunchRouter.shared.launchStartScreen()
+                case.failure(let error):
+                    view.showAlert(error: error)
+                }
+            }
+        }
+        
+    }
+    
+    func didPressBackButton(sender: SMSAuthenticationController) {
+        LaunchRouter.shared.dismissSMSAuthentication()
+    }
 }

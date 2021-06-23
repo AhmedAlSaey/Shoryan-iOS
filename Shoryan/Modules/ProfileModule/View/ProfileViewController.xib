@@ -12,8 +12,10 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ProfileViewController" customModule="Shoryan" customModuleProvider="target">
             <connections>
+                <outlet property="donationsLabel" destination="YXh-dT-nSp" id="hyy-MA-CIy"/>
                 <outlet property="navBarTopConstraint" destination="Ecx-IA-l2w" id="iue-3W-RrK"/>
                 <outlet property="navigationBarView" destination="S3D-62-an9" id="Auh-nu-Tmk"/>
+                <outlet property="pointsLabel" destination="wZk-a5-gg0" id="z69-cQ-qUx"/>
                 <outlet property="statsView" destination="YPe-zh-A12" id="ONa-d2-NmN"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>

@@ -8,11 +8,20 @@
 import Foundation
 
 
+//class DecodableErrorResponse : Decodable {
+//    let error: DecodableErrorData
+//}
+//
+//class DecodableErrorData: Decodable {
+//    let status: Int
+//    let message: String
+//}
+
 class DecodableErrorResponse : Decodable {
-    let error: DecodableErrorData
+    let error: DecodableErrorError
 }
 
-class DecodableErrorData: Decodable {
-    let status: Int
-    let message: String
+class DecodableErrorError : Decodable {
+    let status : Int?
+    let message : String
 }

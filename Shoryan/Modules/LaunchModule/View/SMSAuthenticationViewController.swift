@@ -7,12 +7,14 @@
 
 import UIKit
 
-class LogInSMSViewController: BaseViewController, UITextFieldDelegate {
+class SMSAuthenticationViewController: BaseViewController, UITextFieldDelegate {
     
-    @IBOutlet weak var code1TF: UITextField!
-    @IBOutlet weak var code2TF: UITextField!
-    @IBOutlet weak var code3TF: UITextField!
-    @IBOutlet weak var code4TF: UITextField!
+    @IBOutlet weak var code1TF: UnderlinedUITextField!
+    @IBOutlet weak var code2TF: UnderlinedUITextField!
+    @IBOutlet weak var code3TF: UnderlinedUITextField!
+    @IBOutlet weak var code4TF: UnderlinedUITextField!
+    @IBOutlet weak var code5TF: UnderlinedUITextField!
+    @IBOutlet weak var code6TF: UnderlinedUITextField!
     
     @IBOutlet weak var phoneTextField: UILabel!
     
@@ -20,7 +22,14 @@ class LogInSMSViewController: BaseViewController, UITextFieldDelegate {
     
     var code: String {
         get{
-            code1TF.text.nonNullString + code2TF.text.nonNullString + code3TF.text.nonNullString + code4TF.text.nonNullString
+            var result : String = ""
+            result += code1TF.text.nonNullString
+            result += code2TF.text.nonNullString
+            result += code3TF.text.nonNullString
+            result += code4TF.text.nonNullString
+            result += code5TF.text.nonNullString
+            result += code6TF.text.nonNullString
+            return result
         }
     }
     
@@ -55,6 +64,8 @@ class LogInSMSViewController: BaseViewController, UITextFieldDelegate {
         code2TF.addTarget(self, action: #selector(self.textFieldDidChange(textField:)), for: UIControl.Event.editingChanged)
         code3TF.addTarget(self, action: #selector(self.textFieldDidChange(textField:)), for: UIControl.Event.editingChanged)
         code4TF.addTarget(self, action: #selector(self.textFieldDidChange(textField:)), for: UIControl.Event.editingChanged)
+        code5TF.addTarget(self, action: #selector(self.textFieldDidChange(textField:)), for: UIControl.Event.editingChanged)
+        code6TF.addTarget(self, action: #selector(self.textFieldDidChange(textField:)), for: UIControl.Event.editingChanged)
     }
     
     @objc func textFieldDidChange(textField: UITextField){
@@ -71,6 +82,11 @@ class LogInSMSViewController: BaseViewController, UITextFieldDelegate {
                 code4TF.becomeFirstResponder()
             case code4TF:
                 code4TF.resignFirstResponder()
+//                code5TF.becomeFirstResponder()
+//            case code5TF:
+//                code6TF.becomeFirstResponder()
+//            case code6TF:
+//                code6TF.resignFirstResponder()
             default:
                 break
             }
@@ -85,17 +101,22 @@ class LogInSMSViewController: BaseViewController, UITextFieldDelegate {
     
 
     @IBAction func continueButtonPressed(_ sender: UIButton) {
-        if let presenter = presenter as? LogInSMSPresenter {
-            presenter.didClickContinueFromSMSLogIn(withCode: code)
+        if let presenter = presenter as? SMSAuthenticationPresenter {
+            presenter.didClickContinue(withCode: code)
         }
     }
     
     @IBAction func backButtonPressed(_ sender: Any) {
-        if let presenter = presenter as? LogInSMSPresenter {
+        if let presenter = presenter as? SMSAuthenticationPresenter {
             presenter.backButtonPressed()
         }
     }
     
+    @IBAction func resendButtonClicked(_ sender: Any) {
+        if let presenter = presenter as? SMSAuthenticationPresenter {
+            presenter.resendButtonClicked()
+        }
+    }
     
 
 }

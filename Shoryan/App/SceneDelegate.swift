@@ -16,11 +16,14 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
         // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
-        
         guard let windowScene = (scene as? UIWindowScene) else { return }
+        AppUser.shared.clearUserData()
         window = UIWindow(frame: windowScene.coordinateSpace.bounds)
         window?.windowScene = windowScene
-        window?.rootViewController = LaunchRouter.shared.createLaunchScreen()
+        let vc = LaunchRouter.shared.createLaunchScreen()
+//        let vc = LocalizeViewController()
+//        vc.request = DetailedRequest(lng: 31.357139, lat: 30.059234, fullName: "احمد هشام", address: "53 Ibn Al Nafeis, Al Manteqah as Sadesah, Nasr City, Cairo Governorate", bloodBags: 4, donatorsCount: 3, bloodType: "O+", isUserRequest: false, canUserDonate: false, isUserADonator: true)
+        window?.rootViewController = vc
         window?.makeKeyAndVisible()
     }
 

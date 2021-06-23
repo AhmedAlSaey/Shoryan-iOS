@@ -7,6 +7,7 @@
 
 import UIKit
 import JGProgressHUD
+import Localize_Swift
 
 class BaseViewController: UIViewController, UIGestureRecognizerDelegate {
     
@@ -17,6 +18,7 @@ class BaseViewController: UIViewController, UIGestureRecognizerDelegate {
         super.viewDidLoad()
         presenter?.viewDidLoad()
         localizeStrings()
+        localizeAssets()
         
         let backButton = UIBarButtonItem()
          backButton.title = "رجوع"
@@ -26,6 +28,10 @@ class BaseViewController: UIViewController, UIGestureRecognizerDelegate {
     }
     
     func localizeStrings() {
+        
+    }
+    
+    func localizeAssets() {
         
     }
 
@@ -58,16 +64,17 @@ class BaseViewController: UIViewController, UIGestureRecognizerDelegate {
         navigationController.view.backgroundColor = .clear
     }
     
-    func showAlert(error: Error) {
+    func showAlert(error: Error, okAction: (() -> ())? = nil) {
         var message = error.localizedDescription
         if let baseError = error as? BaseError, let baseMessage = baseError.message {
             message = baseMessage
         }
         
-        showAlert(title: "Error", message: message)
+        showAlert(title: "خطأ", message: message, okAction: okAction)
     }
+    
     func showAlert(message: String) {
-        showAlert(title: "Error", message: message)
+        showAlert(title: "خطأ", message: message)
     }
     func showAlert(title: String, message: String) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)

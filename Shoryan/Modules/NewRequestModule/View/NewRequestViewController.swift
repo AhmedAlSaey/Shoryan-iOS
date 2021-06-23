@@ -39,8 +39,8 @@ class NewRequestViewController: BaseViewController {
     }
 
     func styleNavigationBar() {
-        let barHeight = navigationController?.navigationBar.layer.frame.height ?? 0
-        navBarTopConstraint.constant -= barHeight
+//        let barHeight = navigationController?.navigationBar.layer.frame.height ?? 0
+//        navBarTopConstraint.constant -= barHeight
         navigationBarView.addSpecificCornerRadius(forCorners: .Bottom, radius: 20)
     }
     

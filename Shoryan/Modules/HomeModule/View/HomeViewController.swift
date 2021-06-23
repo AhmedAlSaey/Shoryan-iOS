@@ -42,20 +42,20 @@ class HomeViewController: BaseViewController {
     }
     
     func styleNavigationBar() {
-        let barHeight = navigationController?.navigationBar.layer.frame.height ?? 0
-        navBarTopConstraint.constant -= barHeight
+//        let barHeight = navigationController?.navigationBar.layer.frame.height ?? 0
+//        navBarTopConstraint.constant -= barHeight
         navigationBarView.addSpecificCornerRadius(forCorners: .Bottom, radius: 20)
     }
     
     func configureCards() {
         
-        configureCard(target: leftImageView, targetContainer: leftImageViewContainer, topImageTitle: "Rectangle 1446", bottomImageTitle: "label-hands-inscription-follow-instructions-3.png", cardText: "طلباتى") {
-            // TODO: - Talabaty click action
-        }
+        configureCard(target: leftImageView, targetContainer: leftImageViewContainer, topImageTitle: "Rectangle 1446", bottomImageTitle: "label-hands-inscription-follow-instructions-3.png", cardText: "طلباتى")
+        let tap = UITapGestureRecognizer(target: self, action: #selector(self.myRequestsPressed(_:)))
+        leftImageViewContainer.addGestureRecognizer(tap)
         
-        configureCard(target: rightImageView, targetContainer: rightImageViewContainer, topImageTitle: "Rectangle 1446", bottomImageTitle: "label-hands-inscription-follow-instructions-1", cardText: "في انتظارك") {
-            // TODO: - Fe entzarek click action
-        }
+        configureCard(target: rightImageView, targetContainer: rightImageViewContainer, topImageTitle: "Rectangle 1446", bottomImageTitle: "label-hands-inscription-follow-instructions-1", cardText: "في انتظارك")
+        let tap2 = UITapGestureRecognizer(target: self, action: #selector(self.pendingRequestPressed(_:)))
+        rightImageViewContainer.addGestureRecognizer(tap2)
     }
     
     func configureFilterView() {
@@ -71,7 +71,7 @@ class HomeViewController: BaseViewController {
         requestsTableView.register(UINib(nibName: "RequestBasicTableViewCell", bundle: nil), forCellReuseIdentifier: "RequestCell")
     }
     
-    func configureCard(target: UIImageView, targetContainer: UIView, topImageTitle: String, bottomImageTitle: String, cardText: String, clickAction: () -> ()) {
+    @objc func configureCard(target: UIImageView, targetContainer: UIView, topImageTitle: String, bottomImageTitle: String, cardText: String) {
         let topImage = UIImage(named: topImageTitle)
         let bottomImage = UIImage(named: bottomImageTitle)
 
@@ -102,6 +102,19 @@ class HomeViewController: BaseViewController {
         }
         
         
+        
+        
+        
+    }
+    
+    @objc func pendingRequestPressed(_ sender: UITapGestureRecognizer? = nil) {
+        if let presenter = presenter as? HomePresenter {
+            presenter.pendingRequestCardClicked()
+        }
+    }
+    
+    @objc func myRequestsPressed(_ sender: UITapGestureRecognizer? = nil) {
+        
     }
     
     
@@ -125,9 +138,16 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
             cell.name = requests[indexPath.row].name
             cell.bloodType = requests[indexPath.row].bloodType
             cell.location = requests[indexPath.row].location
+            cell.selectionStyle = .none
             return cell
         }
         return UITableViewCell()
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if let presenter = presenter as? HomePresenter {
+            presenter.requestSelected(atRow: indexPath.row)
+        }
     }
     
 }
