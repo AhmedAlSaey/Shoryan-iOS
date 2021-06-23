@@ -12,10 +12,15 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LogInViewController" customModule="Shoryan" customModuleProvider="target">
             <connections>
+                <outlet property="backButton" destination="fGB-ZE-ddW" id="xYD-ms-tbS"/>
                 <outlet property="continuePasswordButton" destination="N4z-cJ-eyp" id="hSt-89-oJH"/>
                 <outlet property="continueSMSButton" destination="oCB-hs-FTK" id="ijT-jT-GkK"/>
+                <outlet property="loginLabel" destination="RpJ-Np-4nB" id="9NC-Qa-G4X"/>
                 <outlet property="numberTextField" destination="otz-8v-MbW" id="vaa-Ye-h3B"/>
+                <outlet property="passwordLoginButton" destination="N4z-cJ-eyp" id="lPO-q2-cHy"/>
+                <outlet property="phoneNumberLabel" destination="fP5-cf-HDc" id="7nf-4U-j4e"/>
                 <outlet property="phoneTextField" destination="otz-8v-MbW" id="cCq-gf-qaN"/>
+                <outlet property="smsLoginButton" destination="oCB-hs-FTK" id="5Se-Rs-JAi"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -27,70 +32,64 @@
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Intersection 1" translatesAutoresizingMaskIntoConstraints="NO" id="g16-Je-afK">
                     <rect key="frame" x="0.0" y="0.0" width="414" height="150.5"/>
                 </imageView>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="تسجيل الدخول" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RpJ-Np-4nB">
-                    <rect key="frame" x="168" y="220.5" width="78" height="19"/>
-                    <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="17"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Login" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RpJ-Np-4nB">
+                    <rect key="frame" x="176.5" y="220.5" width="61.5" height="28"/>
+                    <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="25"/>
                     <color key="textColor" name="MainRed"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kUo-yY-7xQ">
-                    <rect key="frame" x="25" y="349.5" width="364" height="30"/>
+                    <rect key="frame" x="25" y="358.5" width="364" height="30"/>
                     <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="رقم الهاتف" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fP5-cf-HDc">
-                            <rect key="frame" x="276" y="6" width="56" height="18"/>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="username" translatesAutoresizingMaskIntoConstraints="NO" id="UUC-kP-0gz">
+                            <rect key="frame" x="0.0" y="7" width="16" height="16"/>
+                        </imageView>
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="012xxxxxxxx" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="otz-8v-MbW" customClass="PhoneNumberTextField" customModule="Shoryan" customModuleProvider="target">
+                            <rect key="frame" x="157" y="5" width="191" height="20.5"/>
+                            <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="17"/>
+                            <textInputTraits key="textInputTraits" keyboardType="phonePad" textContentType="tel"/>
+                        </textField>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mobile Number" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fP5-cf-HDc">
+                            <rect key="frame" x="32" y="6" width="109" height="18"/>
                             <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="16"/>
                             <color key="textColor" name="MainRed"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="username" translatesAutoresizingMaskIntoConstraints="NO" id="UUC-kP-0gz">
-                            <rect key="frame" x="348" y="7" width="16" height="16"/>
-                        </imageView>
-                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="012xxxxxxxx" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="otz-8v-MbW" customClass="PhoneNumberTextField" customModule="Shoryan" customModuleProvider="target">
-                            <rect key="frame" x="16" y="5" width="244" height="20.5"/>
-                            <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="17"/>
-                            <textInputTraits key="textInputTraits" keyboardType="phonePad" textContentType="tel"/>
-                        </textField>
                     </subviews>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <constraints>
-                        <constraint firstItem="UUC-kP-0gz" firstAttribute="leading" secondItem="fP5-cf-HDc" secondAttribute="trailing" constant="16" id="428-OA-z17"/>
+                        <constraint firstItem="fP5-cf-HDc" firstAttribute="leading" secondItem="UUC-kP-0gz" secondAttribute="trailing" constant="16" id="9VR-4K-CQg"/>
                         <constraint firstItem="otz-8v-MbW" firstAttribute="centerY" secondItem="kUo-yY-7xQ" secondAttribute="centerY" id="NHo-3n-xao"/>
                         <constraint firstItem="fP5-cf-HDc" firstAttribute="centerY" secondItem="kUo-yY-7xQ" secondAttribute="centerY" id="OQ9-Om-vHB"/>
-                        <constraint firstItem="fP5-cf-HDc" firstAttribute="leading" secondItem="otz-8v-MbW" secondAttribute="trailing" constant="16" id="WHK-Bq-sQ4"/>
-                        <constraint firstItem="otz-8v-MbW" firstAttribute="leading" secondItem="kUo-yY-7xQ" secondAttribute="leading" constant="16" id="YiL-R5-hE0"/>
-                        <constraint firstAttribute="trailing" secondItem="UUC-kP-0gz" secondAttribute="trailing" id="m7m-4o-D7B"/>
+                        <constraint firstItem="otz-8v-MbW" firstAttribute="leading" secondItem="fP5-cf-HDc" secondAttribute="trailing" constant="16" id="cGO-tM-i6K"/>
+                        <constraint firstAttribute="trailing" secondItem="otz-8v-MbW" secondAttribute="trailing" constant="16" id="gcg-KS-YXe"/>
+                        <constraint firstAttribute="leading" secondItem="UUC-kP-0gz" secondAttribute="leading" id="m7m-4o-D7B"/>
                         <constraint firstItem="UUC-kP-0gz" firstAttribute="centerY" secondItem="kUo-yY-7xQ" secondAttribute="centerY" id="nei-WU-eWP"/>
                         <constraint firstAttribute="height" constant="30" id="qru-mn-BEK"/>
                     </constraints>
                 </view>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N4z-cJ-eyp">
-                    <rect key="frame" x="25" y="459.5" width="364" height="58"/>
+                    <rect key="frame" x="25" y="468.5" width="364" height="58"/>
                     <color key="backgroundColor" name="MainRed"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="58" id="llW-92-d1g"/>
                     </constraints>
                     <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="17"/>
-                    <state key="normal" title="الدخول بكلمة السر">
+                    <state key="normal" title="Login with password">
                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </state>
                     <connections>
                         <action selector="continueWithPasswordClicked:" destination="-1" eventType="touchUpInside" id="Ue7-ob-8nv"/>
                     </connections>
                 </button>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="رجوع" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xnh-aH-V2b">
-                    <rect key="frame" x="46" y="66" width="32" height="18"/>
-                    <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="16"/>
-                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                    <nil key="highlightedColor"/>
-                </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oCB-hs-FTK">
-                    <rect key="frame" x="25" y="532.5" width="364" height="58"/>
+                    <rect key="frame" x="25" y="541.5" width="364" height="58"/>
                     <color key="backgroundColor" name="MainRed"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="58" id="KNA-qV-TXa"/>
                     </constraints>
                     <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="17"/>
-                    <state key="normal" title="الدخول برسالة نصية">
+                    <state key="normal" title="Login with SMS">
                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </state>
                     <connections>
@@ -98,15 +97,15 @@
                     </connections>
                 </button>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eup-XU-HsO">
-                    <rect key="frame" x="25" y="389.5" width="364" height="1"/>
+                    <rect key="frame" x="25" y="398.5" width="364" height="1"/>
                     <color key="backgroundColor" name="MainRed"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="1" id="0vQ-7o-m2Q"/>
                     </constraints>
                 </view>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fGB-ZE-ddW">
-                    <rect key="frame" x="15" y="64" width="16" height="22"/>
-                    <state key="normal" image="Backward arrow navbar"/>
+                    <rect key="frame" x="15" y="64" width="43" height="43"/>
+                    <state key="normal" image="back-button_ltr"/>
                     <connections>
                         <action selector="backButtonClicked:" destination="-1" eventType="touchUpInside" id="tGv-Iy-1Lz"/>
                     </connections>
@@ -126,9 +125,7 @@
                 <constraint firstItem="fGB-ZE-ddW" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="20" id="HfG-8D-VeG"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="g16-Je-afK" secondAttribute="trailing" id="JGh-6p-WU4"/>
                 <constraint firstItem="RpJ-Np-4nB" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Rcm-CH-wXU"/>
-                <constraint firstItem="xnh-aH-V2b" firstAttribute="centerY" secondItem="fGB-ZE-ddW" secondAttribute="centerY" id="Ugk-UG-0sv"/>
                 <constraint firstItem="fGB-ZE-ddW" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="15" id="Wyw-WX-d0t"/>
-                <constraint firstItem="xnh-aH-V2b" firstAttribute="leading" secondItem="fGB-ZE-ddW" secondAttribute="trailing" constant="15" id="XTM-rq-9eE"/>
                 <constraint firstItem="N4z-cJ-eyp" firstAttribute="leading" secondItem="kUo-yY-7xQ" secondAttribute="leading" id="avU-KF-sSQ"/>
                 <constraint firstItem="oCB-hs-FTK" firstAttribute="top" secondItem="N4z-cJ-eyp" secondAttribute="bottom" constant="15" id="c4f-0B-Afv"/>
                 <constraint firstItem="kUo-yY-7xQ" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="25" id="lPp-70-z4V"/>
@@ -147,8 +144,8 @@
         </designable>
     </designables>
     <resources>
-        <image name="Backward arrow navbar" width="16" height="16"/>
         <image name="Intersection 1" width="413" height="150.5"/>
+        <image name="back-button_ltr" width="43" height="43"/>
         <image name="username" width="16" height="16"/>
         <namedColor name="MainRed">
             <color red="0.6119999885559082" green="0.067000001668930054" blue="0.067000001668930054" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

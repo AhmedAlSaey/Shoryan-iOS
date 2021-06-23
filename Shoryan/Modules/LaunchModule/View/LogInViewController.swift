@@ -13,6 +13,14 @@ class LogInViewController: BaseViewController {
     
     @IBOutlet weak var numberTextField: UITextField!
     
+    @IBOutlet weak var loginLabel: UILabel!
+    @IBOutlet weak var phoneNumberLabel: UILabel!
+    @IBOutlet weak var passwordLoginButton: UIButton!
+    @IBOutlet weak var smsLoginButton: UIButton!
+    @IBOutlet weak var backButton: UIButton!
+    
+    
+    
     @IBOutlet weak var continuePasswordButton: UIButton!
     @IBOutlet weak var continueSMSButton: UIButton!
     @IBOutlet weak var phoneTextField: PhoneNumberTextField!
@@ -25,6 +33,17 @@ class LogInViewController: BaseViewController {
         continuePasswordButton.layer.cornerRadius = continuePasswordButton.frame.size.height / 2
         continueSMSButton.layer.cornerRadius = continueSMSButton.frame.size.height / 2
         
+    }
+    
+    override func localizeStrings() {
+        loginLabel.text = "login.label".localized()
+        phoneNumberLabel.text = "mobilenumber.label".localized()
+        passwordLoginButton.setTitle("loginpassword.button".localized(), for: .normal)
+        smsLoginButton.setTitle("loginsms.button".localized(), for: .normal)
+    }
+    
+    override func localizeAssets() {
+        backButton.setImage(UIImage(named: "back-button".localized()), for: .normal)
     }
     
     func areEntriesValid() -> Bool {

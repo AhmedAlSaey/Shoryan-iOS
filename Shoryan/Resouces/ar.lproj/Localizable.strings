@@ -1,0 +1,21 @@
+/* 
+  Localizable.string.strings
+  Shoryan
+
+  Created by Ahmed AlSai on 22/06/2021.
+  
+*/
+
+// Assets
+"logo-picture" = "logo-picture_ar";
+"back-button" = "back-button_rtl";
+
+//AuthorizationViewController
+"login.button" = "تسجيل دخول";
+"register.button" = "إنشاء حساب جديد";
+
+//LogInViewController
+"login.label" = "تسجيل دخول";
+"mobilenumber.label" = "رقم الهاتف";
+"loginpassword.button" = "الدخول بكلمة السر";
+"loginsms.button" = "الدخول برسالة نصية";
