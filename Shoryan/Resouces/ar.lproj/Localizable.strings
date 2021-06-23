@@ -10,6 +10,9 @@
 "logo-picture" = "logo-picture_ar";
 "back-button" = "back-button_rtl";
 
+//General
+"Continue" = "استمرار";
+
 //AuthorizationViewController
 "login.button" = "تسجيل دخول";
 "register.button" = "إنشاء حساب جديد";
@@ -19,3 +22,10 @@
 "mobilenumber.label" = "رقم الهاتف";
 "loginpassword.button" = "الدخول بكلمة السر";
 "loginsms.button" = "الدخول برسالة نصية";
+
+//SMSAuthenticationViewController
+"codeauthintication.label" = "رمز الدخول";
+"codeaurthenticationinstruction" = "قم بإدخال رمز الدخول المرسل إلى";
+"codesubmit.button" = "تأكيد";
+"resendcode.button" = "إعادة إرسال الرمز";
+

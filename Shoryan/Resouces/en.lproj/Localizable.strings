@@ -10,6 +10,9 @@
 "logo-picture" = "logo-picture_en";
 "back-button" = "back-button_ltr";
 
+//General
+"Continue" = "Continue";
+
 //AuthorizationViewController
 "login.button" = "Login";
 "register.button" = "Register";
@@ -19,3 +22,9 @@
 "mobilenumber.label" = "Mobile number";
 "loginpassword.button" = "Login with password";
 "loginsms.button" = "Login with SMS";
+
+//SMSAuthenticationViewController
+"codeauthintication.label" = "Verification Code";
+"codeaurthenticationinstruction" = "Enter the verification code we sent to";
+"codesubmit.button" = "Submit";
+"resendcode.button" = "Resend Code";

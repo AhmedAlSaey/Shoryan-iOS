@@ -28,7 +28,6 @@ class LogInPresenter: BasePresenter, SMSAuthenticatorDelegate {
                     switch result {
                     case.success(_):
                         LaunchRouter.shared.pushSMSAuthenticationScreen(phoneNumber: phoneNumber, delegate: self)
-                        LaunchRouter.shared.pushSMSAuthenticationScreen(phoneNumber: phoneNumber, delegate: self)
                     case.failure(let error):
                         view.showAlert(error: error)
                     }

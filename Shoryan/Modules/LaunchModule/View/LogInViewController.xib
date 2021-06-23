@@ -32,7 +32,7 @@
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Intersection 1" translatesAutoresizingMaskIntoConstraints="NO" id="g16-Je-afK">
                     <rect key="frame" x="0.0" y="0.0" width="414" height="150.5"/>
                 </imageView>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Login" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RpJ-Np-4nB">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Login" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RpJ-Np-4nB">
                     <rect key="frame" x="176.5" y="220.5" width="61.5" height="28"/>
                     <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="25"/>
                     <color key="textColor" name="MainRed"/>
@@ -44,7 +44,7 @@
                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="username" translatesAutoresizingMaskIntoConstraints="NO" id="UUC-kP-0gz">
                             <rect key="frame" x="0.0" y="7" width="16" height="16"/>
                         </imageView>
-                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="012xxxxxxxx" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="otz-8v-MbW" customClass="PhoneNumberTextField" customModule="Shoryan" customModuleProvider="target">
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="012xxxxxxxx" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="otz-8v-MbW" customClass="PhoneNumberTextField" customModule="Shoryan" customModuleProvider="target">
                             <rect key="frame" x="157" y="5" width="191" height="20.5"/>
                             <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="17"/>
                             <textInputTraits key="textInputTraits" keyboardType="phonePad" textContentType="tel"/>

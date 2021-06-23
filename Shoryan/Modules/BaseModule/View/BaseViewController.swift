@@ -19,6 +19,7 @@ class BaseViewController: UIViewController, UIGestureRecognizerDelegate {
         presenter?.viewDidLoad()
         localizeStrings()
         localizeAssets()
+        localizationSettings()
         
         let backButton = UIBarButtonItem()
          backButton.title = "رجوع"
@@ -32,6 +33,10 @@ class BaseViewController: UIViewController, UIGestureRecognizerDelegate {
     }
     
     func localizeAssets() {
+        
+    }
+    
+    func localizationSettings() {
         
     }
 

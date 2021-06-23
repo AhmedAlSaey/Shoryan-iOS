@@ -8,6 +8,16 @@
 import UIKit
 
 class SMSAuthenticationViewController: BaseViewController, UITextFieldDelegate {
+    @IBOutlet weak var smsAuthenticationLabel: UILabel!
+    @IBOutlet weak var backButton: UIButton!
+    @IBOutlet weak var codeInstructionLabel: UILabel!
+    @IBOutlet weak var continueButton: UIButton!
+    @IBOutlet weak var resendButton: UIButton!
+    @IBOutlet weak var codeStackView: UIStackView!
+    
+    
+    
+    
     
     @IBOutlet weak var code1TF: UnderlinedUITextField!
     @IBOutlet weak var code2TF: UnderlinedUITextField!
@@ -18,8 +28,7 @@ class SMSAuthenticationViewController: BaseViewController, UITextFieldDelegate {
     
     @IBOutlet weak var phoneTextField: UILabel!
     
-    @IBOutlet weak var continueButton: UIButton!
-    
+   
     var code: String {
         get{
             var result : String = ""
@@ -41,6 +50,21 @@ class SMSAuthenticationViewController: BaseViewController, UITextFieldDelegate {
         
         continueButton.layer.cornerRadius = continueButton.layer.frame.height / 2
         
+    }
+    
+    override func localizeStrings() {
+        smsAuthenticationLabel.text = "codeauthintication.label".localized()
+        codeInstructionLabel.text = "codeaurthenticationinstruction".localized()
+        continueButton.setTitle("Continue".localized(), for: .normal)
+        resendButton.setTitle("resendcode.button".localized(), for: .normal)
+    }
+    
+    override func localizeAssets() {
+        backButton.setImage(UIImage(named: "back-button".localized()), for: .normal)
+    }
+    
+    override func localizationSettings() {
+        codeStackView.semanticContentAttribute = .forceLeftToRight
     }
     
     override func viewWillAppear(_ animated: Bool) {

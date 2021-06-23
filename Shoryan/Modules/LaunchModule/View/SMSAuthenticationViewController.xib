@@ -12,14 +12,19 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SMSAuthenticationViewController" customModule="Shoryan" customModuleProvider="target">
             <connections>
+                <outlet property="backButton" destination="o40-qF-cOM" id="Ea0-IB-51Z"/>
                 <outlet property="code1TF" destination="rTg-sW-7sd" id="KFh-5y-w6d"/>
                 <outlet property="code2TF" destination="lH0-pb-OcM" id="33H-AX-pie"/>
                 <outlet property="code3TF" destination="j4P-wy-jgX" id="KyI-iS-pyj"/>
                 <outlet property="code4TF" destination="9ZC-73-laj" id="xoQ-EW-5DK"/>
                 <outlet property="code5TF" destination="b1J-me-BMv" id="eE9-L2-JoD"/>
                 <outlet property="code6TF" destination="Hyf-Y5-v4X" id="g7c-Yl-6zo"/>
-                <outlet property="continueButton" destination="63R-d9-3cc" id="dEE-Ub-yF9"/>
+                <outlet property="codeInstructionLabel" destination="47r-ad-ZNi" id="NuF-Mi-paN"/>
+                <outlet property="codeStackView" destination="yIV-tT-5mf" id="Uj6-aG-YWX"/>
+                <outlet property="continueButton" destination="63R-d9-3cc" id="oRd-M7-lbU"/>
                 <outlet property="phoneTextField" destination="bml-xl-psM" id="UKN-Tb-bMI"/>
+                <outlet property="resendButton" destination="35R-HC-0T0" id="D8b-18-VP3"/>
+                <outlet property="smsAuthenticationLabel" destination="CXp-jI-Snq" id="mEb-lN-ttL"/>
                 <outlet property="view" destination="TCg-2B-uNg" id="QQl-1c-nQF"/>
             </connections>
         </placeholder>
@@ -31,8 +36,8 @@
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Intersection 1" translatesAutoresizingMaskIntoConstraints="NO" id="Ccs-W6-bjf">
                     <rect key="frame" x="0.0" y="0.0" width="414" height="150.5"/>
                 </imageView>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="تسجيل الدخول" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CXp-jI-Snq">
-                    <rect key="frame" x="150" y="220.5" width="114" height="28"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Verification Code" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CXp-jI-Snq">
+                    <rect key="frame" x="112.5" y="220.5" width="189.5" height="28"/>
                     <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="25"/>
                     <color key="textColor" name="MainRed"/>
                     <nil key="highlightedColor"/>
@@ -44,14 +49,14 @@
                         <constraint firstAttribute="height" constant="58" id="vu3-mN-9ts"/>
                     </constraints>
                     <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="17"/>
-                    <state key="normal" title="استمرار">
+                    <state key="normal" title="Continue">
                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </state>
                     <connections>
                         <action selector="continueButtonPressed:" destination="-1" eventType="touchUpInside" id="fId-f0-uda"/>
                     </connections>
                 </button>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="قم بإدخال رمز الدخول المرسل إلى " textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="47r-ad-ZNi">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter the verification code we sent to" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="47r-ad-ZNi">
                     <rect key="frame" x="25" y="298.5" width="364" height="19"/>
                     <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="17"/>
                     <color key="textColor" name="MainRed"/>
@@ -92,21 +97,15 @@
                         </textField>
                     </subviews>
                 </stackView>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="رجوع" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jrY-8j-ojZ">
-                    <rect key="frame" x="46" y="66" width="32" height="18"/>
-                    <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="16"/>
-                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                    <nil key="highlightedColor"/>
-                </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bml-xl-psM">
-                    <rect key="frame" x="347" y="327.5" width="42" height="19"/>
+                    <rect key="frame" x="25" y="327.5" width="364" height="19"/>
                     <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="17"/>
                     <color key="textColor" name="MainRed"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o40-qF-cOM">
-                    <rect key="frame" x="15" y="64" width="16" height="22"/>
-                    <state key="normal" image="Backward arrow navbar"/>
+                    <rect key="frame" x="15" y="64" width="43" height="43"/>
+                    <state key="normal" image="back-button_ltr"/>
                     <connections>
                         <action selector="backButtonPressed:" destination="-1" eventType="touchUpInside" id="WEZ-Q2-702"/>
                     </connections>
@@ -114,7 +113,7 @@
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="35R-HC-0T0">
                     <rect key="frame" x="156.5" y="555" width="101" height="31"/>
                     <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="17"/>
-                    <state key="normal" title="إعادة إرسال الرمز">
+                    <state key="normal" title="Resend code">
                         <color key="titleColor" systemColor="labelColor"/>
                     </state>
                     <connections>
@@ -134,14 +133,13 @@
                 <constraint firstItem="CXp-jI-Snq" firstAttribute="top" secondItem="Ccs-W6-bjf" secondAttribute="bottom" constant="70" id="Ai9-sR-PeZ"/>
                 <constraint firstItem="qwx-Xw-xbT" firstAttribute="trailing" secondItem="47r-ad-ZNi" secondAttribute="trailing" constant="25" id="IeO-9K-BZB"/>
                 <constraint firstItem="47r-ad-ZNi" firstAttribute="top" secondItem="CXp-jI-Snq" secondAttribute="bottom" constant="50" id="MZj-Vc-dOG"/>
-                <constraint firstItem="bml-xl-psM" firstAttribute="trailing" secondItem="47r-ad-ZNi" secondAttribute="trailing" id="Pnp-Ea-06j"/>
-                <constraint firstItem="jrY-8j-ojZ" firstAttribute="centerY" secondItem="o40-qF-cOM" secondAttribute="centerY" id="Smj-Cn-Kdq"/>
+                <constraint firstItem="bml-xl-psM" firstAttribute="trailing" secondItem="47r-ad-ZNi" secondAttribute="trailing" id="MzL-Nj-5Ai"/>
+                <constraint firstItem="bml-xl-psM" firstAttribute="leading" secondItem="47r-ad-ZNi" secondAttribute="leading" id="Pnp-Ea-06j"/>
                 <constraint firstItem="63R-d9-3cc" firstAttribute="leading" secondItem="qwx-Xw-xbT" secondAttribute="leading" constant="25" id="b26-VW-P3f"/>
                 <constraint firstItem="35R-HC-0T0" firstAttribute="top" secondItem="63R-d9-3cc" secondAttribute="bottom" constant="27" id="b99-ml-Fnh"/>
                 <constraint firstItem="Ccs-W6-bjf" firstAttribute="top" secondItem="TCg-2B-uNg" secondAttribute="top" id="fMk-mX-4HT"/>
                 <constraint firstItem="Ccs-W6-bjf" firstAttribute="leading" secondItem="qwx-Xw-xbT" secondAttribute="leading" id="hA4-Hd-Lhp"/>
                 <constraint firstItem="o40-qF-cOM" firstAttribute="top" secondItem="qwx-Xw-xbT" secondAttribute="top" constant="20" id="kGS-MS-z7a"/>
-                <constraint firstItem="jrY-8j-ojZ" firstAttribute="leading" secondItem="o40-qF-cOM" secondAttribute="trailing" constant="15" id="kfL-re-HKi"/>
                 <constraint firstItem="CXp-jI-Snq" firstAttribute="centerX" secondItem="TCg-2B-uNg" secondAttribute="centerX" id="p9S-Au-TKL"/>
                 <constraint firstItem="o40-qF-cOM" firstAttribute="leading" secondItem="qwx-Xw-xbT" secondAttribute="leading" constant="15" id="tO7-dp-xi0"/>
                 <constraint firstItem="63R-d9-3cc" firstAttribute="top" secondItem="yIV-tT-5mf" secondAttribute="bottom" constant="75" id="tlR-lh-bz5"/>
@@ -153,8 +151,8 @@
         </view>
     </objects>
     <resources>
-        <image name="Backward arrow navbar" width="16" height="16"/>
         <image name="Intersection 1" width="413" height="150.5"/>
+        <image name="back-button_ltr" width="43" height="43"/>
         <namedColor name="MainRed">
             <color red="0.6119999885559082" green="0.067000001668930054" blue="0.067000001668930054" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
