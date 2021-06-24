@@ -17,7 +17,8 @@ class AllRequestsResponseRequest: Decodable {
     let bloodType: String
     let requestBy: AllRequestsRequester?
     let donationLocation: AllRequestsDonationLocation
-    let urgent: Bool?
+    let urgent: Bool
+    let requestByModelReference: String
 }
 
 class AllRequestsRequester: Decodable {

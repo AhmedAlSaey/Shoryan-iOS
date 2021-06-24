@@ -10,6 +10,7 @@
 "logo-picture" = "logo-picture_ar";
 "back-button" = "back-button_rtl";
 "logo-shadowed" = "logo-shadowed_ar";
+"simple-request-nav-arrow" = "simple-request-nav-arrow_rtl";
 
 //General
 "Continue" = "استمرار";
@@ -20,6 +21,7 @@
 "Success" = "نجاح";
 "Male" = "ذكر";
 "Female" = "أنثى";
+"Urgent" = "ضروري";
 
 //Alerts/Error messages
 "incorrectphonenumber.alert" = "الرجاء التأكد من صحة رقم الهاتف";
@@ -27,6 +29,12 @@
 "incorrectcode.alert" = "الرجاء التأكد من ادخال رمز صحيح";
 "coderesent.alert" = "تم إعادة إرسال الرمز بنجاح";
 "incorrectinput.alert" = "الرجاء التأكد من ادخال جميع المعلومات و التأكد من صحتها";
+
+//Main Tabbar
+"home.tabbaritem" = "الصفحة الرئيسية";
+"newrequest.tabbaritem" = "طلب جديد";
+"notifications.tabbaritem" = "الإشعارات";
+"profile.tabbaritem" = "حسابى";
 
 //AuthorizationViewController
 "login.button" = "تسجيل دخول";
@@ -72,3 +80,11 @@
 "location.unvalidatedplaceholder" = "الرجاء اختيار الموقع الحالي";
 "password.unvalidatedplaceholder" = "الرجاء اختيار كلمة سر تحتوي علي [A-Z]، [a-z]، [0-9]";
 "confirmpassword.unvalidatedplaceholder" = "الرجاء التأكد من صحة تأكيد كلمة المرور";
+
+//HomeViewController
+"homenavigationtitle.label" = "الصفحة الرئيسية";
+"myrequests.label" = "طلباتى";
+"pendingrequest.label" = "في انتظارك";
+"rewards.label" = "مكافآت";
+"requests.label" = "الطلبات";
+"filer.button" = "تصنيف حسب";

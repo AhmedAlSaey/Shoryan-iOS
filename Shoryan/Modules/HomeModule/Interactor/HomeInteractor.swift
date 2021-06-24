@@ -34,7 +34,10 @@ class HomeInteractor: BaseInteractor{
                         name: donationRequest.requestBy?.name ?? "",
                         bloodType: donationRequest.bloodType,
                         location: donationRequest.donationLocation.name + " - " + donationRequest.donationLocation.location.region,
-                        _id: donationRequest._id)
+                        _id: donationRequest._id,
+                        urgent: donationRequest.urgent,
+                        requester: donationRequest.requestByModelReference == "RegisteredBloodBank" ? .BloodBank : .User
+                    )
                     return simpleRequest
                 }
                 return simpleRequests

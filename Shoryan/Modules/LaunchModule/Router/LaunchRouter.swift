@@ -155,20 +155,19 @@ class LaunchRouter: BaseRouter, UITabBarControllerDelegate {
         let notificationsVewController = NotificationsRouter.shared.createNotificationsEmbeddedInViewController()
         let profileViewController = ProfileRouter.shared.createProfileEmbeddedInViewController()
         
-        let homeTabVC = createViewControllerTab(viewController: homeViewController, title: "الصفحة الرئيسية", image: "Home-2", selectedImage: "home-1")
-        let newRequestTabVC = createViewControllerTab(viewController: newRequestViewController, title: "طلب جديد", image: "blood-drop", selectedImage: "blood-drop-3")
-        let notificationsTabVC = createViewControllerTab(viewController: notificationsVewController, title: "الإشعارات", image: "Notification", selectedImage: "Notification-1")
-        let profileTabVC = createViewControllerTab(viewController: profileViewController, title: "حسابى", image: "user", selectedImage: "user-4")
+        let homeTabVC = createViewControllerTab(viewController: homeViewController, title: "home.tabbaritem".localized(), image: "Home-2", selectedImage: "home-1")
+        let newRequestTabVC = createViewControllerTab(viewController: newRequestViewController, title: "newrequest.tabbaritem".localized(), image: "blood-drop", selectedImage: "blood-drop-3")
+        let notificationsTabVC = createViewControllerTab(viewController: notificationsVewController, title: "notifications.tabbaritem".localized(), image: "Notification", selectedImage: "Notification-1")
+        let profileTabVC = createViewControllerTab(viewController: profileViewController, title: "profile.tabbaritem".localized(), image: "user", selectedImage: "user-4")
         
         tabBarController = MainTabBarViewController()
         tabBarController!.delegate = self
         tabBarController!.viewControllers = [
-            profileTabVC,
-            notificationsTabVC,
-            newRequestTabVC,
             homeTabVC,
+            newRequestTabVC,
+            notificationsTabVC,
+            profileTabVC
         ]
-        tabBarController?.selectedIndex = 3
         
         
         initializeWindowWithNavigationControllerAnimation(rootViewController: tabBarController!)

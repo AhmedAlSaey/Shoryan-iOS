@@ -10,6 +10,7 @@
 "logo-picture" = "logo-picture_en";
 "back-button" = "back-button_ltr";
 "logo-shadowed" = "logo-shadowed_en";
+"simple-request-nav-arrow" = "simple-request-nav-arrow_ltr";
 
 //General
 "Continue" = "Continue";
@@ -20,6 +21,7 @@
 "Success" = "Success";
 "Male" = "Male";
 "Female" = "Female";
+"Urgent" = "Urgent";
 
 //Alerts/Error messages
 "incorrectphonenumber.alert" = "Please make sure you entered a correct phone number";
@@ -27,6 +29,12 @@
 "incorrectcode.alert" = "Please make sure you entered a valid code";
 "coderesent.alert" = "Code resent successfully";
 "incorrectinput.alert" = "Please make sure you entered all the required field and make sure they are correct";
+
+//Main Tabbar
+"home.tabbaritem" = "Home";
+"newrequest.tabbaritem" = "New Request";
+"notifications.tabbaritem" = "Notifications";
+"profile.tabbaritem" = "Profile";
 
 //AuthorizationViewController
 "login.button" = "Login";
@@ -72,3 +80,11 @@
 "location.unvalidatedplaceholder" = "Please select your current location";
 "password.unvalidatedplaceholder" = "Make sure the password contains [A-Z]، [a-z]، [0-9]";
 "confirmpassword.unvalidatedplaceholder" = "Please enter a correct password confirmation";
+
+//HomeViewController
+"homenavigationtitle.label" = "Home";
+"myrequests.label" = "My Donations";
+"pendingrequest.label" = "Pending";
+"rewards.label" = "Rewards";
+"requests.label" = "Requests";
+"filer.button" = "Sort by";

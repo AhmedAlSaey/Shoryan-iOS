@@ -15,6 +15,9 @@ class RequestBasicTableViewCell: UITableViewCell {
     @IBOutlet weak var bloodTypeLabel: UILabel!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var locationLabel: UILabel!
+    @IBOutlet weak var navigationArrowImageView: UIImageView!
+    @IBOutlet weak var urgentView: UIView!
+    @IBOutlet weak var urgentLabel: UILabel!
     
     
     var name: String? {
@@ -33,6 +36,13 @@ class RequestBasicTableViewCell: UITableViewCell {
         }
     }
     
+    var urgent: Bool? {
+        didSet{
+            urgentView.isHidden = !urgent!
+            nameLabel.isHidden = urgent!
+        }
+    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         nameLabel?.text = name
@@ -43,6 +53,19 @@ class RequestBasicTableViewCell: UITableViewCell {
         containerView.dropShadow()
         
         bloodTypeBackgroudView.layer.cornerRadius = bloodTypeBackgroudView.layer.frame.size.height / 2
+        urgentView.addSpecificCornerRadius(forCorners: .Bottom, radius: 10)
+        urgentView.isHidden = true
+        
+        localizeAssets()
+        localizeStrings()
+    }
+    
+    func localizeStrings() {
+        urgentLabel.text = "Urgent".localized().uppercased()
+    }
+    
+    func localizeAssets() {
+        navigationArrowImageView.image = UIImage(named: "simple-request-nav-arrow".localized())
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
