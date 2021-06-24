@@ -115,7 +115,7 @@ class HomePresenter: BasePresenter {
         }
         else{
             self.dismissLoading()
-            view.showAlert(title: "خطأ", message: "أنت غير مسجل كمتبرع لطلب")
+            view.showAlert(title: "Error".localized(), message: "notregistereddonor.alert".localized())
         }
     }
 }

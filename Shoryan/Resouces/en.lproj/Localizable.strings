@@ -29,6 +29,7 @@
 "incorrectcode.alert" = "Please make sure you entered a valid code";
 "coderesent.alert" = "Code resent successfully";
 "incorrectinput.alert" = "Please make sure you entered all the required field and make sure they are correct";
+"notregistereddonor.alert" = "You are not registered as a donor for a request";
 
 //Main Tabbar
 "home.tabbaritem" = "Home";

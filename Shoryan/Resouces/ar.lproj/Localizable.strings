@@ -29,6 +29,7 @@
 "incorrectcode.alert" = "الرجاء التأكد من ادخال رمز صحيح";
 "coderesent.alert" = "تم إعادة إرسال الرمز بنجاح";
 "incorrectinput.alert" = "الرجاء التأكد من ادخال جميع المعلومات و التأكد من صحتها";
+"notregistereddonor.alert" = "أنت غير مسجل كمتبرع لطلب";
 
 //Main Tabbar
 "home.tabbaritem" = "الصفحة الرئيسية";
