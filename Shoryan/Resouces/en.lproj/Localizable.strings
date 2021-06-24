@@ -9,17 +9,24 @@
 // Assets
 "logo-picture" = "logo-picture_en";
 "back-button" = "back-button_ltr";
+"logo-shadowed" = "logo-shadowed_en";
 
 //General
 "Continue" = "Continue";
+"Ok" = "Ok";
+"Cancel" = "Cancel";
+"Loading" = "Loading";
 "Error" = "Error";
 "Success" = "Success";
+"Male" = "Male";
+"Female" = "Female";
 
 //Alerts/Error messages
 "incorrectphonenumber.alert" = "Please make sure you entered a correct phone number";
 "incorrectpassword.alert" = "Please make sure you entered a correct password";
 "incorrectcode.alert" = "Please make sure you entered a valid code";
 "coderesent.alert" = "Code resent successfully";
+"incorrectinput.alert" = "Please make sure you entered all the required field and make sure they are correct";
 
 //AuthorizationViewController
 "login.button" = "Login";
@@ -41,3 +48,27 @@
 "loginpasswordinstructions.label" = "Enter the password for mobile number";
 "password.label" = "Password";
 "password.placeholder" = "Password";
+
+//SignupViewController
+"register.label" = "Register";
+"firstname.placeholder" = "First Name";
+"lastname.placeholder" = "Last Name";
+"mobilephone.placeholder" = "Mobile Number";
+"birthdate.label" = "Date of Birth";
+"birthdate.placeholder" = "DD/MM/YYYY";
+"bloodtype.label" = "Blood Type";
+"bloodtype.placeholder" = "Blood Type";
+"gender.label" = "Gender";
+"gender.placeholder" = "Gender";
+"address.placeholder" = "Address";
+"changelocation.button" = "Change Location";
+"confirmpassword.placeholder" = "Confirm Password";
+
+"name.unvalidatedplaceholder" = "Please enter an english or arabic name";
+"phone.unvalidatedplaceholder" = "Please enter an egyptian number";
+"birthdate.unvalidatedplaceholder" = "Please enter a birth date";
+"bloodtype.unvalidatedplaceholder" = "Please make a selection";
+"gender.unvalidatedplaceholder" = "Please make a selection";
+"location.unvalidatedplaceholder" = "Please select your current location";
+"password.unvalidatedplaceholder" = "Make sure the password contains [A-Z]، [a-z]، [0-9]";
+"confirmpassword.unvalidatedplaceholder" = "Please enter a correct password confirmation";

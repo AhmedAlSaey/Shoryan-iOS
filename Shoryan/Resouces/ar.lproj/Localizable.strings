@@ -9,17 +9,24 @@
 // Assets
 "logo-picture" = "logo-picture_ar";
 "back-button" = "back-button_rtl";
+"logo-shadowed" = "logo-shadowed_ar";
 
 //General
 "Continue" = "استمرار";
+"Ok" = "حسنا";
+"Cancel" = "إلغاء";
+"Loading" = "جار التحميل";
 "Error" = "خطأ";
 "Success" = "نجاح";
+"Male" = "ذكر";
+"Female" = "أنثى";
 
 //Alerts/Error messages
 "incorrectphonenumber.alert" = "الرجاء التأكد من صحة رقم الهاتف";
 "incorrectpassword.alert" = "الرجاء التأكد من صحة كلمة كلمة المرور";
 "incorrectcode.alert" = "الرجاء التأكد من ادخال رمز صحيح";
 "coderesent.alert" = "تم إعادة إرسال الرمز بنجاح";
+"incorrectinput.alert" = "الرجاء التأكد من ادخال جميع المعلومات و التأكد من صحتها";
 
 //AuthorizationViewController
 "login.button" = "تسجيل دخول";
@@ -42,3 +49,26 @@
 "password.label" = "كلمة السر";
 "password.placeholder" = "كلمة السر";
 
+//SignupViewController
+"register.label" = "إنشاء حساب جديد";
+"firstname.placeholder" = "الاسم الأول";
+"lastname.placeholder" = "الاسم الأخير";
+"mobilephone.placeholder" = "رقم الهاتف";
+"birthdate.label" = "تاريخ الميلاد";
+"birthdate.placeholder" = "يوم/شهر/سنة";
+"bloodtype.label" = "فصيلة الدم";
+"bloodtype.placeholder" = "فصيلة الدم";
+"gender.label" = "النوع";
+"gender.placeholder" = "النوع";
+"address.placeholder" = "العنوان";
+"changelocation.button" = "تغيير الموقع";
+"confirmpassword.placeholder" = "تأكيد كلمة السر";
+
+"name.unvalidatedplaceholder" = "الرجاء ادخال اسم عربي او انجليزي";
+"phone.unvalidatedplaceholder" = "الرجاء ادخال رقم مصري";
+"birthdate.unvalidatedplaceholder" = "الرجاء ادخال تاريخ ميلاد";
+"bloodtype.unvalidatedplaceholder" = "الرجاء الاختيار";
+"gender.unvalidatedplaceholder" = "الرجاء الاختيار";
+"location.unvalidatedplaceholder" = "الرجاء اختيار الموقع الحالي";
+"password.unvalidatedplaceholder" = "الرجاء اختيار كلمة سر تحتوي علي [A-Z]، [a-z]، [0-9]";
+"confirmpassword.unvalidatedplaceholder" = "الرجاء التأكد من صحة تأكيد كلمة المرور";

@@ -10,8 +10,7 @@ import UIKit
 class FirstNameTextField: CustomFloatingPlaceholderTextField {
 
     override func setup() {
-        validatedFloatingText = placeholder
-        unvalidatedFloatingText = "الرجاء ادخال اسم عربي او انجليزي"
+        unvalidatedFloatingText = "name.unvalidatedplaceholder".localized()
         super.setup()
     }
     

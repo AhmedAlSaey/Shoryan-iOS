@@ -37,7 +37,6 @@ class CustomFloatingPlaceholderTextField: JVFloatLabeledTextField {
     var wasValid : Bool!
     var shouldCheckForEveryLetter : Bool = false
     var unvalidatedFloatingText : String?
-    var validatedFloatingText : String?
     
     var validationDelegate : CustomFloatingPlaceholderTextFieldDelegate?
     
@@ -55,7 +54,6 @@ class CustomFloatingPlaceholderTextField: JVFloatLabeledTextField {
     func setup() {
         addTarget(self, action: #selector(didEndEditing), for: .editingDidEnd)
         addTarget(self, action: #selector(didChangeEditing), for: .editingChanged)
-        validatedFloatingText = placeholder
         updateUIForValidEntry()
     }
     
@@ -94,7 +92,7 @@ class CustomFloatingPlaceholderTextField: JVFloatLabeledTextField {
     func updateUIForValidEntry(){
         self.floatingLabelActiveTextColor = ThemeConstants.colorDarkGray
         self.floatingLabelTextColor = ThemeConstants.colorDarkGray
-        self.floatingLabel.text = validatedFloatingText
+        self.floatingLabel.text = placeholder
         self.layoutSubviews()
     }
     

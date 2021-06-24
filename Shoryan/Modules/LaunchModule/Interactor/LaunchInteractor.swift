@@ -107,17 +107,15 @@ class LaunchInteractor {
         return ["A+", "A-", "B+", "B-", "AB+", "AB-", "O+", "O-"]
     }
     func getGenders() -> [String] {
-        return ["افضل عدم القول", "ذكر", "أنثى"]
+        return ["Male".localized(), "Female".localized()]
     }
     
     func reformatGender(arabicGender: String) -> String {
         switch arabicGender {
-        case "ذكر":
+        case "Male".localized():
             return "M"
-        case "أنثى":
+        case "Female".localized():
             return "F"
-        case "افضل عدم القول":
-            return "Prefer not to say"
         default:
             fatalError()
         }

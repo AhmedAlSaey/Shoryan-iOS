@@ -10,8 +10,7 @@ import UIKit
 class BirthDateTextField: CustomFloatingPlaceholderTextField {
 
     override func setup() {
-        validatedFloatingText = placeholder
-        unvalidatedFloatingText = "الرجاء ادخال تاريخ ميلاد"
+        unvalidatedFloatingText = "birthdate.unvalidatedplaceholder".localized()
         super.setup()
     }
 

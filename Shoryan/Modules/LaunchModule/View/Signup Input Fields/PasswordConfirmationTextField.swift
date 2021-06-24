@@ -20,8 +20,7 @@ class PasswordConfirmationTextField: CustomFloatingPlaceholderTextField {
     }
     var mainPasswordTextField: UITextField?
     override func setup() {
-        validatedFloatingText = placeholder
-        unvalidatedFloatingText = "الرجاء التأكد من صحة تأكيد كلمة المرور"
+        unvalidatedFloatingText = "confirmpassword.unvalidatedplaceholder".localized()
         super.setup()
     }
     

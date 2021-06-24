@@ -10,12 +10,19 @@ import JVFloatLabeledTextField
 
 class SignUpViewController: BaseViewController {
     
+    
+    @IBOutlet weak var logoImageView: UIImageView!
+    @IBOutlet weak var backButton: UIButton!
+    @IBOutlet weak var registerLabel: UILabel!
     @IBOutlet weak var firstNameTextField: FirstNameTextField!
     @IBOutlet weak var secondNameTextField: LastNameTextField!
     @IBOutlet weak var phoneNumberTextField: PhoneNumberTextField!
     @IBOutlet weak var dateView: UIView!
+    @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var dateTextField: BirthDateTextField!
+    @IBOutlet weak var bloodTypeLabel: UILabel!
     @IBOutlet weak var bloodTypeTextField: BloodTypeTextField!
+    @IBOutlet weak var genderLabel: UILabel!
     @IBOutlet weak var genderTextField: GenderTextField!
     @IBOutlet weak var addressTextField: LocationTextField!
     @IBOutlet weak var passwordTextField: PasswordTextField!
@@ -43,6 +50,32 @@ class SignUpViewController: BaseViewController {
         super.viewDidLoad()
         style()
         configureTextFields()
+    }
+    
+    override func localizeStrings() {
+        registerLabel.text = "register.label".localized()
+        firstNameTextField.placeholder = "firstname.placeholder".localized()
+        secondNameTextField.placeholder = "lastname.placeholder".localized()
+        phoneNumberTextField.placeholder = "mobilephone.placeholder".localized()
+        dateLabel.text = "birthdate.label".localized()
+        dateTextField.placeholder = "birthdate.placeholder".localized();
+        bloodTypeLabel.text = "bloodtype.label".localized()
+        bloodTypeTextField.placeholder = "bloodtype.placeholder".localized()
+        genderLabel.text = "gender.label".localized()
+        genderTextField.placeholder = "gender.placeholder".localized()
+        addressTextField.placeholder = "address.placeholder".localized()
+        locationButton.setTitle("changelocation.button".localized(), for: .normal)
+        passwordTextField.placeholder = "password.placeholder".localized()
+        passwordConfirmationTextField.placeholder = "confirmpassword.placeholder".localized()
+        continueButton.setTitle("Continue".localized(), for: .normal)
+        
+        
+    }
+    
+    override func localizeAssets() {
+        logoImageView.image = UIImage(named: "logo-shadowed".localized())
+        backButton.setImage(UIImage(named: "back-button".localized()), for: .normal)
+        
     }
     
     func configureTextFields() {
@@ -95,7 +128,7 @@ class SignUpViewController: BaseViewController {
     }
     
     @IBAction func continueButtonPressed(_ sender: Any) {
-        if let presenter = presenter as? SignUpPresenter, isAllInputValid() {
+        if let presenter = presenter as? SignUpPresenter {
             presenter.continueClicked(
                 firstName: firstNameTextField.text.nonNullString,
                 lastName: secondNameTextField.text.nonNullString,

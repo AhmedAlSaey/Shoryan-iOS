@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -13,17 +13,23 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SignUpViewController" customModule="Shoryan" customModuleProvider="target">
             <connections>
                 <outlet property="addressTextField" destination="ZE3-7q-nsh" id="EeU-ds-VsU"/>
+                <outlet property="backButton" destination="HlR-og-FLN" id="QYG-5w-fTu"/>
+                <outlet property="bloodTypeLabel" destination="Zni-5f-kd3" id="mSY-JZ-4nr"/>
                 <outlet property="bloodTypeTextField" destination="BL8-BQ-FSL" id="pDf-pH-kMd"/>
                 <outlet property="cardView" destination="YgW-hw-Hkt" id="CUP-Bj-HsR"/>
                 <outlet property="continueButton" destination="fga-hc-Nja" id="biN-27-Qcq"/>
+                <outlet property="dateLabel" destination="SYm-ng-7W5" id="ufy-QK-3He"/>
                 <outlet property="dateTextField" destination="x7l-mK-qR2" id="Qeo-zx-EEG"/>
                 <outlet property="dateView" destination="vMA-oX-wE7" id="Ri9-B0-a7r"/>
                 <outlet property="firstNameTextField" destination="5hs-eT-Y1H" id="x35-hB-cP8"/>
+                <outlet property="genderLabel" destination="mVd-h1-sdM" id="FPE-21-tYD"/>
                 <outlet property="genderTextField" destination="cID-JE-5XB" id="rRI-nK-wsr"/>
                 <outlet property="locationButton" destination="azk-y4-L1R" id="DZm-fH-oLH"/>
+                <outlet property="logoImageView" destination="zQy-aM-lD0" id="n8Q-bF-Ybd"/>
                 <outlet property="passwordConfirmationTextField" destination="lLb-r8-Xn8" id="WZd-U4-X6u"/>
                 <outlet property="passwordTextField" destination="16q-jD-bzV" id="Xfj-es-26e"/>
                 <outlet property="phoneNumberTextField" destination="bS4-te-3Qg" id="Ppk-al-syV"/>
+                <outlet property="registerLabel" destination="8Yu-7g-9YG" id="ku8-Yw-rMu"/>
                 <outlet property="secondNameTextField" destination="xTX-Qk-QwB" id="Qx7-dT-T3U"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -45,8 +51,8 @@
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YgW-hw-Hkt">
                                     <rect key="frame" x="0.0" y="232" width="414" height="872.5"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="إنشاء حساب جديد" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Yu-7g-9YG">
-                                            <rect key="frame" x="134" y="70" width="146.5" height="28"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Register" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Yu-7g-9YG">
+                                            <rect key="frame" x="157" y="70" width="100.5" height="28"/>
                                             <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="25"/>
                                             <color key="textColor" name="MainRed"/>
                                             <nil key="highlightedColor"/>
@@ -55,10 +61,10 @@
                                             <rect key="frame" x="25" y="203" width="364" height="30"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="username" translatesAutoresizingMaskIntoConstraints="NO" id="mGg-7f-4yS">
-                                                    <rect key="frame" x="348" y="7" width="16" height="16"/>
+                                                    <rect key="frame" x="0.0" y="7" width="16" height="16"/>
                                                 </imageView>
-                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="الاسم الأخير" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xTX-Qk-QwB" customClass="LastNameTextField" customModule="Shoryan" customModuleProvider="target">
-                                                    <rect key="frame" x="16" y="5" width="315" height="20.5"/>
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Last Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xTX-Qk-QwB" customClass="LastNameTextField" customModule="Shoryan" customModuleProvider="target">
+                                                    <rect key="frame" x="33" y="5" width="315" height="20.5"/>
                                                     <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="17"/>
                                                     <textInputTraits key="textInputTraits" textContentType="name"/>
                                                 </textField>
@@ -67,20 +73,20 @@
                                             <constraints>
                                                 <constraint firstItem="xTX-Qk-QwB" firstAttribute="centerY" secondItem="wPv-Ls-xrN" secondAttribute="centerY" id="1mt-Yb-aS3"/>
                                                 <constraint firstItem="mGg-7f-4yS" firstAttribute="centerY" secondItem="wPv-Ls-xrN" secondAttribute="centerY" id="7hP-rF-ptW"/>
+                                                <constraint firstItem="xTX-Qk-QwB" firstAttribute="leading" secondItem="mGg-7f-4yS" secondAttribute="trailing" constant="17" id="Ivo-8f-HvJ"/>
                                                 <constraint firstAttribute="height" constant="30" id="QVm-Zj-Wh8"/>
-                                                <constraint firstAttribute="trailing" secondItem="mGg-7f-4yS" secondAttribute="trailing" id="qvG-U4-cUd"/>
-                                                <constraint firstItem="mGg-7f-4yS" firstAttribute="leading" secondItem="xTX-Qk-QwB" secondAttribute="trailing" constant="17" id="rBz-mq-FpJ"/>
-                                                <constraint firstItem="xTX-Qk-QwB" firstAttribute="leading" secondItem="wPv-Ls-xrN" secondAttribute="leading" constant="16" id="uvK-n0-LY1"/>
+                                                <constraint firstAttribute="leading" secondItem="mGg-7f-4yS" secondAttribute="leading" id="qvG-U4-cUd"/>
+                                                <constraint firstAttribute="trailing" secondItem="xTX-Qk-QwB" secondAttribute="trailing" constant="16" id="smg-XQ-9e2"/>
                                             </constraints>
                                         </view>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2OY-oj-5VR">
                                             <rect key="frame" x="25" y="145" width="364" height="30"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="username" translatesAutoresizingMaskIntoConstraints="NO" id="9Yj-nI-KUd">
-                                                    <rect key="frame" x="348" y="7" width="16" height="16"/>
+                                                    <rect key="frame" x="0.0" y="7" width="16" height="16"/>
                                                 </imageView>
-                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="الاسم الأول" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5hs-eT-Y1H" customClass="FirstNameTextField" customModule="Shoryan" customModuleProvider="target">
-                                                    <rect key="frame" x="16" y="5" width="315" height="20.5"/>
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="First Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5hs-eT-Y1H" customClass="FirstNameTextField" customModule="Shoryan" customModuleProvider="target">
+                                                    <rect key="frame" x="33" y="5" width="315" height="20.5"/>
                                                     <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="17"/>
                                                     <textInputTraits key="textInputTraits" textContentType="name"/>
                                                 </textField>
@@ -89,9 +95,9 @@
                                             <constraints>
                                                 <constraint firstItem="9Yj-nI-KUd" firstAttribute="centerY" secondItem="2OY-oj-5VR" secondAttribute="centerY" id="6RU-f2-Nra"/>
                                                 <constraint firstAttribute="height" constant="30" id="ARz-cs-Sg6"/>
-                                                <constraint firstAttribute="trailing" secondItem="9Yj-nI-KUd" secondAttribute="trailing" id="M4s-XA-4eB"/>
-                                                <constraint firstItem="5hs-eT-Y1H" firstAttribute="leading" secondItem="2OY-oj-5VR" secondAttribute="leading" constant="16" id="WPF-Uf-pJb"/>
-                                                <constraint firstItem="9Yj-nI-KUd" firstAttribute="leading" secondItem="5hs-eT-Y1H" secondAttribute="trailing" constant="17" id="flD-Gw-Vzm"/>
+                                                <constraint firstAttribute="leading" secondItem="9Yj-nI-KUd" secondAttribute="leading" id="M4s-XA-4eB"/>
+                                                <constraint firstItem="5hs-eT-Y1H" firstAttribute="leading" secondItem="9Yj-nI-KUd" secondAttribute="trailing" constant="17" id="Q8U-4Q-8G4"/>
+                                                <constraint firstAttribute="trailing" secondItem="5hs-eT-Y1H" secondAttribute="trailing" constant="16" id="lHC-g1-V6m"/>
                                                 <constraint firstItem="5hs-eT-Y1H" firstAttribute="centerY" secondItem="2OY-oj-5VR" secondAttribute="centerY" id="uvY-v4-b9C"/>
                                             </constraints>
                                         </view>
@@ -113,10 +119,10 @@
                                             <rect key="frame" x="25" y="261" width="364" height="30"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="smartphone" translatesAutoresizingMaskIntoConstraints="NO" id="axf-ZT-LSB">
-                                                    <rect key="frame" x="343" y="4.5" width="21" height="21"/>
+                                                    <rect key="frame" x="0.0" y="4.5" width="21" height="21"/>
                                                 </imageView>
-                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="رقم الهاتف" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bS4-te-3Qg" customClass="PhoneNumberTextField" customModule="Shoryan" customModuleProvider="target">
-                                                    <rect key="frame" x="16" y="5" width="310" height="20.5"/>
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Mobile Number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bS4-te-3Qg" customClass="PhoneNumberTextField" customModule="Shoryan" customModuleProvider="target">
+                                                    <rect key="frame" x="38" y="5" width="310" height="20.5"/>
                                                     <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="17"/>
                                                     <textInputTraits key="textInputTraits" keyboardType="phonePad" textContentType="tel"/>
                                                 </textField>
@@ -124,11 +130,11 @@
                                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                             <constraints>
                                                 <constraint firstItem="axf-ZT-LSB" firstAttribute="centerY" secondItem="fll-8b-9AI" secondAttribute="centerY" id="B2S-9N-eD0"/>
-                                                <constraint firstItem="bS4-te-3Qg" firstAttribute="leading" secondItem="fll-8b-9AI" secondAttribute="leading" constant="16" id="WXV-Bn-xJd"/>
-                                                <constraint firstAttribute="trailing" secondItem="axf-ZT-LSB" secondAttribute="trailing" id="chE-de-Goo"/>
+                                                <constraint firstAttribute="trailing" secondItem="bS4-te-3Qg" secondAttribute="trailing" constant="16" id="IGD-S7-Ef9"/>
+                                                <constraint firstAttribute="leading" secondItem="axf-ZT-LSB" secondAttribute="leading" id="chE-de-Goo"/>
                                                 <constraint firstAttribute="height" constant="30" id="kcG-FG-XdL"/>
+                                                <constraint firstItem="bS4-te-3Qg" firstAttribute="leading" secondItem="axf-ZT-LSB" secondAttribute="trailing" constant="17" id="trE-vF-1f3"/>
                                                 <constraint firstItem="bS4-te-3Qg" firstAttribute="centerY" secondItem="fll-8b-9AI" secondAttribute="centerY" id="wwd-3d-y7U"/>
-                                                <constraint firstItem="axf-ZT-LSB" firstAttribute="leading" secondItem="bS4-te-3Qg" secondAttribute="trailing" constant="17" id="zdk-NL-D3P"/>
                                             </constraints>
                                         </view>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="be3-f4-oiA">
@@ -138,22 +144,22 @@
                                                 <constraint firstAttribute="height" constant="1" id="fHs-xw-dwR"/>
                                             </constraints>
                                         </view>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="تاريخ الميلاد" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SYm-ng-7W5">
-                                            <rect key="frame" x="323.5" y="344" width="65.5" height="18"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date of Birth" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SYm-ng-7W5">
+                                            <rect key="frame" x="25" y="344" width="96" height="18"/>
                                             <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="16"/>
                                             <color key="textColor" name="MainRed"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="فصيلة الدم" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zni-5f-kd3">
-                                            <rect key="frame" x="334" y="407" width="55" height="18"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Blood Type" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zni-5f-kd3">
+                                            <rect key="frame" x="25" y="407" width="86" height="18"/>
                                             <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="16"/>
                                             <color key="textColor" name="MainRed"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2K5-n8-i9z">
-                                            <rect key="frame" x="98" y="393.5" width="107.5" height="45"/>
+                                            <rect key="frame" x="224" y="393.5" width="107.5" height="45"/>
                                             <subviews>
-                                                <textField opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="فصيلة الدم" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BL8-BQ-FSL" customClass="BloodTypeTextField" customModule="Shoryan" customModuleProvider="target">
+                                                <textField opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Blood type" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BL8-BQ-FSL" customClass="BloodTypeTextField" customModule="Shoryan" customModuleProvider="target">
                                                     <rect key="frame" x="5" y="5" width="75.5" height="35"/>
                                                     <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="12"/>
                                                     <textInputTraits key="textInputTraits"/>
@@ -178,16 +184,16 @@
                                             </constraints>
                                         </view>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BhJ-vt-0Y5">
-                                            <rect key="frame" x="98" y="438.5" width="107.5" height="1"/>
+                                            <rect key="frame" x="224" y="438.5" width="107.5" height="1"/>
                                             <color key="backgroundColor" name="MainRed"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="1" id="tYn-SP-NHQ"/>
                                             </constraints>
                                         </view>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3Ov-7U-Jjf">
-                                            <rect key="frame" x="98" y="456.5" width="107.5" height="45"/>
+                                            <rect key="frame" x="224" y="456.5" width="107.5" height="45"/>
                                             <subviews>
-                                                <textField opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="النوع" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cID-JE-5XB" customClass="GenderTextField" customModule="Shoryan" customModuleProvider="target">
+                                                <textField opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Gender" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cID-JE-5XB" customClass="GenderTextField" customModule="Shoryan" customModuleProvider="target">
                                                     <rect key="frame" x="5" y="5" width="75.5" height="35"/>
                                                     <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="12"/>
                                                     <textInputTraits key="textInputTraits"/>
@@ -212,14 +218,14 @@
                                             </constraints>
                                         </view>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ctu-2x-D4v">
-                                            <rect key="frame" x="98" y="501.5" width="107.5" height="1"/>
+                                            <rect key="frame" x="224" y="501.5" width="107.5" height="1"/>
                                             <color key="backgroundColor" name="MainRed"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="1" id="gry-3I-2XF"/>
                                             </constraints>
                                         </view>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="النوع" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mVd-h1-sdM">
-                                            <rect key="frame" x="361.5" y="470" width="27.5" height="18"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gender" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mVd-h1-sdM">
+                                            <rect key="frame" x="25" y="470" width="56.5" height="18"/>
                                             <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="16"/>
                                             <color key="textColor" name="MainRed"/>
                                             <nil key="highlightedColor"/>
@@ -228,21 +234,21 @@
                                             <rect key="frame" x="25" y="528.5" width="364" height="30"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pin" translatesAutoresizingMaskIntoConstraints="NO" id="sZc-K4-RjR">
-                                                    <rect key="frame" x="343" y="4.5" width="21" height="21"/>
+                                                    <rect key="frame" x="0.0" y="4.5" width="21" height="21"/>
                                                 </imageView>
-                                                <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="العنوان" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZE3-7q-nsh" customClass="LocationTextField" customModule="Shoryan" customModuleProvider="target">
-                                                    <rect key="frame" x="16" y="5" width="310" height="20.5"/>
+                                                <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZE3-7q-nsh" customClass="LocationTextField" customModule="Shoryan" customModuleProvider="target">
+                                                    <rect key="frame" x="38" y="5" width="310" height="20.5"/>
                                                     <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="17"/>
                                                     <textInputTraits key="textInputTraits" textContentType="street-address"/>
                                                 </textField>
                                             </subviews>
                                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                             <constraints>
+                                                <constraint firstItem="ZE3-7q-nsh" firstAttribute="leading" secondItem="sZc-K4-RjR" secondAttribute="trailing" constant="17" id="37g-8M-QXB"/>
                                                 <constraint firstItem="sZc-K4-RjR" firstAttribute="centerY" secondItem="H5e-rE-YmH" secondAttribute="centerY" id="JSt-8C-CWc"/>
                                                 <constraint firstItem="ZE3-7q-nsh" firstAttribute="centerY" secondItem="H5e-rE-YmH" secondAttribute="centerY" id="Obb-37-b5r"/>
-                                                <constraint firstAttribute="trailing" secondItem="sZc-K4-RjR" secondAttribute="trailing" id="QO1-l6-zCf"/>
-                                                <constraint firstItem="ZE3-7q-nsh" firstAttribute="leading" secondItem="H5e-rE-YmH" secondAttribute="leading" constant="16" id="WWh-Fh-3Te"/>
-                                                <constraint firstItem="sZc-K4-RjR" firstAttribute="leading" secondItem="ZE3-7q-nsh" secondAttribute="trailing" constant="17" id="ptE-Qa-RSR"/>
+                                                <constraint firstAttribute="leading" secondItem="sZc-K4-RjR" secondAttribute="leading" id="QO1-l6-zCf"/>
+                                                <constraint firstAttribute="trailing" secondItem="ZE3-7q-nsh" secondAttribute="trailing" constant="16" id="bnL-DT-XyG"/>
                                                 <constraint firstAttribute="height" constant="30" id="yWB-f7-KMA"/>
                                             </constraints>
                                         </view>
@@ -253,19 +259,106 @@
                                                 <constraint firstAttribute="height" constant="1" id="1D1-7C-Hp9"/>
                                             </constraints>
                                         </view>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="azk-y4-L1R">
+                                            <rect key="frame" x="127.5" y="579.5" width="159" height="37"/>
+                                            <color key="backgroundColor" name="MainRed"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="159" id="8KT-il-uqt"/>
+                                                <constraint firstAttribute="height" constant="37" id="P44-bn-4UR"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="14"/>
+                                            <state key="normal" title="Change Location">
+                                                <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="locationButtonPressed:" destination="-1" eventType="touchUpInside" id="pyW-h8-aH8"/>
+                                            </connections>
+                                        </button>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="H4M-4J-wDp">
+                                            <rect key="frame" x="25" y="731.5" width="364" height="1"/>
+                                            <color key="backgroundColor" name="MainRed"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="1" id="irg-gN-eAo"/>
+                                            </constraints>
+                                        </view>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fga-hc-Nja">
+                                            <rect key="frame" x="25" y="794.5" width="364" height="58"/>
+                                            <color key="backgroundColor" name="MainRed"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="58" id="JwS-1z-BqQ"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="17"/>
+                                            <state key="normal" title="Continue">
+                                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="continueButtonPressed:" destination="-1" eventType="touchUpInside" id="UHL-dK-Djz"/>
+                                            </connections>
+                                        </button>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zvw-Lv-GVC">
+                                            <rect key="frame" x="25" y="633.5" width="364" height="30"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Lock" translatesAutoresizingMaskIntoConstraints="NO" id="TFN-TP-CiW">
+                                                    <rect key="frame" x="0.0" y="7" width="16" height="16"/>
+                                                </imageView>
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="16q-jD-bzV" customClass="PasswordTextField" customModule="Shoryan" customModuleProvider="target">
+                                                    <rect key="frame" x="33" y="5.5" width="315" height="19"/>
+                                                    <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="17"/>
+                                                    <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
+                                                </textField>
+                                            </subviews>
+                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="16q-jD-bzV" secondAttribute="trailing" constant="16" id="7gD-xk-k3Z"/>
+                                                <constraint firstItem="TFN-TP-CiW" firstAttribute="centerY" secondItem="Zvw-Lv-GVC" secondAttribute="centerY" id="Gyn-tV-kBp"/>
+                                                <constraint firstItem="16q-jD-bzV" firstAttribute="leading" secondItem="TFN-TP-CiW" secondAttribute="trailing" constant="17" id="NtJ-NQ-Nfa"/>
+                                                <constraint firstItem="16q-jD-bzV" firstAttribute="centerY" secondItem="Zvw-Lv-GVC" secondAttribute="centerY" id="THS-oF-u0Q"/>
+                                                <constraint firstAttribute="height" constant="30" id="dt6-NV-HmS"/>
+                                                <constraint firstAttribute="leading" secondItem="TFN-TP-CiW" secondAttribute="leading" id="klK-fk-bJ1"/>
+                                            </constraints>
+                                        </view>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="48p-Uw-mDE">
+                                            <rect key="frame" x="25" y="673.5" width="364" height="1"/>
+                                            <color key="backgroundColor" name="MainRed"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="1" id="E1T-Wb-W17"/>
+                                            </constraints>
+                                        </view>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kal-BN-Gwu">
+                                            <rect key="frame" x="25" y="691.5" width="364" height="30"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Lock" translatesAutoresizingMaskIntoConstraints="NO" id="cla-o9-OV2">
+                                                    <rect key="frame" x="0.0" y="7" width="16" height="16"/>
+                                                </imageView>
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Confirm Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lLb-r8-Xn8" customClass="PasswordConfirmationTextField" customModule="Shoryan" customModuleProvider="target">
+                                                    <rect key="frame" x="33" y="5.5" width="315" height="19"/>
+                                                    <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="17"/>
+                                                    <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
+                                                </textField>
+                                            </subviews>
+                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                            <constraints>
+                                                <constraint firstAttribute="leading" secondItem="cla-o9-OV2" secondAttribute="leading" id="1Hk-iu-aRc"/>
+                                                <constraint firstItem="cla-o9-OV2" firstAttribute="centerY" secondItem="kal-BN-Gwu" secondAttribute="centerY" id="Q6q-ZT-d6t"/>
+                                                <constraint firstAttribute="height" constant="30" id="TB9-nl-z6F"/>
+                                                <constraint firstItem="lLb-r8-Xn8" firstAttribute="leading" secondItem="cla-o9-OV2" secondAttribute="trailing" constant="17" id="e46-ts-awY"/>
+                                                <constraint firstItem="lLb-r8-Xn8" firstAttribute="centerY" secondItem="kal-BN-Gwu" secondAttribute="centerY" id="gXD-PF-bKG"/>
+                                                <constraint firstAttribute="trailing" secondItem="lLb-r8-Xn8" secondAttribute="trailing" constant="16" id="hG0-Vd-2nX"/>
+                                            </constraints>
+                                        </view>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hx7-iQ-C5D">
-                                            <rect key="frame" x="25" y="330.5" width="253.5" height="45"/>
+                                            <rect key="frame" x="166" y="330.5" width="223" height="45"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vMA-oX-wE7">
-                                                    <rect key="frame" x="72" y="0.0" width="109.5" height="45"/>
+                                                    <rect key="frame" x="56.5" y="0.0" width="110" height="45"/>
                                                     <subviews>
                                                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="DD-MM-YYYY" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="x7l-mK-qR2" customClass="BirthDateTextField" customModule="Shoryan" customModuleProvider="target">
-                                                            <rect key="frame" x="5" y="5" width="77.5" height="35"/>
+                                                            <rect key="frame" x="5" y="5" width="78" height="35"/>
                                                             <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="12"/>
                                                             <textInputTraits key="textInputTraits"/>
                                                         </textField>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iconfinder_nav-arrow-right_383100" translatesAutoresizingMaskIntoConstraints="NO" id="lM8-AQ-9gf">
-                                                            <rect key="frame" x="87.5" y="18" width="12" height="9.5"/>
+                                                            <rect key="frame" x="88" y="18" width="12" height="9.5"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="12" id="tpK-Y6-XCL"/>
                                                             </constraints>
@@ -290,93 +383,6 @@
                                                 <constraint firstItem="vMA-oX-wE7" firstAttribute="centerX" secondItem="hx7-iQ-C5D" secondAttribute="centerX" id="qHU-SO-j0a"/>
                                             </constraints>
                                         </view>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="azk-y4-L1R">
-                                            <rect key="frame" x="127.5" y="579.5" width="159" height="37"/>
-                                            <color key="backgroundColor" name="MainRed"/>
-                                            <constraints>
-                                                <constraint firstAttribute="width" constant="159" id="8KT-il-uqt"/>
-                                                <constraint firstAttribute="height" constant="37" id="P44-bn-4UR"/>
-                                            </constraints>
-                                            <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="14"/>
-                                            <state key="normal" title="تغيير الموقع">
-                                                <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                            </state>
-                                            <connections>
-                                                <action selector="locationButtonPressed:" destination="-1" eventType="touchUpInside" id="pyW-h8-aH8"/>
-                                            </connections>
-                                        </button>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="H4M-4J-wDp">
-                                            <rect key="frame" x="25" y="731.5" width="364" height="1"/>
-                                            <color key="backgroundColor" name="MainRed"/>
-                                            <constraints>
-                                                <constraint firstAttribute="height" constant="1" id="irg-gN-eAo"/>
-                                            </constraints>
-                                        </view>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fga-hc-Nja">
-                                            <rect key="frame" x="25" y="794.5" width="364" height="58"/>
-                                            <color key="backgroundColor" name="MainRed"/>
-                                            <constraints>
-                                                <constraint firstAttribute="height" constant="58" id="JwS-1z-BqQ"/>
-                                            </constraints>
-                                            <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="17"/>
-                                            <state key="normal" title="استمرار">
-                                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            </state>
-                                            <connections>
-                                                <action selector="continueButtonPressed:" destination="-1" eventType="touchUpInside" id="UHL-dK-Djz"/>
-                                            </connections>
-                                        </button>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zvw-Lv-GVC">
-                                            <rect key="frame" x="25" y="633.5" width="364" height="30"/>
-                                            <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Lock" translatesAutoresizingMaskIntoConstraints="NO" id="TFN-TP-CiW">
-                                                    <rect key="frame" x="348" y="7" width="16" height="16"/>
-                                                </imageView>
-                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="كلمة السر" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="16q-jD-bzV" customClass="PasswordTextField" customModule="Shoryan" customModuleProvider="target">
-                                                    <rect key="frame" x="16" y="5.5" width="315" height="19"/>
-                                                    <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="17"/>
-                                                    <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
-                                                </textField>
-                                            </subviews>
-                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                            <constraints>
-                                                <constraint firstItem="TFN-TP-CiW" firstAttribute="centerY" secondItem="Zvw-Lv-GVC" secondAttribute="centerY" id="Gyn-tV-kBp"/>
-                                                <constraint firstItem="16q-jD-bzV" firstAttribute="leading" secondItem="Zvw-Lv-GVC" secondAttribute="leading" constant="16" id="JKO-JN-oRg"/>
-                                                <constraint firstItem="TFN-TP-CiW" firstAttribute="leading" secondItem="16q-jD-bzV" secondAttribute="trailing" constant="17" id="OoY-G8-svK"/>
-                                                <constraint firstItem="16q-jD-bzV" firstAttribute="centerY" secondItem="Zvw-Lv-GVC" secondAttribute="centerY" id="THS-oF-u0Q"/>
-                                                <constraint firstAttribute="height" constant="30" id="dt6-NV-HmS"/>
-                                                <constraint firstAttribute="trailing" secondItem="TFN-TP-CiW" secondAttribute="trailing" id="klK-fk-bJ1"/>
-                                            </constraints>
-                                        </view>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="48p-Uw-mDE">
-                                            <rect key="frame" x="25" y="673.5" width="364" height="1"/>
-                                            <color key="backgroundColor" name="MainRed"/>
-                                            <constraints>
-                                                <constraint firstAttribute="height" constant="1" id="E1T-Wb-W17"/>
-                                            </constraints>
-                                        </view>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kal-BN-Gwu">
-                                            <rect key="frame" x="25" y="691.5" width="364" height="30"/>
-                                            <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Lock" translatesAutoresizingMaskIntoConstraints="NO" id="cla-o9-OV2">
-                                                    <rect key="frame" x="348" y="7" width="16" height="16"/>
-                                                </imageView>
-                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="تأكيد كلمة السر" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lLb-r8-Xn8" customClass="PasswordConfirmationTextField" customModule="Shoryan" customModuleProvider="target">
-                                                    <rect key="frame" x="16" y="5.5" width="315" height="19"/>
-                                                    <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="17"/>
-                                                    <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
-                                                </textField>
-                                            </subviews>
-                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                            <constraints>
-                                                <constraint firstAttribute="trailing" secondItem="cla-o9-OV2" secondAttribute="trailing" id="1Hk-iu-aRc"/>
-                                                <constraint firstItem="lLb-r8-Xn8" firstAttribute="leading" secondItem="kal-BN-Gwu" secondAttribute="leading" constant="16" id="F0g-ZN-xmn"/>
-                                                <constraint firstItem="cla-o9-OV2" firstAttribute="centerY" secondItem="kal-BN-Gwu" secondAttribute="centerY" id="Q6q-ZT-d6t"/>
-                                                <constraint firstAttribute="height" constant="30" id="TB9-nl-z6F"/>
-                                                <constraint firstItem="lLb-r8-Xn8" firstAttribute="centerY" secondItem="kal-BN-Gwu" secondAttribute="centerY" id="gXD-PF-bKG"/>
-                                                <constraint firstItem="cla-o9-OV2" firstAttribute="leading" secondItem="lLb-r8-Xn8" secondAttribute="trailing" constant="17" id="ywi-kB-RKW"/>
-                                            </constraints>
-                                        </view>
                                     </subviews>
                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                     <constraints>
@@ -391,6 +397,7 @@
                                         <constraint firstItem="be3-f4-oiA" firstAttribute="top" secondItem="fll-8b-9AI" secondAttribute="bottom" constant="10" id="72K-5f-9hP"/>
                                         <constraint firstItem="rSd-I3-lcs" firstAttribute="trailing" secondItem="2OY-oj-5VR" secondAttribute="trailing" id="7iZ-gd-wbx"/>
                                         <constraint firstItem="H5e-rE-YmH" firstAttribute="top" secondItem="ctu-2x-D4v" secondAttribute="top" constant="27" id="94d-F7-20e"/>
+                                        <constraint firstItem="hx7-iQ-C5D" firstAttribute="leading" secondItem="SYm-ng-7W5" secondAttribute="trailing" constant="45" id="9VU-4Y-CVD"/>
                                         <constraint firstItem="be3-f4-oiA" firstAttribute="leading" secondItem="fll-8b-9AI" secondAttribute="leading" id="AG2-Ic-Lab"/>
                                         <constraint firstItem="mVd-h1-sdM" firstAttribute="top" secondItem="Zni-5f-kd3" secondAttribute="bottom" constant="45" id="ArS-Nt-Ppf"/>
                                         <constraint firstItem="XXA-9z-Op7" firstAttribute="trailing" secondItem="H5e-rE-YmH" secondAttribute="trailing" id="CH2-Oa-DmO"/>
@@ -398,7 +405,6 @@
                                         <constraint firstItem="2K5-n8-i9z" firstAttribute="centerY" secondItem="Zni-5f-kd3" secondAttribute="centerY" id="Cdd-v2-zTY"/>
                                         <constraint firstItem="SYm-ng-7W5" firstAttribute="top" secondItem="be3-f4-oiA" secondAttribute="bottom" constant="42" id="D3Y-tC-lSS"/>
                                         <constraint firstItem="wPv-Ls-xrN" firstAttribute="leading" secondItem="YgW-hw-Hkt" secondAttribute="leading" constant="25" id="GPC-Q8-c3x"/>
-                                        <constraint firstItem="SYm-ng-7W5" firstAttribute="leading" secondItem="hx7-iQ-C5D" secondAttribute="trailing" constant="45" id="HKx-kh-g1Q"/>
                                         <constraint firstItem="wPv-Ls-xrN" firstAttribute="top" secondItem="rSd-I3-lcs" secondAttribute="bottom" constant="17" id="HXb-WX-atb"/>
                                         <constraint firstAttribute="trailing" secondItem="kal-BN-Gwu" secondAttribute="trailing" constant="25" id="JUF-vn-67N"/>
                                         <constraint firstItem="Zni-5f-kd3" firstAttribute="top" secondItem="SYm-ng-7W5" secondAttribute="bottom" constant="45" id="JVF-B2-CK3"/>
@@ -419,10 +425,10 @@
                                         <constraint firstItem="XXA-9z-Op7" firstAttribute="leading" secondItem="H5e-rE-YmH" secondAttribute="leading" id="boa-rz-yG2"/>
                                         <constraint firstItem="ctu-2x-D4v" firstAttribute="trailing" secondItem="3Ov-7U-Jjf" secondAttribute="trailing" id="bow-z2-Clo"/>
                                         <constraint firstItem="fll-8b-9AI" firstAttribute="trailing" secondItem="2OY-oj-5VR" secondAttribute="trailing" id="cBH-ZH-WD4"/>
-                                        <constraint firstItem="SYm-ng-7W5" firstAttribute="trailing" secondItem="fll-8b-9AI" secondAttribute="trailing" id="djb-wc-Olh"/>
+                                        <constraint firstItem="SYm-ng-7W5" firstAttribute="leading" secondItem="fll-8b-9AI" secondAttribute="leading" id="djb-wc-Olh"/>
                                         <constraint firstItem="hx7-iQ-C5D" firstAttribute="centerY" secondItem="SYm-ng-7W5" secondAttribute="centerY" id="eNr-m2-2aM"/>
                                         <constraint firstItem="2K5-n8-i9z" firstAttribute="centerX" secondItem="vMA-oX-wE7" secondAttribute="centerX" id="f9b-Xs-ba4"/>
-                                        <constraint firstItem="Zni-5f-kd3" firstAttribute="trailing" secondItem="SYm-ng-7W5" secondAttribute="trailing" id="fUn-u0-yTH"/>
+                                        <constraint firstItem="Zni-5f-kd3" firstAttribute="leading" secondItem="SYm-ng-7W5" secondAttribute="leading" id="fUn-u0-yTH"/>
                                         <constraint firstItem="fll-8b-9AI" firstAttribute="top" secondItem="ZP9-am-jUu" secondAttribute="bottom" constant="17" id="gOD-ed-pYv"/>
                                         <constraint firstItem="rSd-I3-lcs" firstAttribute="top" secondItem="2OY-oj-5VR" secondAttribute="bottom" constant="10" id="gym-k5-l4p"/>
                                         <constraint firstAttribute="trailing" secondItem="wPv-Ls-xrN" secondAttribute="trailing" constant="25" id="k00-EB-xtz"/>
@@ -430,9 +436,9 @@
                                         <constraint firstItem="8Yu-7g-9YG" firstAttribute="top" secondItem="YgW-hw-Hkt" secondAttribute="top" constant="70" id="kLP-i1-wTz"/>
                                         <constraint firstItem="kal-BN-Gwu" firstAttribute="leading" secondItem="YgW-hw-Hkt" secondAttribute="leading" constant="25" id="kLi-RM-LSJ"/>
                                         <constraint firstItem="H4M-4J-wDp" firstAttribute="leading" secondItem="kal-BN-Gwu" secondAttribute="leading" id="kdf-21-jfo"/>
-                                        <constraint firstItem="mVd-h1-sdM" firstAttribute="trailing" secondItem="Zni-5f-kd3" secondAttribute="trailing" id="l50-5n-TY0"/>
+                                        <constraint firstItem="mVd-h1-sdM" firstAttribute="leading" secondItem="Zni-5f-kd3" secondAttribute="leading" id="l50-5n-TY0"/>
                                         <constraint firstAttribute="bottom" secondItem="fga-hc-Nja" secondAttribute="bottom" constant="20" id="mD2-RJ-Bmp"/>
-                                        <constraint firstItem="hx7-iQ-C5D" firstAttribute="leading" secondItem="fll-8b-9AI" secondAttribute="leading" id="mvd-aQ-v65"/>
+                                        <constraint firstItem="hx7-iQ-C5D" firstAttribute="trailing" secondItem="fll-8b-9AI" secondAttribute="trailing" id="mvd-aQ-v65"/>
                                         <constraint firstItem="rSd-I3-lcs" firstAttribute="leading" secondItem="2OY-oj-5VR" secondAttribute="leading" id="nNa-dl-EfM"/>
                                         <constraint firstItem="ZP9-am-jUu" firstAttribute="top" secondItem="wPv-Ls-xrN" secondAttribute="bottom" constant="10" id="ngo-eh-jF2"/>
                                         <constraint firstAttribute="trailing" secondItem="H5e-rE-YmH" secondAttribute="trailing" constant="25" id="qON-du-Ma2"/>
@@ -445,27 +451,19 @@
                                         <constraint firstItem="azk-y4-L1R" firstAttribute="top" secondItem="XXA-9z-Op7" secondAttribute="bottom" constant="10" id="yHj-FP-7gg"/>
                                     </constraints>
                                 </view>
-                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo-1" translatesAutoresizingMaskIntoConstraints="NO" id="zQy-aM-lD0">
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo-shadowed_en" translatesAutoresizingMaskIntoConstraints="NO" id="zQy-aM-lD0">
                                     <rect key="frame" x="126" y="45" width="162" height="162"/>
                                 </imageView>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HlR-og-FLN">
-                                    <rect key="frame" x="15" y="20" width="16" height="22"/>
-                                    <state key="normal" image="Backward arrow navbar"/>
+                                    <rect key="frame" x="15" y="20" width="43" height="43"/>
+                                    <state key="normal" image="back-button_ltr"/>
                                     <connections>
                                         <action selector="backButtonPressed:" destination="-1" eventType="touchUpInside" id="1PO-qb-KUu"/>
                                     </connections>
                                 </button>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="رجوع" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FdB-vn-2So">
-                                    <rect key="frame" x="46" y="22" width="32" height="18"/>
-                                    <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="16"/>
-                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                    <nil key="highlightedColor"/>
-                                </label>
                             </subviews>
                             <constraints>
-                                <constraint firstItem="FdB-vn-2So" firstAttribute="leading" secondItem="HlR-og-FLN" secondAttribute="trailing" constant="15" id="JP1-kg-AKR"/>
                                 <constraint firstAttribute="bottom" secondItem="YgW-hw-Hkt" secondAttribute="bottom" id="Jwe-YZ-BPj"/>
-                                <constraint firstItem="FdB-vn-2So" firstAttribute="centerY" secondItem="HlR-og-FLN" secondAttribute="centerY" id="LF9-aa-gto"/>
                                 <constraint firstItem="HlR-og-FLN" firstAttribute="top" secondItem="jVP-RD-iOv" secondAttribute="top" constant="20" id="PEI-Bh-jxy"/>
                                 <constraint firstItem="zQy-aM-lD0" firstAttribute="centerX" secondItem="jVP-RD-iOv" secondAttribute="centerX" id="PNg-Ds-5Rj"/>
                                 <constraint firstItem="YgW-hw-Hkt" firstAttribute="leading" secondItem="jVP-RD-iOv" secondAttribute="leading" id="Upq-se-M42"/>
@@ -505,39 +503,39 @@
     </objects>
     <designables>
         <designable name="16q-jD-bzV">
-            <size key="intrinsicContentSize" width="52.5" height="19"/>
+            <size key="intrinsicContentSize" width="75" height="19"/>
         </designable>
         <designable name="5hs-eT-Y1H">
-            <size key="intrinsicContentSize" width="61" height="20.5"/>
+            <size key="intrinsicContentSize" width="83.5" height="20.5"/>
         </designable>
         <designable name="BL8-BQ-FSL">
-            <size key="intrinsicContentSize" width="40" height="15"/>
+            <size key="intrinsicContentSize" width="57" height="15"/>
         </designable>
         <designable name="ZE3-7q-nsh">
-            <size key="intrinsicContentSize" width="38" height="20.5"/>
+            <size key="intrinsicContentSize" width="62.5" height="20.5"/>
         </designable>
         <designable name="bS4-te-3Qg">
-            <size key="intrinsicContentSize" width="59" height="20.5"/>
+            <size key="intrinsicContentSize" width="115.5" height="20.5"/>
         </designable>
         <designable name="cID-JE-5XB">
-            <size key="intrinsicContentSize" width="20" height="15"/>
+            <size key="intrinsicContentSize" width="40.5" height="15"/>
         </designable>
         <designable name="lLb-r8-Xn8">
-            <size key="intrinsicContentSize" width="82" height="19"/>
+            <size key="intrinsicContentSize" width="139" height="19"/>
         </designable>
         <designable name="x7l-mK-qR2">
             <size key="intrinsicContentSize" width="77.5" height="15"/>
         </designable>
         <designable name="xTX-Qk-QwB">
-            <size key="intrinsicContentSize" width="66.5" height="20.5"/>
+            <size key="intrinsicContentSize" width="82.5" height="20.5"/>
         </designable>
     </designables>
     <resources>
-        <image name="Backward arrow navbar" width="16" height="16"/>
         <image name="Lock" width="16" height="16"/>
         <image name="Register – 2" width="414" height="1029"/>
+        <image name="back-button_ltr" width="43" height="43"/>
         <image name="iconfinder_nav-arrow-right_383100" width="15" height="9.5"/>
-        <image name="logo-1" width="162" height="162"/>
+        <image name="logo-shadowed_en" width="162" height="162"/>
         <image name="pin" width="21" height="21"/>
         <image name="smartphone" width="21" height="21"/>
         <image name="username" width="16" height="16"/>

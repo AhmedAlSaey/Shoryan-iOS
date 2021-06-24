@@ -10,8 +10,7 @@ import UIKit
 class LocationTextField: CustomFloatingPlaceholderTextField {
 
     override func setup() {
-        validatedFloatingText = placeholder
-        unvalidatedFloatingText = "الرجاء اختيار الموقع الحالي"
+        unvalidatedFloatingText = "location.unvalidatedplaceholder".localized()
         super.setup()
     }
 

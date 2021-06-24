@@ -79,7 +79,7 @@ class SignUpPresenter: BasePresenter {
                 }
             }
             else {
-                view.showAlert(message: "الرجاء التأكد من ادخال جميع المعلومات و التأكد من صحتها")
+                view.showAlert(message: "incorrectinput.alert".localized())
             }
         }
         

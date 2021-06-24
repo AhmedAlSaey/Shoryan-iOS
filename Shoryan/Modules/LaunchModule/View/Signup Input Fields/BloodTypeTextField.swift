@@ -10,8 +10,7 @@ import UIKit
 class BloodTypeTextField: CustomFloatingPlaceholderTextField {
 
     override func setup() {
-        validatedFloatingText = placeholder
-        unvalidatedFloatingText = "الرجاء الاختيار"
+        unvalidatedFloatingText = "bloodtype.unvalidatedplaceholder".localized()
         super.setup()
     }
 

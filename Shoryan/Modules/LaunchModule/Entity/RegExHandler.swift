@@ -21,13 +21,13 @@ class RegExHandler {
         return evaluate(text: text, withRegEx: phoneNumberRegEx)
     }
     static func notEmptyRegEx (text: String) -> Bool {
-        let emptyRegEx = "(.|\\s)*\\S(.|\\s)*"
-        return evaluate(text: text, withRegEx: emptyRegEx)
+        let emptyRegEx = "^$|\\s+"
+        return !evaluate(text: text, withRegEx: emptyRegEx)
     }
     static func nameRegEx (text: String) -> Bool {
         //TODO: - This is the not empty RegEx, fix it.
-        let nameRegEx = "(.|\\s)*\\S(.|\\s)*"
-        return evaluate(text: text, withRegEx: nameRegEx)
+        let emptyRegEx = "^$|\\s+"
+        return !evaluate(text: text, withRegEx: emptyRegEx)
     }
     
     static private func evaluate(text: String, withRegEx regEx : String) -> Bool{

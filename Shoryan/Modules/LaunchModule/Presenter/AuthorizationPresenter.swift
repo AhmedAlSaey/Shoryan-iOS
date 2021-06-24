@@ -8,7 +8,6 @@
 import Foundation
 
 class AuthorizationPresenter: BasePresenter {
-    
     override func viewDidLoad() {
         
     }

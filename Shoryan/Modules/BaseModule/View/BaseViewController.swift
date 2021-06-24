@@ -75,22 +75,22 @@ class BaseViewController: UIViewController, UIGestureRecognizerDelegate {
             message = baseMessage
         }
         
-        showAlert(title: "خطأ", message: message, okAction: okAction)
+        showAlert(title: "Error".localized(), message: message, okAction: okAction)
     }
     
     func showAlert(message: String) {
-        showAlert(title: "خطأ", message: message)
+        showAlert(title: "Error".localized(), message: message)
     }
     func showAlert(title: String, message: String) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+        alert.addAction(UIAlertAction(title: "Ok".localized(), style: .default, handler: nil))
         self.present(alert, animated: true, completion: nil)
     }
     
     func showAlert(title: String, message: String, okAction: (() -> ())? = nil) {
         
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { (action) in
+        alert.addAction(UIAlertAction(title: "Ok".localized(), style: .default, handler: { (action) in
             okAction?()
         }))
         DispatchQueue.main.async {
@@ -99,12 +99,12 @@ class BaseViewController: UIViewController, UIGestureRecognizerDelegate {
         
     }
     
-    func showDislaimer(title: String, message: String, agreeAction: @escaping () -> (), agreeTitle: String = "Ok"){
+    func showDislaimer(title: String, message: String, agreeAction: @escaping () -> (), agreeTitle: String = "Ok".localized()){
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: agreeTitle, style: .default, handler: { (action) in
             agreeAction()
         }))
-        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+        alert.addAction(UIAlertAction(title: "Cancel".localized(), style: .cancel, handler: nil))
         self.present(alert, animated: true, completion: nil)
     }
     
@@ -112,7 +112,7 @@ class BaseViewController: UIViewController, UIGestureRecognizerDelegate {
     func showLoading() {
         DispatchQueue.main.async {
             self.hud = JGProgressHUD()
-            self.hud?.textLabel.text = "Loading"
+            self.hud?.textLabel.text = "Loading".localized()
             self.hud?.show(in: self.view)
         }
     }

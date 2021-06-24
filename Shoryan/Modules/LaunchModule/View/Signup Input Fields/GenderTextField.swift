@@ -10,8 +10,7 @@ import UIKit
 class GenderTextField: CustomFloatingPlaceholderTextField {
 
     override func setup() {
-        validatedFloatingText = placeholder
-        unvalidatedFloatingText = "الرجاء الاختيار"
+        unvalidatedFloatingText = "gender.unvalidatedplaceholder".localized()
         super.setup()
     }
 

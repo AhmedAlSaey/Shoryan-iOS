@@ -25,11 +25,21 @@ class MapSelectorViewController: UIViewController {
     var locationManager = CLLocationManager()
     var delegate: MapSelectorDelegate?
     let hud = JGProgressHUD()
+    let languageCode =  Locale.current.languageCode
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupViews()
         setupMap()
+        
+        if UIApplication.shared.userInterfaceLayoutDirection == .rightToLeft {
+
+            backButton.setImage(UIImage(named: "back-button-map_rtl"), for: .normal)
+            }
+        else {
+            backButton.setImage(UIImage(named: "back-button-map_ltr"), for: .normal)
+        }
+        
     }
     
     func setupViews() {
@@ -96,7 +106,7 @@ class MapSelectorViewController: UIViewController {
         var components = URLComponents(string: "https://maps.googleapis.com/maps/api/geocode/json")!
         let key = URLQueryItem(name: "key", value: "AIzaSyBdof_5MRwUAFSOI0KkO5BMhDvtWC5qiyQ")
         let latlng = URLQueryItem(name: "latlng", value: "\(lat),\(long)")
-        let language = URLQueryItem(name: "language", value: "ar")
+        let language = URLQueryItem(name: "language", value: languageCode)
         components.queryItems = [latlng, language, key]
 
         let task = URLSession.shared.dataTask(with: components.url!) { [self] data, response, error in

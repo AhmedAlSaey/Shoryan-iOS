@@ -10,8 +10,7 @@ import UIKit
 class PhoneNumberTextField: CustomFloatingPlaceholderTextField {
 
     override func setup() {
-        validatedFloatingText = placeholder
-        unvalidatedFloatingText = "الرجاء ادخال رقم مصري"
+        unvalidatedFloatingText = "phone.unvalidatedplaceholder".localized()
         super.setup()
     }
 

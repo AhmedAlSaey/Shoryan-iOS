@@ -10,8 +10,7 @@ import UIKit
 class PasswordTextField: CustomFloatingPlaceholderTextField {
 
     override func setup() {
-        validatedFloatingText = placeholder
-        unvalidatedFloatingText = "الرجاء اختيار كلمة سر تحتوي علي [A-Z]، [a-z]، [0-9]"
+        unvalidatedFloatingText = "password.unvalidatedplaceholder".localized()
         super.setup()
     }
 
