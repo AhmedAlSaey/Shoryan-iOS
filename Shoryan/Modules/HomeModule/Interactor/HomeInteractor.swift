@@ -67,8 +67,9 @@ class HomeInteractor: BaseInteractor{
                     donatorsCount: request.request.numberOfComingDonors,
                     bloodType: request.request.bloodType,
                     isUserRequest: request.request.requestBy._id == AppUser.shared.userID,
-                    canUserDonate: request.error == nil,
-                    canUserDonateReasoning: self.getDonationPreventionReasoning(errorName: request.error?.message),
+                    //TODO: - Delete this if not needed in the future
+//                    canUserDonate: request.error == nil,
+//                    canUserDonateReasoning: self.getDonationPreventionReasoning(errorName: request.error?.message),
                     isUserADonator: request.request._id == AppUser.shared.pendingRequestID,
                     _id: request.request._id)
                 completionHandler(.success(detailedRequest))

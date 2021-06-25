@@ -16,13 +16,11 @@ class DetailedRequest {
     var donatorsCount: Int
     var bloodType: String
     var isUserRequest: Bool
-    var canUserDonate: Bool
-    var canUserDonateReasoning: String?
     var isUserADonator: Bool
     var _id: String
     
     
-    init(lng: Double, lat: Double, fullName: String, address: String, bloodBags: Int, donatorsCount: Int, bloodType: String, isUserRequest: Bool, canUserDonate: Bool,  canUserDonateReasoning: String?, isUserADonator: Bool, _id: String) {
+    init(lng: Double, lat: Double, fullName: String, address: String, bloodBags: Int, donatorsCount: Int, bloodType: String, isUserRequest: Bool, isUserADonator: Bool, _id: String) {
         self.lng = lng
         self.lat = lat
         self.fullName = fullName
@@ -31,8 +29,6 @@ class DetailedRequest {
         self.donatorsCount = donatorsCount
         self.bloodType = bloodType
         self.isUserRequest = isUserRequest
-        self.canUserDonate = canUserDonate
-        self.canUserDonateReasoning = canUserDonateReasoning
         self.isUserADonator = isUserADonator
         self._id = _id
     }

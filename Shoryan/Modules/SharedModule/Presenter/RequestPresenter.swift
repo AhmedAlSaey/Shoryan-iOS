@@ -22,7 +22,6 @@ class RequestPresenter: BasePresenter {
         showLoading()
         switch view.primaryButtonFunctionality {
         case .Donate:
-            if view.request!.canUserDonate {
                 SharedInteractor.shared.registerUserAsDonor(forRequest: view.request!._id) { (result) in
                     DispatchQueue.main.async {
                         self.dismissLoading()
@@ -34,8 +33,6 @@ class RequestPresenter: BasePresenter {
                             else {
                                 view.request?.bloodBags = update.bloodBagsCount
                                 view.request?.donatorsCount = update.donatorsCount
-                                view.request?.canUserDonate = update.canUserDonate
-                                view.request?.canUserDonateReasoning = update.donationPreventionReason
                                 view.request?.isUserADonator = true
                                 AppUser.shared.pendingRequestID = view.request?._id
                                 view.setup()
@@ -48,10 +45,7 @@ class RequestPresenter: BasePresenter {
                         }
                     }
                 }
-            } else {
-                self.dismissLoading()
-                view.showAlert(title: "Error".localized(), message: view.request?.canUserDonateReasoning ?? "unpermitteddonation.alert".localized())
-            }
+            
         case .ConfirmDonation:
             SharedInteractor.shared.confirmUserAsDonor(forRequest: view.request!._id) { result in
                 DispatchQueue.main.async {
@@ -64,9 +58,7 @@ class RequestPresenter: BasePresenter {
                         else{
                             view.request?.bloodBags = update.bloodBagsCount
                             view.request?.donatorsCount = update.donatorsCount
-                            view.request?.canUserDonate = update.canUserDonate
-                            view.request?.canUserDonateReasoning = update.donationPreventionReason
-                            view.request?.isUserADonator = true
+                            view.request?.isUserADonator = false
                             AppUser.shared.pendingRequestID = nil
                             view.setup()
                             view.setupViewForInactiveRequest()
@@ -101,8 +93,6 @@ class RequestPresenter: BasePresenter {
                         
                         view.request?.bloodBags = update.bloodBagsCount
                         view.request?.donatorsCount = update.donatorsCount
-                        view.request?.canUserDonate = update.canUserDonate
-                        view.request?.canUserDonateReasoning = update.donationPreventionReason
                         view.request?.isUserADonator = false
                         AppUser.shared.pendingRequestID = nil
                         view.setup()
