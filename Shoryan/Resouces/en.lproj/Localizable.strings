@@ -22,6 +22,7 @@
 "Male" = "Male";
 "Female" = "Female";
 "Urgent" = "Urgent";
+"Done" = "Done";
 
 //Alerts/Error messages
 "incorrectphonenumber.alert" = "Please make sure you entered a correct phone number";
@@ -30,6 +31,18 @@
 "coderesent.alert" = "Code resent successfully";
 "incorrectinput.alert" = "Please make sure you entered all the required field and make sure they are correct";
 "notregistereddonor.alert" = "You are not registered as a donor for a request";
+"donorregistered.alert" = "Your are now registered as a donor";
+"unpermitteddonation.alert" = "You can't donate to this request";
+"donationsuccess.alert" = "You have successfully donated to this request!";
+"canceldonationsuccess.alert" = "You are now not registered as a donor";
+"incompatiblebloodtype.alert" = "You can't donate to this request, your blood type is incompatible";
+"agecheckfail.alert" = "You have to be 18 years old or older to donate blood";
+"breaktimecheckfail.alert" = "You can't donate more than once every 3 months";
+"usergoingtoanotherrequest.alert" = "You already have another pending request";
+"alreadygoingtorequest.alert" = "You are already regestered as a donor for this request";
+"cantdonatetorequest.alert" = "You can't donate to this request";
+
+
 
 //Main Tabbar
 "home.tabbaritem" = "Home";
@@ -89,3 +102,13 @@
 "rewards.label" = "Rewards";
 "requests.label" = "Requests";
 "filer.button" = "Sort by";
+
+//RequestViewController
+"donationrequestnavtitle.label" = "Donation Request";
+"bloodbags.label" = "Blood Bags";
+"activedonors.label" = "People are on their way to donate";
+"registerdonoralert.label" = "You are now registered as a donor for this request, we are awaiting your arrival to the blood bank";
+"donate.button" = "Donate";
+"canceldonation.button" = "Cancel Donation";
+"idonated.button" = "I Donated";
+"cancelrequest.button" = "Cancel Request";

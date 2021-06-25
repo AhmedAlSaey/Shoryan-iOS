@@ -8,40 +8,41 @@
 import Foundation
 
 class SpecificRequestResponse: Decodable {
+    let error: SpecificRequestRespnseError?
     let request: SpecificRequest
-    let userCanDonate: SpecificRequestUserCanDonate
 }
 
+//TODO: - Clean this
 class SpecificRequest: Decodable {
     let numberOfBagsFulfilled: Int
     let numberOfComingDonors: Int
-    let isActive: Bool
-    let comingDonors: [String]
+//    let isActive: Bool
+//    let comingDonors: [String]
     let _id: String
     let bloodType: String
     let numberOfBagsRequired: Int
-    let urgent: Bool
     let requestBy: SpecificRequestRequester
+    let requestByModelReference: String
+    let urgent: Bool
     let donationLocation: SpecificRequestDonationLocation
-    let date: String
-    let donations: [SpecificRequestDonation]
-    let __v: Int
+//    let date: String
+//    let donations: [SpecificRequestDonation]
+}
+
+class SpecificRequestRespnseError: Decodable {
+    let status: Int
+    let message: String
 }
 
 class SpecificRequestRequester: Decodable {
-    let name: SpecificRequestRequesterName
+    let name: String
     let _id: String
-    let phoneNumber: Int
-}
-
-class SpecificRequestRequesterName: Decodable {
-    let firstName: String
-    let lastName: String
+    let phoneNumber: String
 }
 
 class SpecificRequestDonationLocation: Decodable {
     let location: SpecificRequestLocation
-    let phoneNumber: [Int]
+    let phoneNumber: String
     let _id: String
     let name: String
     let __v: Int

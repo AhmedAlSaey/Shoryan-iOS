@@ -27,8 +27,8 @@ class ProfileViewController: BaseViewController {
 //        let barHeight = navigationController?.navigationBar.layer.frame.height ?? 0
 //        navBarTopConstraint.constant -= barHeight
         navigationBarView.addSpecificCornerRadius(forCorners: .Bottom, radius: 20)
-        pointsLabel.text = pointsLabel.text?.enToArDigits
-        donationsLabel.text = donationsLabel.text?.enToArDigits
+        pointsLabel.text = pointsLabel.text?.localizeDigits
+        donationsLabel.text = donationsLabel.text?.localizeDigits
         
     }
     

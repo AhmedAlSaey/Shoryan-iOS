@@ -28,14 +28,20 @@ class RequestPresenter: BasePresenter {
                         self.dismissLoading()
                         switch result {
                         case (.success(let update)):
-                            view.request?.bloodBags = update.bloodBagsCount
-                            view.request?.donatorsCount = update.donatorsCount
-                            view.request?.canUserDonate = false
-                            view.request?.isUserADonator = true
-                            AppUser.shared.pendingRequestID = view.request?._id
-                            view.setup()
-                            view.setupViewForActiveRequest()
-                            view.showAlert(title: "تم", message: "أنت الآن مسجل كمتبرع")
+                            if !update.canUserDonate {
+                                view.showAlert(title: "Error".localized(), message: update.donationPreventionReason!)
+                            }
+                            else {
+                                view.request?.bloodBags = update.bloodBagsCount
+                                view.request?.donatorsCount = update.donatorsCount
+                                view.request?.canUserDonate = update.canUserDonate
+                                view.request?.canUserDonateReasoning = update.donationPreventionReason
+                                view.request?.isUserADonator = true
+                                AppUser.shared.pendingRequestID = view.request?._id
+                                view.setup()
+                                view.setupViewForActiveRequest()
+                                view.showAlert(title: "Done".localized(), message: "donorregistered.alert".localized())
+                            }
                             
                         case (.failure(let error)):
                             view.showAlert(error: error)
@@ -44,7 +50,7 @@ class RequestPresenter: BasePresenter {
                 }
             } else {
                 self.dismissLoading()
-                view.showAlert(title: "خطأ", message: view.request?.canUserDonateReasoning ?? "لا يسمح لك بالتبرع لهذا الطلب".enToArDigits)
+                view.showAlert(title: "Error".localized(), message: view.request?.canUserDonateReasoning ?? "unpermitteddonation.alert".localized())
             }
         case .ConfirmDonation:
             SharedInteractor.shared.confirmUserAsDonor(forRequest: view.request!._id) { result in
@@ -52,16 +58,23 @@ class RequestPresenter: BasePresenter {
                     self.dismissLoading()
                     switch result {
                     case (.success(let update)):
-                        view.request?.bloodBags = update.bloodBagsCount
-                        view.request?.donatorsCount = update.donatorsCount
-                        view.request?.canUserDonate = false
-                        view.request?.isUserADonator = true
-                        AppUser.shared.pendingRequestID = nil
-                        view.setup()
-                        view.setupViewForInactiveRequest()
-                        view.showAlert(title: "تم", message: "لقد تبرعت لهذا الطلب!", okAction: {
-                            SharedRouter.shared.dismissRequestView(vc: view)
-                        })
+                        if !update.canUserDonate {
+                            view.showAlert(title: "Error".localized(), message: update.donationPreventionReason!)
+                        }
+                        else{
+                            view.request?.bloodBags = update.bloodBagsCount
+                            view.request?.donatorsCount = update.donatorsCount
+                            view.request?.canUserDonate = update.canUserDonate
+                            view.request?.canUserDonateReasoning = update.donationPreventionReason
+                            view.request?.isUserADonator = true
+                            AppUser.shared.pendingRequestID = nil
+                            view.setup()
+                            view.setupViewForInactiveRequest()
+                            view.showAlert(title: "Done".localized(), message: "donationsuccess.alert".localized(), okAction: {
+                                SharedRouter.shared.dismissRequestView(vc: view)
+                            })
+                        }
+                        
                         
                     case (.failure(let error)):
                         view.showAlert(error: error)
@@ -88,12 +101,13 @@ class RequestPresenter: BasePresenter {
                         
                         view.request?.bloodBags = update.bloodBagsCount
                         view.request?.donatorsCount = update.donatorsCount
-                        view.request?.canUserDonate = true
+                        view.request?.canUserDonate = update.canUserDonate
+                        view.request?.canUserDonateReasoning = update.donationPreventionReason
                         view.request?.isUserADonator = false
                         AppUser.shared.pendingRequestID = nil
                         view.setup()
                         view.setupViewForInactiveRequest()
-                        view.showAlert(title: "تم", message: "أنت الآن غير مسجل كمتبرع")
+                        view.showAlert(title: "Done".localized(), message: "canceldonationsuccess.alert".localized())
                         
                     case (.failure(let error)):
                         view.showAlert(error: error)

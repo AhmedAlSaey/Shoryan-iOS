@@ -53,28 +53,48 @@ class HomeInteractor: BaseInteractor{
         }
     }
     
-    func getSpecificRequest(requestID: String, userID: String, completionHandler: @escaping (Result<DetailedRequest, NetworkError>) -> ()){
-        SharedModuleAPIManager.getSpecificRequest(requestID: requestID, userID: userID) { (result) in
+    func getSpecificRequest(requestID: String, completionHandler: @escaping (Result<DetailedRequest, NetworkError>) -> ()){
+        SharedModuleAPIManager.getSpecificRequest(accessToken: AppUser.shared.accessToken!, requestID: requestID) { (result) in
             switch result {
             case .success(let request):
-                let address = request.request.donationLocation.name + " : " + "\(request.request.donationLocation.location.buildingNumber)".enToArDigits + " " +  request.request.donationLocation.location.streetName + " - " + request.request.donationLocation.location.region + " - " + request.request.donationLocation.location.governorate
+                let address = request.request.donationLocation.name + " : " + "\(request.request.donationLocation.location.buildingNumber)".localizeDigits + " " +  request.request.donationLocation.location.streetName + " - " + request.request.donationLocation.location.region + " - " + request.request.donationLocation.location.governorate
                 let detailedRequest: DetailedRequest = DetailedRequest(
                     lng: request.request.donationLocation.location.longitude,
                     lat: request.request.donationLocation.location.latitude,
-                    fullName: request.request.requestBy.name.firstName + " " + request.request.requestBy.name.lastName,
+                    fullName: request.request.requestBy.name,
                     address: address,
                     bloodBags: request.request.numberOfBagsRequired - request.request.numberOfBagsFulfilled,
                     donatorsCount: request.request.numberOfComingDonors,
                     bloodType: request.request.bloodType,
                     isUserRequest: request.request.requestBy._id == AppUser.shared.userID,
-                    canUserDonate: request.userCanDonate.state,
-                    canUserDonateReasoning: request.userCanDonate.message,
-                    isUserADonator: request.request.comingDonors.contains(AppUser.shared.userID!),
+                    canUserDonate: request.error == nil,
+                    canUserDonateReasoning: self.getDonationPreventionReasoning(errorName: request.error?.message),
+                    isUserADonator: request.request._id == AppUser.shared.pendingRequestID,
                     _id: request.request._id)
                 completionHandler(.success(detailedRequest))
             case .failure(let error):
                 completionHandler(.failure(error))
             }
+        }
+    }
+    
+    
+    //TODO: - Move this to shared interactor
+    func getDonationPreventionReasoning(errorName: String?) -> String? {
+        guard let errorName = errorName else {return nil}
+        switch errorName {
+        case "INCOMPATIBLE_BLOOD_TYPE":
+            return "incompatiblebloodtype.alert".localized()
+        case "AGE_CHECK_FAILS":
+            return "agecheckfail.alert".localized()
+        case "BREAK_TIME_CHECK_FAILS":
+            return "breaktimecheckfail.alert".localized()
+        case "USER_GOING_TO_ANOTHER_REQUEST":
+            return "usergoingtoanotherrequest.alert".localized()
+        case "ALREADY_GOING_TO_THIS_REQUEST":
+            return "alreadygoingtorequest.alert".localized()
+        default:
+            return "cantdonatetorequest.alert".localized()
         }
     }
     

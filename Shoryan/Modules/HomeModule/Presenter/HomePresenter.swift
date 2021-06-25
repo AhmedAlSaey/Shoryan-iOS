@@ -92,7 +92,7 @@ class HomePresenter: BasePresenter {
     }
     
     func getDetailedRequest(fromRequestID requestID: String, userID: String, completionHandler: @escaping (Result<DetailedRequest, NetworkError>) -> ()){
-        HomeInteractor.shared.getSpecificRequest(requestID: requestID, userID: userID) { (result) in
+        HomeInteractor.shared.getSpecificRequest(requestID: requestID) { (result) in
             completionHandler(result)
             
         }

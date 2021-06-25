@@ -22,6 +22,7 @@
 "Male" = "ذكر";
 "Female" = "أنثى";
 "Urgent" = "ضروري";
+"Done" = "تم";
 
 //Alerts/Error messages
 "incorrectphonenumber.alert" = "الرجاء التأكد من صحة رقم الهاتف";
@@ -30,6 +31,16 @@
 "coderesent.alert" = "تم إعادة إرسال الرمز بنجاح";
 "incorrectinput.alert" = "الرجاء التأكد من ادخال جميع المعلومات و التأكد من صحتها";
 "notregistereddonor.alert" = "أنت غير مسجل كمتبرع لطلب";
+"donorregistered.alert" = "أنت الآن مسجل كمتبرع";
+"unpermitteddonation.alert" = "لا يسمح لك بالتبرع لهذا الطلب";
+"donationsuccess.alert" = "لقد تبرعت لهذا الطلب!";
+"canceldonationsuccess.alert" = "أنت الآن غير مسجل كمتبرع";
+"incompatiblebloodtype.alert" = "لا يمكنك التبرع لهذا الطلب ، فصيلة دمك غير متوافقة";
+"agecheckfail.alert" = "يجب أن يكون عمرك ۱۸ عامًا أو أكثر للتبرع بالدم";
+"breaktimecheckfail.alert" = "لا يمكنك التبرع أكثر من مرة كل ۳ أشهر";
+"usergoingtoanotherrequest.alert" = "أنت مسجل كمتبرع لطلب آخر";
+"alreadygoingtorequest.alert" = "أنت بالفعل مسجل كمتبرع لهذا الطلب";
+"cantdonatetorequest.alert" = "لا يمكنك التبرع لهذا الطلب";
 
 //Main Tabbar
 "home.tabbaritem" = "الصفحة الرئيسية";
@@ -89,3 +100,13 @@
 "rewards.label" = "مكافآت";
 "requests.label" = "الطلبات";
 "filer.button" = "تصنيف حسب";
+
+//RequestViewController
+"donationrequestnavtitle.label" = "طلب تبرع بالدم";
+"bloodbags.label" = "أكياس الدم";
+"activedonors.label" = "أشخاص في طريقهم للتبرع لهذا الطلب";
+"registerdonoralert.label" = "انت الان مسجل كمتبرع لهذا الطلب, نحن في انتظار وصولك الي بنك الدم";
+"donate.button" = "تبرع";
+"canceldonation.button" = "إلغاء التبرع";
+"idonated.button" = "لقد تبرعت";
+"cancelrequest.button" = "إلغاء الطلب";

@@ -16,14 +16,23 @@ extension Optional where Wrapped == String {
 }
 
 extension String {
-    public var arToEnDigits : String {
+    public var localizeDigits: String {
+        let langStr = Locale.current.languageCode
+        if langStr == "ar" {
+            return enToArDigits
+        }
+        else {
+            return arToEnDigits
+        }
+    }
+    private var arToEnDigits : String {
         let arabicNumbers = ["٠": "0","١": "1","٢": "2","٣": "3","٤": "4","٥": "5","٦": "6","٧": "7","٨": "8","٩": "9"]
         var txt = self
         arabicNumbers.map { txt = txt.replacingOccurrences(of: $0, with: $1)}
         return txt
     }
     
-    public var enToArDigits : String {
+    private var enToArDigits : String {
         let englishNumbers = ["0": "٠",
                              "1": "١",
                              "2": "٢",

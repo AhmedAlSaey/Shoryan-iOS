@@ -11,6 +11,7 @@ import GoogleMaps
 class RequestViewController: BaseViewController {
 
     
+    @IBOutlet weak var donationRequestLabel: UILabel!
     @IBOutlet weak var backgroundView: UIView!
     @IBOutlet weak var mapView: UIView!
     @IBOutlet weak var miniCardView: UIView!
@@ -21,14 +22,14 @@ class RequestViewController: BaseViewController {
     @IBOutlet weak var bloodBagsLabel: UILabel!
     var bloodBagsCount: Int? {
         didSet {
-            bloodBagsLabel.text = "\(bloodBagsCount!) ".enToArDigits + "أكياس دم"
+            bloodBagsLabel.text = "\(bloodBagsCount!) ".localizeDigits + "bloodbags.label".localized()
         }
     }
     
     @IBOutlet weak var donatorsLabel: UILabel!
     var donatorsCount: Int? {
         didSet {
-            donatorsLabel.text = "\(donatorsCount!) ".enToArDigits + "أشخاص في طريقهم للتبرع لهذا الطلب"
+            donatorsLabel.text = "\(donatorsCount!) ".localizeDigits + "activedonors.label".localized()
 
         }
     }
@@ -74,6 +75,12 @@ class RequestViewController: BaseViewController {
         super.viewDidLoad()
         initializeView()
         setup()
+    }
+    
+    override func localizeStrings() {
+        donationRequestLabel.text = "donationrequestnavtitle.label".localized()
+        disclaimerLabel.text = "registerdonoralert.label".localized()
+        
     }
     
     func setup() {
@@ -140,9 +147,9 @@ class RequestViewController: BaseViewController {
             self.secondaryButton.isHidden = false
             self.primaryButtonFunctionality = .ConfirmDonation
             self.primaryButtonTopConstraints.constant = 16
-            self.primaryButton.setTitle("لقد تبرعت", for: .normal)
+            self.primaryButton.setTitle("idonated.button".localized(), for: .normal)
             self.secondaryButtonFunctionality = .CancelDonation
-            self.secondaryButton.setTitle("إلغاء التبرع", for: .normal)
+            self.secondaryButton.setTitle("canceldonation.button".localized(), for: .normal)
             self.view.layoutIfNeeded()
         }
         
@@ -159,7 +166,7 @@ class RequestViewController: BaseViewController {
             self.primaryButton.isHidden = false
             
             self.primaryButtonFunctionality = .Donate
-            self.primaryButton.setTitle("تبرع", for: .normal)
+            self.primaryButton.setTitle("donate.button".localized(), for: .normal)
             self.view.layoutIfNeeded()
         }
         
@@ -176,7 +183,7 @@ class RequestViewController: BaseViewController {
             self.secondaryButton.isHidden = false
             
             self.secondaryButtonFunctionality = .CancelRequest
-            self.secondaryButton.setTitle("إلغاء الطلب", for: .normal)
+            self.secondaryButton.setTitle("cancelrequest.button".localized(), for: .normal)
             self.view.layoutIfNeeded()
         }
     }

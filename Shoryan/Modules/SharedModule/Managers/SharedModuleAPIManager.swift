@@ -7,30 +7,30 @@
 
 import Foundation
 class SharedModuleAPIManager {
-    static func getSpecificRequest(requestID: String, userID: String, completionHandler: @escaping (Result<SpecificRequestResponse, NetworkError>) -> ()){
-        let path = "/api/requests/\(requestID)/user-donation/\(userID)"
-        Network.loadJSONFile(fromURL: Constants.endPoint, path: path, method: .GET, type: SpecificRequestResponse.self, completionHandler: { result in
+    static func getSpecificRequest(accessToken: String, requestID: String, completionHandler: @escaping (Result<SpecificRequestResponse, NetworkError>) -> ()){
+        let path = String(format: Constants.getSpecificRequestPath, requestID)
+        Network.loadJSONFile(fromURL: Constants.endPoint, path: path, token: accessToken, method: .GET, type: SpecificRequestResponse.self, completionHandler: { result in
             completionHandler(result)
         })
     }
     
-    static func registerUserAsDonor(requestID: String, userID: String, completionHandler: @escaping (Result<RequestUpdateResponse, NetworkError>) -> ()) {
-        let path = String(format: Constants.addPotentialDonorPath, requestID, userID)
-        Network.loadJSONFile(fromURL: Constants.endPoint, path: path, method: .POST, type: RequestUpdateResponse.self, completionHandler: { result in
+    static func registerUserAsDonor(requestID: String, accessToken: String, completionHandler: @escaping (Result<RequestUpdateResponse, NetworkError>) -> ()) {
+        let path = String(format: Constants.addPotentialDonorPath, requestID)
+        Network.loadJSONFile(fromURL: Constants.endPoint, path: path, token: accessToken, method: .POST, type: RequestUpdateResponse.self, completionHandler: { result in
             completionHandler(result)
         })
     }
     
-    static func removeUserAsDonor(requestID: String, userID: String, completionHandler: @escaping (Result<RequestUpdateResponse, NetworkError>) -> ()) {
-        let path = String(format: Constants.removePotentialDonorPath, requestID, userID)
-        Network.loadJSONFile(fromURL: Constants.endPoint, path: path, method: .DEL, type: RequestUpdateResponse.self, completionHandler: { result in
+    static func removeUserAsDonor(requestID: String, accessToken: String, completionHandler: @escaping (Result<RequestUpdateResponse, NetworkError>) -> ()) {
+        let path = String(format: Constants.removePotentialDonorPath, requestID)
+        Network.loadJSONFile(fromURL: Constants.endPoint, path: path, token: accessToken, method: .DEL, type: RequestUpdateResponse.self, completionHandler: { result in
             completionHandler(result)
         })
     }
     
-    static func confirmUserAsDonor(requestID: String, userID: String, completionHandler: @escaping (Result<RequestUpdateResponse, NetworkError>) -> ()) {
-        let path = String(format: Constants.confirmPotentialDonorPath, requestID, userID)
-        Network.loadJSONFile(fromURL: Constants.endPoint, path: path, method: .POST, type: RequestUpdateResponse.self, completionHandler: { result in
+    static func confirmUserAsDonor(requestID: String, accessToken: String, completionHandler: @escaping (Result<RequestUpdateResponse, NetworkError>) -> ()) {
+        let path = String(format: Constants.confirmPotentialDonorPath, requestID)
+        Network.loadJSONFile(fromURL: Constants.endPoint, path: path, token: accessToken, method: .POST, type: RequestUpdateResponse.self, completionHandler: { result in
             completionHandler(result)
         })
     }

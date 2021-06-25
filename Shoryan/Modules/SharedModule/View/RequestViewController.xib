@@ -20,6 +20,7 @@
                 <outlet property="bloodTypeLabel" destination="JG4-Xk-AeD" id="mNK-x0-APq"/>
                 <outlet property="disclaimerLabel" destination="kvl-kL-NQ1" id="VKB-8V-pGw"/>
                 <outlet property="disclaimerLabelTopConstraint" destination="piI-xF-lRm" id="bt0-Nm-TOz"/>
+                <outlet property="donationRequestLabel" destination="JsO-Ww-d1F" id="aCg-du-Vlh"/>
                 <outlet property="donatorsLabel" destination="9rL-Ts-ZDM" id="1xt-4D-5L3"/>
                 <outlet property="mapView" destination="6aR-1t-weD" id="eiZ-D0-RY1"/>
                 <outlet property="miniCardView" destination="P04-3V-sWo" id="ewZ-8y-zTe"/>
@@ -40,8 +41,8 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7gh-8k-B2N" userLabel="cardView">
                     <rect key="frame" x="0.0" y="44" width="414" height="1186"/>
                     <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="طلب تبرع بالدم" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JsO-Ww-d1F">
-                            <rect key="frame" x="145.5" y="25" width="123.5" height="28"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Donation Request" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JsO-Ww-d1F">
+                            <rect key="frame" x="100" y="25" width="214" height="28"/>
                             <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="25"/>
                             <color key="textColor" name="MainRed"/>
                             <nil key="highlightedColor"/>
@@ -50,7 +51,7 @@
                             <rect key="frame" x="0.0" y="69" width="414" height="1117"/>
                             <subviews>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eWl-lF-FM3" userLabel="contentView">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="650.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="669.5"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6aR-1t-weD" userLabel="mapView">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="271"/>
@@ -63,7 +64,7 @@
                                             <rect key="frame" x="29" y="251" width="356" height="181.5"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="V41-d5-yBR">
-                                                    <rect key="frame" x="287" y="23" width="50" height="50"/>
+                                                    <rect key="frame" x="19" y="23" width="50" height="50"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="B+" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JG4-Xk-AeD">
                                                             <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
@@ -82,54 +83,54 @@
                                                         <constraint firstItem="JG4-Xk-AeD" firstAttribute="leading" secondItem="V41-d5-yBR" secondAttribute="leading" id="aPI-h2-MGF"/>
                                                     </constraints>
                                                 </view>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UnO-Xc-lsO">
-                                                    <rect key="frame" x="40" y="23" width="207" height="23.5"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UnO-Xc-lsO">
+                                                    <rect key="frame" x="109" y="23" width="207" height="23.5"/>
                                                     <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="21"/>
                                                     <color key="textColor" name="MainRed"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Address Label" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3hq-NG-cKZ">
-                                                    <rect key="frame" x="40" y="55.5" width="207" height="15"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Address Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3hq-NG-cKZ">
+                                                    <rect key="frame" x="109" y="55.5" width="207" height="15"/>
                                                     <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="13"/>
                                                     <color key="textColor" name="MainRed"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Blood bags Label" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vya-Tl-Dwz">
-                                                    <rect key="frame" x="40" y="79.5" width="207" height="15"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Blood bags Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vya-Tl-Dwz">
+                                                    <rect key="frame" x="109" y="79.5" width="207" height="15"/>
                                                     <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="13"/>
                                                     <color key="textColor" name="MainRed"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Donators label" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9rL-Ts-ZDM">
-                                                    <rect key="frame" x="40" y="103.5" width="207" height="15"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Donators label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9rL-Ts-ZDM">
+                                                    <rect key="frame" x="109" y="103.5" width="207" height="15"/>
                                                     <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="13"/>
                                                     <color key="textColor" name="MainRed"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2tO-mx-tJ0">
-                                                    <rect key="frame" x="44" y="140.5" width="24" height="23"/>
+                                                    <rect key="frame" x="237" y="140.5" width="24" height="23"/>
                                                     <state key="normal" image="chat"/>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wsp-s1-cX0">
-                                                    <rect key="frame" x="100" y="140.5" width="19" height="23"/>
+                                                    <rect key="frame" x="293" y="140.5" width="19" height="23"/>
                                                     <state key="normal" image="call"/>
                                                 </button>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Path 747" translatesAutoresizingMaskIntoConstraints="NO" id="9Ff-vt-JBo">
-                                                    <rect key="frame" x="261" y="55.5" width="11" height="15"/>
+                                                    <rect key="frame" x="84" y="55.5" width="11" height="15"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="11" id="4Bi-0o-oGL"/>
                                                         <constraint firstAttribute="height" constant="15" id="Pqa-Q2-ggu"/>
                                                     </constraints>
                                                 </imageView>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="blood-drop (2)" translatesAutoresizingMaskIntoConstraints="NO" id="8eG-H1-6BG">
-                                                    <rect key="frame" x="261" y="79.5" width="11" height="16"/>
+                                                    <rect key="frame" x="84" y="79.5" width="11" height="16"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="16" id="cCe-Lo-lwS"/>
                                                         <constraint firstAttribute="width" constant="11" id="uJ3-th-WJm"/>
                                                     </constraints>
                                                 </imageView>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="blood-donation" translatesAutoresizingMaskIntoConstraints="NO" id="wQx-O5-zjX">
-                                                    <rect key="frame" x="258" y="103.5" width="17" height="16"/>
+                                                    <rect key="frame" x="81" y="103.5" width="17" height="16"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="16" id="A5o-jb-br7"/>
                                                         <constraint firstAttribute="width" constant="17" id="jXX-1U-dRN"/>
@@ -139,41 +140,41 @@
                                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                             <constraints>
                                                 <constraint firstItem="V41-d5-yBR" firstAttribute="top" secondItem="P04-3V-sWo" secondAttribute="top" constant="23" id="0Uj-Ee-rJo"/>
+                                                <constraint firstItem="UnO-Xc-lsO" firstAttribute="leading" secondItem="V41-d5-yBR" secondAttribute="trailing" constant="40" id="3ha-ia-ov7"/>
                                                 <constraint firstItem="9rL-Ts-ZDM" firstAttribute="trailing" secondItem="vya-Tl-Dwz" secondAttribute="trailing" id="4hh-SC-1x6"/>
                                                 <constraint firstItem="wsp-s1-cX0" firstAttribute="leading" secondItem="2tO-mx-tJ0" secondAttribute="trailing" constant="32" id="5Uw-W6-mcs"/>
                                                 <constraint firstItem="vya-Tl-Dwz" firstAttribute="trailing" secondItem="3hq-NG-cKZ" secondAttribute="trailing" id="6Kg-dG-2ii"/>
+                                                <constraint firstAttribute="trailing" secondItem="UnO-Xc-lsO" secondAttribute="trailing" constant="40" id="7lf-f9-JcS"/>
+                                                <constraint firstItem="V41-d5-yBR" firstAttribute="leading" secondItem="P04-3V-sWo" secondAttribute="leading" constant="19" id="A4x-vQ-U3O"/>
                                                 <constraint firstItem="3hq-NG-cKZ" firstAttribute="top" secondItem="UnO-Xc-lsO" secondAttribute="bottom" constant="9" id="CkF-QD-dG3"/>
                                                 <constraint firstItem="wQx-O5-zjX" firstAttribute="top" secondItem="9rL-Ts-ZDM" secondAttribute="top" id="Hqt-Dz-7Wy"/>
                                                 <constraint firstItem="8eG-H1-6BG" firstAttribute="top" secondItem="vya-Tl-Dwz" secondAttribute="top" id="IRU-Tt-Lxo"/>
                                                 <constraint firstAttribute="bottom" secondItem="2tO-mx-tJ0" secondAttribute="bottom" constant="18" id="MKN-mW-835"/>
                                                 <constraint firstItem="9Ff-vt-JBo" firstAttribute="top" secondItem="3hq-NG-cKZ" secondAttribute="top" id="QU6-Iu-teq"/>
-                                                <constraint firstItem="9Ff-vt-JBo" firstAttribute="leading" secondItem="3hq-NG-cKZ" secondAttribute="trailing" constant="14" id="RYh-f6-gmV"/>
                                                 <constraint firstItem="UnO-Xc-lsO" firstAttribute="top" secondItem="V41-d5-yBR" secondAttribute="top" id="ReL-Pt-CRc"/>
                                                 <constraint firstItem="wQx-O5-zjX" firstAttribute="centerX" secondItem="8eG-H1-6BG" secondAttribute="centerX" id="TWT-Ro-pYW"/>
-                                                <constraint firstItem="2tO-mx-tJ0" firstAttribute="leading" secondItem="P04-3V-sWo" secondAttribute="leading" constant="44" id="XHp-14-nQq"/>
                                                 <constraint firstItem="9rL-Ts-ZDM" firstAttribute="leading" secondItem="vya-Tl-Dwz" secondAttribute="leading" id="Xi4-fw-jkT"/>
                                                 <constraint firstItem="vya-Tl-Dwz" firstAttribute="leading" secondItem="3hq-NG-cKZ" secondAttribute="leading" id="ZDm-At-BQV"/>
                                                 <constraint firstItem="8eG-H1-6BG" firstAttribute="centerX" secondItem="9Ff-vt-JBo" secondAttribute="centerX" id="cio-qi-AP4"/>
-                                                <constraint firstItem="UnO-Xc-lsO" firstAttribute="leading" secondItem="P04-3V-sWo" secondAttribute="leading" constant="40" id="dix-nh-bhy"/>
-                                                <constraint firstAttribute="trailing" secondItem="V41-d5-yBR" secondAttribute="trailing" constant="19" id="f4J-Cb-eXL"/>
                                                 <constraint firstItem="3hq-NG-cKZ" firstAttribute="leading" secondItem="UnO-Xc-lsO" secondAttribute="leading" id="gIJ-H5-qR2"/>
                                                 <constraint firstItem="vya-Tl-Dwz" firstAttribute="top" secondItem="3hq-NG-cKZ" secondAttribute="bottom" constant="9" id="iSc-Sc-pdB"/>
+                                                <constraint firstItem="3hq-NG-cKZ" firstAttribute="leading" secondItem="9Ff-vt-JBo" secondAttribute="trailing" constant="14" id="nKP-nx-wAZ"/>
                                                 <constraint firstItem="wsp-s1-cX0" firstAttribute="top" secondItem="2tO-mx-tJ0" secondAttribute="top" id="oDb-iG-Emx"/>
-                                                <constraint firstItem="V41-d5-yBR" firstAttribute="leading" secondItem="UnO-Xc-lsO" secondAttribute="trailing" constant="40" id="pF7-ia-JEp"/>
                                                 <constraint firstItem="wsp-s1-cX0" firstAttribute="bottom" secondItem="2tO-mx-tJ0" secondAttribute="bottom" id="qtV-bk-ZKj"/>
                                                 <constraint firstItem="3hq-NG-cKZ" firstAttribute="trailing" secondItem="UnO-Xc-lsO" secondAttribute="trailing" id="w63-kY-eD7"/>
                                                 <constraint firstItem="2tO-mx-tJ0" firstAttribute="top" secondItem="9rL-Ts-ZDM" secondAttribute="bottom" constant="22" id="wxK-jm-VQq"/>
+                                                <constraint firstAttribute="trailing" secondItem="wsp-s1-cX0" secondAttribute="trailing" constant="44" id="xgU-Hh-UAl"/>
                                                 <constraint firstItem="9rL-Ts-ZDM" firstAttribute="top" secondItem="vya-Tl-Dwz" secondAttribute="bottom" constant="9" id="zGR-n3-OVF"/>
                                             </constraints>
                                         </view>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="انت الان مسجل كمتبرع لهذا الطلب, نحن في انتظار وصولك الي بنك الدم" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kvl-kL-NQ1">
-                                            <rect key="frame" x="29" y="448.5" width="356" height="38"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You are now registered as a donor for this request, we are awaiting your arrival to the blood bank" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kvl-kL-NQ1">
+                                            <rect key="frame" x="29" y="448.5" width="356" height="57"/>
                                             <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="17"/>
                                             <color key="textColor" name="MainRed"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EGG-wi-Fy4">
-                                            <rect key="frame" x="24" y="502.5" width="366" height="58"/>
+                                            <rect key="frame" x="24" y="521.5" width="366" height="58"/>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="58" id="14J-SA-obT"/>
@@ -187,7 +188,7 @@
                                             </connections>
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="idd-GH-bbp">
-                                            <rect key="frame" x="24" y="576.5" width="366" height="58"/>
+                                            <rect key="frame" x="24" y="595.5" width="366" height="58"/>
                                             <color key="backgroundColor" name="MainRed"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="58" id="Bw6-5k-Dyp"/>
