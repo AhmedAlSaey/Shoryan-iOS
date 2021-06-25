@@ -44,9 +44,21 @@ class HomeRouter: BaseRouter {
         return vc
     }
     
+    func createFilter() -> FilterRequestsViewController {
+        let vc = FilterRequestsViewController()
+        return vc
+    }
+    
     func presentRequest(detailedRequest: DetailedRequest){
         let vc = createDetailedRequestScreen()
         vc.request = detailedRequest
+        navigationController?.present(vc, animated: true, completion: nil)
+    }
+    
+    func presentFilter(delegate: FilterDelegate, params: [String : String]?){
+        let vc = createFilter()
+        vc.delegate = delegate
+        vc.parameters = params
         navigationController?.present(vc, animated: true, completion: nil)
     }
     

@@ -12,46 +12,58 @@ class AppUser {
     static let shared = AppUser()
     var userID : String? {
         get {
-            return KeyChain.shared[Constants.userIDKey]
+            return UserDefaults.standard.string(forKey: Constants.userIDKey)
         }
         set {
-            KeyChain.shared[Constants.userIDKey] = newValue
+            UserDefaults.standard.set(newValue, forKey: Constants.userIDKey)
         }
     }
     var accessToken : String? {
         get {
             KeyChain.shared[Constants.accessTokenKey]
         }
+        set {
+            KeyChain.shared[Constants.accessTokenKey] = newValue
+        }
     }
     
     var pendingRequestID: String? {
         get {
-            return KeyChain.shared[Constants.pendingRequestIDKey]
+            return UserDefaults.standard.string(forKey: Constants.pendingRequestIDKey)
         }
         set {
-            KeyChain.shared[Constants.pendingRequestIDKey] = newValue
+            UserDefaults.standard.set(newValue, forKey: Constants.pendingRequestIDKey)
+        }
+    }
+    
+    var bloodType: String? {
+        get {
+            return UserDefaults.standard.string(forKey: Constants.bloodTypeKey)
+        }
+        set {
+            UserDefaults.standard.set(newValue, forKey: Constants.bloodTypeKey)
         }
     }
 
     func isUserAuthenticated() -> Bool {
-        return userID != nil
+        return accessToken != nil
     }
     
     func saveNewUserAcessTokens(userData: LoginPasswordResponse) {
-        KeyChain.shared[Constants.accessTokenKey] = userData.accessToken
+        accessToken = userData.accessToken
     }
     
     func saveNewUserAcessTokens(userData: LoginUsingCodeResponse) {
-        KeyChain.shared[Constants.accessTokenKey] = userData.accessToken
+        accessToken = userData.accessToken
     }
     
     func saveNewUserAcessTokens(userData: VerifyAccountResponse) {
-        KeyChain.shared[Constants.accessTokenKey] = userData.accessToken
+        accessToken = userData.accessToken
     }
     
     func clearUserData() {
-        KeyChain.shared[Constants.accessTokenKey] = nil
-        KeyChain.shared[Constants.userIDKey] = nil
+        accessToken = nil
+        userID = nil
     }
     
 }

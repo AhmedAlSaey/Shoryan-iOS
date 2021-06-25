@@ -57,6 +57,8 @@
 		B166B1392598386900AD6FD6 /* LogInViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B166B1372598386900AD6FD6 /* LogInViewController.xib */; };
 		B166B13E2598415200AD6FD6 /* LogInPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B166B13D2598415200AD6FD6 /* LogInPresenter.swift */; };
 		B1717B162607F0530045B67B /* SharedModuleAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1717B152607F0530045B67B /* SharedModuleAPIManager.swift */; };
+		B17B3456268633B100F958FD /* FilterRequestsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B17B3454268633B100F958FD /* FilterRequestsViewController.swift */; };
+		B17B3457268633B100F958FD /* FilterRequestsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B17B3455268633B100F958FD /* FilterRequestsViewController.xib */; };
 		B196C5552606C5D900194A1D /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = B196C5542606C5D900194A1D /* Network.swift */; };
 		B196C5582606C5E400194A1D /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B196C5572606C5E400194A1D /* NetworkError.swift */; };
 		B196C55B2606C60B00194A1D /* DecodableError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B196C55A2606C60B00194A1D /* DecodableError.swift */; };
@@ -109,7 +111,7 @@
 		B1C524D6266E94DF00F0E4B6 /* VerifyAccountResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C524D5266E94DF00F0E4B6 /* VerifyAccountResponse.swift */; };
 		B1F6E6EE2667D17C0038982C /* LogInUsingCodeResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1F6E6ED2667D17C0038982C /* LogInUsingCodeResponse.swift */; };
 		B1F6E6F12667D40C0038982C /* LoginRequestCodeResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1F6E6F02667D40C0038982C /* LoginRequestCodeResponse.swift */; };
-		B1FD6CB72681CDEA00C8E3E2 /* GetUserIDResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1FD6CB62681CDEA00C8E3E2 /* GetUserIDResponse.swift */; };
+		B1FD6CB72681CDEA00C8E3E2 /* GetUserDataResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1FD6CB62681CDEA00C8E3E2 /* GetUserDataResponse.swift */; };
 		B1FD6CBA2681E6A300C8E3E2 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = B1FD6CBC2681E6A300C8E3E2 /* Localizable.strings */; };
 		B1FD6CCC2681EB4800C8E3E2 /* LaunchScreenViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B1FD6CCA2681EB4800C8E3E2 /* LaunchScreenViewController.xib */; };
 /* End PBXBuildFile section */
@@ -168,6 +170,8 @@
 		B166B1372598386900AD6FD6 /* LogInViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LogInViewController.xib; sourceTree = "<group>"; };
 		B166B13D2598415200AD6FD6 /* LogInPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInPresenter.swift; sourceTree = "<group>"; };
 		B1717B152607F0530045B67B /* SharedModuleAPIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedModuleAPIManager.swift; sourceTree = "<group>"; };
+		B17B3454268633B100F958FD /* FilterRequestsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterRequestsViewController.swift; sourceTree = "<group>"; };
+		B17B3455268633B100F958FD /* FilterRequestsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FilterRequestsViewController.xib; sourceTree = "<group>"; };
 		B181453E25E8B15D009C6221 /* Shoryan.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Shoryan.entitlements; sourceTree = "<group>"; };
 		B196C5542606C5D900194A1D /* Network.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
 		B196C5572606C5E400194A1D /* NetworkError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
@@ -221,7 +225,7 @@
 		B1C524D5266E94DF00F0E4B6 /* VerifyAccountResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyAccountResponse.swift; sourceTree = "<group>"; };
 		B1F6E6ED2667D17C0038982C /* LogInUsingCodeResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInUsingCodeResponse.swift; sourceTree = "<group>"; };
 		B1F6E6F02667D40C0038982C /* LoginRequestCodeResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRequestCodeResponse.swift; sourceTree = "<group>"; };
-		B1FD6CB62681CDEA00C8E3E2 /* GetUserIDResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetUserIDResponse.swift; sourceTree = "<group>"; };
+		B1FD6CB62681CDEA00C8E3E2 /* GetUserDataResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetUserDataResponse.swift; sourceTree = "<group>"; };
 		B1FD6CBB2681E6A300C8E3E2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		B1FD6CBD2681E6D400C8E3E2 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Localizable.strings; sourceTree = "<group>"; };
 		B1FD6CCD2681EB4B00C8E3E2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreenViewController.xib; sourceTree = "<group>"; };
@@ -352,6 +356,8 @@
 				B1A471A3259D95C1006152C1 /* Cells */,
 				B163D1CC259D73160005C731 /* HomeViewController.swift */,
 				B163D1CD259D73160005C731 /* HomeViewController.xib */,
+				B17B3454268633B100F958FD /* FilterRequestsViewController.swift */,
+				B17B3455268633B100F958FD /* FilterRequestsViewController.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -387,7 +393,7 @@
 				B1A471AD259DA02D006152C1 /* RequestFilters.swift */,
 				B13453E42606F93800EF3319 /* AllRequestsResponse.swift */,
 				B12CBA602609040F006C8464 /* PendingRequestResponse.swift */,
-				B1FD6CB62681CDEA00C8E3E2 /* GetUserIDResponse.swift */,
+				B1FD6CB62681CDEA00C8E3E2 /* GetUserDataResponse.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -907,6 +913,7 @@
 			files = (
 				B1A471F2259DC764006152C1 /* ProfileViewController.xib in Resources */,
 				B166B1392598386900AD6FD6 /* LogInViewController.xib in Resources */,
+				B17B3457268633B100F958FD /* FilterRequestsViewController.xib in Resources */,
 				B1087F9F2607A42100158209 /* RequestViewController.xib in Resources */,
 				B1428CA0259AE4C700A75D9C /* SMSAuthenticationViewController.xib in Resources */,
 				B1428C9225985AB300A75D9C /* AuthorizationViewController.xib in Resources */,
@@ -1041,10 +1048,11 @@
 				B1C22F5925E6F27D002EECD9 /* LastNameTextField.swift in Sources */,
 				B163D1CE259D73160005C731 /* HomeViewController.swift in Sources */,
 				B114ADD0259AF0890052C89D /* String.swift in Sources */,
-				B1FD6CB72681CDEA00C8E3E2 /* GetUserIDResponse.swift in Sources */,
+				B1FD6CB72681CDEA00C8E3E2 /* GetUserDataResponse.swift in Sources */,
 				B1428CA6259AE68A00A75D9C /* SMSAuthenticationPresenter.swift in Sources */,
 				B1087F9E2607A42100158209 /* RequestViewController.swift in Sources */,
 				B196C57D2606DECC00194A1D /* Date.swift in Sources */,
+				B17B3456268633B100F958FD /* FilterRequestsViewController.swift in Sources */,
 				B1A471AE259DA02D006152C1 /* RequestFilters.swift in Sources */,
 				B166B12025982CB500AD6FD6 /* LaunchRouter.swift in Sources */,
 				B1A471E4259DC03A006152C1 /* NotificationTableViewCell.swift in Sources */,

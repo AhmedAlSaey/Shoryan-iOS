@@ -81,6 +81,8 @@ class HomeViewController: BaseViewController {
         filterView.layer.borderWidth = 1
         filterView.layer.borderColor = UIColor.black.cgColor
         filterView.layer.cornerRadius = 11
+        let tap = UITapGestureRecognizer(target: self, action: #selector(self.filterViewPressed(_:)))
+        filterView.addGestureRecognizer(tap)
     }
     
     func configureTableView(){
@@ -140,13 +142,11 @@ class HomeViewController: BaseViewController {
         
     }
     
-    
-    
-    
-
-
-    
-
+    @objc func filterViewPressed(_ sender: UITapGestureRecognizer? = nil) {
+        if let presenter = presenter as? HomePresenter {
+            presenter.filterViewPressed()
+        }
+    }
 }
 
 extension HomeViewController: UITableViewDelegate, UITableViewDataSource {

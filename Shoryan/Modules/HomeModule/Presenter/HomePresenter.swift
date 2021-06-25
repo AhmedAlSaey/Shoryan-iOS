@@ -8,20 +8,21 @@
 import Foundation
 import JGProgressHUD
 
-class HomePresenter: BasePresenter {
+class HomePresenter: BasePresenter, FilterDelegate {
     
-    
+    var unfilteredRequests: [SimpleRequest]?
+    var filterParams: [String:String]?
     override func viewDidLoad() {
         showLoading()
-        getUserID {
+        getUserData {
             self.getOngoingRequests()
             self.getPendingRequest()
         }
         
     }
     
-    func getUserID(completionHandler: @escaping () -> ()) {
-        HomeInteractor.shared.getUserID { result in
+    func getUserData(completionHandler: @escaping () -> ()) {
+        HomeInteractor.shared.getUserData { result in
             if case .failure(let error) = result {
                 if let view = self.view as? HomeViewController {
                     //TODO: - Make this more generalized
@@ -34,7 +35,7 @@ class HomePresenter: BasePresenter {
                     }
                     else {
                         view.showAlert(error: error) {
-                            self.getUserID(completionHandler: completionHandler)
+                            self.getUserData(completionHandler: completionHandler)
                         }
                     }
                 }
@@ -51,6 +52,7 @@ class HomePresenter: BasePresenter {
                 switch result {
                 case .success(let simpleRequests):
                     (self.view as! HomeViewController).requests = simpleRequests
+                    self.unfilteredRequests = simpleRequests
                 case .failure(let error):
                     (self.view as! HomeViewController).showAlert(error: error)
                 }
@@ -118,5 +120,28 @@ class HomePresenter: BasePresenter {
             view.showAlert(title: "Error".localized(), message: "notregistereddonor.alert".localized())
         }
     }
+    
+    func filterViewPressed(){
+        HomeRouter.shared.presentFilter(delegate: self, params: filterParams)
+    }
+    
+    func viewWillDisappear(withParameters params: [String : String]) {
+        filterParams = params
+        guard let selectedBloodType = params["bloodType"] else {
+            (self.view as! HomeViewController).requests = unfilteredRequests
+            return
+        }
+        if selectedBloodType == "allowed" {
+            (self.view as! HomeViewController).requests = unfilteredRequests?.filter({ request in
+                HomeInteractor.shared.isBloodTypeCompatibleWithUser(bloodType: request.bloodType)
+            })
+        }        else {
+            (self.view as! HomeViewController).requests = unfilteredRequests?.filter({ request in
+                 request.bloodType == selectedBloodType
+            })
+        }
+        
+    }
+
 }
 

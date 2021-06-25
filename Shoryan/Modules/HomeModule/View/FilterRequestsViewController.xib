@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FilterRequestsViewController" customModule="Shoryan" customModuleProvider="target">
+            <connections>
+                <outlet property="backgroundView" destination="zcy-Iv-ajC" id="MVX-uj-fXA"/>
+                <outlet property="bt1Button" destination="zJl-e3-js3" id="mZF-qa-BUU"/>
+                <outlet property="bt2Button" destination="zG0-cs-hmW" id="0Cn-RH-PBc"/>
+                <outlet property="bt3Button" destination="wSb-bq-5Um" id="R9o-1H-FHI"/>
+                <outlet property="bt4Button" destination="VmL-a3-XWp" id="D5H-mt-HBA"/>
+                <outlet property="bt5Button" destination="KuV-c5-3id" id="TJd-ql-zP7"/>
+                <outlet property="bt6Button" destination="CM7-c1-6Ld" id="3Ta-vT-xKj"/>
+                <outlet property="bt7Button" destination="QtK-2H-BxQ" id="x6H-vp-BRP"/>
+                <outlet property="bt8Button" destination="AvH-Zb-HGr" id="MCa-1X-UT7"/>
+                <outlet property="bt9Button" destination="YCQ-B1-Vr7" id="eR1-Ye-plG"/>
+                <outlet property="resetButton" destination="z7M-7a-DXW" id="shZ-1t-5xp"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zcy-Iv-ajC">
+                    <rect key="frame" x="0.0" y="517" width="414" height="379"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sort by" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uY6-Wv-vbZ">
+                            <rect key="frame" x="164" y="21" width="86.5" height="28"/>
+                            <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="25"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Blood Type" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NWv-9N-QFy">
+                            <rect key="frame" x="38" y="105" width="86" height="18"/>
+                            <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="16"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z7M-7a-DXW">
+                            <rect key="frame" x="332" y="99" width="44" height="30"/>
+                            <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="16"/>
+                            <state key="normal" title="Reset">
+                                <color key="titleColor" name="MainRed"/>
+                            </state>
+                            <connections>
+                                <action selector="resetButtonPressed:" destination="-1" eventType="touchUpInside" id="VOq-4y-NbA"/>
+                            </connections>
+                        </button>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uYd-Mn-0Yy">
+                            <rect key="frame" x="63" y="166" width="288" height="175"/>
+                            <subviews>
+                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="23" translatesAutoresizingMaskIntoConstraints="NO" id="35C-1k-YkX">
+                                    <rect key="frame" x="0.0" y="0.0" width="288" height="175"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="23" translatesAutoresizingMaskIntoConstraints="NO" id="Umj-Jg-sZT">
+                                            <rect key="frame" x="0.0" y="0.0" width="288" height="43"/>
+                                            <subviews>
+                                                <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zJl-e3-js3">
+                                                    <rect key="frame" x="0.0" y="0.0" width="55" height="43"/>
+                                                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="43" id="kct-7X-ndB"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="14"/>
+                                                    <color key="tintColor" systemColor="labelColor"/>
+                                                    <state key="normal" title="A+">
+                                                        <color key="titleColor" systemColor="labelColor"/>
+                                                    </state>
+                                                    <state key="selected">
+                                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="selectionButtonClicked:" destination="-1" eventType="touchUpInside" id="33W-Zm-3Me"/>
+                                                    </connections>
+                                                </button>
+                                                <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zG0-cs-hmW">
+                                                    <rect key="frame" x="78" y="0.0" width="54.5" height="43"/>
+                                                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="14"/>
+                                                    <color key="tintColor" systemColor="labelColor"/>
+                                                    <state key="normal" title="B+">
+                                                        <color key="titleColor" systemColor="labelColor"/>
+                                                        <color key="titleShadowColor" systemColor="labelColor"/>
+                                                    </state>
+                                                    <state key="selected">
+                                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <color key="titleShadowColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="selectionButtonClicked:" destination="-1" eventType="touchUpInside" id="xAt-Lf-u2Q"/>
+                                                    </connections>
+                                                </button>
+                                                <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wSb-bq-5Um">
+                                                    <rect key="frame" x="155.5" y="0.0" width="55" height="43"/>
+                                                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="14"/>
+                                                    <color key="tintColor" systemColor="labelColor"/>
+                                                    <state key="normal" title="AB+">
+                                                        <color key="titleColor" systemColor="labelColor"/>
+                                                    </state>
+                                                    <state key="selected">
+                                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="selectionButtonClicked:" destination="-1" eventType="touchUpInside" id="vFO-4i-p2b"/>
+                                                    </connections>
+                                                </button>
+                                                <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VmL-a3-XWp">
+                                                    <rect key="frame" x="233.5" y="0.0" width="54.5" height="43"/>
+                                                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="14"/>
+                                                    <color key="tintColor" systemColor="labelColor"/>
+                                                    <state key="normal" title="O+">
+                                                        <color key="titleColor" systemColor="labelColor"/>
+                                                    </state>
+                                                    <state key="selected">
+                                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="selectionButtonClicked:" destination="-1" eventType="touchUpInside" id="eDW-kb-4Fo"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                        </stackView>
+                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="23" translatesAutoresizingMaskIntoConstraints="NO" id="P0b-Cu-fyT">
+                                            <rect key="frame" x="0.0" y="66" width="288" height="43"/>
+                                            <subviews>
+                                                <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KuV-c5-3id">
+                                                    <rect key="frame" x="0.0" y="0.0" width="55" height="43"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="43" id="Pv4-jA-I4y"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="14"/>
+                                                    <state key="normal" title="A-">
+                                                        <color key="titleColor" systemColor="labelColor"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="selectionButtonClicked:" destination="-1" eventType="touchUpInside" id="zhF-mB-ZGG"/>
+                                                    </connections>
+                                                </button>
+                                                <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CM7-c1-6Ld">
+                                                    <rect key="frame" x="78" y="0.0" width="54.5" height="43"/>
+                                                    <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="14"/>
+                                                    <state key="normal" title="B-">
+                                                        <color key="titleColor" systemColor="labelColor"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="selectionButtonClicked:" destination="-1" eventType="touchUpInside" id="KlL-Tq-PbY"/>
+                                                    </connections>
+                                                </button>
+                                                <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QtK-2H-BxQ">
+                                                    <rect key="frame" x="155.5" y="0.0" width="55" height="43"/>
+                                                    <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="14"/>
+                                                    <state key="normal" title="AB-">
+                                                        <color key="titleColor" systemColor="labelColor"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="selectionButtonClicked:" destination="-1" eventType="touchUpInside" id="79z-5C-see"/>
+                                                    </connections>
+                                                </button>
+                                                <button opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AvH-Zb-HGr">
+                                                    <rect key="frame" x="233.5" y="0.0" width="54.5" height="43"/>
+                                                    <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="14"/>
+                                                    <state key="normal" title="O-">
+                                                        <color key="titleColor" systemColor="labelColor"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="selectionButtonClicked:" destination="-1" eventType="touchUpInside" id="xfd-Sa-pqy"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                        </stackView>
+                                        <button opaque="NO" tag="9" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YCQ-B1-Vr7">
+                                            <rect key="frame" x="0.0" y="132" width="288" height="43"/>
+                                            <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="14"/>
+                                            <state key="normal" title="Blood types I can donate to">
+                                                <color key="titleColor" systemColor="labelColor"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="selectionButtonClicked:" destination="-1" eventType="touchUpInside" id="N4J-e2-lqv"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                </stackView>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <constraints>
+                                <constraint firstAttribute="bottom" secondItem="35C-1k-YkX" secondAttribute="bottom" id="Qh1-hU-wCx"/>
+                                <constraint firstItem="35C-1k-YkX" firstAttribute="top" secondItem="uYd-Mn-0Yy" secondAttribute="top" id="bXS-2x-hiU"/>
+                                <constraint firstItem="35C-1k-YkX" firstAttribute="leading" secondItem="uYd-Mn-0Yy" secondAttribute="leading" id="p5E-pP-nyK"/>
+                                <constraint firstAttribute="trailing" secondItem="35C-1k-YkX" secondAttribute="trailing" id="qxQ-ll-dMb"/>
+                            </constraints>
+                        </view>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7xh-c5-U3f">
+                            <rect key="frame" x="348" y="23" width="23" height="24"/>
+                            <inset key="contentEdgeInsets" minX="-1" minY="0.0" maxX="0.0" maxY="0.0"/>
+                            <state key="normal" image="cross-black"/>
+                            <connections>
+                                <action selector="exitButtonPressed:" destination="-1" eventType="touchUpInside" id="lrA-jC-nmY"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="uYd-Mn-0Yy" firstAttribute="top" secondItem="NWv-9N-QFy" secondAttribute="bottom" constant="43" id="2wi-nQ-P1L"/>
+                        <constraint firstItem="uYd-Mn-0Yy" firstAttribute="leading" secondItem="zcy-Iv-ajC" secondAttribute="leading" constant="63" id="Chw-b0-ooE"/>
+                        <constraint firstItem="NWv-9N-QFy" firstAttribute="leading" secondItem="zcy-Iv-ajC" secondAttribute="leading" constant="38" id="DtF-tk-cXe"/>
+                        <constraint firstAttribute="trailing" secondItem="z7M-7a-DXW" secondAttribute="trailing" constant="38" id="HtW-pF-GaS"/>
+                        <constraint firstItem="uY6-Wv-vbZ" firstAttribute="centerX" secondItem="zcy-Iv-ajC" secondAttribute="centerX" id="NVZ-JP-jyW"/>
+                        <constraint firstItem="7xh-c5-U3f" firstAttribute="centerY" secondItem="uY6-Wv-vbZ" secondAttribute="centerY" id="T9S-o9-LH1"/>
+                        <constraint firstAttribute="trailing" secondItem="7xh-c5-U3f" secondAttribute="trailing" constant="43" id="f8k-Z6-qKZ"/>
+                        <constraint firstAttribute="trailing" secondItem="uYd-Mn-0Yy" secondAttribute="trailing" constant="63" id="qBI-8R-AxE"/>
+                        <constraint firstItem="NWv-9N-QFy" firstAttribute="top" secondItem="uY6-Wv-vbZ" secondAttribute="bottom" constant="56" id="tHT-VJ-Z7B"/>
+                        <constraint firstItem="uY6-Wv-vbZ" firstAttribute="top" secondItem="zcy-Iv-ajC" secondAttribute="top" constant="21" id="tNw-9W-mGE"/>
+                        <constraint firstItem="z7M-7a-DXW" firstAttribute="centerY" secondItem="NWv-9N-QFy" secondAttribute="centerY" id="xR3-rO-cCI"/>
+                        <constraint firstAttribute="bottom" secondItem="uYd-Mn-0Yy" secondAttribute="bottom" constant="38" id="xfC-pj-nMa"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <constraints>
+                <constraint firstItem="zcy-Iv-ajC" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="HHA-mW-af5"/>
+                <constraint firstAttribute="bottom" secondItem="zcy-Iv-ajC" secondAttribute="bottom" id="X29-wy-AKv"/>
+                <constraint firstAttribute="trailing" secondItem="zcy-Iv-ajC" secondAttribute="trailing" id="nOQ-7n-SV1"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="137.68115942028987" y="79.6875"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="cross-black" width="24" height="24"/>
+        <namedColor name="MainRed">
+            <color red="0.6119999885559082" green="0.067000001668930054" blue="0.067000001668930054" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

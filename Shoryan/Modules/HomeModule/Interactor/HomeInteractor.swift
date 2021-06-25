@@ -12,14 +12,26 @@ class HomeInteractor: BaseInteractor{
     
     static let shared = HomeInteractor()
     
+    let bloodTypeDonorDoneeCompatibility = [
+        "O-" : ["O-", "O+", "A-", "A+", "B-", "B+", "AB-", "AB+"],
+        "O+" : ["O+", "A+", "B+", "AB+"],
+        "B-" : ["B-", "B+", "AB-", "AB+"],
+        "B+" : ["B+", "AB+"],
+        "A-" : ["A-", "A+", "AB-", "AB+"],
+        "A+" : ["A+", "AB+"],
+        "AB-" : ["AB-", "AB+"],
+        "AB+" : ["AB+"]
+    ]
+    
     func loadHomeData(){
         
     }
     
-    func getUserID(completionHandler: @escaping (Result<GetUserIDResponse, NetworkError>) -> ()){
-        HomeModuleAPIManager.getUserID(accessToken: AppUser.shared.accessToken!) { result in
-            if case .success(let userIDResponse) = result {
-                AppUser.shared.userID = userIDResponse.user._id
+    func getUserData(completionHandler: @escaping (Result<GetUserDataResponse, NetworkError>) -> ()){
+        HomeModuleAPIManager.getUserData(accessToken: AppUser.shared.accessToken!) { result in
+            if case .success(let userDataResponse) = result {
+                AppUser.shared.userID = userDataResponse.user._id
+                AppUser.shared.bloodType = userDataResponse.user.bloodType
             }
             completionHandler(result)
         }
@@ -97,6 +109,16 @@ class HomeInteractor: BaseInteractor{
         default:
             return "cantdonatetorequest.alert".localized()
         }
+    }
+    
+    func isBloodTypeCompatibleWithUser(bloodType: String) -> Bool{
+        guard let userBloodType = AppUser.shared.bloodType, let comaptibleArray = bloodTypeDonorDoneeCompatibility[userBloodType] else {fatalError()}
+        return comaptibleArray.contains(bloodType)
+    }
+    
+    func areBloodTypesCompatible(donor: String, donee: String) -> Bool{
+        guard let comaptibleArray = bloodTypeDonorDoneeCompatibility[donor] else {fatalError()}
+        return comaptibleArray.contains(donee)
     }
     
     

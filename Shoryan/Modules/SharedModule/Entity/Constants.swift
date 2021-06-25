@@ -41,5 +41,6 @@ class Constants {
     static let userIDKey = "USER_ID"
     static let accessTokenKey = "ACCESS_TOKEN"
     static let pendingRequestIDKey = "PENDING_REQUEST"
+    static let bloodTypeKey = "BLOOD_TYPE"
 
 }

@@ -20,7 +20,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window = UIWindow(frame: windowScene.coordinateSpace.bounds)
         window?.windowScene = windowScene
         let vc = LaunchRouter.shared.createLaunchScreen()
-//        let vc = LocalizeViewController()
+//        AppUser.shared.clearUserData()
+//        let vc = FilterRequestsViewController()
 //        vc.request = DetailedRequest(lng: 31.357139, lat: 30.059234, fullName: "احمد هشام", address: "53 Ibn Al Nafeis, Al Manteqah as Sadesah, Nasr City, Cairo Governorate", bloodBags: 4, donatorsCount: 3, bloodType: "O+", isUserRequest: false, canUserDonate: false, isUserADonator: true)
         window?.rootViewController = vc
         window?.makeKeyAndVisible()

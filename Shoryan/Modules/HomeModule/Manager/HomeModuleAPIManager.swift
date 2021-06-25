@@ -9,9 +9,9 @@ import Foundation
 
 
 class HomeModuleAPIManager {
-    static func getUserID(accessToken: String, completionHandler: @escaping (Result<GetUserIDResponse, NetworkError>) -> ()){
+    static func getUserData(accessToken: String, completionHandler: @escaping (Result<GetUserDataResponse, NetworkError>) -> ()){
         
-        Network.loadJSONFile(fromURL: Constants.endPoint, path: Constants.getUserDataPath, token: accessToken, method: .GET, type: GetUserIDResponse.self) { (result) in
+        Network.loadJSONFile(fromURL: Constants.endPoint, path: Constants.getUserDataPath, token: accessToken, method: .GET, type: GetUserDataResponse.self) { (result) in
             completionHandler(result)
         }
     }
