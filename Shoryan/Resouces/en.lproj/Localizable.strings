@@ -23,6 +23,7 @@
 "Female" = "Female";
 "Urgent" = "Urgent";
 "Done" = "Done";
+"Points" = "Points";
 
 //Alerts/Error messages
 "incorrectphonenumber.alert" = "Please make sure you entered a correct phone number";
@@ -115,3 +116,6 @@
 "filternavtitle.label" = "Sort by";
 "reset.button" = "Reset";
 "allowedbloodtyped.button" = "Blood typed I can donate to";
+
+//AllRewardsViewController
+"rewardsnavtitle.label" = "Rewards";

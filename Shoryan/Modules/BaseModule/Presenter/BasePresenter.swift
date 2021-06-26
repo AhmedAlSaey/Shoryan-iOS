@@ -8,7 +8,7 @@
 import Foundation
 import JGProgressHUD
 
-class BasePresenter {
+class BasePresenter: NSObject {
     var view: BaseViewController?
     let hud = JGProgressHUD()
     

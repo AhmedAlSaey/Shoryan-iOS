@@ -139,7 +139,9 @@ class HomeViewController: BaseViewController {
     }
     
     @objc func rewardsPressed(_ sender: UITapGestureRecognizer? = nil) {
-        
+        if let presenter = presenter as? HomePresenter {
+            presenter.rewardsCardClicked()
+        }
     }
     
     @objc func filterViewPressed(_ sender: UITapGestureRecognizer? = nil) {

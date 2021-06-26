@@ -91,6 +91,22 @@ class HomeInteractor: BaseInteractor{
         }
     }
     
+    func getAllRewards(completionHandler: @escaping (Result<[SimpleReward], NetworkError>) -> ()){
+        HomeModuleAPIManager.getRewards(accessToken: AppUser.shared.accessToken!) { result in
+            completionHandler(result.map { response in
+                response.rewards.map { reward in
+                    SimpleReward(imageURL: reward.store.logo, pointCost: reward.requiredPoints, id: reward._id)
+                }
+            })
+        }
+    }
+    
+    func getDetailedReward(rewardID: String, completionHandler: @escaping (Result<DetailedRewardResponse, NetworkError>) -> ()){
+        HomeModuleAPIManager.getDetailedReward(accessToken: AppUser.shared.accessToken!, rewardID: rewardID) { response in
+            completionHandler(response)
+        }
+    }
+    
     
     //TODO: - Move this to shared interactor
     func getDonationPreventionReasoning(errorName: String?) -> String? {
@@ -120,6 +136,7 @@ class HomeInteractor: BaseInteractor{
         guard let comaptibleArray = bloodTypeDonorDoneeCompatibility[donor] else {fatalError()}
         return comaptibleArray.contains(donee)
     }
+    
     
     
     

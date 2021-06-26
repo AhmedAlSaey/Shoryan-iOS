@@ -49,6 +49,14 @@ class HomeRouter: BaseRouter {
         return vc
     }
     
+    func createRewards() -> AllRewardsViewController {
+        let vc = AllRewardsViewController()
+        let presenter = AllRewardsPresenter()
+        vc.presenter = presenter
+        presenter.view = vc
+        return vc
+    }
+    
     func presentRequest(detailedRequest: DetailedRequest){
         let vc = createDetailedRequestScreen()
         vc.request = detailedRequest
@@ -62,6 +70,11 @@ class HomeRouter: BaseRouter {
         navigationController?.present(vc, animated: true, completion: nil)
     }
     
+    
+    func pushRewards() {
+        let vc = createRewards()
+        navigationController?.pushViewController(vc, animated: true)
+    }
     
     
 }

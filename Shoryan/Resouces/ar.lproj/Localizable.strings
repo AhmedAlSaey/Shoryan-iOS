@@ -23,6 +23,7 @@
 "Female" = "أنثى";
 "Urgent" = "ضروري";
 "Done" = "تم";
+"Points" = "نقاط";
 
 //Alerts/Error messages
 "incorrectphonenumber.alert" = "الرجاء التأكد من صحة رقم الهاتف";
@@ -115,3 +116,6 @@
 "filternavtitle.label" = "تصنيف حسب";
 "reset.button" = "مسح";
 "allowedbloodtyped.button" = "الفصائل التي يمكننى التبرع لها";
+
+//AllRewardsViewController
+"rewardsnavtitle.label" = "مكافآت";

@@ -35,9 +35,10 @@ class Constants {
     static let verifyAccountPath = "/api/users/signup-verification"
     static let getUserDataPath = "/api/users"
     static let getSpecificRequestPath = "/api/requests/%@/user-donation" //Request ID
+    static let pendingRequestPath = "/api/users/pending-donations"
+    static let allRewardsPath = "/api/rewards"
+    static let detailedRewardPath = "https://pacific-springs-77989.herokuapp.com/api/rewards/%@" //Reward ID
     
-    
-    static let pendingRequestPath = "/api/users/pending-donations" 
     static let userIDKey = "USER_ID"
     static let accessTokenKey = "ACCESS_TOKEN"
     static let pendingRequestIDKey = "PENDING_REQUEST"

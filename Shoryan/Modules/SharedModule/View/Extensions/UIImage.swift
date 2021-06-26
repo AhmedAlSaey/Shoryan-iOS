@@ -8,11 +8,11 @@
 import UIKit
 
 extension UIImageView {
-    func applyshadowWithCorner(containerView : UIView, cornerRadius : CGFloat){
+    func applyshadowWithCorner(containerView : UIView, cornerRadius : CGFloat, shadowWidth: Int = 2, shadowHeight: Int = 2){
         containerView.clipsToBounds = false
         containerView.layer.cornerRadius = cornerRadius
         containerView.layer.shadowColor = UIColor.black.cgColor
-        containerView.layer.shadowOffset = .init(width: 2, height: 2)
+        containerView.layer.shadowOffset = .init(width: shadowWidth, height: shadowHeight)
         containerView.layer.shadowOpacity = 0.2
         containerView.layer.shadowRadius = 1
         self.clipsToBounds = true

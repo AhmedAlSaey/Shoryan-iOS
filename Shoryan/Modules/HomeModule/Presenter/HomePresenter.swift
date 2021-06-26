@@ -121,6 +121,13 @@ class HomePresenter: BasePresenter, FilterDelegate {
         }
     }
     
+    func rewardsCardClicked() {
+        guard let view = view as? HomeViewController else {fatalError()}
+        
+        //TODO: - Implement this
+        HomeRouter.shared.pushRewards()
+    }
+    
     func filterViewPressed(){
         HomeRouter.shared.presentFilter(delegate: self, params: filterParams)
     }
