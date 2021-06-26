@@ -110,3 +110,8 @@
 "canceldonation.button" = "إلغاء التبرع";
 "idonated.button" = "لقد تبرعت";
 "cancelrequest.button" = "إلغاء الطلب";
+
+//FilterRequestsViewController
+"filternavtitle.label" = "تصنيف حسب";
+"reset.button" = "مسح";
+"allowedbloodtyped.button" = "الفصائل التي يمكننى التبرع لها";

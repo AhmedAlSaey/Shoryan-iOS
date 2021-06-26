@@ -42,8 +42,6 @@
 "alreadygoingtorequest.alert" = "You are already regestered as a donor for this request";
 "cantdonatetorequest.alert" = "You can't donate to this request";
 
-
-
 //Main Tabbar
 "home.tabbaritem" = "Home";
 "newrequest.tabbaritem" = "New Request";
@@ -112,3 +110,8 @@
 "canceldonation.button" = "Cancel Donation";
 "idonated.button" = "I Donated";
 "cancelrequest.button" = "Cancel Request";
+
+//FilterRequestsViewController
+"filternavtitle.label" = "Sort by";
+"reset.button" = "Reset";
+"allowedbloodtyped.button" = "Blood typed I can donate to";

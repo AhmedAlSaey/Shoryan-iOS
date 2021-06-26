@@ -11,10 +11,14 @@ protocol FilterDelegate {
     func viewWillDisappear(withParameters params: [String : String])
 }
 
-class FilterRequestsViewController: UIViewController {
+class FilterRequestsViewController: BaseViewController {
+    
+    @IBOutlet weak var filterLabel: UILabel!
+    @IBOutlet weak var bloodTypeLabel: UILabel!
+    @IBOutlet weak var resetButton: UIButton!
     
     @IBOutlet weak var backgroundView: UIView!
-    @IBOutlet weak var resetButton: UIButton!
+    
     //bt -> blood type
     @IBOutlet weak var bt1Button: UIButton!
     @IBOutlet weak var bt2Button: UIButton!
@@ -41,6 +45,14 @@ class FilterRequestsViewController: UIViewController {
         setupUI()
         setupInitialParameters()
     }
+    
+    override func localizeStrings() {
+        filterLabel.text = "filternavtitle.label".localized()
+        bloodTypeLabel.text = "bloodtype.label".localized()
+        resetButton.setTitle("reset.button".localized(), for: .normal)
+        bt9Button.setTitle("allowedbloodtyped.button".localized(), for: .normal)
+    }
+    
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)

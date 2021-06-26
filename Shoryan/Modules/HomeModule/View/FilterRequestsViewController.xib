@@ -13,6 +13,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FilterRequestsViewController" customModule="Shoryan" customModuleProvider="target">
             <connections>
                 <outlet property="backgroundView" destination="zcy-Iv-ajC" id="MVX-uj-fXA"/>
+                <outlet property="bloodTypeLabel" destination="NWv-9N-QFy" id="YvP-cQ-Lhl"/>
                 <outlet property="bt1Button" destination="zJl-e3-js3" id="mZF-qa-BUU"/>
                 <outlet property="bt2Button" destination="zG0-cs-hmW" id="0Cn-RH-PBc"/>
                 <outlet property="bt3Button" destination="wSb-bq-5Um" id="R9o-1H-FHI"/>
@@ -22,6 +23,7 @@
                 <outlet property="bt7Button" destination="QtK-2H-BxQ" id="x6H-vp-BRP"/>
                 <outlet property="bt8Button" destination="AvH-Zb-HGr" id="MCa-1X-UT7"/>
                 <outlet property="bt9Button" destination="YCQ-B1-Vr7" id="eR1-Ye-plG"/>
+                <outlet property="filterLabel" destination="uY6-Wv-vbZ" id="KeY-se-L7C"/>
                 <outlet property="resetButton" destination="z7M-7a-DXW" id="shZ-1t-5xp"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
