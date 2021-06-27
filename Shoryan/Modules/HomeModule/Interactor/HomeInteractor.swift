@@ -123,6 +123,25 @@ class HomeInteractor: BaseInteractor{
         }
     }
     
+    func getMyRequestsList(completionHandler: @escaping (Result<[SimpleRequest], NetworkError>) -> ()){
+        HomeModuleAPIManager.getMyRequests(accessToken: AppUser.shared.accessToken!) { (result) in
+            completionHandler(result.map { (successResponse) -> [SimpleRequest] in
+                let simpleRequests = successResponse.activeRequests.map { (donationRequest) -> SimpleRequest in
+                    let simpleRequest: SimpleRequest = SimpleRequest(
+                        name: donationRequest.requestBy.name,
+                        bloodType: donationRequest.bloodType,
+                        location: donationRequest.donationLocation.name + " - " + donationRequest.donationLocation.location.region,
+                        _id: donationRequest._id,
+                        urgent: false,
+                        requester: .User
+                    )
+                    return simpleRequest
+                }
+                return simpleRequests
+            })
+        }
+    }
+    
     
     //TODO: - Move this to shared interactor
     func getDonationPreventionReasoning(errorName: String?) -> String? {

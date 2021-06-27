@@ -40,7 +40,6 @@ class HomeViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        presenter?.viewDidLoad()
         styleNavigationBar()
         configureFilterView()
         configureTableView()
@@ -135,7 +134,9 @@ class HomeViewController: BaseViewController {
     }
     
     @objc func myRequestsPressed(_ sender: UITapGestureRecognizer? = nil) {
-        
+        if let presenter = presenter as? HomePresenter {
+            presenter.myRequestsCardClicked()
+        }
     }
     
     @objc func rewardsPressed(_ sender: UITapGestureRecognizer? = nil) {

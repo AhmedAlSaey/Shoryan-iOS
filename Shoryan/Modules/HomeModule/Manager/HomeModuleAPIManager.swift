@@ -24,6 +24,14 @@ class HomeModuleAPIManager {
         
     }
     
+    static func getMyRequests(accessToken: String, completionHandler: @escaping (Result<MyRequestsResponse, NetworkError>) -> ()){
+        
+        Network.loadJSONFile(fromURL: Constants.endPoint, path: Constants.myRequestsPath, token: accessToken, method: .GET, type: MyRequestsResponse.self) { (result) in
+            completionHandler(result)
+        }
+        
+    }
+    
     static func getPendingRequest(accessToken: String, completionHandler: @escaping (Result<PendingRequestResponse, NetworkError>) -> ()){
         
         Network.loadJSONFile(fromURL: Constants.endPoint, path: Constants.pendingRequestPath, token: accessToken, method: .GET, type: PendingRequestResponse.self) { (result) in

@@ -75,6 +75,14 @@ class HomeRouter: BaseRouter {
         return vc
     }
     
+    func createMyRequests() -> MyRequestsViewController {
+        let vc = MyRequestsViewController()
+        let presenter = MyRequestsPresenter()
+        vc.presenter = presenter
+        presenter.view = vc
+        return vc
+    }
+    
     func presentRequest(detailedRequest: DetailedRequest){
         let vc = createDetailedRequestScreen()
         vc.request = detailedRequest
@@ -104,6 +112,11 @@ class HomeRouter: BaseRouter {
         navigationController?.pushViewController(vc, animated: true)
     }
     
+    func pushMyRequests() {
+        let vc = createMyRequests()
+        navigationController?.pushViewController(vc, animated: true)
+    }
+    
     func popToRootViewController() {
         navigationController?.popToRootViewController(animated: true)
     }
@@ -118,6 +131,16 @@ class HomeRouter: BaseRouter {
         let n: Int! = self.navigationController?.viewControllers.count
         guard let _ = self.navigationController?.viewControllers[n-1] as? DetailedRewardViewController else {fatalError()}
         navigationController?.popViewController(animated: true)
+    }
+    
+    func popMyRequests() {
+        let n: Int! = self.navigationController?.viewControllers.count
+        guard let _ = self.navigationController?.viewControllers[n-1] as? MyRequestsViewController else {fatalError()}
+        navigationController?.popViewController(animated: true)
+    }
+    
+    func navigateToNewRequestTab() {
+        LaunchRouter.shared.navigateToNewrequestTab()
     }
     
 }

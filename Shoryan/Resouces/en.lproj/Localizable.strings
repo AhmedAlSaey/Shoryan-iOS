@@ -99,7 +99,7 @@
 
 //HomeViewController
 "homenavigationtitle.label" = "Home";
-"myrequests.label" = "My Donations";
+"myrequests.label" = "My Requests";
 "pendingrequest.label" = "Pending";
 "rewards.label" = "Rewards";
 "requests.label" = "Requests";
@@ -133,3 +133,6 @@
 "successtitle.label" = "Success!";
 "successdescription.label" = "Offer Redeemed";
 "successnavbartitle.label" = "Reward";
+
+//MyRequestsViewController
+"myrequestsnavtitle.label" = "My Requests";

@@ -193,7 +193,9 @@ class LaunchRouter: BaseRouter, UITabBarControllerDelegate {
         return viewController
     }
     
-    
+    func navigateToNewrequestTab() {
+        tabBarController?.selectedIndex = 1
+    }
     
     
     

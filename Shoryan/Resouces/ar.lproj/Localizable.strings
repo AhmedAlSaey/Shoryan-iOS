@@ -133,3 +133,6 @@
 "successtitle.label" = "عملية ناجحة!";
 "successdescription.label" = "تم استرداد العرض";
 "successnavbartitle.label" = "مكافأة";
+
+//MyRequestsViewController
+"myrequestsnavtitle.label" = "طلباتى";
