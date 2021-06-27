@@ -44,6 +44,15 @@ class AppUser {
             UserDefaults.standard.set(newValue, forKey: Constants.bloodTypeKey)
         }
     }
+    
+    var points: Int? {
+        get {
+            return UserDefaults.standard.integer(forKey: Constants.pointsKey)
+        }
+        set {
+            UserDefaults.standard.set(newValue, forKey: Constants.pointsKey)
+        }
+    }
 
     func isUserAuthenticated() -> Bool {
         return accessToken != nil

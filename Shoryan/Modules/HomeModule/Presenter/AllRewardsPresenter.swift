@@ -35,10 +35,10 @@ class AllRewardsPresenter: BasePresenter, UICollectionViewDataSource {
                 switch result {
                 case .success(let detailedReward):
                     if detailedReward.successfulResponse.isRedeemingThisReward {
-                        
+                        HomeRouter.shared.pushDetailedReward(withReward: detailedReward, isVerifying: true)
                     }
                     else{
-                        
+                        HomeRouter.shared.pushDetailedReward(withReward: detailedReward, isVerifying: false)
                     }
                 case .failure(let error):
                     view.showAlert(error: error)
@@ -57,6 +57,10 @@ class AllRewardsPresenter: BasePresenter, UICollectionViewDataSource {
         cell.imageURL = rewards![indexPath.row].imageURL
         cell.points = rewards![indexPath.row].pointCost
         return cell
+    }
+    
+    func backButtonPressed() {
+        HomeRouter.shared.popAllRewardsScreen()
     }
 }
 

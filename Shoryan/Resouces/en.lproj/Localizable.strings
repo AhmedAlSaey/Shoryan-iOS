@@ -11,6 +11,7 @@
 "back-button" = "back-button_ltr";
 "logo-shadowed" = "logo-shadowed_en";
 "simple-request-nav-arrow" = "simple-request-nav-arrow_ltr";
+"back-arrow-white" = "back-arrow-white_ltr";
 
 //General
 "Continue" = "Continue";
@@ -24,6 +25,7 @@
 "Urgent" = "Urgent";
 "Done" = "Done";
 "Points" = "Points";
+"Close" = "Close";
 
 //Alerts/Error messages
 "incorrectphonenumber.alert" = "Please make sure you entered a correct phone number";
@@ -42,6 +44,7 @@
 "usergoingtoanotherrequest.alert" = "You already have another pending request";
 "alreadygoingtorequest.alert" = "You are already regestered as a donor for this request";
 "cantdonatetorequest.alert" = "You can't donate to this request";
+"selectbranch.alert" = "Please select a branch";
 
 //Main Tabbar
 "home.tabbaritem" = "Home";
@@ -119,3 +122,14 @@
 
 //AllRewardsViewController
 "rewardsnavtitle.label" = "Rewards";
+
+//DetailedRewardViewController
+"rewardnavtitle.label" = "Rewards";
+"branches.label" = "Branches";
+"redeem.button" = "Redeem";
+"rewardcodeinstruction.label" = "Enter the code we sent to the branch clerk";
+
+//SuccessRedeemViewController
+"successtitle.label" = "Success!";
+"successdescription.label" = "Offer Redeemed";
+"successnavbartitle.label" = "Reward";

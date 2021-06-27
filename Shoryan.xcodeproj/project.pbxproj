@@ -58,6 +58,15 @@
 		B166B13E2598415200AD6FD6 /* LogInPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B166B13D2598415200AD6FD6 /* LogInPresenter.swift */; };
 		B1717B162607F0530045B67B /* SharedModuleAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1717B152607F0530045B67B /* SharedModuleAPIManager.swift */; };
 		B176F34C26878EC9007B3D78 /* DetailedRewardResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B176F34B26878EC9007B3D78 /* DetailedRewardResponse.swift */; };
+		B176F34F26879850007B3D78 /* DetailedRewardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B176F34D26879850007B3D78 /* DetailedRewardViewController.swift */; };
+		B176F35026879850007B3D78 /* DetailedRewardViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B176F34E26879850007B3D78 /* DetailedRewardViewController.xib */; };
+		B176F35226879DCC007B3D78 /* SimpleBranch.swift in Sources */ = {isa = PBXBuildFile; fileRef = B176F35126879DCC007B3D78 /* SimpleBranch.swift */; };
+		B176F3542687A17A007B3D78 /* DetailedRewardPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B176F3532687A17A007B3D78 /* DetailedRewardPresenter.swift */; };
+		B176F3562687B28E007B3D78 /* RedeemRewardResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B176F3552687B28E007B3D78 /* RedeemRewardResponse.swift */; };
+		B176F3582687D1FB007B3D78 /* RedeemRewardCodeVerificationResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B176F3572687D1FB007B3D78 /* RedeemRewardCodeVerificationResponse.swift */; };
+		B176F35B2687D9D6007B3D78 /* SuccessRedeemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B176F3592687D9D6007B3D78 /* SuccessRedeemViewController.swift */; };
+		B176F35C2687D9D6007B3D78 /* SuccessRedeemViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B176F35A2687D9D6007B3D78 /* SuccessRedeemViewController.xib */; };
+		B176F35E2687E563007B3D78 /* SuccessRedeemPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B176F35D2687E563007B3D78 /* SuccessRedeemPresenter.swift */; };
 		B17B3456268633B100F958FD /* FilterRequestsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B17B3454268633B100F958FD /* FilterRequestsViewController.swift */; };
 		B17B3457268633B100F958FD /* FilterRequestsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B17B3455268633B100F958FD /* FilterRequestsViewController.xib */; };
 		B196C5552606C5D900194A1D /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = B196C5542606C5D900194A1D /* Network.swift */; };
@@ -179,6 +188,15 @@
 		B166B13D2598415200AD6FD6 /* LogInPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInPresenter.swift; sourceTree = "<group>"; };
 		B1717B152607F0530045B67B /* SharedModuleAPIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedModuleAPIManager.swift; sourceTree = "<group>"; };
 		B176F34B26878EC9007B3D78 /* DetailedRewardResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedRewardResponse.swift; sourceTree = "<group>"; };
+		B176F34D26879850007B3D78 /* DetailedRewardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedRewardViewController.swift; sourceTree = "<group>"; };
+		B176F34E26879850007B3D78 /* DetailedRewardViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailedRewardViewController.xib; sourceTree = "<group>"; };
+		B176F35126879DCC007B3D78 /* SimpleBranch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleBranch.swift; sourceTree = "<group>"; };
+		B176F3532687A17A007B3D78 /* DetailedRewardPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedRewardPresenter.swift; sourceTree = "<group>"; };
+		B176F3552687B28E007B3D78 /* RedeemRewardResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedeemRewardResponse.swift; sourceTree = "<group>"; };
+		B176F3572687D1FB007B3D78 /* RedeemRewardCodeVerificationResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedeemRewardCodeVerificationResponse.swift; sourceTree = "<group>"; };
+		B176F3592687D9D6007B3D78 /* SuccessRedeemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuccessRedeemViewController.swift; sourceTree = "<group>"; };
+		B176F35A2687D9D6007B3D78 /* SuccessRedeemViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SuccessRedeemViewController.xib; sourceTree = "<group>"; };
+		B176F35D2687E563007B3D78 /* SuccessRedeemPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuccessRedeemPresenter.swift; sourceTree = "<group>"; };
 		B17B3454268633B100F958FD /* FilterRequestsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterRequestsViewController.swift; sourceTree = "<group>"; };
 		B17B3455268633B100F958FD /* FilterRequestsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FilterRequestsViewController.xib; sourceTree = "<group>"; };
 		B181453E25E8B15D009C6221 /* Shoryan.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Shoryan.entitlements; sourceTree = "<group>"; };
@@ -376,6 +394,10 @@
 				B17B3455268633B100F958FD /* FilterRequestsViewController.xib */,
 				B1CDAE7A2687346F0019D7E3 /* AllRewardsViewController.swift */,
 				B1CDAE7B2687346F0019D7E3 /* AllRewardsViewController.xib */,
+				B176F34D26879850007B3D78 /* DetailedRewardViewController.swift */,
+				B176F34E26879850007B3D78 /* DetailedRewardViewController.xib */,
+				B176F3592687D9D6007B3D78 /* SuccessRedeemViewController.swift */,
+				B176F35A2687D9D6007B3D78 /* SuccessRedeemViewController.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -385,6 +407,7 @@
 			children = (
 				B163D1D2259D73240005C731 /* HomePresenter.swift */,
 				B1CDAE7E268735A40019D7E3 /* AllRewardsPresenter.swift */,
+				B176F3532687A17A007B3D78 /* DetailedRewardPresenter.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -416,6 +439,10 @@
 				B1CDAE8426875A3F0019D7E3 /* SimpleReward.swift */,
 				B1CDAE8626875ADB0019D7E3 /* AllRewardsResponse.swift */,
 				B176F34B26878EC9007B3D78 /* DetailedRewardResponse.swift */,
+				B176F35126879DCC007B3D78 /* SimpleBranch.swift */,
+				B176F3552687B28E007B3D78 /* RedeemRewardResponse.swift */,
+				B176F3572687D1FB007B3D78 /* RedeemRewardCodeVerificationResponse.swift */,
+				B176F35D2687E563007B3D78 /* SuccessRedeemPresenter.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -937,6 +964,7 @@
 			files = (
 				B1A471F2259DC764006152C1 /* ProfileViewController.xib in Resources */,
 				B166B1392598386900AD6FD6 /* LogInViewController.xib in Resources */,
+				B176F35026879850007B3D78 /* DetailedRewardViewController.xib in Resources */,
 				B17B3457268633B100F958FD /* FilterRequestsViewController.xib in Resources */,
 				B1087F9F2607A42100158209 /* RequestViewController.xib in Resources */,
 				B1428CA0259AE4C700A75D9C /* SMSAuthenticationViewController.xib in Resources */,
@@ -952,6 +980,7 @@
 				B1A471E5259DC03A006152C1 /* NotificationTableViewCell.xib in Resources */,
 				B114ADE1259C20880052C89D /* SignUpViewController.xib in Resources */,
 				B1A471D5259DBE92006152C1 /* NotificationsViewController.xib in Resources */,
+				B176F35C2687D9D6007B3D78 /* SuccessRedeemViewController.xib in Resources */,
 				B1A471A7259D95E4006152C1 /* RequestBasicTableViewCell.xib in Resources */,
 				B163D1CF259D73160005C731 /* HomeViewController.xib in Resources */,
 				B1FD6CCC2681EB4800C8E3E2 /* LaunchScreenViewController.xib in Resources */,
@@ -1027,6 +1056,7 @@
 				B12CBA4C260803E1006C8464 /* RequestPresenter.swift in Sources */,
 				B166B0D9259826B800AD6FD6 /* AppDelegate.swift in Sources */,
 				B1C22F6825E6F52A002EECD9 /* LocationTextField.swift in Sources */,
+				B176F35E2687E563007B3D78 /* SuccessRedeemPresenter.swift in Sources */,
 				B1C22F6225E6F507002EECD9 /* BloodTypeTextField.swift in Sources */,
 				B13453E52606F93800EF3319 /* AllRequestsResponse.swift in Sources */,
 				B1C22F6525E6F515002EECD9 /* GenderTextField.swift in Sources */,
@@ -1038,6 +1068,8 @@
 				B1A471C0259DAC38006152C1 /* NewRequestPresenter.swift in Sources */,
 				B1428C9525985ACB00A75D9C /* AuthorizationPresenter.swift in Sources */,
 				B1A471DE259DBECC006152C1 /* NotificationsRouter.swift in Sources */,
+				B176F35B2687D9D6007B3D78 /* SuccessRedeemViewController.swift in Sources */,
+				B176F3542687A17A007B3D78 /* DetailedRewardPresenter.swift in Sources */,
 				B163D1D6259D732D0005C731 /* HomeRouter.swift in Sources */,
 				B196C5802606E75C00194A1D /* SpecificRequestResponse.swift in Sources */,
 				B166B12225982CB500AD6FD6 /* LaunchInteractor.swift in Sources */,
@@ -1061,10 +1093,12 @@
 				B1C22F5F25E6F4B6002EECD9 /* BirthDateTextField.swift in Sources */,
 				B1C524D6266E94DF00F0E4B6 /* VerifyAccountResponse.swift in Sources */,
 				B196C5672606C8D600194A1D /* LoginPasswordResponse.swift in Sources */,
+				B176F35226879DCC007B3D78 /* SimpleBranch.swift in Sources */,
 				B1428C9A259AE29500A75D9C /* LogInPasswordViewController.swift in Sources */,
 				B1A471D4259DBE92006152C1 /* NotificationsViewController.swift in Sources */,
 				B114ADE4259C38F80052C89D /* SignUpPresenter.swift in Sources */,
 				B1B3A1E9259D88EE0089E41D /* UIImage.swift in Sources */,
+				B176F3562687B28E007B3D78 /* RedeemRewardResponse.swift in Sources */,
 				B196C55E2606C61200194A1D /* KeyChain.swift in Sources */,
 				B1428C9F259AE4C700A75D9C /* SMSAuthenticationViewController.swift in Sources */,
 				B196C5862606ED5B00194A1D /* HomeModuleAPIManager.swift in Sources */,
@@ -1090,6 +1124,7 @@
 				B1F6E6EE2667D17C0038982C /* LogInUsingCodeResponse.swift in Sources */,
 				B1C22F7A25E70C4A002EECD9 /* MapSelectorViewController.swift in Sources */,
 				B1A471BD259DAC25006152C1 /* NewRequestInteractor.swift in Sources */,
+				B176F3582687D1FB007B3D78 /* RedeemRewardCodeVerificationResponse.swift in Sources */,
 				B12CBA552608CA0D006C8464 /* SharedRouter.swift in Sources */,
 				B1A471C7259DB00B006152C1 /* BloodTypeSelectionButton.swift in Sources */,
 				B1A471FF259DDCF6006152C1 /* MainTabBarViewController.swift in Sources */,
@@ -1105,6 +1140,7 @@
 				B12CBA512608CA02006C8464 /* SharedInteractor.swift in Sources */,
 				B1CDAE8726875ADB0019D7E3 /* AllRewardsResponse.swift in Sources */,
 				B114ADDB259AFF4E0052C89D /* UnderlinedUITextField.swift in Sources */,
+				B176F34F26879850007B3D78 /* DetailedRewardViewController.swift in Sources */,
 				B12CBA5B2608D702006C8464 /* RequestUpdate.swift in Sources */,
 				B1C22F5125E6F0B3002EECD9 /* FirstNameTextField.swift in Sources */,
 				B1C22F6E25E6F552002EECD9 /* PasswordConfirmationTextField.swift in Sources */,

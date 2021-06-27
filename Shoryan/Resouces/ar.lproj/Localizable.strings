@@ -11,6 +11,7 @@
 "back-button" = "back-button_rtl";
 "logo-shadowed" = "logo-shadowed_ar";
 "simple-request-nav-arrow" = "simple-request-nav-arrow_rtl";
+"back-arrow-white" = "back-arrow-white_rtl";
 
 //General
 "Continue" = "استمرار";
@@ -23,7 +24,8 @@
 "Female" = "أنثى";
 "Urgent" = "ضروري";
 "Done" = "تم";
-"Points" = "نقاط";
+"Points" = "نقطة";
+"Close" = "إغلاق";
 
 //Alerts/Error messages
 "incorrectphonenumber.alert" = "الرجاء التأكد من صحة رقم الهاتف";
@@ -42,6 +44,7 @@
 "usergoingtoanotherrequest.alert" = "أنت مسجل كمتبرع لطلب آخر";
 "alreadygoingtorequest.alert" = "أنت بالفعل مسجل كمتبرع لهذا الطلب";
 "cantdonatetorequest.alert" = "لا يمكنك التبرع لهذا الطلب";
+"selectbranch.alert" = "الرجاء تحديد الفرع";
 
 //Main Tabbar
 "home.tabbaritem" = "الصفحة الرئيسية";
@@ -119,3 +122,14 @@
 
 //AllRewardsViewController
 "rewardsnavtitle.label" = "مكافآت";
+
+//DetailedRewardViewController
+"rewardnavtitle.label" = "مكافأة";
+"branches.label" = "الفروع";
+"redeem.button" = " استرد العرض";
+"rewardcodeinstruction.label" = "ادخل الكود المرسل لموظف الفرع";
+
+//SuccessRedeemViewController
+"successtitle.label" = "عملية ناجحة!";
+"successdescription.label" = "تم استرداد العرض";
+"successnavbartitle.label" = "مكافأة";

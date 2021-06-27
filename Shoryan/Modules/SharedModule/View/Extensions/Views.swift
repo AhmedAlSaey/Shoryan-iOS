@@ -11,7 +11,8 @@ extension UIView {
     enum Corner {
         case Top
         case Bottom
-        
+        case Right
+        case Left
     }
     
     func dropShadow(scale: Bool = true, widthOffset: Int = 0, heightOffset: Int = 3) {
@@ -32,6 +33,22 @@ extension UIView {
             layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
         } else if corners == .Bottom {
             layer.maskedCorners = [.layerMaxXMaxYCorner, .layerMinXMaxYCorner]
+        }
+        else if corners == .Right {
+            if UIApplication.shared.userInterfaceLayoutDirection == .leftToRight {
+                layer.maskedCorners = [.layerMaxXMinYCorner, .layerMaxXMaxYCorner]
+            }
+            else{
+                layer.maskedCorners = [.layerMinXMinYCorner, .layerMinXMaxYCorner]
+            }
+        }
+        else if corners == .Left {
+            if UIApplication.shared.userInterfaceLayoutDirection == .leftToRight {
+                layer.maskedCorners = [.layerMinXMinYCorner, .layerMinXMaxYCorner]
+            }
+            else{
+                layer.maskedCorners = [.layerMaxXMinYCorner, .layerMaxXMaxYCorner]
+            }
         }
         
     }

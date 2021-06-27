@@ -46,4 +46,20 @@ class HomeModuleAPIManager {
             completionHandler(result)
         }
     }
+    
+    static func redeemReward(accessToken: String, rewardID: String, branchID: String, completionHandler: @escaping (Result<RedeemRewardResponse, NetworkError>) -> ()){
+        let path = String(format: Constants.redeemRewardPath, rewardID)
+        let parameters = "{\r\n    \"branchId\": \"\(branchID)\"\r\n}"
+        Network.loadJSONFile(fromURL: Constants.endPoint, path: path, parameters: parameters, token: accessToken, method: .POST, type: RedeemRewardResponse.self) { (result) in
+            completionHandler(result)
+        }
+    }
+    
+    static func redeemRewardCodeVerification(accessToken: String, rewardID: String, branchID: String, verificationCode: String, completionHandler: @escaping (Result<RedeemRewardCodeVerificationResponse, NetworkError>) -> ()){
+        let path = String(format: Constants.redeemRewardValidationPath, rewardID)
+        let parameters = "{\r\n    \"branchId\": \"\(branchID)\",\r\n    \"verificationCode\": \(verificationCode)\r\n}"
+        Network.loadJSONFile(fromURL: Constants.endPoint, path: path, parameters: parameters, token: accessToken, method: .POST, type: RedeemRewardCodeVerificationResponse.self) { (result) in
+            completionHandler(result)
+        }
+    }
 }

@@ -12,6 +12,7 @@ class AllRewardsViewController: BaseViewController {
     @IBOutlet weak var navigationBarView: UIView!
     @IBOutlet weak var rewardsNavLabel: UILabel!
     @IBOutlet weak var rewardsCollectionView: UICollectionView!
+    @IBOutlet weak var backButton: UIButton!
     let reuseIdentifier = "RewardCell"
     private let sectionInsets = UIEdgeInsets(
       top: 32,
@@ -32,12 +33,21 @@ class AllRewardsViewController: BaseViewController {
         rewardsNavLabel.text = "rewardsnavtitle.label".localized()
     }
     
+    override func localizeAssets() {
+        backButton.setImage(UIImage(named: "back-arrow-white".localized()), for: .normal)
+    }
+    
     func styleNavigationBar() {
         //        let barHeight = navigationController?.navigationBar.layer.frame.height ?? 0
         //        navBarTopConstraint.constant -= barHeight
                 navigationBarView.addSpecificCornerRadius(forCorners: .Bottom, radius: 20)
     }
     
+    @IBAction func backButtonPressed(_ sender: Any) {
+        if let presenter = presenter as? AllRewardsPresenter {
+            presenter.backButtonPressed()
+        }
+    }
     
 
 

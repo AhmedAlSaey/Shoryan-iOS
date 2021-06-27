@@ -32,6 +32,7 @@ class HomeInteractor: BaseInteractor{
             if case .success(let userDataResponse) = result {
                 AppUser.shared.userID = userDataResponse.user._id
                 AppUser.shared.bloodType = userDataResponse.user.bloodType
+                AppUser.shared.points = userDataResponse.user.points
             }
             completionHandler(result)
         }
@@ -103,6 +104,21 @@ class HomeInteractor: BaseInteractor{
     
     func getDetailedReward(rewardID: String, completionHandler: @escaping (Result<DetailedRewardResponse, NetworkError>) -> ()){
         HomeModuleAPIManager.getDetailedReward(accessToken: AppUser.shared.accessToken!, rewardID: rewardID) { response in
+            completionHandler(response)
+        }
+    }
+    
+    func redeemReward(rewardID: String, branchID: String, completionHandler: @escaping (Result<RedeemRewardResponse, NetworkError>) -> ()){
+        HomeModuleAPIManager.redeemReward(accessToken: AppUser.shared.accessToken!, rewardID: rewardID, branchID: branchID) { response in
+            completionHandler(response)
+        }
+    }
+    
+    func redeemRewardCodeVerification(rewardID: String, branchID: String, code: String, completionHandler: @escaping (Result<RedeemRewardCodeVerificationResponse, NetworkError>) -> ()){
+        HomeModuleAPIManager.redeemRewardCodeVerification(accessToken: AppUser.shared.accessToken!, rewardID: rewardID, branchID: branchID, verificationCode: code) { response in
+            if case .success(let result) = response {
+                AppUser.shared.points = result.user.points
+            }
             completionHandler(response)
         }
     }

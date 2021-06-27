@@ -12,6 +12,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AllRewardsViewController" customModule="Shoryan" customModuleProvider="target">
             <connections>
+                <outlet property="backButton" destination="z9T-Qf-dpa" id="UUm-xy-GNx"/>
                 <outlet property="navigationBarView" destination="T73-SH-Vyl" id="S4d-lO-62c"/>
                 <outlet property="rewardsCollectionView" destination="ECn-sh-t3E" id="IO8-lV-TSE"/>
                 <outlet property="rewardsNavLabel" destination="mkg-jR-eKP" id="xtC-lb-IxI"/>
@@ -32,9 +33,18 @@
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <nil key="highlightedColor"/>
                         </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z9T-Qf-dpa">
+                            <rect key="frame" x="20" y="30.5" width="16" height="22"/>
+                            <state key="normal" image="back-arrow-white_ltr"/>
+                            <connections>
+                                <action selector="backButtonPressed:" destination="-1" eventType="touchUpInside" id="7me-WT-0C0"/>
+                            </connections>
+                        </button>
                     </subviews>
                     <color key="backgroundColor" name="MainRed"/>
                     <constraints>
+                        <constraint firstItem="z9T-Qf-dpa" firstAttribute="leading" secondItem="T73-SH-Vyl" secondAttribute="leading" constant="20" id="Bq9-AZ-vHP"/>
+                        <constraint firstItem="z9T-Qf-dpa" firstAttribute="centerY" secondItem="mkg-jR-eKP" secondAttribute="centerY" id="Olw-mX-l1b"/>
                         <constraint firstItem="mkg-jR-eKP" firstAttribute="centerY" secondItem="T73-SH-Vyl" secondAttribute="centerY" id="ar7-F1-dYX"/>
                         <constraint firstItem="mkg-jR-eKP" firstAttribute="centerX" secondItem="T73-SH-Vyl" secondAttribute="centerX" id="mLg-tZ-UMG"/>
                         <constraint firstAttribute="height" constant="83" id="osX-Bn-m0q"/>
@@ -63,10 +73,11 @@
                 <constraint firstItem="ECn-sh-t3E" firstAttribute="top" secondItem="T73-SH-Vyl" secondAttribute="bottom" id="uno-BS-9t4"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="133" y="80"/>
+            <point key="canvasLocation" x="131.8840579710145" y="79.6875"/>
         </view>
     </objects>
     <resources>
+        <image name="back-arrow-white_ltr" width="16" height="16"/>
         <namedColor name="MainRed">
             <color red="0.6119999885559082" green="0.067000001668930054" blue="0.067000001668930054" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

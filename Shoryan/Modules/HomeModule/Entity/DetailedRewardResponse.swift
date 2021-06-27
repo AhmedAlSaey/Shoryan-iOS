@@ -26,7 +26,7 @@ class DetailedRewardResponseReward: Decodable {
 }
 
 class DetailedRewardResponseStore: Decodable {
-    let branches: DetailedRewardResponseBranch
+    let branches: [DetailedRewardResponseBranch]
     let _id: String
     let name: String
     let cover: String
