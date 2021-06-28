@@ -14,6 +14,11 @@ class NewRequestInteractor {
     
     static let shared = NewRequestInteractor()
     
+    func canUserCreateRequest(completionHandler: @escaping (Result<BloodBanksResponse, NetworkError>) -> ()){
+        NewRequestModuleAPIManager.canUserCreateRequest(accessToken: AppUser.shared.accessToken!) { result in
+            completionHandler(result)
+        }
+    }
     
     
 

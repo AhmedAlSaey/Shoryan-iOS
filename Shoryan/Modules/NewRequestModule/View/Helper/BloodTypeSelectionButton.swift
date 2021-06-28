@@ -14,7 +14,7 @@ class BloodTypeSelectionButton: UIButton {
     override func draw(_ rect: CGRect) {
         if isSelectedBloodType == nil || isSelectedBloodType == false {
             setUnselected()
-
+            isSelectedBloodType = false
         }
         layer.cornerRadius = 15
         clipsToBounds = true
