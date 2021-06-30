@@ -23,4 +23,8 @@ class BasePresenter: NSObject {
     func viewDidLoad(){
         
     }
+    
+    func viewWillAppear() {
+        
+    }
 }

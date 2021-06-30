@@ -28,6 +28,10 @@ class BaseViewController: UIViewController, UIGestureRecognizerDelegate {
         hideKeyboardWhenTappedAround()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        presenter?.viewWillAppear()
+    }
+    
     func localizeStrings() {
         
     }

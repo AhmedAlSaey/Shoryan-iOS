@@ -45,6 +45,8 @@
 "alreadygoingtorequest.alert" = "أنت بالفعل مسجل كمتبرع لهذا الطلب";
 "cantdonatetorequest.alert" = "لا يمكنك التبرع لهذا الطلب";
 "selectbranch.alert" = "الرجاء تحديد الفرع";
+"newrequestsuccess.alert" = "تم تقديم طلب التبرع بالدم الخاص بك";
+"notenoughpoints.alert" = "ليس لديك نقاط كافية لاسترداد هذه المكافأة";
 
 //Main Tabbar
 "home.tabbaritem" = "الصفحة الرئيسية";
@@ -136,3 +138,14 @@
 
 //MyRequestsViewController
 "myrequestsnavtitle.label" = "طلباتى";
+
+//CreateRequestViewController
+"newrequestnavtitle.label" = "طلب جديد";
+"newrequestdisclaimer.label" = "يمكنك طلب دم ۳ مرات فقط خلال اليوم ";
+"bloodtype.label" = "فصيلة الدم";
+"bloodunits.label" = "عدد الوحدات";
+"location.label" = "اختر المكان";
+"governorate.placeholder" = "اختر المحافظة";
+"city.placeholder" = "اختر المنطقة";
+"bloodbank.placeholder" = "اختر بنك الدم";
+"requestblood.button" = "طلب دم";

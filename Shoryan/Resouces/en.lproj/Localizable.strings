@@ -45,6 +45,8 @@
 "alreadygoingtorequest.alert" = "You are already regestered as a donor for this request";
 "cantdonatetorequest.alert" = "You can't donate to this request";
 "selectbranch.alert" = "Please select a branch";
+"newrequestsuccess.alert" = "Your blood donation request has been placed";
+"notenoughpoints.alert" = "You do not have enough points to redeem this reward";
 
 //Main Tabbar
 "home.tabbaritem" = "Home";
@@ -136,3 +138,14 @@
 
 //MyRequestsViewController
 "myrequestsnavtitle.label" = "My Requests";
+
+//CreateRequestViewController
+"newrequestnavtitle.label" = "New Request";
+"newrequestdisclaimer.label" = "You can request blood only 3 times during the day";
+"bloodtype.label" = "Blood Type";
+"bloodunits.label" = "Blood Units";
+"location.label" = "Location";
+"governorate.placeholder" = "Governorate";
+"city.placeholder" = "City";
+"bloodbank.placeholder" = "Blood Banks";
+"requestblood.button" = "Request Blood";

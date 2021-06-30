@@ -12,16 +12,29 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="NewRequestViewController" customModule="Shoryan" customModuleProvider="target">
             <connections>
-                <outlet property="bloodBagsLabel" destination="FTx-ci-zhv" id="1bb-sM-Jpf"/>
+                <outlet property="bloodBagsLabel" destination="FTx-ci-zhv" id="VA1-Il-3ZE"/>
                 <outlet property="bloodBankDropdownImage" destination="CNP-cA-JmB" id="eM8-3A-1Dn"/>
                 <outlet property="bloodBankTextField" destination="w7i-kj-4dl" id="xQ0-Mr-Hfe"/>
                 <outlet property="bloodBankView" destination="2U9-yv-mcp" id="joo-ag-8RV"/>
+                <outlet property="bloodTypeLabel" destination="vWW-5X-ivD" id="vlW-nA-9PW"/>
+                <outlet property="bloodUnitsLabel" destination="nT5-Ql-O8a" id="WXn-2F-oAQ"/>
+                <outlet property="btButton1" destination="1WV-VA-kda" id="ZII-02-ISd"/>
+                <outlet property="btButton2" destination="UPx-1H-puL" id="Khd-nF-YBN"/>
+                <outlet property="btButton3" destination="jbe-AF-Bjq" id="0VW-u9-qIg"/>
+                <outlet property="btButton4" destination="c9s-2x-jgS" id="IV8-Cj-USC"/>
+                <outlet property="btButton5" destination="F2j-vK-QMm" id="fv3-QB-Klo"/>
+                <outlet property="btButton6" destination="zTc-eE-FwO" id="xfB-wI-giC"/>
+                <outlet property="btButton7" destination="ziQ-w2-CQw" id="mOZ-7A-KIT"/>
+                <outlet property="btButton8" destination="BtC-3n-khb" id="S4v-2V-2x8"/>
+                <outlet property="disclaimerLabel" destination="Evs-30-UeK" id="zB2-Aa-YeK"/>
                 <outlet property="governoratesDropdownImage" destination="lNi-cj-eAr" id="bf8-eT-IIR"/>
                 <outlet property="governoratesTextField" destination="Msg-Pg-Bfx" id="b0y-eD-bio"/>
                 <outlet property="governoratesView" destination="rVD-Io-AXX" id="XJf-oD-FXf"/>
+                <outlet property="locationLabel" destination="ggn-YC-f4t" id="Bh9-ro-cus"/>
                 <outlet property="minusButton" destination="AgT-Zg-RiR" id="w9G-az-Chy"/>
                 <outlet property="navBarTopConstraint" destination="1S4-mh-qvy" id="G7v-y6-o46"/>
                 <outlet property="navigationBarView" destination="WCS-nN-HoA" id="nnl-Kj-T4w"/>
+                <outlet property="newRequestNavigationTitle" destination="wUY-ql-iMl" id="Mta-Wg-tF9"/>
                 <outlet property="plusButton" destination="7yu-0q-ZN7" id="yiG-Jp-C0I"/>
                 <outlet property="regionDropdownImage" destination="0c5-gm-8JN" id="g7i-bZ-P2x"/>
                 <outlet property="regionTextField" destination="StV-J9-gAV" id="nh5-xg-3Ri"/>
@@ -41,8 +54,8 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WCS-nN-HoA">
                     <rect key="frame" x="0.0" y="44" width="414" height="83"/>
                     <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="طلب جديد" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wUY-ql-iMl">
-                            <rect key="frame" x="167.5" y="27.5" width="79.5" height="28"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New Request" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wUY-ql-iMl">
+                            <rect key="frame" x="128.5" y="27.5" width="157" height="28"/>
                             <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="25"/>
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <nil key="highlightedColor"/>
@@ -61,26 +74,26 @@
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gGF-kz-9OH">
                             <rect key="frame" x="0.0" y="0.0" width="414" height="868.5"/>
                             <subviews>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="يمكنك طلب دم ۳ مرات فقط خلال اليوم " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Evs-30-UeK">
-                                    <rect key="frame" x="90" y="27" width="234" height="56"/>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You can request blood only 3 times during the day" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Evs-30-UeK">
+                                    <rect key="frame" x="30" y="27" width="354" height="56"/>
                                     <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="25"/>
                                     <color key="textColor" name="MainRed"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="فصيلة الدم" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vWW-5X-ivD">
-                                    <rect key="frame" x="25" y="121" width="75.5" height="25"/>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Blood Type" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vWW-5X-ivD">
+                                    <rect key="frame" x="25" y="121" width="118.5" height="25"/>
                                     <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="22"/>
                                     <color key="textColor" name="MainRed"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="عدد الوحدات" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nT5-Ql-O8a">
-                                    <rect key="frame" x="25" y="324" width="91.5" height="25"/>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Blood Units" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nT5-Ql-O8a">
+                                    <rect key="frame" x="25" y="324" width="123.5" height="25"/>
                                     <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="22"/>
                                     <color key="textColor" name="MainRed"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="اختر المكان" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ggn-YC-f4t">
-                                    <rect key="frame" x="25" y="482" width="82" height="25"/>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ggn-YC-f4t">
+                                    <rect key="frame" x="25" y="482" width="92" height="25"/>
                                     <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="22"/>
                                     <color key="textColor" name="MainRed"/>
                                     <nil key="highlightedColor"/>
@@ -252,7 +265,7 @@
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iconfinder_nav-arrow-right_-15" translatesAutoresizingMaskIntoConstraints="NO" id="lNi-cj-eAr">
                                             <rect key="frame" x="285" y="14" width="13" height="7.5"/>
                                         </imageView>
-                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="اختر المحافظة..." textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Msg-Pg-Bfx">
+                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Governorate" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Msg-Pg-Bfx">
                                             <rect key="frame" x="23" y="8" width="247" height="19.5"/>
                                             <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="16"/>
                                             <textInputTraits key="textInputTraits"/>
@@ -271,7 +284,7 @@
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4EM-2b-emG">
                                     <rect key="frame" x="50" y="605.5" width="314" height="35.5"/>
                                     <subviews>
-                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="اختر المنطقة..." textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="StV-J9-gAV">
+                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="City" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="StV-J9-gAV">
                                             <rect key="frame" x="23" y="8" width="247" height="19.5"/>
                                             <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="16"/>
                                             <textInputTraits key="textInputTraits"/>
@@ -293,7 +306,7 @@
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2U9-yv-mcp">
                                     <rect key="frame" x="50" y="669" width="314" height="35.5"/>
                                     <subviews>
-                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="اختر بنك الدم..." textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="w7i-kj-4dl">
+                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Blood Bank" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="w7i-kj-4dl">
                                             <rect key="frame" x="23" y="8" width="247" height="19.5"/>
                                             <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="16"/>
                                             <textInputTraits key="textInputTraits"/>
@@ -320,9 +333,12 @@
                                         <constraint firstAttribute="height" constant="54" id="Ha8-A2-7wJ"/>
                                     </constraints>
                                     <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="17"/>
-                                    <state key="normal" title="طلب دم">
+                                    <state key="normal" title="Request Blood">
                                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </state>
+                                    <connections>
+                                        <action selector="newRequestButtonClicked:" destination="-1" eventType="touchUpInside" id="gSK-cx-oZZ"/>
+                                    </connections>
                                 </button>
                             </subviews>
                             <constraints>
@@ -333,7 +349,7 @@
                                 <constraint firstItem="zRI-ZA-etf" firstAttribute="top" secondItem="vWW-5X-ivD" secondAttribute="bottom" constant="20" id="9T6-Ef-f4D"/>
                                 <constraint firstItem="rVD-Io-AXX" firstAttribute="leading" secondItem="gGF-kz-9OH" secondAttribute="leading" constant="50" id="Ada-0O-aoe"/>
                                 <constraint firstItem="XeO-tL-MCA" firstAttribute="leading" secondItem="gGF-kz-9OH" secondAttribute="leading" constant="63" id="CXW-OQ-sHc"/>
-                                <constraint firstAttribute="trailing" secondItem="Evs-30-UeK" secondAttribute="trailing" constant="90" id="D6M-ox-GSH"/>
+                                <constraint firstAttribute="trailing" secondItem="Evs-30-UeK" secondAttribute="trailing" constant="30" id="D6M-ox-GSH"/>
                                 <constraint firstAttribute="trailing" secondItem="XeO-tL-MCA" secondAttribute="trailing" constant="63" id="Gth-5o-FAI"/>
                                 <constraint firstAttribute="trailing" secondItem="zRI-ZA-etf" secondAttribute="trailing" constant="63" id="KNQ-ai-lRb"/>
                                 <constraint firstItem="vWW-5X-ivD" firstAttribute="top" secondItem="Evs-30-UeK" secondAttribute="bottom" constant="38" id="NNt-5a-Z8a"/>
@@ -352,7 +368,7 @@
                                 <constraint firstAttribute="trailing" secondItem="rVD-Io-AXX" secondAttribute="trailing" constant="50" id="uYJ-qV-Fkq"/>
                                 <constraint firstItem="4EM-2b-emG" firstAttribute="leading" secondItem="rVD-Io-AXX" secondAttribute="leading" id="x7a-Ka-6lg"/>
                                 <constraint firstItem="nT5-Ql-O8a" firstAttribute="top" secondItem="zRI-ZA-etf" secondAttribute="bottom" constant="42" id="zMJ-Td-jlo"/>
-                                <constraint firstItem="Evs-30-UeK" firstAttribute="leading" secondItem="gGF-kz-9OH" secondAttribute="leading" constant="90" id="zmk-AI-2LG"/>
+                                <constraint firstItem="Evs-30-UeK" firstAttribute="leading" secondItem="gGF-kz-9OH" secondAttribute="leading" constant="30" id="zmk-AI-2LG"/>
                             </constraints>
                         </view>
                     </subviews>

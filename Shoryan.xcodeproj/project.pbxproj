@@ -11,6 +11,7 @@
 		B1087F9E2607A42100158209 /* RequestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1087F9C2607A42100158209 /* RequestViewController.swift */; };
 		B1087F9F2607A42100158209 /* RequestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B1087F9D2607A42100158209 /* RequestViewController.xib */; };
 		B1087FA22607D77600158209 /* DetailedRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1087FA12607D77600158209 /* DetailedRequest.swift */; };
+		B10B2B5D268BFC50002337BC /* CreateRequestResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10B2B5C268BFC50002337BC /* CreateRequestResponse.swift */; };
 		B114ADD0259AF0890052C89D /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = B114ADCF259AF0890052C89D /* String.swift */; };
 		B114ADDB259AFF4E0052C89D /* UnderlinedUITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = B114ADDA259AFF4E0052C89D /* UnderlinedUITextField.swift */; };
 		B114ADE0259C20880052C89D /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B114ADDE259C20880052C89D /* SignUpViewController.swift */; };
@@ -146,6 +147,7 @@
 		B1087F9C2607A42100158209 /* RequestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestViewController.swift; sourceTree = "<group>"; };
 		B1087F9D2607A42100158209 /* RequestViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RequestViewController.xib; sourceTree = "<group>"; };
 		B1087FA12607D77600158209 /* DetailedRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedRequest.swift; sourceTree = "<group>"; };
+		B10B2B5C268BFC50002337BC /* CreateRequestResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateRequestResponse.swift; sourceTree = "<group>"; };
 		B114ADCF259AF0890052C89D /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		B114ADDA259AFF4E0052C89D /* UnderlinedUITextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnderlinedUITextField.swift; sourceTree = "<group>"; };
 		B114ADDE259C20880052C89D /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
@@ -725,6 +727,7 @@
 			children = (
 				B175868A268A0FEA0030DA05 /* BloodBanksManager.swift */,
 				B175868C268A100D0030DA05 /* BloodBanksResponse.swift */,
+				B10B2B5C268BFC50002337BC /* CreateRequestResponse.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -1089,6 +1092,7 @@
 				B176F35E2687E563007B3D78 /* SuccessRedeemPresenter.swift in Sources */,
 				B1C22F6225E6F507002EECD9 /* BloodTypeTextField.swift in Sources */,
 				B13453E52606F93800EF3319 /* AllRequestsResponse.swift in Sources */,
+				B10B2B5D268BFC50002337BC /* CreateRequestResponse.swift in Sources */,
 				B1C22F6525E6F515002EECD9 /* GenderTextField.swift in Sources */,
 				B166B10025982AB600AD6FD6 /* BasePresenter.swift in Sources */,
 				B1CDAE82268739730019D7E3 /* RewardCollectionViewCell.swift in Sources */,

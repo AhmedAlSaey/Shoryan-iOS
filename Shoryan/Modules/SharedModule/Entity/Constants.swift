@@ -42,6 +42,7 @@ class Constants {
     static let redeemRewardValidationPath = "/api/rewards/%@/redeemRewardCodeVerification" //Reward ID
     static let myRequestsPath = "/api/users/active-requests"
     static let canUserCreateDonationPath = "/api/requests/request-creation-details"
+    static let createNewRequestPath = "/api/requests/request-creation"
     
     static let userIDKey = "USER_ID"
     static let accessTokenKey = "ACCESS_TOKEN"

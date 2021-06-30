@@ -33,6 +33,8 @@ class NetworkError : BaseError {
             return PhoneNumberRequiredError()
         case "ACCOUNT_NOT_VERIFIED":
             return AccountNotVerifiedError()
+        case "NO_ENOUGH_POINTS":
+            return NotEnoughPointsError()
         default:
             return UnknownNetworkError()
         }
@@ -144,6 +146,13 @@ class AccountNotVerifiedError : NetworkError {
     }
 }
 
+class NotEnoughPointsError : NetworkError {
+    override init() {
+        super.init()
+        message = "notenoughpoints.alert".localized()
+    }
+}
+
 class InvalidPathError : NetworkError {
     override init() {
         super.init()
@@ -171,3 +180,4 @@ class NoInternetConnectionError : NetworkError {
         message = "Your internet connection is offline, please make sure you are connected to the internet"
     }
 }
+

@@ -7,20 +7,34 @@
 
 import UIKit
 
-class NewRequestViewController: BaseViewController, UIPickerViewDelegate, UIPickerViewDataSource {
+class NewRequestViewController: BaseViewController {
     
 
+    @IBOutlet weak var newRequestNavigationTitle: UILabel!
     @IBOutlet weak var navBarTopConstraint: NSLayoutConstraint!
     @IBOutlet weak var navigationBarView: UIView!
+    
+    
+    @IBOutlet weak var disclaimerLabel: UILabel!
+    @IBOutlet weak var bloodTypeLabel: UILabel!
+    @IBOutlet weak var btButton1: BloodTypeSelectionButton!
+    @IBOutlet weak var btButton2: BloodTypeSelectionButton!
+    @IBOutlet weak var btButton3: BloodTypeSelectionButton!
+    @IBOutlet weak var btButton4: BloodTypeSelectionButton!
+    @IBOutlet weak var btButton5: BloodTypeSelectionButton!
+    @IBOutlet weak var btButton6: BloodTypeSelectionButton!
+    @IBOutlet weak var btButton7: BloodTypeSelectionButton!
+    @IBOutlet weak var btButton8: BloodTypeSelectionButton!
+    
+    @IBOutlet weak var bloodBagsLabel: UILabel!
+    @IBOutlet weak var bloodUnitsLabel: UILabel!
     @IBOutlet weak var plusButton: UIButton!
     @IBOutlet weak var minusButton: UIButton!
     
+    @IBOutlet weak var locationLabel: UILabel!
     @IBOutlet weak var stateTextField: UITextField!
     @IBOutlet weak var stateDropdownImage: UIImageView!
     @IBOutlet weak var stateView: UIView!
-    @IBOutlet weak var bloodBagsLabel: UILabel!
-    
-    
     @IBOutlet weak var governoratesTextField: UITextField!
     @IBOutlet weak var governoratesDropdownImage: UIImageView!
     @IBOutlet weak var governoratesView: UIView!
@@ -51,7 +65,7 @@ class NewRequestViewController: BaseViewController, UIPickerViewDelegate, UIPick
             }
         }
     }
-    var bloodBanks: [String]? {
+    var bloodBanks: [(String, String)]? {
         didSet {
             if isViewLoaded {
                 bloodBankPickerView.reloadAllComponents()
@@ -66,6 +80,18 @@ class NewRequestViewController: BaseViewController, UIPickerViewDelegate, UIPick
         styleNavigationBar()
         styleButtons()
         setupLocationInputViews()
+    }
+    
+    override func localizeStrings() {
+        newRequestNavigationTitle?.text = "newrequestnavtitle.label".localized()
+        disclaimerLabel.text = "newrequestdisclaimer.label".localized()
+        bloodTypeLabel.text = "bloodtype.label".localized()
+        bloodUnitsLabel.text = "bloodunits.label".localized()
+        locationLabel.text = "location.label".localized()
+        governoratesTextField.placeholder = "governorate.placeholder".localized()
+        regionTextField.placeholder = "city.placeholder".localized()
+        bloodBankTextField.placeholder = "bloodbank.placeholder" .localized()
+        requestButton.setTitle("requestblood.button".localized(), for: .normal)
     }
 
     func styleNavigationBar() {
@@ -157,6 +183,21 @@ class NewRequestViewController: BaseViewController, UIPickerViewDelegate, UIPick
         }
     }
     
+    @IBAction func newRequestButtonClicked(_ sender: Any) {
+        if let presenter = presenter as? NewRequestPresenter {
+            let bloodBankID = bloodBanks?[bloodBankPickerView.selectedRow(inComponent: 0)].1 ??  ""
+            let bloodType = currentlySelectedBloodTypeButton?.titleLabel?.text ?? ""
+            let bloodBagsCount = Int(bloodBagsLabel.text ?? "0") ?? 0
+            presenter.newRequestButtonClicked(withBloodType: bloodType, bagsCount: bloodBagsCount, bloodBankID: bloodBankID)
+        }
+        
+    }
+    
+    
+
+}
+
+extension NewRequestViewController: UIPickerViewDelegate, UIPickerViewDataSource {
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         1
     }
@@ -184,7 +225,7 @@ class NewRequestViewController: BaseViewController, UIPickerViewDelegate, UIPick
             regionTextField.text = regions![row]
         }
         else if pickerView.tag == 3 {
-            bloodBankTextField.text = bloodBanks![row]
+            bloodBankTextField.text = bloodBanks![row].0
         }
         else {
             fatalError("Unexpected sender")
@@ -198,15 +239,12 @@ class NewRequestViewController: BaseViewController, UIPickerViewDelegate, UIPick
             return regions![row]
         }
         else if pickerView.tag == 3 {
-            return bloodBanks![row]
+            return bloodBanks![row].0
         }
         else {
             fatalError("Unexpected sender")
         }
     }
-    
-    
-
 }
 
 extension NewRequestViewController: UITextFieldDelegate {
@@ -222,6 +260,22 @@ extension NewRequestViewController: UITextFieldDelegate {
                 guard let presenter = presenter as? NewRequestPresenter else {fatalError()}
                 presenter.regionLocationChanged(change: regionTextField.text!)
             }
+        default:
+            break;
+        }
+    }
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        switch textField.tag {
+        case 1:
+            governoratesTextField.text = ""
+            governoratesTextField.insertText( governorates![governoratePickView.selectedRow(inComponent: 0)])
+        case 2:
+            regionTextField.text = ""
+            regionTextField.insertText(regions![regionPickerView.selectedRow(inComponent: 0)])
+        case 3:
+            bloodBankTextField.text = ""
+            bloodBankTextField.insertText( bloodBanks![bloodBankPickerView.selectedRow(inComponent: 0)].0)
         default:
             break;
         }

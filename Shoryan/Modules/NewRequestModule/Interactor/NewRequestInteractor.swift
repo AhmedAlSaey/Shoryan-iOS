@@ -20,6 +20,12 @@ class NewRequestInteractor {
         }
     }
     
+    func createNewRequest(bloodType: String, numberOfBagsRequired: Int, donationLocation: String, completionHandler: @escaping (Result<CreateRequestResponse, NetworkError>) -> ()) {
+        NewRequestModuleAPIManager.createNewrequest(accessToken: AppUser.shared.accessToken!, bloodType: bloodType, numberOfBagsRequired: numberOfBagsRequired, donationLocation: donationLocation) { result in
+            completionHandler(result)
+        }
+    }
+    
     
 
 }
