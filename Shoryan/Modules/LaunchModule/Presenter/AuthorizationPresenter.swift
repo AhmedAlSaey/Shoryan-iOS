@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import Localize_Swift
 
 class AuthorizationPresenter: BasePresenter {
     override func viewDidLoad() {
@@ -16,5 +17,10 @@ class AuthorizationPresenter: BasePresenter {
     }
     func signUpButtonClicked(){
         LaunchRouter.shared.pushSignUp()
+    }
+    
+    func languageButtonClicked() {
+        guard let view = view as? AuthorizationViewController else {return}
+        LaunchRouter.shared.presentLanguageSelectionScreen(onTopOf: view)
     }
 }

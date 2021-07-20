@@ -40,7 +40,7 @@ class HomeModuleAPIManager {
         
     }
     
-    static func getRewards(accessToken: String, completionHandler: @escaping (Result<AllRewardsResponse, NetworkError>) -> ()){
+    static func getAllRewards(accessToken: String, completionHandler: @escaping (Result<AllRewardsResponse, NetworkError>) -> ()){
         
         Network.loadJSONFile(fromURL: Constants.endPoint, path: Constants.allRewardsPath, token: accessToken, method: .GET, type: AllRewardsResponse.self) { (result) in
             completionHandler(result)

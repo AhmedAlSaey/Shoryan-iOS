@@ -33,6 +33,9 @@ class HomeInteractor: BaseInteractor{
                 AppUser.shared.userID = userDataResponse.user._id
                 AppUser.shared.bloodType = userDataResponse.user.bloodType
                 AppUser.shared.points = userDataResponse.user.points
+                AppUser.shared.donations = userDataResponse.user.numberOfDonations
+                AppUser.shared.firstName = userDataResponse.user.name.firstName
+                AppUser.shared.lastName = userDataResponse.user.name.lastName
             }
             completionHandler(result)
         }
@@ -93,7 +96,7 @@ class HomeInteractor: BaseInteractor{
     }
     
     func getAllRewards(completionHandler: @escaping (Result<[SimpleReward], NetworkError>) -> ()){
-        HomeModuleAPIManager.getRewards(accessToken: AppUser.shared.accessToken!) { result in
+        HomeModuleAPIManager.getAllRewards(accessToken: AppUser.shared.accessToken!) { result in
             completionHandler(result.map { response in
                 response.rewards.map { reward in
                     SimpleReward(imageURL: reward.store.logo, pointCost: reward.requiredPoints, id: reward._id)
@@ -171,6 +174,7 @@ class HomeInteractor: BaseInteractor{
         guard let comaptibleArray = bloodTypeDonorDoneeCompatibility[donor] else {fatalError()}
         return comaptibleArray.contains(donee)
     }
+    
     
     
     

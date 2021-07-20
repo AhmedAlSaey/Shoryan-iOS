@@ -12,8 +12,14 @@ class GetUserDataResponse: Decodable {
 }
 
 class GetUserDataResponseUser: Decodable {
+    var name: GetUserDataResponseName
     var _id: String
     var bloodType: String
     var points: Int
     var numberOfDonations: Int
+}
+
+class GetUserDataResponseName: Decodable {
+    var firstName: String
+    var lastName: String
 }

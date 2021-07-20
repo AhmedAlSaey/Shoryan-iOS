@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import Localize_Swift
 
 class LaunchRouter: BaseRouter, UITabBarControllerDelegate {
     
@@ -94,6 +95,18 @@ class LaunchRouter: BaseRouter, UITabBarControllerDelegate {
         return viewController
     }
     
+    func createLanguageSelection() -> UIViewController {
+        let viewController = LanguagePickerViewController()
+        return viewController
+    }
+    
+    func presentLanguageSelectionScreen(onTopOf view: UIViewController){
+        let vc = createLanguageSelection()
+        vc.modalPresentationStyle = .overCurrentContext
+        vc.modalTransitionStyle = .crossDissolve
+        view.present(vc, animated: true, completion: nil)
+    }
+    
     
     func launchAuthorizationPage() {
         let nc = embedInNavigationController(viewController: createAuthorization())
@@ -148,7 +161,18 @@ class LaunchRouter: BaseRouter, UITabBarControllerDelegate {
         navigationController?.popViewController(animated: true)
     }
     
-    func launchStartScreen() {
+    @objc func launchStartScreen() {
+        // TODO: - Make sure this function is not called before auth token is initialized by other methods. AppUser should not be called here
+        if AppUser.shared.accessToken != nil {
+            tabBarController = MainTabBarViewController()
+            tabBarController!.delegate = self
+            initializeTabbarItems()
+            NotificationCenter.default.addObserver(self, selector: #selector(launchStartScreen), name: NSNotification.Name(LCLLanguageChangeNotification), object: nil)
+            initializeWindowWithNavigationControllerAnimation(rootViewController: tabBarController!)
+        }
+    }
+    
+    @objc func initializeTabbarItems() {
         
         let homeViewController = HomeRouter.shared.createHomePageEmbeddedInViewController()
         let newRequestViewController = NewRequestRouter.shared.createNewRequestEmbeddedInViewController()
@@ -160,8 +184,6 @@ class LaunchRouter: BaseRouter, UITabBarControllerDelegate {
         let notificationsTabVC = createViewControllerTab(viewController: notificationsVewController, title: "notifications.tabbaritem".localized(), image: "Notification", selectedImage: "Notification-1")
         let profileTabVC = createViewControllerTab(viewController: profileViewController, title: "profile.tabbaritem".localized(), image: "user", selectedImage: "user-4")
         
-        tabBarController = MainTabBarViewController()
-        tabBarController!.delegate = self
         tabBarController!.viewControllers = [
             homeTabVC,
             newRequestTabVC,
@@ -169,9 +191,9 @@ class LaunchRouter: BaseRouter, UITabBarControllerDelegate {
             profileTabVC
         ]
         
-        
-        initializeWindowWithNavigationControllerAnimation(rootViewController: tabBarController!)
-        
+        tabBarController!.view.semanticContentAttribute = .forceLeftToRight
+        tabBarController!.view.setNeedsLayout()
+        tabBarController!.view.layoutIfNeeded()
         
     }
     

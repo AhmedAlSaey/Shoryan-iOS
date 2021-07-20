@@ -17,7 +17,7 @@ extension Optional where Wrapped == String {
 
 extension String {
     public var localizeDigits: String {
-        let langStr = Locale.current.languageCode
+        let langStr = "language-code".localized()
         if langStr == "ar" {
             return enToArDigits
         }

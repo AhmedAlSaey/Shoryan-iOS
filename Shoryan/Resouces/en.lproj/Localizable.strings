@@ -10,8 +10,9 @@
 "logo-picture" = "logo-picture_en";
 "back-button" = "back-button_ltr";
 "logo-shadowed" = "logo-shadowed_en";
-"simple-request-nav-arrow" = "simple-request-nav-arrow_ltr";
+"nav-arrow" = "nav-arrow_ltr";
 "back-arrow-white" = "back-arrow-white_ltr";
+"language-icon" = "language-icon_en";
 
 //General
 "Continue" = "Continue";
@@ -25,7 +26,11 @@
 "Urgent" = "Urgent";
 "Done" = "Done";
 "Points" = "Points";
+"Donations" = "Donations";
 "Close" = "Close";
+"Hello" = "Hello";
+"language-code" = "eg";
+"language-name" = "English";
 
 //Alerts/Error messages
 "incorrectphonenumber.alert" = "Please make sure you entered a correct phone number";
@@ -149,3 +154,13 @@
 "city.placeholder" = "City";
 "bloodbank.placeholder" = "Blood Banks";
 "requestblood.button" = "Request Blood";
+
+//LanguagePickerViewController
+"language.label" = "Language";
+"changelanguage.button" = "Change Language";
+
+//ProfileViewController
+"accountinfo.label" = "Account Info";
+"changepassword.label" = "Change Password";
+"language.label" = "Language";
+"logout.button" = "Log Out";

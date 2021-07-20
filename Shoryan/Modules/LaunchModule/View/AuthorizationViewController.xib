@@ -12,6 +12,9 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AuthorizationViewController" customModule="Shoryan" customModuleProvider="target">
             <connections>
+                <outlet property="languageImageView" destination="5it-cv-vhL" id="ks1-as-pWs"/>
+                <outlet property="languageText" destination="IPk-jN-fA4" id="Dof-Ag-rEq"/>
+                <outlet property="languageView" destination="6Ut-TC-fsD" id="MAD-Qb-nNv"/>
                 <outlet property="logInButton" destination="lvI-eY-Ufj" id="ASB-64-jhP"/>
                 <outlet property="logoImage" destination="BtS-cF-dWU" id="F2E-Wv-h5D"/>
                 <outlet property="signUpButton" destination="9aW-BM-tMG" id="Bon-wX-L6C"/>
@@ -55,6 +58,33 @@
                         <action selector="didClickLogInButton:" destination="-1" eventType="touchUpInside" id="FaB-Tg-rjQ"/>
                     </connections>
                 </button>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Ut-TC-fsD">
+                    <rect key="frame" x="292.5" y="30" width="94.5" height="40"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="eg-icon" translatesAutoresizingMaskIntoConstraints="NO" id="5it-cv-vhL">
+                            <rect key="frame" x="57.5" y="6.5" width="27" height="27"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="27" id="5WE-ce-wJ0"/>
+                                <constraint firstAttribute="height" constant="27" id="g5z-YV-iaa"/>
+                            </constraints>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AR" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IPk-jN-fA4">
+                            <rect key="frame" x="15" y="9.5" width="27.5" height="21.5"/>
+                            <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="19"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="5it-cv-vhL" firstAttribute="leading" secondItem="IPk-jN-fA4" secondAttribute="trailing" constant="15" id="2DB-Ls-A4G"/>
+                        <constraint firstAttribute="height" constant="40" id="3ur-5W-ij4"/>
+                        <constraint firstItem="IPk-jN-fA4" firstAttribute="leading" secondItem="6Ut-TC-fsD" secondAttribute="leading" constant="15" id="JNw-jL-hV3"/>
+                        <constraint firstItem="IPk-jN-fA4" firstAttribute="centerY" secondItem="6Ut-TC-fsD" secondAttribute="centerY" id="XRE-JZ-gh1"/>
+                        <constraint firstAttribute="trailing" secondItem="5it-cv-vhL" secondAttribute="trailing" constant="10" id="s45-GE-aPe"/>
+                        <constraint firstItem="5it-cv-vhL" firstAttribute="centerY" secondItem="6Ut-TC-fsD" secondAttribute="centerY" id="sJA-ni-34c"/>
+                    </constraints>
+                </view>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9aW-BM-tMG">
                     <rect key="frame" x="25" y="759" width="364" height="58"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -73,6 +103,7 @@
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="6Ut-TC-fsD" secondAttribute="trailing" constant="27" id="2MF-eN-je4"/>
                 <constraint firstAttribute="trailing" secondItem="4yd-bb-lml" secondAttribute="trailing" id="52Q-iI-U7e"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="9aW-BM-tMG" secondAttribute="bottom" constant="45" id="8LX-Ei-SOm"/>
                 <constraint firstAttribute="bottom" secondItem="4yd-bb-lml" secondAttribute="bottom" id="Ekq-lw-eV7"/>
@@ -86,6 +117,7 @@
                 <constraint firstItem="hSs-tD-5Vq" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="pob-wq-0en"/>
                 <constraint firstItem="4yd-bb-lml" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="u0L-NX-Jwb"/>
                 <constraint firstItem="lvI-eY-Ufj" firstAttribute="top" secondItem="hSs-tD-5Vq" secondAttribute="bottom" id="u8J-vn-00U"/>
+                <constraint firstItem="6Ut-TC-fsD" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="30" id="uMi-8O-BKP"/>
                 <constraint firstItem="hSs-tD-5Vq" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="uRG-lp-BcL"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
@@ -93,6 +125,7 @@
         </view>
     </objects>
     <resources>
+        <image name="eg-icon" width="27" height="27"/>
         <image name="logo-picture_en" width="276" height="276"/>
         <image name="red-oval" width="414" height="252"/>
         <namedColor name="MainRed">

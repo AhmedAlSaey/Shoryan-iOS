@@ -17,7 +17,7 @@ class Constants {
     static var endPoint : String {
         switch appState {
         case .production:
-            return "https://pacific-springs-77989.herokuapp.com"
+            return "https://shoryan.herokuapp.com"
         default:
             fatalError("Undefined endpoint")
         }
@@ -49,5 +49,8 @@ class Constants {
     static let pendingRequestIDKey = "PENDING_REQUEST"
     static let bloodTypeKey = "BLOOD_TYPE"
     static let pointsKey = "POINTS"
+    static let donationsKey = "DONATIONS"
+    static let firstNameKey = "FIRST_NAME"
+    static let lastNameKey = "LAST_NAME"
 
 }

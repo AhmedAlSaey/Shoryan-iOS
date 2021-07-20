@@ -58,6 +58,8 @@
 		B166B1392598386900AD6FD6 /* LogInViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B166B1372598386900AD6FD6 /* LogInViewController.xib */; };
 		B166B13E2598415200AD6FD6 /* LogInPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B166B13D2598415200AD6FD6 /* LogInPresenter.swift */; };
 		B1717B162607F0530045B67B /* SharedModuleAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1717B152607F0530045B67B /* SharedModuleAPIManager.swift */; };
+		B17408F226A6F006001C742D /* LanguagePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B17408F026A6F006001C742D /* LanguagePickerViewController.swift */; };
+		B17408F326A6F006001C742D /* LanguagePickerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B17408F126A6F006001C742D /* LanguagePickerViewController.xib */; };
 		B175868B268A0FEA0030DA05 /* BloodBanksManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B175868A268A0FEA0030DA05 /* BloodBanksManager.swift */; };
 		B175868D268A100D0030DA05 /* BloodBanksResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B175868C268A100D0030DA05 /* BloodBanksResponse.swift */; };
 		B1758690268A16C30030DA05 /* NewRequestModuleAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B175868F268A16C30030DA05 /* NewRequestModuleAPIManager.swift */; };
@@ -196,6 +198,8 @@
 		B166B1372598386900AD6FD6 /* LogInViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LogInViewController.xib; sourceTree = "<group>"; };
 		B166B13D2598415200AD6FD6 /* LogInPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInPresenter.swift; sourceTree = "<group>"; };
 		B1717B152607F0530045B67B /* SharedModuleAPIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedModuleAPIManager.swift; sourceTree = "<group>"; };
+		B17408F026A6F006001C742D /* LanguagePickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguagePickerViewController.swift; sourceTree = "<group>"; };
+		B17408F126A6F006001C742D /* LanguagePickerViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LanguagePickerViewController.xib; sourceTree = "<group>"; };
 		B175868A268A0FEA0030DA05 /* BloodBanksManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BloodBanksManager.swift; sourceTree = "<group>"; };
 		B175868C268A100D0030DA05 /* BloodBanksResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BloodBanksResponse.swift; sourceTree = "<group>"; };
 		B175868F268A16C30030DA05 /* NewRequestModuleAPIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewRequestModuleAPIManager.swift; sourceTree = "<group>"; };
@@ -894,6 +898,8 @@
 				B1C22F7925E70C4A002EECD9 /* MapSelectorViewController.xib */,
 				B1087F9C2607A42100158209 /* RequestViewController.swift */,
 				B1087F9D2607A42100158209 /* RequestViewController.xib */,
+				B17408F026A6F006001C742D /* LanguagePickerViewController.swift */,
+				B17408F126A6F006001C742D /* LanguagePickerViewController.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1014,6 +1020,7 @@
 				B114ADE1259C20880052C89D /* SignUpViewController.xib in Resources */,
 				B1A471D5259DBE92006152C1 /* NotificationsViewController.xib in Resources */,
 				B176F35C2687D9D6007B3D78 /* SuccessRedeemViewController.xib in Resources */,
+				B17408F326A6F006001C742D /* LanguagePickerViewController.xib in Resources */,
 				B1A471A7259D95E4006152C1 /* RequestBasicTableViewCell.xib in Resources */,
 				B163D1CF259D73160005C731 /* HomeViewController.xib in Resources */,
 				B1FD6CCC2681EB4800C8E3E2 /* LaunchScreenViewController.xib in Resources */,
@@ -1092,6 +1099,7 @@
 				B176F35E2687E563007B3D78 /* SuccessRedeemPresenter.swift in Sources */,
 				B1C22F6225E6F507002EECD9 /* BloodTypeTextField.swift in Sources */,
 				B13453E52606F93800EF3319 /* AllRequestsResponse.swift in Sources */,
+				B17408F226A6F006001C742D /* LanguagePickerViewController.swift in Sources */,
 				B10B2B5D268BFC50002337BC /* CreateRequestResponse.swift in Sources */,
 				B1C22F6525E6F515002EECD9 /* GenderTextField.swift in Sources */,
 				B166B10025982AB600AD6FD6 /* BasePresenter.swift in Sources */,

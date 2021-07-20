@@ -65,7 +65,7 @@ class RequestBasicTableViewCell: UITableViewCell {
     }
     
     func localizeAssets() {
-        navigationArrowImageView.image = UIImage(named: "simple-request-nav-arrow".localized())
+        navigationArrowImageView.image = UIImage(named: "nav-arrow".localized())
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

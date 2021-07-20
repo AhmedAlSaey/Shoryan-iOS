@@ -26,6 +26,7 @@ class BaseViewController: UIViewController, UIGestureRecognizerDelegate {
          self.navigationController?.navigationBar.topItem?.backBarButtonItem = backButton
         makeNavigationBarTransparent()
         hideKeyboardWhenTappedAround()
+        NotificationCenter.default.addObserver(self, selector: #selector(localize), name: NSNotification.Name(LCLLanguageChangeNotification), object: nil)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -42,6 +43,32 @@ class BaseViewController: UIViewController, UIGestureRecognizerDelegate {
     
     func localizationSettings() {
         
+    }
+    
+    @objc func localize() {
+        localizeStrings()
+        localizeAssets()
+        localizationSettings()
+        let langStr = "language-code".localized()
+        // TODO: - Move this to a separate class
+        if langStr == "ar" {
+            self.view.semanticContentAttribute = .forceRightToLeft
+            UIView.appearance().semanticContentAttribute = .forceRightToLeft
+            navigationController?.view.semanticContentAttribute = .forceRightToLeft
+            navigationController?.navigationBar.semanticContentAttribute = .forceRightToLeft
+        } else {
+            self.view.semanticContentAttribute = .forceLeftToRight
+            UIView.appearance().semanticContentAttribute = .forceLeftToRight
+            navigationController?.view.semanticContentAttribute = .forceLeftToRight
+            navigationController?.navigationBar.semanticContentAttribute = .forceLeftToRight
+        }
+        
+    }
+    func getPreferredLocale() -> Locale {
+        guard let preferredIdentifier = Locale.preferredLanguages.first else {
+            return Locale.current
+        }
+        return Locale(identifier: preferredIdentifier)
     }
 
     func makeNavigationBarTransparent () {

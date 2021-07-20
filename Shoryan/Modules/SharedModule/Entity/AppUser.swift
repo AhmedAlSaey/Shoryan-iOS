@@ -53,6 +53,33 @@ class AppUser {
             UserDefaults.standard.set(newValue, forKey: Constants.pointsKey)
         }
     }
+    
+    var donations: Int? {
+        get {
+            return UserDefaults.standard.integer(forKey: Constants.donationsKey)
+        }
+        set {
+            UserDefaults.standard.set(newValue, forKey: Constants.donationsKey)
+        }
+    }
+    
+    var firstName: String? {
+        get {
+            return UserDefaults.standard.string(forKey: Constants.firstNameKey)
+        }
+        set {
+            UserDefaults.standard.set(newValue, forKey: Constants.firstNameKey)
+        }
+    }
+    
+    var lastName: String? {
+        get {
+            return UserDefaults.standard.string(forKey: Constants.lastNameKey)
+        }
+        set {
+            UserDefaults.standard.set(newValue, forKey: Constants.lastNameKey)
+        }
+    }
 
     func isUserAuthenticated() -> Bool {
         return accessToken != nil
@@ -71,8 +98,14 @@ class AppUser {
     }
     
     func clearUserData() {
-        accessToken = nil
         userID = nil
+        accessToken = nil
+        pendingRequestID = nil
+        bloodType = nil
+        points = nil
+        donations = nil
+        firstName = nil
+        lastName = nil
     }
     
 }

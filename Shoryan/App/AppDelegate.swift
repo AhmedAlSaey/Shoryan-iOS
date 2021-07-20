@@ -9,6 +9,7 @@ import UIKit
 import IQKeyboardManager
 import GooglePlaces
 import GoogleMaps
+import Localize_Swift
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -20,9 +21,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         GMSPlacesClient.provideAPIKey("AIzaSyBdof_5MRwUAFSOI0KkO5BMhDvtWC5qiyQ")
         GMSServices.provideAPIKey("AIzaSyBdof_5MRwUAFSOI0KkO5BMhDvtWC5qiyQ")
         IQKeyboardManager.shared().isEnabled = true
+        let getlan = Localize.currentLanguage()
+        if getlan == "en" {
+            //English
+            UIView.appearance().semanticContentAttribute = .forceLeftToRight
+        }
+        else {
+            //Arabic
+            UIView.appearance().semanticContentAttribute = .forceRightToLeft
+        }
+        
         return true
+    
     }
-
     // MARK: UISceneSession Lifecycle
 
     func application(_ application: UIApplication, configurationForConnecting connectingSceneSession: UISceneSession, options: UIScene.ConnectionOptions) -> UISceneConfiguration {

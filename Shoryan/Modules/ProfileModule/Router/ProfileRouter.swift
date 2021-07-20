@@ -33,4 +33,20 @@ class ProfileRouter: BaseRouter {
         return nc
     }
     
+    func createLanguageSelection() -> UIViewController {
+        let viewController = LanguagePickerViewController()
+        return viewController
+    }
+    
+    func launchAuthorizationPage() {
+        LaunchRouter.shared.launchAuthorizationPage()
+    }
+    
+    func presentLanguageSelectionScreen(onTopOf view: UIViewController){
+        let vc = createLanguageSelection()
+        vc.modalPresentationStyle = .overCurrentContext
+        vc.modalTransitionStyle = .crossDissolve
+        view.present(vc, animated: true, completion: nil)
+    }
+    
 }

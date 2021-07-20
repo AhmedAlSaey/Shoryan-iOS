@@ -10,6 +10,18 @@ import Foundation
 class ProfilePresenter: BasePresenter {
 
     override func viewDidLoad() {
-        
+        guard let view  = view as? ProfileViewController else {fatalError()}
+        view.pointsCountLabel.text = ProfileInteractor.shared.getUserPoints()
+        view.donationsCountLabel.text = ProfileInteractor.shared.getUserDonation()
+    }
+    
+    func languageButtonClicked() {
+        guard let view = view as? ProfileViewController else {return}
+        ProfileRouter.shared.presentLanguageSelectionScreen(onTopOf: view)
+    }
+    
+    func logoutButtonClicked(){
+        ProfileInteractor.shared.clearUserData()
+        ProfileRouter.shared.launchAuthorizationPage()
     }
 }

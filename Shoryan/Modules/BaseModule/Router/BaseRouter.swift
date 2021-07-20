@@ -42,7 +42,8 @@ class BaseRouter: NSObject {
         transition.duration = 0.5
         transition.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeInEaseOut)
         transition.type = .push
-        if UIApplication.shared.userInterfaceLayoutDirection == .rightToLeft {
+        // Usually UIApplication.shared.userInterfaceLayoutDirection is used, but it is incorrect
+        if UIView.appearance().semanticContentAttribute == .forceRightToLeft {
             transition.subtype = .fromLeft
         } else {
             transition.subtype = .fromRight
