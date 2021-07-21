@@ -43,6 +43,7 @@ class Constants {
     static let myRequestsPath = "/api/users/active-requests"
     static let canUserCreateDonationPath = "/api/requests/request-creation-details"
     static let createNewRequestPath = "/api/requests/request-creation"
+    static let editAccountInfoPath = "/api/users/profile"
     
     static let userIDKey = "USER_ID"
     static let accessTokenKey = "ACCESS_TOKEN"
@@ -52,5 +53,12 @@ class Constants {
     static let donationsKey = "DONATIONS"
     static let firstNameKey = "FIRST_NAME"
     static let lastNameKey = "LAST_NAME"
-
+    static let birthDayKey = "BIRTH_DAY"
+    static let birthMonthKey = "BIRTH_MONTH"
+    static let birthYearKey = "BIRTH_YEAR"
+    static let governorateKey = "GOVERNANCE"
+    static let regionKey = "REGION"
+    static let latKey = "LATITUDE"
+    static let longKey = "LOGITUDE"
+    static let genderKey = "GENDER"
 }

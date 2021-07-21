@@ -18,6 +18,8 @@ class LaunchModuleAPIManager {
         
     }
     
+    
+    
     static func authenticateUserSMS2(phoneNumber: String, code: String, simulatedDelay: Double?, completionHandler: @escaping (Result<LoginUsingCodeResponse, NetworkError>) -> ()){
         
         let parameters = "{\r\n    \"phoneNumber\": \"\(phoneNumber)\",\r\n    \"code\": \"\(code)\"\r\n}"

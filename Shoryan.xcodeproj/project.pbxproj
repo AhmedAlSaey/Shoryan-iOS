@@ -79,6 +79,8 @@
 		B176F3662688B7B8007B3D78 /* MyRequestsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B176F3652688B7B8007B3D78 /* MyRequestsResponse.swift */; };
 		B17B3456268633B100F958FD /* FilterRequestsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B17B3454268633B100F958FD /* FilterRequestsViewController.swift */; };
 		B17B3457268633B100F958FD /* FilterRequestsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B17B3455268633B100F958FD /* FilterRequestsViewController.xib */; };
+		B18B231826A85F5600B736C0 /* AccountInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B18B231626A85F5600B736C0 /* AccountInfoViewController.swift */; };
+		B18B231926A85F5600B736C0 /* AccountInfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B18B231726A85F5600B736C0 /* AccountInfoViewController.xib */; };
 		B196C5552606C5D900194A1D /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = B196C5542606C5D900194A1D /* Network.swift */; };
 		B196C5582606C5E400194A1D /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B196C5572606C5E400194A1D /* NetworkError.swift */; };
 		B196C55B2606C60B00194A1D /* DecodableError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B196C55A2606C60B00194A1D /* DecodableError.swift */; };
@@ -136,9 +138,11 @@
 		B1CDAE83268739730019D7E3 /* RewardCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B1CDAE81268739730019D7E3 /* RewardCollectionViewCell.xib */; };
 		B1CDAE8526875A3F0019D7E3 /* SimpleReward.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1CDAE8426875A3F0019D7E3 /* SimpleReward.swift */; };
 		B1CDAE8726875ADB0019D7E3 /* AllRewardsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1CDAE8626875ADB0019D7E3 /* AllRewardsResponse.swift */; };
+		B1D591B126A86A5B00DF3B70 /* AccountInfoPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D591B026A86A5A00DF3B70 /* AccountInfoPresenter.swift */; };
+		B1D591B426A8780300DF3B70 /* ProfileModuleAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D591B326A8780300DF3B70 /* ProfileModuleAPIManager.swift */; };
 		B1F6E6EE2667D17C0038982C /* LogInUsingCodeResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1F6E6ED2667D17C0038982C /* LogInUsingCodeResponse.swift */; };
 		B1F6E6F12667D40C0038982C /* LoginRequestCodeResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1F6E6F02667D40C0038982C /* LoginRequestCodeResponse.swift */; };
-		B1FD6CB72681CDEA00C8E3E2 /* GetUserDataResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1FD6CB62681CDEA00C8E3E2 /* GetUserDataResponse.swift */; };
+		B1FD6CB72681CDEA00C8E3E2 /* UserDataResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1FD6CB62681CDEA00C8E3E2 /* UserDataResponse.swift */; };
 		B1FD6CBA2681E6A300C8E3E2 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = B1FD6CBC2681E6A300C8E3E2 /* Localizable.strings */; };
 		B1FD6CCC2681EB4800C8E3E2 /* LaunchScreenViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B1FD6CCA2681EB4800C8E3E2 /* LaunchScreenViewController.xib */; };
 /* End PBXBuildFile section */
@@ -220,6 +224,8 @@
 		B17B3454268633B100F958FD /* FilterRequestsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterRequestsViewController.swift; sourceTree = "<group>"; };
 		B17B3455268633B100F958FD /* FilterRequestsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FilterRequestsViewController.xib; sourceTree = "<group>"; };
 		B181453E25E8B15D009C6221 /* Shoryan.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Shoryan.entitlements; sourceTree = "<group>"; };
+		B18B231626A85F5600B736C0 /* AccountInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountInfoViewController.swift; sourceTree = "<group>"; };
+		B18B231726A85F5600B736C0 /* AccountInfoViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AccountInfoViewController.xib; sourceTree = "<group>"; };
 		B196C5542606C5D900194A1D /* Network.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
 		B196C5572606C5E400194A1D /* NetworkError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		B196C55A2606C60B00194A1D /* DecodableError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DecodableError.swift; sourceTree = "<group>"; };
@@ -277,9 +283,11 @@
 		B1CDAE81268739730019D7E3 /* RewardCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RewardCollectionViewCell.xib; sourceTree = "<group>"; };
 		B1CDAE8426875A3F0019D7E3 /* SimpleReward.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleReward.swift; sourceTree = "<group>"; };
 		B1CDAE8626875ADB0019D7E3 /* AllRewardsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllRewardsResponse.swift; sourceTree = "<group>"; };
+		B1D591B026A86A5A00DF3B70 /* AccountInfoPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountInfoPresenter.swift; sourceTree = "<group>"; };
+		B1D591B326A8780300DF3B70 /* ProfileModuleAPIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileModuleAPIManager.swift; sourceTree = "<group>"; };
 		B1F6E6ED2667D17C0038982C /* LogInUsingCodeResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInUsingCodeResponse.swift; sourceTree = "<group>"; };
 		B1F6E6F02667D40C0038982C /* LoginRequestCodeResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRequestCodeResponse.swift; sourceTree = "<group>"; };
-		B1FD6CB62681CDEA00C8E3E2 /* GetUserDataResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetUserDataResponse.swift; sourceTree = "<group>"; };
+		B1FD6CB62681CDEA00C8E3E2 /* UserDataResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataResponse.swift; sourceTree = "<group>"; };
 		B1FD6CBB2681E6A300C8E3E2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		B1FD6CBD2681E6D400C8E3E2 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Localizable.strings; sourceTree = "<group>"; };
 		B1FD6CCD2681EB4B00C8E3E2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreenViewController.xib; sourceTree = "<group>"; };
@@ -458,7 +466,7 @@
 				B1A471AD259DA02D006152C1 /* RequestFilters.swift */,
 				B13453E42606F93800EF3319 /* AllRequestsResponse.swift */,
 				B12CBA602609040F006C8464 /* PendingRequestResponse.swift */,
-				B1FD6CB62681CDEA00C8E3E2 /* GetUserDataResponse.swift */,
+				B1FD6CB62681CDEA00C8E3E2 /* UserDataResponse.swift */,
 				B1CDAE8426875A3F0019D7E3 /* SimpleReward.swift */,
 				B1CDAE8626875ADB0019D7E3 /* AllRewardsResponse.swift */,
 				B176F34B26878EC9007B3D78 /* DetailedRewardResponse.swift */,
@@ -817,6 +825,7 @@
 		B1A471E7259DC6FD006152C1 /* ProfileModule */ = {
 			isa = PBXGroup;
 			children = (
+				B1D591B226A877DB00DF3B70 /* Manager */,
 				B1A471ED259DC736006152C1 /* Entity */,
 				B1A471EB259DC721006152C1 /* Presenter */,
 				B1A471EA259DC711006152C1 /* Router */,
@@ -831,6 +840,8 @@
 			children = (
 				B1A471EF259DC764006152C1 /* ProfileViewController.swift */,
 				B1A471F0259DC764006152C1 /* ProfileViewController.xib */,
+				B18B231626A85F5600B736C0 /* AccountInfoViewController.swift */,
+				B18B231726A85F5600B736C0 /* AccountInfoViewController.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -855,6 +866,7 @@
 			isa = PBXGroup;
 			children = (
 				B1A471FA259DC79B006152C1 /* ProfilePresenter.swift */,
+				B1D591B026A86A5A00DF3B70 /* AccountInfoPresenter.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -937,6 +949,14 @@
 				B12CBA4B260803E1006C8464 /* RequestPresenter.swift */,
 			);
 			path = Presenter;
+			sourceTree = "<group>";
+		};
+		B1D591B226A877DB00DF3B70 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				B1D591B326A8780300DF3B70 /* ProfileModuleAPIManager.swift */,
+			);
+			path = Manager;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1023,6 +1043,7 @@
 				B17408F326A6F006001C742D /* LanguagePickerViewController.xib in Resources */,
 				B1A471A7259D95E4006152C1 /* RequestBasicTableViewCell.xib in Resources */,
 				B163D1CF259D73160005C731 /* HomeViewController.xib in Resources */,
+				B18B231926A85F5600B736C0 /* AccountInfoViewController.xib in Resources */,
 				B1FD6CCC2681EB4800C8E3E2 /* LaunchScreenViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1123,8 +1144,10 @@
 				B1A471F5259DC78A006152C1 /* ProfileInteractor.swift in Sources */,
 				B1087FA22607D77600158209 /* DetailedRequest.swift in Sources */,
 				B1A471C3259DAC44006152C1 /* NewRequestRouter.swift in Sources */,
+				B18B231826A85F5600B736C0 /* AccountInfoViewController.swift in Sources */,
 				B1A471D8259DBE9C006152C1 /* NotificationsInteractor.swift in Sources */,
 				B1A471DB259DBEC2006152C1 /* NotificationsPresenter.swift in Sources */,
+				B1D591B126A86A5B00DF3B70 /* AccountInfoPresenter.swift in Sources */,
 				B1CDAE7F268735A40019D7E3 /* AllRewardsPresenter.swift in Sources */,
 				B196C5552606C5D900194A1D /* Network.swift in Sources */,
 				B1A471A6259D95E4006152C1 /* RequestBasicTableViewCell.swift in Sources */,
@@ -1147,6 +1170,7 @@
 				B1A471AB259D9F38006152C1 /* SimpleRequest.swift in Sources */,
 				B166B11F25982CB500AD6FD6 /* LaunchScreenPresenter.swift in Sources */,
 				B166B10325982AC300AD6FD6 /* BaseRouter.swift in Sources */,
+				B1D591B426A8780300DF3B70 /* ProfileModuleAPIManager.swift in Sources */,
 				B1A471FB259DC79B006152C1 /* ProfilePresenter.swift in Sources */,
 				B166B12725982CD600AD6FD6 /* LaunchScreenViewController.swift in Sources */,
 				B196C5612606C61800194A1D /* Constants.swift in Sources */,
@@ -1156,7 +1180,7 @@
 				B1C22F5925E6F27D002EECD9 /* LastNameTextField.swift in Sources */,
 				B163D1CE259D73160005C731 /* HomeViewController.swift in Sources */,
 				B114ADD0259AF0890052C89D /* String.swift in Sources */,
-				B1FD6CB72681CDEA00C8E3E2 /* GetUserDataResponse.swift in Sources */,
+				B1FD6CB72681CDEA00C8E3E2 /* UserDataResponse.swift in Sources */,
 				B1428CA6259AE68A00A75D9C /* SMSAuthenticationPresenter.swift in Sources */,
 				B1087F9E2607A42100158209 /* RequestViewController.swift in Sources */,
 				B196C57D2606DECC00194A1D /* Date.swift in Sources */,

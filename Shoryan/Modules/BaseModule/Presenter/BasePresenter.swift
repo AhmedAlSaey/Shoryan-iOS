@@ -16,8 +16,8 @@ class BasePresenter: NSObject {
         self.hud.textLabel.text = "Loading"
         self.hud.show(in: self.view!.view)
     }
-    func dismissLoading() {
-        self.hud.dismiss(animated: true)
+    func dismissLoading(delay: Double = 0) {
+        self.hud.dismiss(afterDelay: delay, animated: true)
     }
     
     func viewDidLoad(){
@@ -25,6 +25,10 @@ class BasePresenter: NSObject {
     }
     
     func viewWillAppear() {
+        
+    }
+    
+    func viewDidAppear() {
         
     }
 }

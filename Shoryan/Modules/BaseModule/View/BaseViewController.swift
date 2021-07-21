@@ -17,6 +17,7 @@ class BaseViewController: UIViewController, UIGestureRecognizerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         presenter?.viewDidLoad()
+
         localizeStrings()
         localizeAssets()
         localizationSettings()
@@ -30,7 +31,14 @@ class BaseViewController: UIViewController, UIGestureRecognizerDelegate {
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         presenter?.viewWillAppear()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        presenter?.viewDidAppear()
+        
     }
     
     func localizeStrings() {

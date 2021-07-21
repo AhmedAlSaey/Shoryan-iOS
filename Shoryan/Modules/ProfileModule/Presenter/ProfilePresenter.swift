@@ -24,4 +24,8 @@ class ProfilePresenter: BasePresenter {
         ProfileInteractor.shared.clearUserData()
         ProfileRouter.shared.launchAuthorizationPage()
     }
+    
+    func accountInfoClicked() {
+        ProfileRouter.shared.pushAccountInfo()
+    }
 }

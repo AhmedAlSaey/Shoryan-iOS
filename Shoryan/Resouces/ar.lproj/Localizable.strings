@@ -13,6 +13,7 @@
 "nav-arrow" = "nav-arrow_rtl";
 "back-arrow-white" = "back-arrow-white_rtl";
 "language-icon" = "language-icon_ar";
+"back-arrow-red" = "back-arrow-red_rtl";
 
 //General
 "Continue" = "استمرار";
@@ -29,6 +30,7 @@
 "Donations" = "تبرع";
 "Close" = "إغلاق";
 "Hello" = "مرحباً";
+"Save" = "حفظ";
 "language-code" = "ar";
 "language-name" = "العربية";
 
@@ -52,6 +54,7 @@
 "selectbranch.alert" = "الرجاء تحديد الفرع";
 "newrequestsuccess.alert" = "تم تقديم طلب التبرع بالدم الخاص بك";
 "notenoughpoints.alert" = "ليس لديك نقاط كافية لاسترداد هذه المكافأة";
+"accountinfochanges.alert" = "تم تغيير معلومات حسابك بنجاح";
 
 //Main Tabbar
 "home.tabbaritem" = "الصفحة الرئيسية";
@@ -164,3 +167,6 @@
 "changepassword.label" = "تغيير كلمة المرور";
 "language.label" = "اللغة";
 "logout.button" = "تسجيل الخروج";
+
+//AccountInfoViewController
+"accountinfo.label" = "معلومات الحساب";

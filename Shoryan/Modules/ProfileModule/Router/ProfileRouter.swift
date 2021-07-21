@@ -38,6 +38,32 @@ class ProfileRouter: BaseRouter {
         return viewController
     }
     
+    func createAccountInfo() -> UIViewController {
+        let viewController = AccountInfoViewController()
+        return viewController
+    }
+    
+    func createMapSelection() -> UIViewController{
+        let viewController = MapSelectorViewController()
+        
+        return viewController
+    }
+    
+    func pushMapSelector(delegate: MapSelectorDelegate){
+        if let vc = createMapSelection() as? MapSelectorViewController {
+            vc.delegate = delegate
+            navigationController?.pushViewController(vc, animated: true)
+        }
+    }
+    
+    func pushAccountInfo() {
+        guard let vc = createAccountInfo() as? AccountInfoViewController else {fatalError()}
+        let presenter = AccountInfoPresenter()
+        vc.presenter = presenter
+        presenter.view = vc
+        navigationController?.pushViewController(vc, animated: true)
+    }
+    
     func launchAuthorizationPage() {
         LaunchRouter.shared.launchAuthorizationPage()
     }
@@ -47,6 +73,16 @@ class ProfileRouter: BaseRouter {
         vc.modalPresentationStyle = .overCurrentContext
         vc.modalTransitionStyle = .crossDissolve
         view.present(vc, animated: true, completion: nil)
+    }
+    
+    func dissmissAccountInfo(){
+        guard let _ = navigationController?.viewControllers.last as? AccountInfoViewController else {fatalError()}
+        navigationController?.popViewController(animated: true)
+    }
+    
+    func dissmissMapSelector() {
+        guard let _ = navigationController?.viewControllers.last as? MapSelectorViewController else {fatalError()}
+        navigationController?.popViewController(animated: true)
     }
     
 }

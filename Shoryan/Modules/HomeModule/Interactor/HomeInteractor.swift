@@ -27,7 +27,7 @@ class HomeInteractor: BaseInteractor{
         
     }
     
-    func getUserData(completionHandler: @escaping (Result<GetUserDataResponse, NetworkError>) -> ()){
+    func getUserData(completionHandler: @escaping (Result<UserDataResponse, NetworkError>) -> ()){
         HomeModuleAPIManager.getUserData(accessToken: AppUser.shared.accessToken!) { result in
             if case .success(let userDataResponse) = result {
                 AppUser.shared.userID = userDataResponse.user._id
@@ -36,6 +36,14 @@ class HomeInteractor: BaseInteractor{
                 AppUser.shared.donations = userDataResponse.user.numberOfDonations
                 AppUser.shared.firstName = userDataResponse.user.name.firstName
                 AppUser.shared.lastName = userDataResponse.user.name.lastName
+                AppUser.shared.birthDay = userDataResponse.user.birthDate.day
+                AppUser.shared.birthMonth = userDataResponse.user.birthDate.month
+                AppUser.shared.birthYear = userDataResponse.user.birthDate.year
+                AppUser.shared.governorate = userDataResponse.user.location.governorate
+                AppUser.shared.region = userDataResponse.user.location.region
+                AppUser.shared.lat = userDataResponse.user.location.latitude
+                AppUser.shared.long = userDataResponse.user.location.longitude
+                AppUser.shared.genderKey = userDataResponse.user.gender
             }
             completionHandler(result)
         }

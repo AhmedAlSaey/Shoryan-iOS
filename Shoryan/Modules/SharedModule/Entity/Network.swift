@@ -11,6 +11,7 @@ enum URLRequestType {
     case POST
     case GET
     case DEL
+    case PATCH
     
     var stringValue : String {
         switch self {
@@ -20,6 +21,8 @@ enum URLRequestType {
             return "GET"
         case .DEL:
             return "DELETE"
+        case .PATCH:
+            return "PATCH"
         }
     }
 }

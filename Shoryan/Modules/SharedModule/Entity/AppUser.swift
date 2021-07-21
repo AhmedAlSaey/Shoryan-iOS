@@ -80,6 +80,82 @@ class AppUser {
             UserDefaults.standard.set(newValue, forKey: Constants.lastNameKey)
         }
     }
+    
+    var birthDay: Int? {
+        get {
+            return UserDefaults.standard.integer(forKey: Constants.birthDayKey)
+        }
+        set {
+            UserDefaults.standard.set(newValue, forKey: Constants.birthDayKey)
+        }
+    }
+    
+    var birthMonth: Int? {
+        get {
+            return UserDefaults.standard.integer(forKey: Constants.birthMonthKey)
+        }
+        set {
+            UserDefaults.standard.set(newValue, forKey: Constants.birthMonthKey)
+        }
+    }
+    
+    var birthYear: Int? {
+        get {
+            return UserDefaults.standard.integer(forKey: Constants.birthYearKey)
+        }
+        set {
+            UserDefaults.standard.set(newValue, forKey: Constants.birthYearKey)
+        }
+    }
+    
+    var governorate: String? {
+        get {
+            return UserDefaults.standard.string(forKey: Constants.governorateKey)
+        }
+        set {
+            UserDefaults.standard.set(newValue, forKey: Constants.governorateKey)
+        }
+    }
+    
+    var region: String? {
+        get {
+            return UserDefaults.standard.string(forKey: Constants.regionKey)
+        }
+        set {
+            UserDefaults.standard.set(newValue, forKey: Constants.regionKey)
+        }
+    }
+    
+    var lat: Double? {
+        get {
+            return UserDefaults.standard.double(forKey: Constants.latKey)
+        }
+        set {
+            UserDefaults.standard.set(newValue, forKey: Constants.latKey)
+        }
+    }
+    
+    var long: Double? {
+        get {
+            return UserDefaults.standard.double(forKey: Constants.longKey)
+        }
+        set {
+            UserDefaults.standard.set(newValue, forKey: Constants.longKey)
+        }
+    }
+    
+    
+    // M or F
+    var genderKey: String? {
+        get {
+            return UserDefaults.standard.string(forKey: Constants.genderKey)
+        }
+        set {
+            UserDefaults.standard.set(newValue, forKey: Constants.genderKey)
+        }
+    }
+    
+    
 
     func isUserAuthenticated() -> Bool {
         return accessToken != nil

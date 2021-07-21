@@ -13,6 +13,7 @@
 "nav-arrow" = "nav-arrow_ltr";
 "back-arrow-white" = "back-arrow-white_ltr";
 "language-icon" = "language-icon_en";
+"back-arrow-red" = "back-arrow-red_ltr";
 
 //General
 "Continue" = "Continue";
@@ -29,6 +30,7 @@
 "Donations" = "Donations";
 "Close" = "Close";
 "Hello" = "Hello";
+"Save" = "Save";
 "language-code" = "eg";
 "language-name" = "English";
 
@@ -52,6 +54,7 @@
 "selectbranch.alert" = "Please select a branch";
 "newrequestsuccess.alert" = "Your blood donation request has been placed";
 "notenoughpoints.alert" = "You do not have enough points to redeem this reward";
+"accountinfochanges.alert" = "Your account's information has been changed successfully";
 
 //Main Tabbar
 "home.tabbaritem" = "Home";
@@ -164,3 +167,6 @@
 "changepassword.label" = "Change Password";
 "language.label" = "Language";
 "logout.button" = "Log Out";
+
+//AccountInfoViewController
+"accountinfo.label" = "Account Info";
