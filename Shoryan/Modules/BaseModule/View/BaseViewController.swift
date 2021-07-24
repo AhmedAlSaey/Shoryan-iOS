@@ -62,11 +62,13 @@ class BaseViewController: UIViewController, UIGestureRecognizerDelegate {
         if langStr == "ar" {
             self.view.semanticContentAttribute = .forceRightToLeft
             UIView.appearance().semanticContentAttribute = .forceRightToLeft
+            UITextField.appearance().textAlignment = .right
             navigationController?.view.semanticContentAttribute = .forceRightToLeft
             navigationController?.navigationBar.semanticContentAttribute = .forceRightToLeft
         } else {
             self.view.semanticContentAttribute = .forceLeftToRight
             UIView.appearance().semanticContentAttribute = .forceLeftToRight
+            UITextField.appearance().textAlignment = .left
             navigationController?.view.semanticContentAttribute = .forceLeftToRight
             navigationController?.navigationBar.semanticContentAttribute = .forceLeftToRight
         }

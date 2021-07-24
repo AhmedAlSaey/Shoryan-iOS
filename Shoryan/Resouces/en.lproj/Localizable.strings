@@ -55,6 +55,7 @@
 "newrequestsuccess.alert" = "Your blood donation request has been placed";
 "notenoughpoints.alert" = "You do not have enough points to redeem this reward";
 "accountinfochanges.alert" = "Your account's information has been changed successfully";
+"passwordchanged.alert" = "Your password has been changed successfully";
 
 //Main Tabbar
 "home.tabbaritem" = "Home";
@@ -170,3 +171,7 @@
 
 //AccountInfoViewController
 "accountinfo.label" = "Account Info";
+
+//ChangePasswordViewController
+"oldpassword.placeholder" = "Current Password";
+"newpassword.placeholder" = "New Password";

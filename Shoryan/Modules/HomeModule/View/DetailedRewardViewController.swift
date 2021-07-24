@@ -76,6 +76,12 @@ class DetailedRewardViewController: BaseViewController, UIPickerViewDelegate, UI
         // Do any additional setup after loading the view.
     }
     
+    func styleNavigationBar() {
+//        let barHeight = navigationController?.navigationBar.layer.frame.height ?? 0
+//        navBarTopConstraint.constant -= barHeight
+        navigationBarView.addSpecificCornerRadius(forCorners: .Bottom, radius: 20)
+    }
+    
     override func localizeStrings() {
         rewardNavTitle.text = "rewardnavtitle.label".localized()
         branchesLabel.text = "rewardnavtitle.label".localized()
@@ -152,11 +158,7 @@ class DetailedRewardViewController: BaseViewController, UIPickerViewDelegate, UI
             textField.text = ""
         }
     
-    func styleNavigationBar() {
-        //        let barHeight = navigationController?.navigationBar.layer.frame.height ?? 0
-        //        navBarTopConstraint.constant -= barHeight
-                navigationBarView.addSpecificCornerRadius(forCorners: .Bottom, radius: 20)
-    }
+    
     
     @IBAction func redeemButtonClicked(_ sender: Any) {
         if let presenter = presenter as? DetailedRewardPresenter {

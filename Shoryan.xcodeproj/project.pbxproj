@@ -140,6 +140,11 @@
 		B1CDAE8726875ADB0019D7E3 /* AllRewardsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1CDAE8626875ADB0019D7E3 /* AllRewardsResponse.swift */; };
 		B1D591B126A86A5B00DF3B70 /* AccountInfoPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D591B026A86A5A00DF3B70 /* AccountInfoPresenter.swift */; };
 		B1D591B426A8780300DF3B70 /* ProfileModuleAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D591B326A8780300DF3B70 /* ProfileModuleAPIManager.swift */; };
+		B1D591B726A9AA1B00DF3B70 /* ChangePasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D591B526A9AA1B00DF3B70 /* ChangePasswordViewController.swift */; };
+		B1D591B826A9AA1B00DF3B70 /* ChangePasswordViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B1D591B626A9AA1B00DF3B70 /* ChangePasswordViewController.xib */; };
+		B1D591BB26A9AF0900DF3B70 /* OldPasswordTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D591BA26A9AF0900DF3B70 /* OldPasswordTextField.swift */; };
+		B1D591BD26A9AF7300DF3B70 /* NewPasswordTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D591BC26A9AF7300DF3B70 /* NewPasswordTextField.swift */; };
+		B1D591BF26A9B79600DF3B70 /* ChangePasswordPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D591BE26A9B79600DF3B70 /* ChangePasswordPresenter.swift */; };
 		B1F6E6EE2667D17C0038982C /* LogInUsingCodeResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1F6E6ED2667D17C0038982C /* LogInUsingCodeResponse.swift */; };
 		B1F6E6F12667D40C0038982C /* LoginRequestCodeResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1F6E6F02667D40C0038982C /* LoginRequestCodeResponse.swift */; };
 		B1FD6CB72681CDEA00C8E3E2 /* UserDataResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1FD6CB62681CDEA00C8E3E2 /* UserDataResponse.swift */; };
@@ -285,6 +290,11 @@
 		B1CDAE8626875ADB0019D7E3 /* AllRewardsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllRewardsResponse.swift; sourceTree = "<group>"; };
 		B1D591B026A86A5A00DF3B70 /* AccountInfoPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountInfoPresenter.swift; sourceTree = "<group>"; };
 		B1D591B326A8780300DF3B70 /* ProfileModuleAPIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileModuleAPIManager.swift; sourceTree = "<group>"; };
+		B1D591B526A9AA1B00DF3B70 /* ChangePasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordViewController.swift; sourceTree = "<group>"; };
+		B1D591B626A9AA1B00DF3B70 /* ChangePasswordViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChangePasswordViewController.xib; sourceTree = "<group>"; };
+		B1D591BA26A9AF0900DF3B70 /* OldPasswordTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OldPasswordTextField.swift; sourceTree = "<group>"; };
+		B1D591BC26A9AF7300DF3B70 /* NewPasswordTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPasswordTextField.swift; sourceTree = "<group>"; };
+		B1D591BE26A9B79600DF3B70 /* ChangePasswordPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordPresenter.swift; sourceTree = "<group>"; };
 		B1F6E6ED2667D17C0038982C /* LogInUsingCodeResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInUsingCodeResponse.swift; sourceTree = "<group>"; };
 		B1F6E6F02667D40C0038982C /* LoginRequestCodeResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRequestCodeResponse.swift; sourceTree = "<group>"; };
 		B1FD6CB62681CDEA00C8E3E2 /* UserDataResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataResponse.swift; sourceTree = "<group>"; };
@@ -838,10 +848,13 @@
 		B1A471E8259DC708006152C1 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				B1D591B926A9AE8E00DF3B70 /* Input Cells */,
 				B1A471EF259DC764006152C1 /* ProfileViewController.swift */,
 				B1A471F0259DC764006152C1 /* ProfileViewController.xib */,
 				B18B231626A85F5600B736C0 /* AccountInfoViewController.swift */,
 				B18B231726A85F5600B736C0 /* AccountInfoViewController.xib */,
+				B1D591B526A9AA1B00DF3B70 /* ChangePasswordViewController.swift */,
+				B1D591B626A9AA1B00DF3B70 /* ChangePasswordViewController.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -867,6 +880,7 @@
 			children = (
 				B1A471FA259DC79B006152C1 /* ProfilePresenter.swift */,
 				B1D591B026A86A5A00DF3B70 /* AccountInfoPresenter.swift */,
+				B1D591BE26A9B79600DF3B70 /* ChangePasswordPresenter.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -959,6 +973,15 @@
 			path = Manager;
 			sourceTree = "<group>";
 		};
+		B1D591B926A9AE8E00DF3B70 /* Input Cells */ = {
+			isa = PBXGroup;
+			children = (
+				B1D591BA26A9AF0900DF3B70 /* OldPasswordTextField.swift */,
+				B1D591BC26A9AF7300DF3B70 /* NewPasswordTextField.swift */,
+			);
+			path = "Input Cells";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1034,6 +1057,7 @@
 				B1CDAE83268739730019D7E3 /* RewardCollectionViewCell.xib in Resources */,
 				B1FD6CBA2681E6A300C8E3E2 /* Localizable.strings in Resources */,
 				B1A471B9259DAC17006152C1 /* NewRequestViewController.xib in Resources */,
+				B1D591B826A9AA1B00DF3B70 /* ChangePasswordViewController.xib in Resources */,
 				B166B0E2259826BA00AD6FD6 /* Assets.xcassets in Resources */,
 				B1C22F7B25E70C4A002EECD9 /* MapSelectorViewController.xib in Resources */,
 				B1A471E5259DC03A006152C1 /* NotificationTableViewCell.xib in Resources */,
@@ -1114,6 +1138,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B1D591BB26A9AF0900DF3B70 /* OldPasswordTextField.swift in Sources */,
+				B1D591BF26A9B79600DF3B70 /* ChangePasswordPresenter.swift in Sources */,
 				B12CBA4C260803E1006C8464 /* RequestPresenter.swift in Sources */,
 				B166B0D9259826B800AD6FD6 /* AppDelegate.swift in Sources */,
 				B1C22F6825E6F52A002EECD9 /* LocationTextField.swift in Sources */,
@@ -1195,6 +1221,7 @@
 				B176F3582687D1FB007B3D78 /* RedeemRewardCodeVerificationResponse.swift in Sources */,
 				B12CBA552608CA0D006C8464 /* SharedRouter.swift in Sources */,
 				B1A471C7259DB00B006152C1 /* BloodTypeSelectionButton.swift in Sources */,
+				B1D591BD26A9AF7300DF3B70 /* NewPasswordTextField.swift in Sources */,
 				B175868B268A0FEA0030DA05 /* BloodBanksManager.swift in Sources */,
 				B1A471FF259DDCF6006152C1 /* MainTabBarViewController.swift in Sources */,
 				B166B1382598386900AD6FD6 /* LogInViewController.swift in Sources */,
@@ -1212,6 +1239,7 @@
 				B1CDAE8726875ADB0019D7E3 /* AllRewardsResponse.swift in Sources */,
 				B114ADDB259AFF4E0052C89D /* UnderlinedUITextField.swift in Sources */,
 				B176F34F26879850007B3D78 /* DetailedRewardViewController.swift in Sources */,
+				B1D591B726A9AA1B00DF3B70 /* ChangePasswordViewController.swift in Sources */,
 				B12CBA5B2608D702006C8464 /* RequestUpdate.swift in Sources */,
 				B1C22F5125E6F0B3002EECD9 /* FirstNameTextField.swift in Sources */,
 				B1C22F6E25E6F552002EECD9 /* PasswordConfirmationTextField.swift in Sources */,

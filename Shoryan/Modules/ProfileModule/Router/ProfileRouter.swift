@@ -49,6 +49,12 @@ class ProfileRouter: BaseRouter {
         return viewController
     }
     
+    func createChangePassword() -> UIViewController{
+        let viewController = ChangePasswordViewController()
+        
+        return viewController
+    }
+    
     func pushMapSelector(delegate: MapSelectorDelegate){
         if let vc = createMapSelection() as? MapSelectorViewController {
             vc.delegate = delegate
@@ -59,6 +65,14 @@ class ProfileRouter: BaseRouter {
     func pushAccountInfo() {
         guard let vc = createAccountInfo() as? AccountInfoViewController else {fatalError()}
         let presenter = AccountInfoPresenter()
+        vc.presenter = presenter
+        presenter.view = vc
+        navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    func pushChangePassword() {
+        guard let vc = createChangePassword() as? ChangePasswordViewController else {fatalError()}
+        let presenter = ChangePasswordPresenter()
         vc.presenter = presenter
         presenter.view = vc
         navigationController?.pushViewController(vc, animated: true)
@@ -77,6 +91,11 @@ class ProfileRouter: BaseRouter {
     
     func dissmissAccountInfo(){
         guard let _ = navigationController?.viewControllers.last as? AccountInfoViewController else {fatalError()}
+        navigationController?.popViewController(animated: true)
+    }
+    
+    func dissmissChangePassword(){
+        guard let _ = navigationController?.viewControllers.last as? ChangePasswordViewController else {fatalError()}
         navigationController?.popViewController(animated: true)
     }
     

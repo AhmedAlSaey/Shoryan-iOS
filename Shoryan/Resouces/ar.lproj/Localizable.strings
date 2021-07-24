@@ -55,6 +55,7 @@
 "newrequestsuccess.alert" = "تم تقديم طلب التبرع بالدم الخاص بك";
 "notenoughpoints.alert" = "ليس لديك نقاط كافية لاسترداد هذه المكافأة";
 "accountinfochanges.alert" = "تم تغيير معلومات حسابك بنجاح";
+"passwordchanged.alert" = "تم تغيير كلمة المرور الخاصة بك بنجاح";
 
 //Main Tabbar
 "home.tabbaritem" = "الصفحة الرئيسية";
@@ -170,3 +171,7 @@
 
 //AccountInfoViewController
 "accountinfo.label" = "معلومات الحساب";
+
+//ChangePasswordViewController
+"oldpassword.placeholder" = "كلمة المرور الحالية";
+"newpassword.placeholder" = "كلمة المرور الجديدة";

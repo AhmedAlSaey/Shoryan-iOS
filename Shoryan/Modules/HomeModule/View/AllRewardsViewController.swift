@@ -25,7 +25,7 @@ class AllRewardsViewController: BaseViewController {
         super.viewDidLoad()
         rewardsCollectionView.register(UINib(nibName: "RewardCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: reuseIdentifier)
         rewardsCollectionView.delegate = self
-
+        styleNavigationBar()
         // Do any additional setup after loading the view.
     }
     

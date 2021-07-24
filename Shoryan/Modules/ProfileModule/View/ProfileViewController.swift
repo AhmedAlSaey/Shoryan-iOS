@@ -97,7 +97,8 @@ class ProfileViewController: BaseViewController {
     }
     
     @objc func changePassworkCellClicked(_ sender: UITapGestureRecognizer? = nil) {
-        
+        guard let presenter = presenter as? ProfilePresenter else {return}
+        presenter.changePasswordClicked()
     }
 
     @objc func languageCellClicked(_ sender: UITapGestureRecognizer? = nil) {

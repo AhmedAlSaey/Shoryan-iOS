@@ -25,10 +25,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         if getlan == "en" {
             //English
             UIView.appearance().semanticContentAttribute = .forceLeftToRight
+            UITextField.appearance().textAlignment = .left
         }
         else {
             //Arabic
             UIView.appearance().semanticContentAttribute = .forceRightToLeft
+            UITextField.appearance().textAlignment = .right
         }
         
         return true

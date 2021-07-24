@@ -17,8 +17,6 @@
                 <outlet property="code2TF" destination="lH0-pb-OcM" id="33H-AX-pie"/>
                 <outlet property="code3TF" destination="j4P-wy-jgX" id="KyI-iS-pyj"/>
                 <outlet property="code4TF" destination="9ZC-73-laj" id="xoQ-EW-5DK"/>
-                <outlet property="code5TF" destination="b1J-me-BMv" id="eE9-L2-JoD"/>
-                <outlet property="code6TF" destination="Hyf-Y5-v4X" id="g7c-Yl-6zo"/>
                 <outlet property="codeInstructionLabel" destination="47r-ad-ZNi" id="NuF-Mi-paN"/>
                 <outlet property="codeStackView" destination="yIV-tT-5mf" id="Uj6-aG-YWX"/>
                 <outlet property="continueButton" destination="63R-d9-3cc" id="oRd-M7-lbU"/>
@@ -66,32 +64,22 @@
                     <rect key="frame" x="40" y="376.5" width="334" height="18.5"/>
                     <subviews>
                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rTg-sW-7sd" customClass="UnderlinedUITextField" customModule="Shoryan" customModuleProvider="target">
-                            <rect key="frame" x="0.0" y="0.0" width="25" height="18.5"/>
+                            <rect key="frame" x="0.0" y="0.0" width="56" height="18.5"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <textInputTraits key="textInputTraits" keyboardType="numberPad" textContentType="one-time-code"/>
                         </textField>
                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lH0-pb-OcM" customClass="UnderlinedUITextField" customModule="Shoryan" customModuleProvider="target">
-                            <rect key="frame" x="62" y="0.0" width="24.5" height="18.5"/>
+                            <rect key="frame" x="93" y="0.0" width="55.5" height="18.5"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <textInputTraits key="textInputTraits" keyboardType="numberPad" textContentType="one-time-code"/>
                         </textField>
                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="j4P-wy-jgX" customClass="UnderlinedUITextField" customModule="Shoryan" customModuleProvider="target">
-                            <rect key="frame" x="123.5" y="0.0" width="25" height="18.5"/>
+                            <rect key="frame" x="185.5" y="0.0" width="56" height="18.5"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <textInputTraits key="textInputTraits" keyboardType="numberPad" textContentType="one-time-code"/>
                         </textField>
                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9ZC-73-laj" customClass="UnderlinedUITextField" customModule="Shoryan" customModuleProvider="target">
-                            <rect key="frame" x="185.5" y="0.0" width="25" height="18.5"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                            <textInputTraits key="textInputTraits" keyboardType="numberPad" textContentType="one-time-code"/>
-                        </textField>
-                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="b1J-me-BMv" customClass="UnderlinedUITextField" customModule="Shoryan" customModuleProvider="target">
-                            <rect key="frame" x="247.5" y="0.0" width="24.5" height="18.5"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                            <textInputTraits key="textInputTraits" keyboardType="numberPad" textContentType="one-time-code"/>
-                        </textField>
-                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Hyf-Y5-v4X" customClass="UnderlinedUITextField" customModule="Shoryan" customModuleProvider="target">
-                            <rect key="frame" x="309" y="0.0" width="25" height="18.5"/>
+                            <rect key="frame" x="278.5" y="0.0" width="55.5" height="18.5"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <textInputTraits key="textInputTraits" keyboardType="numberPad" textContentType="one-time-code"/>
                         </textField>

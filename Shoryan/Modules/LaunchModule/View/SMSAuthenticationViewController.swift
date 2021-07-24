@@ -23,8 +23,6 @@ class SMSAuthenticationViewController: BaseViewController, UITextFieldDelegate {
     @IBOutlet weak var code2TF: UnderlinedUITextField!
     @IBOutlet weak var code3TF: UnderlinedUITextField!
     @IBOutlet weak var code4TF: UnderlinedUITextField!
-    @IBOutlet weak var code5TF: UnderlinedUITextField!
-    @IBOutlet weak var code6TF: UnderlinedUITextField!
     
     @IBOutlet weak var phoneTextField: UILabel!
     
@@ -36,8 +34,6 @@ class SMSAuthenticationViewController: BaseViewController, UITextFieldDelegate {
             result += code2TF.text.nonNullString
             result += code3TF.text.nonNullString
             result += code4TF.text.nonNullString
-            result += code5TF.text.nonNullString
-            result += code6TF.text.nonNullString
             return result
         }
     }
@@ -88,8 +84,6 @@ class SMSAuthenticationViewController: BaseViewController, UITextFieldDelegate {
         code2TF.addTarget(self, action: #selector(self.textFieldDidChange(textField:)), for: UIControl.Event.editingChanged)
         code3TF.addTarget(self, action: #selector(self.textFieldDidChange(textField:)), for: UIControl.Event.editingChanged)
         code4TF.addTarget(self, action: #selector(self.textFieldDidChange(textField:)), for: UIControl.Event.editingChanged)
-        code5TF.addTarget(self, action: #selector(self.textFieldDidChange(textField:)), for: UIControl.Event.editingChanged)
-        code6TF.addTarget(self, action: #selector(self.textFieldDidChange(textField:)), for: UIControl.Event.editingChanged)
     }
     
     @objc func textFieldDidChange(textField: UITextField){

@@ -13,6 +13,8 @@ class NetworkError : BaseError {
         switch error.error.message {
         case "MISSING_PARAMETER":
             return MissingParameterError()
+        case "MISSING_URL_PARAMETER":
+            return MissingURLParameterError()
         case "INVALID_FORMAT":
             return InvalidFormatError()
         case "USER_NOT_FOUND":
@@ -35,6 +37,36 @@ class NetworkError : BaseError {
             return AccountNotVerifiedError()
         case "NO_ENOUGH_POINTS":
             return NotEnoughPointsError()
+        case "USER_ALREADY_EXISTS":
+            return UserAlreadyExistsError()
+        case "ACCOUNT_ALREADY_VERIFIED":
+            return AccountAlreadyVerifiedError()
+        case "JWT_NOT_ACTIVE":
+            return JWTNotActiveError()
+        case "PASSWORD_MISMATCH":
+            return PasswordMismatchError()
+//        case "INVALID_ID":
+//            return InvalidIDError()
+        case "REQUESTS_DAILY_LIMIT":
+            return RequestsDailyLimitError()
+        case "REQUEST_NOT_FOUND":
+            return RequestNotFoundError()
+        case "AGE_CHECK_FAILS":
+            return AgeCheckFailError()
+        case "BREAK_TIME_CHECK_FAILS":
+            return BreakTimeCheckFails()
+        case "INCOMPATIBLE_BLOOD_TYPE":
+            return IncompatibleBloodTypeError()
+        case "USER_GOING_TO_ANOTHER_REQUEST":
+            return UserGoingToAnotherRequestError()
+        case "ALREADY_GOING_TO_THIS_REQUEST":
+            return AlreadyGoingToThisRequestError()
+        case "USER_MUST_BE_IN_COMING_DONORS":
+            return UserMustBeInComingDonorsError()
+        case "REWARD_NOT_FOUND":
+            return RewardNotFoundError()
+        case "REDEEMING_ANOTHER_REWARD":
+            return RedeemingAnotherRewardError()
         default:
             return UnknownNetworkError()
         }
@@ -70,6 +102,13 @@ class NoInternetError : NetworkError {
 }
 
 class MissingParameterError : NetworkError {
+    override init() {
+        super.init()
+        message = "Please make sure you entered all required fields"
+    }
+}
+
+class MissingURLParameterError: NetworkError {
     override init() {
         super.init()
         message = "Please make sure you entered all required fields"
@@ -181,3 +220,100 @@ class NoInternetConnectionError : NetworkError {
     }
 }
 
+class UserAlreadyExistsError : NetworkError {
+    override init() {
+        super.init()
+        message = "This user already exists"
+    }
+}
+
+class AccountAlreadyVerifiedError : NetworkError {
+    override init() {
+        super.init()
+        message = "This account is already verified"
+    }
+}
+
+class JWTNotActiveError : NetworkError {
+    override init() {
+        super.init()
+        message = "JWT not active"
+    }
+}
+
+class PasswordMismatchError : NetworkError {
+    override init() {
+        super.init()
+        message = "Password mismatch, please make sure that the password and its confirmation match"
+    }
+}
+
+class RequestsDailyLimitError: NetworkError {
+    override init() {
+        super.init()
+        message = "You have reached your daily limit of 3 requests"
+    }
+}
+
+class RequestNotFoundError : NetworkError {
+    override init() {
+        super.init()
+        message = "Blood donation request not found"
+    }
+}
+
+class AgeCheckFailError : NetworkError {
+    override init() {
+        super.init()
+        message = "You must be 17 years or older to donate blood"
+    }
+}
+
+class BreakTimeCheckFails : NetworkError {
+    override init() {
+        super.init()
+        message = "You can not donate blood more than once every 3 months"
+    }
+}
+
+class IncompatibleBloodTypeError : NetworkError {
+    override init() {
+        super.init()
+        message = "Your blood type is incompatible with this request"
+    }
+}
+
+class UserGoingToAnotherRequestError : NetworkError {
+    override init() {
+        super.init()
+        message = "You are already registered as a donor for another request, please cancel that request first"
+    }
+}
+
+class AlreadyGoingToThisRequestError : NetworkError {
+    override init() {
+        super.init()
+        message = "You are already registered as a donor for this request"
+    }
+}
+
+class UserMustBeInComingDonorsError : NetworkError {
+    override init() {
+        super.init()
+        message = "You are already not registered as a donor for this request"
+    }
+}
+
+class RewardNotFoundError : NetworkError {
+    override init() {
+        super.init()
+        message = "This reward is not available"
+    }
+}
+
+class RedeemingAnotherRewardError : NetworkError {
+    override init() {
+        super.init()
+        message = "You are already redeeming another reward"
+    }
+}

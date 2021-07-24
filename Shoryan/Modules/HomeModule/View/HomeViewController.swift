@@ -40,7 +40,7 @@ class HomeViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        styleNavigationBar()
+//        styleNavigationBar()
         configureFilterView()
         configureTableView()
         configureCards()

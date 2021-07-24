@@ -43,22 +43,17 @@
                     <rect key="frame" x="0.0" y="44" width="414" height="110"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MmC-Nc-FQl">
-                            <rect key="frame" x="108" y="41" width="62" height="28"/>
+                            <rect key="frame" x="33" y="41" width="62" height="28"/>
                             <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="25"/>
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="account" translatesAutoresizingMaskIntoConstraints="NO" id="P8R-5l-zdh">
-                            <rect key="frame" x="35" y="27" width="56" height="56"/>
-                        </imageView>
                     </subviews>
                     <color key="backgroundColor" name="MainRed"/>
                     <constraints>
-                        <constraint firstItem="MmC-Nc-FQl" firstAttribute="leading" secondItem="P8R-5l-zdh" secondAttribute="trailing" constant="17" id="02l-ew-TYr"/>
-                        <constraint firstItem="MmC-Nc-FQl" firstAttribute="centerY" secondItem="P8R-5l-zdh" secondAttribute="centerY" id="BD7-vs-Uen"/>
-                        <constraint firstItem="P8R-5l-zdh" firstAttribute="centerY" secondItem="S3D-62-an9" secondAttribute="centerY" id="Wzt-Vc-0gJ"/>
+                        <constraint firstItem="MmC-Nc-FQl" firstAttribute="centerY" secondItem="S3D-62-an9" secondAttribute="centerY" id="3a8-6j-SFS"/>
                         <constraint firstAttribute="height" constant="110" id="eKC-eq-Wmg"/>
-                        <constraint firstItem="P8R-5l-zdh" firstAttribute="leading" secondItem="S3D-62-an9" secondAttribute="leading" constant="35" id="v8i-zb-mdB"/>
+                        <constraint firstItem="MmC-Nc-FQl" firstAttribute="leading" secondItem="S3D-62-an9" secondAttribute="leading" constant="33" id="gU2-o7-Vt0"/>
                     </constraints>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YPe-zh-A12">
@@ -295,7 +290,6 @@
         </view>
     </objects>
     <resources>
-        <image name="account" width="56" height="56"/>
         <image name="nav-arrow_ltr" width="8" height="13.5"/>
         <namedColor name="MainRed">
             <color red="0.6119999885559082" green="0.067000001668930054" blue="0.067000001668930054" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

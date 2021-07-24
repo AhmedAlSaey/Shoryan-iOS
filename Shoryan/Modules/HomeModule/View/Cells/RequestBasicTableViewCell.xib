@@ -62,16 +62,16 @@
                                 </constraints>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DCb-Lg-yYZ">
-                                <rect key="frame" x="61" y="0.0" width="92" height="33"/>
+                                <rect key="frame" x="96.5" y="20" width="62.5" height="30"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="URGENT" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xwo-5p-WlL">
-                                        <rect key="frame" x="10" y="7" width="72" height="19"/>
-                                        <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="17"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Urgent" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xwo-5p-WlL">
+                                        <rect key="frame" x="10" y="7" width="42.5" height="16"/>
+                                        <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="14"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" name="MainRed"/>
+                                <color key="backgroundColor" red="0.81960784313725488" green="0.16470588235294117" blue="0.16470588235294117" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstItem="xwo-5p-WlL" firstAttribute="top" secondItem="DCb-Lg-yYZ" secondAttribute="top" constant="7" id="Ljs-WX-sit"/>
                                     <constraint firstItem="xwo-5p-WlL" firstAttribute="leading" secondItem="DCb-Lg-yYZ" secondAttribute="leading" constant="10" id="Waj-aA-o0q"/>
@@ -83,18 +83,18 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="Jzi-do-lfr" secondAttribute="trailing" constant="20" id="30j-pU-BKw"/>
-                            <constraint firstItem="DCb-Lg-yYZ" firstAttribute="top" secondItem="swM-d6-Fir" secondAttribute="top" id="De8-vW-WRD"/>
+                            <constraint firstItem="DCb-Lg-yYZ" firstAttribute="top" secondItem="swM-d6-Fir" secondAttribute="top" constant="20" id="7X7-T9-VHs"/>
                             <constraint firstItem="K5y-ul-wgq" firstAttribute="centerY" secondItem="swM-d6-Fir" secondAttribute="centerY" id="EJd-4F-HZK"/>
                             <constraint firstItem="V2g-PQ-Iw0" firstAttribute="centerX" secondItem="K5y-ul-wgq" secondAttribute="centerX" id="FL0-pc-BUs"/>
                             <constraint firstItem="U9K-4k-HtC" firstAttribute="centerY" secondItem="eOa-oP-xqe" secondAttribute="centerY" id="GIw-bG-OVg"/>
                             <constraint firstItem="K5y-ul-wgq" firstAttribute="leading" secondItem="swM-d6-Fir" secondAttribute="leading" constant="20" id="QLp-PE-QjI"/>
+                            <constraint firstItem="Jzi-do-lfr" firstAttribute="leading" secondItem="DCb-Lg-yYZ" secondAttribute="trailing" constant="27" id="QqH-Vj-cLP"/>
                             <constraint firstItem="Jzi-do-lfr" firstAttribute="centerY" secondItem="swM-d6-Fir" secondAttribute="centerY" id="Tqv-A4-uzt"/>
                             <constraint firstItem="VXs-WW-ZSE" firstAttribute="top" secondItem="K5y-ul-wgq" secondAttribute="top" id="gKm-Um-Zp6"/>
                             <constraint firstItem="U9K-4k-HtC" firstAttribute="leading" secondItem="eOa-oP-xqe" secondAttribute="trailing" constant="5" id="gu3-pX-EaQ"/>
                             <constraint firstAttribute="height" constant="95" id="p6c-sk-bxO"/>
                             <constraint firstItem="eOa-oP-xqe" firstAttribute="leading" secondItem="VXs-WW-ZSE" secondAttribute="leading" id="qSK-vk-SSv"/>
                             <constraint firstItem="eOa-oP-xqe" firstAttribute="top" secondItem="VXs-WW-ZSE" secondAttribute="bottom" constant="10" id="qlV-vU-Dre"/>
-                            <constraint firstItem="DCb-Lg-yYZ" firstAttribute="centerX" secondItem="swM-d6-Fir" secondAttribute="centerX" id="rSW-Bj-GBE"/>
                             <constraint firstItem="VXs-WW-ZSE" firstAttribute="leading" secondItem="K5y-ul-wgq" secondAttribute="trailing" constant="32" id="uwG-kF-P1U"/>
                             <constraint firstItem="V2g-PQ-Iw0" firstAttribute="centerY" secondItem="K5y-ul-wgq" secondAttribute="centerY" id="v2l-WX-Jkb"/>
                         </constraints>

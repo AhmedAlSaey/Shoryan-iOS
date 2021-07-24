@@ -10,6 +10,10 @@ import Foundation
 class ProfilePresenter: BasePresenter {
 
     override func viewDidLoad() {
+        
+    }
+    
+    override func viewDidAppear() {
         guard let view  = view as? ProfileViewController else {fatalError()}
         view.pointsCountLabel.text = ProfileInteractor.shared.getUserPoints()
         view.donationsCountLabel.text = ProfileInteractor.shared.getUserDonation()
@@ -23,6 +27,10 @@ class ProfilePresenter: BasePresenter {
     func logoutButtonClicked(){
         ProfileInteractor.shared.clearUserData()
         ProfileRouter.shared.launchAuthorizationPage()
+    }
+    
+    func changePasswordClicked() {
+        ProfileRouter.shared.pushChangePassword()
     }
     
     func accountInfoClicked() {

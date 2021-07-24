@@ -53,7 +53,7 @@ class RequestBasicTableViewCell: UITableViewCell {
         containerView.dropShadow()
         
         bloodTypeBackgroudView.layer.cornerRadius = bloodTypeBackgroudView.layer.frame.size.height / 2
-        urgentView.addSpecificCornerRadius(forCorners: .Bottom, radius: 10)
+        urgentView.layer.cornerRadius = 7
         urgentView.isHidden = true
         
         localizeAssets()
@@ -61,7 +61,7 @@ class RequestBasicTableViewCell: UITableViewCell {
     }
     
     func localizeStrings() {
-        urgentLabel.text = "Urgent".localized().uppercased()
+        urgentLabel.text = "Urgent".localized()
     }
     
     func localizeAssets() {

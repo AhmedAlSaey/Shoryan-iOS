@@ -12,11 +12,11 @@ class ProfileInteractor: BaseInteractor {
     static let shared = ProfileInteractor()
     
     func getUserPoints() -> String {
-        "\(AppUser.shared.points ?? 0)"
+        "\(AppUser.shared.points ?? 0)".localizeDigits
     }
     
     func getUserDonation() -> String {
-        "\(AppUser.shared.donations ?? 0)"
+        "\(AppUser.shared.donations ?? 0)".localizeDigits
     }
     
     func getUserFistName() -> String {
@@ -91,6 +91,18 @@ class ProfileInteractor: BaseInteractor {
     }
     func getLocationValidationFunction() -> ((String) -> Bool){
         RegExHandler.notEmptyRegEx.self
+    }
+    func getPasswordValidationFunction() -> ((String) -> Bool){
+        RegExHandler.fairPasswordRegEx.self
+    }
+    
+    func changePassword(oldPassword: String, newPassword: String, passwordConfirmation: String, completionHandler: @escaping (Result<UserDataResponse, BaseError>) -> ()){
+        
+        ProfileModuleAPIManager.changePassword(accessToken: AppUser.shared.accessToken!, oldPassword: oldPassword, newPassword: newPassword, simulatedDelay: 0.2) { result in
+            completionHandler(result.mapError({ (error) -> BaseError in
+                return error as BaseError
+            }))
+        }
     }
     
     func genderCodeToName(code: String) -> String{

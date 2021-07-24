@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import Localize_Swift
 
 extension Optional where Wrapped == String {
     var nonNullString: String {
@@ -17,7 +18,7 @@ extension Optional where Wrapped == String {
 
 extension String {
     public var localizeDigits: String {
-        let langStr = "language-code".localized()
+        let langStr = Localize.currentLanguage()
         if langStr == "ar" {
             return enToArDigits
         }
