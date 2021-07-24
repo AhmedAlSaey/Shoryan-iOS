@@ -38,7 +38,6 @@ class AuthorizationViewController: BaseViewController {
         
         let tap = UITapGestureRecognizer(target: self, action: #selector(self.languageViewPressed(_:)))
         languageView.addGestureRecognizer(tap)
-        // Do any additional setup after loading the view.
     }
     
     override func localizeAssets() {

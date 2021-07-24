@@ -17,9 +17,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
-        GMSPlacesClient.provideAPIKey("AIzaSyBdof_5MRwUAFSOI0KkO5BMhDvtWC5qiyQ")
-        GMSServices.provideAPIKey("AIzaSyBdof_5MRwUAFSOI0KkO5BMhDvtWC5qiyQ")
+        // Override point for customization after application launch
+        var keys: NSDictionary?
+
+        if let path = Bundle.main.url(forResource: "Info", withExtension: ".plist") {
+            keys = NSDictionary(contentsOfFile: "\(path)")
+            }
+            if let dict = keys {
+                let googleAPIKey = dict[Constants.googlePListAPIKey] as? String
+                GMSPlacesClient.provideAPIKey(googleAPIKey!)
+                GMSServices.provideAPIKey(googleAPIKey!)
+            }
+        
         IQKeyboardManager.shared().isEnabled = true
         let getlan = Localize.currentLanguage()
         if getlan == "en" {

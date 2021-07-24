@@ -17,11 +17,12 @@ class Constants {
     static var endPoint : String {
         switch appState {
         case .production:
-            return "https://shoryan.herokuapp.com"
+            return "<BACKEND_ENDPOINT>"
         default:
             fatalError("Undefined endpoint")
         }
     }
+    
     
     static let loginPath = "/api/users/login"
     static let signupPath = "/api/users/signup"
@@ -61,4 +62,5 @@ class Constants {
     static let latKey = "LATITUDE"
     static let longKey = "LOGITUDE"
     static let genderKey = "GENDER"
+    static let googlePListAPIKey = "googleAPIKey"
 }

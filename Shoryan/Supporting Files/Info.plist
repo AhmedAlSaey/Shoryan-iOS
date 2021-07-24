@@ -2,6 +2,8 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>googleAPIKey</key>
+	<string>AIzaSyBdof_5MRwUAFSOI0KkO5BMhDvtWC5qiyQ</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>We need you permission to automatically pin your current location, you can select it yourself instead</string>
 	<key>UIUserInterfaceStyle</key>
