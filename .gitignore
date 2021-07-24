@@ -1,0 +1,9 @@
+*.xcuserstate
+*.xcbkptlist
+
+hidsi/Podfile.lock
+hidsi/Pods/
+hidsi/hidsi.xcodeproj/xcuserdata/
+hidsi/node_modules/*
+
+hidsi data model.graffle
