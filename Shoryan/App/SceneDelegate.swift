@@ -6,9 +6,6 @@
 //
 
 import UIKit
-import GooglePlaces
-import GoogleMaps
-
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
